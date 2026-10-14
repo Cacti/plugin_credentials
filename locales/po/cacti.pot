@@ -1,0 +1,666 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti 1.0\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-10-14 15:16-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Cacti Developers <developers@cacti.net>\n"
+"Language-Team: Cacti Developers <developers@cacti.net>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: credentials.php
+msgid "Delete"
+msgstr ""
+
+#: credentials.php
+msgid "Enable"
+msgstr ""
+
+#: credentials.php
+msgid "Disable"
+msgstr ""
+
+#: credentials.php
+msgid "The selected credential type is not valid."
+msgstr ""
+
+#: credentials.php
+msgid "A credential name is required."
+msgstr ""
+
+#: credentials.php
+msgid "Cannot store a secret: the Cacti core secret encryption functions are unavailable on this installation."
+msgstr ""
+
+#: credentials.php
+#, php-format
+msgid "The value and its confirmation for '%s' do not match."
+msgstr ""
+
+#: credentials.php
+#, php-format
+msgid "'%s' is required."
+msgstr ""
+
+#: credentials.php
+msgid "Could not encrypt the secret. Verify the Cacti encryption key configuration and try again."
+msgstr ""
+
+#: credentials.php
+msgid "Credential saved."
+msgstr ""
+
+#: credentials.php
+msgid "Failed to save the credential."
+msgstr ""
+
+#: credentials.php
+msgid "Delete the following credential(s)?"
+msgstr ""
+
+#: credentials.php
+msgid "Enable the following credential(s)?"
+msgstr ""
+
+#: credentials.php
+msgid "Disable the following credential(s)?"
+msgstr ""
+
+#: credentials.php
+msgid "Cancel"
+msgstr ""
+
+#: credentials.php
+msgid "Continue"
+msgstr ""
+
+#: credentials.php setup.php
+msgid "Credentials"
+msgstr ""
+
+#: credentials.php
+msgid "Search"
+msgstr ""
+
+#: credentials.php
+msgid "Type"
+msgstr ""
+
+#: credentials.php
+msgid "Any"
+msgstr ""
+
+#: credentials.php
+msgid "All"
+msgstr ""
+
+#: credentials.php
+msgid "Go"
+msgstr ""
+
+#: credentials.php
+msgid "Clear"
+msgstr ""
+
+#: credentials.php
+msgid "Name"
+msgstr ""
+
+#: credentials.php
+msgid "Description"
+msgstr ""
+
+#: credentials.php
+msgid "Owner"
+msgstr ""
+
+#: credentials.php
+msgid "Enabled"
+msgstr ""
+
+#: credentials.php
+msgid "Last Updated"
+msgstr ""
+
+#: credentials.php
+msgid "N/A"
+msgstr ""
+
+#: credentials.php
+msgid "No"
+msgstr ""
+
+#: credentials.php
+msgid "Yes"
+msgstr ""
+
+#: credentials.php
+msgid "No Credentials Found"
+msgstr ""
+
+#: credentials.php
+#, php-format
+msgid "Credential [edit: %s]"
+msgstr ""
+
+#: credentials.php
+msgid "Credential [new]"
+msgstr ""
+
+#: credentials.php
+msgid "A unique, meaningful name for this credential."
+msgstr ""
+
+#: credentials.php
+msgid "An optional description of where this credential is used."
+msgstr ""
+
+#: credentials.php
+msgid "Credential Type"
+msgstr ""
+
+#: credentials.php
+msgid "The type of credential. Changing the type on an existing credential discards the previously stored type-specific values when you save."
+msgstr ""
+
+#: credentials.php
+msgid "Whether this credential is available for use."
+msgstr ""
+
+#: credentials.php
+msgid "A value is currently stored (encrypted)."
+msgstr ""
+
+#: credentials.php
+msgid "Leave this blank to keep it, or enter a new value to replace it."
+msgstr ""
+
+#: credentials.php
+msgid "No value stored yet."
+msgstr ""
+
+#: credentials.php
+msgid "Change Credential Type?"
+msgstr ""
+
+#: credentials.php
+msgid "Changing the Credential Type will discard the values stored for the current type when you save this credential. Do you want to continue?"
+msgstr ""
+
+#: includes/arrays.php
+msgid "SNMP v1/v2c Community"
+msgstr ""
+
+#: includes/arrays.php
+msgid "SNMP"
+msgstr ""
+
+#: includes/arrays.php
+msgid "SNMP Version"
+msgstr ""
+
+#: includes/arrays.php
+msgid "The community-based SNMP protocol version this credential is used with."
+msgstr ""
+
+#: includes/arrays.php
+msgid "Version 1"
+msgstr ""
+
+#: includes/arrays.php
+msgid "Version 2"
+msgstr ""
+
+#: includes/arrays.php
+msgid "Read Community"
+msgstr ""
+
+#: includes/arrays.php
+msgid "The SNMP read community string. Treated as a secret and stored encrypted."
+msgstr ""
+
+#: includes/arrays.php
+msgid "Write Community"
+msgstr ""
+
+#: includes/arrays.php
+msgid "The optional SNMP write community string. Stored encrypted."
+msgstr ""
+
+#: includes/arrays.php
+msgid "SNMP v3 (USM)"
+msgstr ""
+
+#: includes/arrays.php
+msgid "Security Name"
+msgstr ""
+
+#: includes/arrays.php
+msgid "The SNMP v3 USM security (user) name."
+msgstr ""
+
+#: includes/arrays.php
+msgid "Authentication Protocol"
+msgstr ""
+
+#: includes/arrays.php
+msgid "The USM authentication protocol. Choose [None] for noAuthNoPriv."
+msgstr ""
+
+#: includes/arrays.php
+msgid "None"
+msgstr ""
+
+#: includes/arrays.php
+msgid "Authentication Passphrase"
+msgstr ""
+
+#: includes/arrays.php
+msgid "The USM authentication passphrase. Stored encrypted."
+msgstr ""
+
+#: includes/arrays.php
+msgid "Privacy Protocol"
+msgstr ""
+
+#: includes/arrays.php
+msgid "The USM privacy (encryption) protocol. Choose [None] for authNoPriv."
+msgstr ""
+
+#: includes/arrays.php
+msgid "Privacy Passphrase"
+msgstr ""
+
+#: includes/arrays.php
+msgid "The USM privacy passphrase. Stored encrypted."
+msgstr ""
+
+#: includes/arrays.php
+msgid "Context Name"
+msgstr ""
+
+#: includes/arrays.php
+msgid "The optional SNMP v3 context name."
+msgstr ""
+
+#: includes/arrays.php
+msgid "Engine ID"
+msgstr ""
+
+#: includes/arrays.php
+msgid "The optional SNMP v3 context engine id."
+msgstr ""
+
+#: includes/arrays.php
+msgid "Username / Password"
+msgstr ""
+
+#: includes/arrays.php
+msgid "Generic"
+msgstr ""
+
+#: includes/arrays.php
+msgid "Username"
+msgstr ""
+
+#: includes/arrays.php
+msgid "A reusable username for HTTP Basic, Telnet, web UI logins or script inputs."
+msgstr ""
+
+#: includes/arrays.php
+msgid "Password"
+msgstr ""
+
+#: includes/arrays.php
+msgid "The password paired with the username. Stored encrypted."
+msgstr ""
+
+#: includes/arrays.php
+msgid "SSH"
+msgstr ""
+
+#: includes/arrays.php
+msgid "CLI"
+msgstr ""
+
+#: includes/arrays.php
+msgid "The SSH login username."
+msgstr ""
+
+#: includes/arrays.php
+msgid "Authentication Method"
+msgstr ""
+
+#: includes/arrays.php
+msgid "Authenticate with a password or a private key."
+msgstr ""
+
+#: includes/arrays.php
+msgid "Private Key"
+msgstr ""
+
+#: includes/arrays.php
+msgid "The SSH password (when using password authentication). Stored encrypted."
+msgstr ""
+
+#: includes/arrays.php
+msgid "The PEM private key (when using key authentication). Stored encrypted."
+msgstr ""
+
+#: includes/arrays.php
+msgid "Key Passphrase"
+msgstr ""
+
+#: includes/arrays.php
+msgid "The optional passphrase protecting the private key. Stored encrypted."
+msgstr ""
+
+#: includes/arrays.php
+msgid "Port"
+msgstr ""
+
+#: includes/arrays.php
+msgid "The TCP port for the SSH service."
+msgstr ""
+
+#: includes/arrays.php
+msgid "Bearer / API Token"
+msgstr ""
+
+#: includes/arrays.php
+msgid "API"
+msgstr ""
+
+#: includes/arrays.php
+msgid "Bearer Token"
+msgstr ""
+
+#: includes/arrays.php
+msgid "The opaque bearer token sent as an Authorization header. Stored encrypted."
+msgstr ""
+
+#: includes/arrays.php
+msgid "Header Name"
+msgstr ""
+
+#: includes/arrays.php
+msgid "The HTTP header the token is sent in."
+msgstr ""
+
+#: includes/arrays.php
+msgid "API Key"
+msgstr ""
+
+#: includes/arrays.php
+msgid "The API key value. Stored encrypted."
+msgstr ""
+
+#: includes/arrays.php
+msgid "Placement"
+msgstr ""
+
+#: includes/arrays.php
+msgid "Whether the key is sent as an HTTP header or a query parameter."
+msgstr ""
+
+#: includes/arrays.php
+msgid "Header"
+msgstr ""
+
+#: includes/arrays.php
+msgid "Query Parameter"
+msgstr ""
+
+#: includes/arrays.php
+msgid "Parameter Name"
+msgstr ""
+
+#: includes/arrays.php
+msgid "The header or query parameter name carrying the key (e.g. X-API-Key)."
+msgstr ""
+
+#: includes/arrays.php
+msgid "GitHub Personal Access Token"
+msgstr ""
+
+#: includes/arrays.php
+msgid "The optional GitHub username associated with the token."
+msgstr ""
+
+#: includes/arrays.php
+msgid "Personal Access Token"
+msgstr ""
+
+#: includes/arrays.php
+msgid "The GitHub personal access token. Stored encrypted."
+msgstr ""
+
+#: includes/arrays.php
+msgid "OAuth 2.0 Client Credentials"
+msgstr ""
+
+#: includes/arrays.php
+msgid "Client ID"
+msgstr ""
+
+#: includes/arrays.php
+msgid "The OAuth 2.0 client identifier."
+msgstr ""
+
+#: includes/arrays.php
+msgid "Client Secret"
+msgstr ""
+
+#: includes/arrays.php
+msgid "The OAuth 2.0 client secret. Stored encrypted."
+msgstr ""
+
+#: includes/arrays.php
+msgid "Token URL"
+msgstr ""
+
+#: includes/arrays.php
+msgid "The token endpoint used for the client_credentials grant."
+msgstr ""
+
+#: includes/arrays.php
+msgid "Scopes"
+msgstr ""
+
+#: includes/arrays.php
+msgid "An optional space delimited list of scopes to request."
+msgstr ""
+
+#: includes/arrays.php
+msgid "HTTP Basic Auth"
+msgstr ""
+
+#: includes/arrays.php
+msgid "The HTTP Basic auth username."
+msgstr ""
+
+#: includes/arrays.php
+msgid "The HTTP Basic auth password. Stored encrypted."
+msgstr ""
+
+#: includes/arrays.php
+msgid "WMI (Windows)"
+msgstr ""
+
+#: includes/arrays.php
+msgid "Device"
+msgstr ""
+
+#: includes/arrays.php
+msgid "Domain"
+msgstr ""
+
+#: includes/arrays.php
+msgid "The optional Windows domain."
+msgstr ""
+
+#: includes/arrays.php
+msgid "The Windows account username."
+msgstr ""
+
+#: includes/arrays.php
+msgid "The Windows account password. Stored encrypted."
+msgstr ""
+
+#: includes/arrays.php
+msgid "IPMI / Redfish (BMC)"
+msgstr ""
+
+#: includes/arrays.php
+msgid "The out-of-band controller username."
+msgstr ""
+
+#: includes/arrays.php
+msgid "The out-of-band controller password. Stored encrypted."
+msgstr ""
+
+#: includes/arrays.php
+msgid "Protocol"
+msgstr ""
+
+#: includes/arrays.php
+msgid "The management protocol exposed by the controller."
+msgstr ""
+
+#: includes/arrays.php
+msgid "Database"
+msgstr ""
+
+#: includes/arrays.php
+msgid "Driver"
+msgstr ""
+
+#: includes/arrays.php
+msgid "The database engine this credential connects to."
+msgstr ""
+
+#: includes/arrays.php
+msgid "Host"
+msgstr ""
+
+#: includes/arrays.php
+msgid "The database server hostname or IP address."
+msgstr ""
+
+#: includes/arrays.php
+msgid "The database server TCP port."
+msgstr ""
+
+#: includes/arrays.php
+msgid "The database account username."
+msgstr ""
+
+#: includes/arrays.php
+msgid "The database account password. Stored encrypted."
+msgstr ""
+
+#: includes/arrays.php
+msgid "Database Name"
+msgstr ""
+
+#: includes/arrays.php
+msgid "The optional default database/schema name."
+msgstr ""
+
+#: includes/arrays.php
+msgid "VMware / vCenter"
+msgstr ""
+
+#: includes/arrays.php
+msgid "Server"
+msgstr ""
+
+#: includes/arrays.php
+msgid "The vCenter or ESXi API endpoint."
+msgstr ""
+
+#: includes/arrays.php
+msgid "The hypervisor API username."
+msgstr ""
+
+#: includes/arrays.php
+msgid "The hypervisor API password. Stored encrypted."
+msgstr ""
+
+#: includes/arrays.php
+msgid "TLS Client Certificate"
+msgstr ""
+
+#: includes/arrays.php
+msgid "Certificate (PEM)"
+msgstr ""
+
+#: includes/arrays.php
+msgid "The PEM client certificate. Public material, stored as entered."
+msgstr ""
+
+#: includes/arrays.php
+msgid "Private Key (PEM)"
+msgstr ""
+
+#: includes/arrays.php
+msgid "The PEM private key for the client certificate. Stored encrypted."
+msgstr ""
+
+#: includes/arrays.php
+msgid "CA Bundle (PEM)"
+msgstr ""
+
+#: includes/arrays.php
+msgid "An optional PEM CA bundle used to verify the peer."
+msgstr ""
+
+#: includes/arrays.php
+#, php-format
+msgid "Tier %d: %s"
+msgstr ""
+
+#: includes/functions.php
+msgid "A password is required for SSH password authentication."
+msgstr ""
+
+#: includes/functions.php
+msgid "A private key is required for SSH key authentication."
+msgstr ""
+
+#: includes/functions.php
+msgid "SNMP v3 privacy requires an authentication protocol; noAuthPriv is not a valid security level."
+msgstr ""
+
+#: includes/functions.php
+msgid "An authentication passphrase is required when an SNMP v3 authentication protocol is selected."
+msgstr ""
+
+#: includes/functions.php
+msgid "A privacy passphrase is required when an SNMP v3 privacy protocol is selected."
+msgstr ""
+
+#: setup.php
+msgid "Configuration"
+msgstr ""
+
+#: setup.php
+msgid "(Edit)"
+msgstr ""
+
+#: setup.php
+msgid "Actions"
+msgstr ""
+
+#: setup.php
+msgid "(Save)"
+msgstr ""

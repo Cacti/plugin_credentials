@@ -1,0 +1,11 @@
+1.0
+-feature: Initial release of the Credentials plugin
+-feature: Tier 1 credential types - SNMP v1/v2c Community, SNMP v3 (USM), Username/Password, SSH
+-feature: Tier 2 credential types - Bearer/API Token, API Key, GitHub PAT, OAuth 2.0 Client Credentials, HTTP Basic Auth
+-feature: Tier 3 credential types - WMI, IPMI/Redfish, Database, VMware/vCenter, TLS Client Certificate
+-feature: Store credentials in the 'credentials' table with name, description, user_id, enabled, create_date, last_updated and JSON properties columns
+-feature: Render each type's required and optional fields with tooltips using the Cacti Form API
+-feature: Encrypt all sensitive fields with the Cacti core secret functions and never render stored secrets in clear text
+-feature: Place the 'Credentials' menu pick below 'User Domains' (1.2.x) or 'Login Providers' (develop/1.3+)
+-feature: Gate credentials.php access on the core Users/Groups permission
+-feature: Warn with a jQueryUI dialog about losing stored data before switching the Credential Type of an existing credential
