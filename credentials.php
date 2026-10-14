@@ -407,6 +407,7 @@ function credentials_list(): void {
 	$allowed_sort = array(
 		'name'         => 'c.name',
 		'type'         => 'c.type',
+		'description'  => 'c.description',
 		'enabled'      => 'c.enabled',
 		'owner'        => 'owner',
 		'last_updated' => 'c.last_updated',
@@ -461,12 +462,13 @@ function credentials_list(): void {
 		strURL += '&filter=' + encodeURIComponent($('#filter').val());
 		strURL += '&type='   + encodeURIComponent($('#type').val());
 		strURL += '&rows='   + encodeURIComponent($('#rows').val());
-		loadUrl({url:strURL});
+		strURL += '&page=1';
+		loadPageNoHeader(strURL);
 	}
 
 	function clearFilter() {
 		strURL = 'credentials.php?clear=true&header=false';
-		loadUrl({url:strURL});
+		loadPageNoHeader(strURL);
 	}
 
 	$(function() {
@@ -588,6 +590,8 @@ function credentials_list(): void {
  * @return void
  */
 function credentials_edit(): void {
+	global $config;
+
 	get_filter_request_var('id');
 
 	$id  = isempty_request_var('id') ? 0 : get_request_var('id');
@@ -657,6 +661,7 @@ function credentials_edit(): void {
 			'description'   => __('Whether this credential is available for use.', 'credentials'),
 			'value'         => $row['enabled'],
 			'default'       => 'on',
+			'form_id'       => $id,
 		),
 	);
 
@@ -740,6 +745,42 @@ function credentials_edit(): void {
 		'continue' => __('Continue', 'credentials'),
 		'cancel'   => __('Cancel', 'credentials'),
 	), JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP);?>;
+
+	// Cacti AJAX navigation swaps only #main, so the page_head <script> that
+	// loads credentials.js is absent when Credentials is entered from another
+	// Console page, and its ready handler never reruns for AJAX-loaded Add/Edit
+	// fragments. Load the script when needed and (re)initialize the form-scoped
+	// handler for this fragment; credentialsInitTypeWarning() is idempotent.
+	(function() {
+		function init() {
+			if (typeof window.credentialsInitTypeWarning === 'function') {
+				window.credentialsInitTypeWarning();
+			}
+		}
+
+		if (typeof window.credentialsInitTypeWarning === 'function') {
+			init();
+		} else {
+			var existing = document.getElementById('credentials-js');
+
+			if (existing) {
+				existing.addEventListener('load', init);
+			} else {
+				var s   = document.createElement('script');
+				s.id    = 'credentials-js';
+				s.src   = '<?php print $config['url_path'];?>plugins/credentials/credentials.js';
+				var cur = document.currentScript;
+
+				if (cur && cur.nonce) {
+					s.setAttribute('nonce', cur.nonce);
+					s.nonce = cur.nonce;
+				}
+
+				s.onload = init;
+				document.head.appendChild(s);
+			}
+		}
+	})();
 	</script>
 	<?php
 

@@ -15,10 +15,11 @@
 // already-created credential, because saving after the switch replaces the
 // stored type-specific values. The credentialsId / credentialsOriginalType
 // globals are emitted inline by credentials.php on the edit form.
-$(function() {
-	// This script loads on every credentials.php view, but the #type id exists on
-	// both the edit form and the list filter. Bind only on the edit form, which
-	// is identified by the edit-only global the page emits.
+function credentialsInitTypeWarning() {
+	// Invoked on full-page load and from each AJAX-loaded edit-form fragment, so
+	// it must be safe to run repeatedly. The #type id exists on both the edit
+	// form and the list filter; bind only on the edit form, identified by the
+	// edit-only global the page emits.
 	if (typeof credentialsOriginalType === 'undefined') {
 		return;
 	}
@@ -29,7 +30,7 @@ $(function() {
 		return;
 	}
 
-	// the value currently rendered on the form; Cancel reverts to this
+	// the value currently rendered on the form; Cancel/Escape revert to this
 	var lastType = typeSelect.val();
 
 	function reloadForType(newType, id) {
@@ -42,7 +43,9 @@ $(function() {
 		document.location = url;
 	}
 
-	typeSelect.on('change', function() {
+	// Rebind idempotently: this runs for every edit-form fragment, so drop any
+	// previous handler before binding to avoid stacking duplicates.
+	typeSelect.off('change.credentials').on('change.credentials', function() {
 		var newType = $(this).val();
 
 		if (newType === lastType) {
@@ -73,6 +76,11 @@ $(function() {
 				width: 480,
 				resizable: false,
 				close: function() {
+					// Escape and the title-bar X also land here; revert the selector
+					// to the rendered type so the shown fields and the selection stay
+					// consistent. Continue has already advanced lastType, so this is a
+					// no-op for it.
+					typeSelect.val(lastType).trigger('change.select2');
 					$(this).remove();
 				},
 				buttons: [
@@ -89,9 +97,8 @@ $(function() {
 						text: s.cancel,
 						class: 'ui-button ui-corner-all ui-widget',
 						click: function() {
+							// the dialog close handler reverts the selector
 							$(this).dialog('close');
-							// revert the selection without re-triggering this handler
-							typeSelect.val(lastType).trigger('change.select2');
 						}
 					}
 				]
@@ -101,4 +108,8 @@ $(function() {
 			reloadForType(newType, id);
 		}
 	});
+}
+
+$(function() {
+	credentialsInitTypeWarning();
 });
