@@ -1,3 +1,15 @@
+1.1
+-feature: External secret providers - resolve credential secrets from HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, Google Cloud Secret Manager and CyberArk Conjur
+-feature: Pluggable CredentialProvider driver interface and registry so additional secret stores can be added without changing the storage or UI layer
+-feature: New 'credential_providers' table storing provider instances; per-connection secrets (tokens, keys, client secrets) encrypted with the Cacti core secret functions
+-feature: New 'Secret Providers' management page (list/add/edit/enable/disable/delete) with a per-provider 'Test Connection' self-check
+-feature: Per-credential 'Secret Provider' selector; a provider-backed secret field stores a non-sensitive reference the provider resolves at poll time instead of the secret itself
+-feature: Support more than one provider instance of the same or different types side by side, mixing local and external storage per credential
+-feature: Reference syntax with an optional '#key' selector to pull a single field from a JSON secret, and dotted paths into nested JSON
+-feature: Per-request resolution cache so a poll does not repeatedly round-trip to a store; failures fail closed and are logged without leaking secrets
+-feature: Add a 'provider_id' column to the 'credentials' table and an idempotent upgrade path for existing installations
+-feature: Add a 'Secret Providers' menu pick and breadcrumb navigation, gated on the core Users/Groups permission
+
 1.0
 -feature: Initial release of the Credentials plugin
 -feature: Tier 1 credential types - SNMP v1/v2c Community, SNMP v3 (USM), Username/Password, SSH

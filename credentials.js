@@ -40,7 +40,30 @@ function credentialsInitTypeWarning() {
 			url += '&id=' + id;
 		}
 
+		if (typeof credentialsProviderCurrent !== 'undefined') {
+			url += '&provider_id=' + encodeURIComponent(credentialsProviderCurrent);
+		}
+
 		document.location = url;
+	}
+
+	// Switching the backing Secret Provider re-renders the type-specific fields
+	// (masked local secrets vs. plain provider references), so reload the edit
+	// form for the newly selected provider, preserving the current type and id.
+	var providerSelect = $('#provider_id');
+
+	if (providerSelect.length) {
+		providerSelect.off('change.credprovider').on('change.credprovider', function() {
+			var id    = (typeof credentialsId !== 'undefined') ? credentialsId : 0;
+			var type  = (typeof credentialsCurrentType !== 'undefined') ? credentialsCurrentType : $('#type').val();
+			var url   = 'credentials.php?action=edit&type=' + encodeURIComponent(type) + '&provider_id=' + encodeURIComponent($(this).val());
+
+			if (id > 0) {
+				url += '&id=' + id;
+			}
+
+			document.location = url;
+		});
 	}
 
 	// Rebind idempotently: this runs for every edit-form fragment, so drop any
