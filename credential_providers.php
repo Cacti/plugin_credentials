@@ -82,6 +82,14 @@ switch (get_request_var('action')) {
  * @return void
  */
 function form_save(): void {
+	/* saving changes state: require POST so the request carries Cacti's CSRF
+	 * token and cannot be triggered through a crafted GET link */
+	if (!isset($_SERVER['REQUEST_METHOD']) || strtoupper($_SERVER['REQUEST_METHOD']) !== 'POST') {
+		header('Location: credential_providers.php');
+
+		exit;
+	}
+
 	if (!isset_request_var('save_component_provider')) {
 		header('Location: credential_providers.php');
 
@@ -374,6 +382,8 @@ function provider_ajax_test(): void {
  * @return void
  */
 function provider_list(): void {
+	global $actions;
+
 	$filters = array(
 		'rows' => array(
 			'filter'  => FILTER_VALIDATE_INT,

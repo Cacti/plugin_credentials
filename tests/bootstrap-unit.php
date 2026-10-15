@@ -99,6 +99,23 @@ if (!function_exists('credentials_test_reset_db_mocks')) {
 	}
 }
 
+if (!function_exists('credentials_test_register_driver')) {
+	// Register an in-memory provider driver for the resolution/orchestration
+	// tests and drop the cached registry so it is rebuilt including the driver.
+	function credentials_test_register_driver($driver) {
+		$GLOBALS['__credentials_test_drivers'][] = $driver;
+		unset($GLOBALS['__credentials_provider_registry']);
+	}
+}
+
+if (!function_exists('credentials_test_reset_drivers')) {
+	// Remove any registered test drivers and the cached registry so the suite
+	// returns to exactly the five production drivers.
+	function credentials_test_reset_drivers() {
+		unset($GLOBALS['__credentials_test_drivers'], $GLOBALS['__credentials_provider_registry']);
+	}
+}
+
 if (!function_exists('credentials_test_db_result')) {
 	function credentials_test_db_result($fn, $sql, $params, $default) {
 		foreach (array_reverse($GLOBALS['__test_db_fixtures']) as $fixture) {
@@ -192,6 +209,21 @@ if (!function_exists('api_plugin_db_table_create')) {
 		$GLOBALS['__test_db_calls'][] = array('fn' => 'api_plugin_db_table_create', 'sql' => $table, 'params' => $data);
 
 		return true;
+	}
+}
+
+if (!function_exists('api_plugin_db_add_column')) {
+	function api_plugin_db_add_column($plugin, $table, $column) {
+		$GLOBALS['__test_db_calls'][] = array('fn' => 'api_plugin_db_add_column', 'sql' => $table, 'params' => $column);
+
+		return true;
+	}
+}
+
+if (!function_exists('db_index_exists')) {
+	function db_index_exists($table, $index, $log = true, $db_conn = false) {
+		// Default false so the guarded index migration runs; tests may override.
+		return credentials_test_db_result('db_index_exists', $table . ' ' . $index, array(), false);
 	}
 }
 

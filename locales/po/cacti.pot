@@ -29,204 +29,204 @@ msgstr ""
 msgid "Disable"
 msgstr ""
 
-#: credential_providers.php:99
+#: credential_providers.php:107
 msgid "The selected provider type is not valid."
 msgstr ""
 
-#: credential_providers.php:108
+#: credential_providers.php:116
 msgid "A provider name is required."
 msgstr ""
 
-#: credential_providers.php:142 credentials.php:168
+#: credential_providers.php:150 credentials.php:173
 msgid ""
 "Cannot store a secret: the Cacti core secret encryption functions are "
 "unavailable on this installation."
 msgstr ""
 
-#: credential_providers.php:158 credential_providers.php:183
-#: credentials.php:215 credentials.php:241
+#: credential_providers.php:166 credential_providers.php:191
+#: credentials.php:220 credentials.php:246
 #, php-format
 msgid "'%s' is required."
 msgstr ""
 
-#: credential_providers.php:167 credentials.php:224
+#: credential_providers.php:175 credentials.php:229
 msgid ""
 "Could not encrypt the secret. Verify the Cacti encryption key configuration "
 "and try again."
 msgstr ""
 
-#: credential_providers.php:196
+#: credential_providers.php:204
 msgid ""
 "The provider could not be saved because one of its fields contains invalid "
 "characters. Please re-enter the affected values and try again."
 msgstr ""
 
-#: credential_providers.php:213
+#: credential_providers.php:221
 msgid "Secret provider saved."
 msgstr ""
 
-#: credential_providers.php:216
+#: credential_providers.php:224
 msgid "Failed to save the secret provider."
 msgstr ""
 
-#: credential_providers.php:254
+#: credential_providers.php:262
 #, php-format
 msgid "A provider still used by %d credential(s) was not deleted."
 msgstr ""
 
-#: credential_providers.php:306
+#: credential_providers.php:314
 msgid "Delete the following secret provider(s)?"
 msgstr ""
 
-#: credential_providers.php:308
+#: credential_providers.php:316
 msgid "Enable the following secret provider(s)?"
 msgstr ""
 
-#: credential_providers.php:310
+#: credential_providers.php:318
 msgid "Disable the following secret provider(s)?"
 msgstr ""
 
-#: credential_providers.php:320 credential_providers.php:734
-#: credentials.php:393 credentials.php:845
+#: credential_providers.php:328 credential_providers.php:744
+#: credentials.php:398 credentials.php:850
 msgid "Cancel"
 msgstr ""
 
-#: credential_providers.php:320 credential_providers.php:733
-#: credentials.php:393 credentials.php:844
+#: credential_providers.php:328 credential_providers.php:743
+#: credentials.php:398 credentials.php:849
 msgid "Continue"
 msgstr ""
 
-#: credential_providers.php:349
+#: credential_providers.php:357
 msgid "Invalid request method."
 msgstr ""
 
-#: credential_providers.php:359
+#: credential_providers.php:367
 msgid "Save the provider before testing it."
 msgstr ""
 
-#: credential_providers.php:471 credential_providers.php:510 setup.php:201
-#: setup.php:219 setup.php:260
+#: credential_providers.php:481 credential_providers.php:520 setup.php:228
+#: setup.php:246 setup.php:287
 msgid "Secret Providers"
 msgstr ""
 
-#: credential_providers.php:479 credentials.php:539
+#: credential_providers.php:489 credentials.php:544
 msgid "Search"
 msgstr ""
 
-#: credential_providers.php:483
+#: credential_providers.php:493
 msgid "Providers"
 msgstr ""
 
-#: credential_providers.php:486 credentials.php:557
+#: credential_providers.php:496 credentials.php:562
 msgid "All"
 msgstr ""
 
-#: credential_providers.php:497 credentials.php:568
+#: credential_providers.php:507 credentials.php:573
 msgid "Go"
 msgstr ""
 
-#: credential_providers.php:498 credentials.php:569
+#: credential_providers.php:508 credentials.php:574
 msgid "Clear"
 msgstr ""
 
-#: credential_providers.php:519 credential_providers.php:605
-#: credentials.php:590 credentials.php:714
+#: credential_providers.php:529 credential_providers.php:615
+#: credentials.php:595 credentials.php:719
 msgid "Name"
 msgstr ""
 
-#: credential_providers.php:520 credentials.php:543 credentials.php:591
+#: credential_providers.php:530 credentials.php:548 credentials.php:596
 msgid "Type"
 msgstr ""
 
-#: credential_providers.php:521 credential_providers.php:613
-#: credentials.php:593 credentials.php:722
+#: credential_providers.php:531 credential_providers.php:623
+#: credentials.php:598 credentials.php:727
 msgid "Description"
 msgstr ""
 
-#: credential_providers.php:522 credential_providers.php:628
-#: credentials.php:595 credentials.php:744
+#: credential_providers.php:532 credential_providers.php:638
+#: credentials.php:600 credentials.php:749
 msgid "Enabled"
 msgstr ""
 
-#: credential_providers.php:523 credentials.php:596
+#: credential_providers.php:533 credentials.php:601
 msgid "Last Updated"
 msgstr ""
 
-#: credential_providers.php:537 credentials.php:613
+#: credential_providers.php:547 credentials.php:618
 msgid "Yes"
 msgstr ""
 
-#: credential_providers.php:537 credentials.php:613
+#: credential_providers.php:547 credentials.php:618
 msgid "No"
 msgstr ""
 
-#: credential_providers.php:544
+#: credential_providers.php:554
 msgid "No Secret Providers Found"
 msgstr ""
 
-#: credential_providers.php:600
+#: credential_providers.php:610
 #, php-format
 msgid "Secret Provider [edit: %s]"
 msgstr ""
 
-#: credential_providers.php:600
+#: credential_providers.php:610
 msgid "Secret Provider [new]"
 msgstr ""
 
-#: credential_providers.php:606
+#: credential_providers.php:616
 msgid "A unique, meaningful name for this provider instance."
 msgstr ""
 
-#: credential_providers.php:614
+#: credential_providers.php:624
 msgid "An optional description of this provider instance."
 msgstr ""
 
-#: credential_providers.php:621
+#: credential_providers.php:631
 msgid "Provider Type"
 msgstr ""
 
-#: credential_providers.php:622
+#: credential_providers.php:632
 msgid ""
 "The external secret store this provider connects to. Changing the type on an "
 "existing provider discards the previously stored type-specific configuration "
 "when you save."
 msgstr ""
 
-#: credential_providers.php:629
+#: credential_providers.php:639
 msgid "Whether this provider is available to resolve credential secrets."
 msgstr ""
 
-#: credential_providers.php:677 credentials.php:797
+#: credential_providers.php:687 credentials.php:802
 msgid "A value is currently stored (encrypted)."
 msgstr ""
 
-#: credential_providers.php:677 credentials.php:797
+#: credential_providers.php:687 credentials.php:802
 msgid "Leave this blank to keep it, or enter a new value to replace it."
 msgstr ""
 
-#: credential_providers.php:679 credentials.php:799
+#: credential_providers.php:689 credentials.php:804
 msgid "No value stored yet."
 msgstr ""
 
-#: credential_providers.php:720
+#: credential_providers.php:730
 msgid "Test Connection"
 msgstr ""
 
-#: credential_providers.php:731
+#: credential_providers.php:741
 msgid "Change Provider Type?"
 msgstr ""
 
-#: credential_providers.php:732
+#: credential_providers.php:742
 msgid ""
 "Changing the Provider Type will discard the configuration stored for the "
 "current type when you save this provider. Do you want to continue?"
 msgstr ""
 
-#: credential_providers.php:735
+#: credential_providers.php:745
 msgid "Testing..."
 msgstr ""
 
-#: credential_providers.php:736
+#: credential_providers.php:746
 msgid "The test request failed."
 msgstr ""
 
@@ -246,99 +246,99 @@ msgstr ""
 msgid "The selected secret provider is disabled."
 msgstr ""
 
-#: credentials.php:186
+#: credentials.php:191
 #, php-format
 msgid "A reference for '%s' is required."
 msgstr ""
 
-#: credentials.php:202
+#: credentials.php:207
 #, php-format
 msgid "The value and its confirmation for '%s' do not match."
 msgstr ""
 
-#: credentials.php:266
+#: credentials.php:271
 msgid ""
 "The credential could not be saved because one of its fields contains invalid "
 "characters. Please re-enter the affected values and try again."
 msgstr ""
 
-#: credentials.php:291
+#: credentials.php:296
 msgid "Credential saved."
 msgstr ""
 
-#: credentials.php:294
+#: credentials.php:299
 msgid "Failed to save the credential."
 msgstr ""
 
-#: credentials.php:379
+#: credentials.php:384
 msgid "Delete the following credential(s)?"
 msgstr ""
 
-#: credentials.php:381
+#: credentials.php:386
 msgid "Enable the following credential(s)?"
 msgstr ""
 
-#: credentials.php:383
+#: credentials.php:388
 msgid "Disable the following credential(s)?"
 msgstr ""
 
-#: credentials.php:531 credentials.php:554 credentials.php:581 setup.php:200
-#: setup.php:218 setup.php:232
+#: credentials.php:536 credentials.php:559 credentials.php:586 setup.php:227
+#: setup.php:245 setup.php:259
 msgid "Credentials"
 msgstr ""
 
-#: credentials.php:546
+#: credentials.php:551
 msgid "Any"
 msgstr ""
 
-#: credentials.php:592 credentials.php:737
+#: credentials.php:597 credentials.php:742
 msgid "Secret Provider"
 msgstr ""
 
-#: credentials.php:594
+#: credentials.php:599
 msgid "Owner"
 msgstr ""
 
-#: credentials.php:604
+#: credentials.php:609
 msgid "Local Database"
 msgstr ""
 
-#: credentials.php:612
+#: credentials.php:617
 msgid "N/A"
 msgstr ""
 
-#: credentials.php:620
+#: credentials.php:625
 msgid "No Credentials Found"
 msgstr ""
 
-#: credentials.php:709
+#: credentials.php:714
 #, php-format
 msgid "Credential [edit: %s]"
 msgstr ""
 
-#: credentials.php:709
+#: credentials.php:714
 msgid "Credential [new]"
 msgstr ""
 
-#: credentials.php:715
+#: credentials.php:720
 msgid "A unique, meaningful name for this credential."
 msgstr ""
 
-#: credentials.php:723
+#: credentials.php:728
 msgid "An optional description of where this credential is used."
 msgstr ""
 
-#: credentials.php:730
+#: credentials.php:735
 msgid "Credential Type"
 msgstr ""
 
-#: credentials.php:731
+#: credentials.php:736
 msgid ""
 "The type of credential. Changing the type on an existing credential discards "
 "the previously stored type-specific values when you save."
 msgstr ""
 
-#: credentials.php:738
+#: credentials.php:743
 msgid ""
 "Where the secret values for this credential live. Choose the local encrypted "
 "database, or an external secret store. When an external provider is "
@@ -346,19 +346,19 @@ msgid ""
 "time instead of the secret itself."
 msgstr ""
 
-#: credentials.php:745
+#: credentials.php:750
 msgid "Whether this credential is available for use."
 msgstr ""
 
-#: credentials.php:786
+#: credentials.php:791
 msgid "(reference)"
 msgstr ""
 
-#: credentials.php:842
+#: credentials.php:847
 msgid "Change Credential Type?"
 msgstr ""
 
-#: credentials.php:843
+#: credentials.php:848
 msgid ""
 "Changing the Credential Type will discard the values stored for the current "
 "type when you save this credential. Do you want to continue?"
@@ -839,22 +839,22 @@ msgstr ""
 msgid "Secret Reference"
 msgstr ""
 
-#: includes/providers/AbstractProvider.php:120
+#: includes/providers/AbstractProvider.php:124
 #, php-format
 msgid ""
 "The stored secret is not a JSON object, so the '%s' key cannot be selected."
 msgstr ""
 
-#: includes/providers/AbstractProvider.php:128
+#: includes/providers/AbstractProvider.php:132
 #, php-format
 msgid "The stored secret does not contain the '%s' key."
 msgstr ""
 
-#: includes/providers/AbstractProvider.php:158
+#: includes/providers/AbstractProvider.php:162
 msgid "The PHP cURL extension is required to reach external secret providers."
 msgstr ""
 
-#: includes/providers/AbstractProvider.php:203
+#: includes/providers/AbstractProvider.php:208
 msgid "The request to the secret provider failed."
 msgstr ""
 
@@ -970,34 +970,46 @@ msgid ""
 "is used."
 msgstr ""
 
-#: includes/providers/AwsSecretsManagerProvider.php:213
+#: includes/providers/AwsSecretsManagerProvider.php:222
+msgid "The configured ECS credentials endpoint is not an allowed address."
+msgstr ""
+
+#: includes/providers/AwsSecretsManagerProvider.php:251
+msgid "Unable to read ECS task role credentials."
+msgstr ""
+
+#: includes/providers/AwsSecretsManagerProvider.php:257
+msgid "The ECS credentials endpoint returned no usable credentials."
+msgstr ""
+
+#: includes/providers/AwsSecretsManagerProvider.php:335
 msgid ""
 "Unable to obtain an instance metadata token; is Cacti running on an AWS "
 "instance with a role?"
 msgstr ""
 
-#: includes/providers/AwsSecretsManagerProvider.php:221
+#: includes/providers/AwsSecretsManagerProvider.php:343
 msgid "No IAM role is attached to this instance."
 msgstr ""
 
-#: includes/providers/AwsSecretsManagerProvider.php:229
+#: includes/providers/AwsSecretsManagerProvider.php:351
 msgid "Unable to read instance role credentials."
 msgstr ""
 
-#: includes/providers/AwsSecretsManagerProvider.php:235
+#: includes/providers/AwsSecretsManagerProvider.php:357
 msgid "The instance metadata service returned no usable credentials."
 msgstr ""
 
-#: includes/providers/AwsSecretsManagerProvider.php:264
+#: includes/providers/AwsSecretsManagerProvider.php:386
 msgid "Unable to encode the AWS request."
 msgstr ""
 
-#: includes/providers/AwsSecretsManagerProvider.php:355
+#: includes/providers/AwsSecretsManagerProvider.php:477
 #, php-format
 msgid "AWS Secrets Manager error: %s (HTTP %d)."
 msgstr ""
 
-#: includes/providers/AwsSecretsManagerProvider.php:358
+#: includes/providers/AwsSecretsManagerProvider.php:480
 #, php-format
 msgid "AWS Secrets Manager returned HTTP %d."
 msgstr ""
@@ -1367,20 +1379,16 @@ msgstr ""
 msgid "Google Cloud Secret Manager returned HTTP %d."
 msgstr ""
 
-#: includes/providers.php:183
+#: includes/providers.php:190
 msgid "Local Database (encrypted)"
 msgstr ""
 
-#: includes/providers.php:194
+#: includes/providers.php:201
 msgid "(disabled)"
 msgstr ""
 
-#: includes/providers.php:267
+#: includes/providers.php:271
 msgid "The provider could not be found or its type is unknown."
-msgstr ""
-
-#: includes/providers.php:273
-msgid "The provider type is not supported."
 msgstr ""
 
 #: includes/providers/VaultProvider.php:35
@@ -1524,46 +1532,45 @@ msgstr ""
 msgid "Vault returned an unexpected response reading the secret."
 msgstr ""
 
-#: includes/providers/VaultProvider.php:221
+#: includes/providers/VaultProvider.php:216
+msgid "Vault returned an unexpected secret payload."
+msgstr ""
+
+#: includes/providers/VaultProvider.php:227
 msgid ""
 "The Vault secret holds multiple fields; append '#key' to the reference to "
 "select one."
 msgstr ""
 
-#: includes/providers/VaultProvider.php:225
-#, php-format
-msgid "The Vault secret does not contain the '%s' key."
-msgstr ""
-
-#: includes/providers/VaultProvider.php:248
+#: includes/providers/VaultProvider.php:250
 msgid "AppRole authentication requires both a RoleID and a SecretID."
 msgstr ""
 
-#: includes/providers/VaultProvider.php:266
+#: includes/providers/VaultProvider.php:268
 #, php-format
 msgid "Vault AppRole login failed with HTTP %d."
 msgstr ""
 
-#: includes/providers/VaultProvider.php:272
+#: includes/providers/VaultProvider.php:274
 msgid "Vault AppRole login returned no client token."
 msgstr ""
 
-#: includes/providers/VaultProvider.php:281
+#: includes/providers/VaultProvider.php:283
 msgid "A Vault token is required for Token authentication."
 msgstr ""
 
-#: setup.php:215
+#: setup.php:242
 msgid "Configuration"
 msgstr ""
 
-#: setup.php:239 setup.php:267
+#: setup.php:266 setup.php:294
 msgid "(Edit)"
 msgstr ""
 
-#: setup.php:246 setup.php:274
+#: setup.php:273 setup.php:301
 msgid "Actions"
 msgstr ""
 
-#: setup.php:253 setup.php:281
+#: setup.php:280 setup.php:308
 msgid "(Save)"
 msgstr ""

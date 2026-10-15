@@ -212,22 +212,24 @@ class VaultProvider extends AbstractProvider {
 			? $decoded['data']['data']
 			: $decoded['data'];
 
+		if (!is_array($data)) {
+			return array(false, null, __('Vault returned an unexpected secret payload.', 'credentials'));
+		}
+
 		if ($json_key === null) {
 			/* no key selected: only unambiguous when the secret holds one field */
-			if (is_array($data) && count($data) === 1) {
-				return array(true, (string) reset($data), '');
+			if (count($data) === 1) {
+				$only = reset($data);
+
+				return array(true, is_array($only) ? (string) json_encode($only) : (string) $only, '');
 			}
 
 			return array(false, null, __('The Vault secret holds multiple fields; append \'#key\' to the reference to select one.', 'credentials'));
 		}
 
-		if (!is_array($data) || !array_key_exists($json_key, $data)) {
-			return array(false, null, __('The Vault secret does not contain the \'%s\' key.', $json_key, 'credentials'));
-		}
-
-		$value = $data[$json_key];
-
-		return array(true, is_array($value) ? (string) json_encode($value) : (string) $value, '');
+		/* delegate key selection - including dotted nested paths and structured
+		 * values - to the shared helper the other drivers use */
+		return $this->selectValue((string) json_encode($data), $json_key);
 	}
 
 	/**

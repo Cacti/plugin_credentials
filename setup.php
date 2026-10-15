@@ -60,6 +60,7 @@ function plugin_credentials_install(): void {
 
 	credentials_setup_table();
 	credential_providers_setup_table();
+	credentials_migrate_schema();
 }
 
 /**
@@ -93,8 +94,34 @@ function plugin_credentials_check_config(): bool {
 function plugin_credentials_upgrade(): bool {
 	credentials_setup_table();
 	credential_providers_setup_table();
+	credentials_migrate_schema();
 
 	return true;
+}
+
+/**
+ * Reconcile the schema for installations upgrading from an earlier release.
+ * On the supported Cacti 1.2.29 floor, api_plugin_db_table_create() leaves an
+ * existing table untouched, so the provider_id column added in 1.1 must be
+ * installed explicitly. Both helpers are idempotent: the column and its index
+ * are added only when absent, so this is safe to run on every install and
+ * upgrade without disturbing stored credentials.
+ *
+ * @return void
+ */
+function credentials_migrate_schema(): void {
+	api_plugin_db_add_column('credentials', 'credentials', array(
+		'name'     => 'provider_id',
+		'type'     => 'int(10)',
+		'unsigned' => true,
+		'NULL'     => false,
+		'default'  => '0',
+		'after'    => 'type',
+	));
+
+	if (!db_index_exists('credentials', 'provider_id')) {
+		db_execute('ALTER TABLE credentials ADD INDEX provider_id (provider_id)');
+	}
 }
 
 /**

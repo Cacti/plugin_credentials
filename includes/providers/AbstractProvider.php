@@ -58,6 +58,8 @@ abstract class AbstractProvider implements CredentialProvider {
 
 	/**
 	 * Whether a config flag rendered as a Cacti checkbox ('on'/'') is enabled.
+	 * Only an absent key falls back to the default; an explicit empty value (an
+	 * unchecked checkbox) is a deliberate false, so a disabled toggle is honoured.
 	 *
 	 * @param array  $config The decrypted provider configuration.
 	 * @param string $key    The configuration field name.
@@ -66,11 +68,13 @@ abstract class AbstractProvider implements CredentialProvider {
 	 * @return bool
 	 */
 	protected function flag(array $config, string $key, bool $default = false): bool {
-		if (!isset($config[$key]) || $config[$key] === '') {
+		if (!array_key_exists($key, $config)) {
 			return $default;
 		}
 
-		return $config[$key] === 'on' || $config[$key] === true || $config[$key] === '1' || $config[$key] === 1;
+		$value = $config[$key];
+
+		return $value === 'on' || $value === true || $value === '1' || $value === 1;
 	}
 
 	/**
@@ -175,8 +179,9 @@ abstract class AbstractProvider implements CredentialProvider {
 
 		/* TLS verification is on by default; it can be disabled only by an
 		 * explicit 'tls_verify' => '' on drivers that expose the toggle, and a
-		 * CA bundle path may pin verification to a private authority */
-		$verify   = !isset($config['tls_verify']) ? true : $this->flag($config, 'tls_verify', true);
+		 * CA bundle path may pin verification to a private authority. An absent
+		 * key keeps verification on; an explicit empty value turns it off. */
+		$verify   = $this->flag($config, 'tls_verify', true);
 		$ca_path  = (string) $this->cfg($config, 'ca_bundle_path', '');
 
 		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, $verify);

@@ -25,15 +25,19 @@
         Composer-managed vendor tree, checked out alongside this plugin by
         the CI workflow (see .github/workflows/plugin-ci-workflow.yml).
 
-        credentials.php and the directory index.php guards are web entry
-        points that cannot be loaded into the isolated unit process, so they
-        are measured by the patch-coverage allowlist rather than Clover.
+        credentials.php, credential_providers.php and the directory index.php
+        guards are web entry points that cannot be loaded into the isolated
+        unit process, and the concrete provider drivers perform live network
+        I/O; those are measured by the patch-coverage allowlist rather than
+        Clover. includes/providers.php is the pure registry/orchestration
+        library and is measured here.
     -->
     <source>
         <include>
             <file>setup.php</file>
             <file>includes/arrays.php</file>
             <file>includes/functions.php</file>
+            <file>includes/providers.php</file>
         </include>
     </source>
 </phpunit>

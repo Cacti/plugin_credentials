@@ -196,15 +196,137 @@ class AwsSecretsManagerProvider extends AbstractProvider {
 	}
 
 	/**
-	 * Fetch temporary credentials from the EC2 instance metadata service using
-	 * IMDSv2 (token-protected). Not reachable off an AWS instance; errors are
-	 * surfaced rather than thrown.
+	 * Fetch temporary credentials for the task/instance role. The ECS/EKS
+	 * container credentials endpoint (used by Fargate and ECS task roles) is
+	 * preferred when the standard AWS environment variables are present; only
+	 * when no container source is configured does this fall back to the EC2
+	 * instance metadata service. Not reachable off AWS; errors are surfaced
+	 * rather than thrown.
 	 *
 	 * @param array $config The decrypted provider configuration.
 	 *
 	 * @return array A [array|null credentials, string error] pair.
 	 */
 	private function instanceCredentials(array $config): array {
+		$relative = getenv('AWS_CONTAINER_CREDENTIALS_RELATIVE_URI');
+
+		if ($relative !== false && $relative !== '') {
+			/* the relative URI is always the fixed ECS link-local endpoint */
+			return $this->containerCredentials($config, 'http://169.254.170.2' . $relative);
+		}
+
+		$full = getenv('AWS_CONTAINER_CREDENTIALS_FULL_URI');
+
+		if ($full !== false && $full !== '') {
+			if (!$this->allowedContainerUri($full)) {
+				return array(null, __('The configured ECS credentials endpoint is not an allowed address.', 'credentials'));
+			}
+
+			return $this->containerCredentials($config, $full);
+		}
+
+		return $this->ec2InstanceCredentials($config);
+	}
+
+	/**
+	 * Read task-role credentials from the ECS/EKS container credentials endpoint,
+	 * sending the container authorization token when one is configured.
+	 *
+	 * @param array  $config The decrypted provider configuration.
+	 * @param string $url    The resolved container credentials URL.
+	 *
+	 * @return array A [array|null credentials, string error] pair.
+	 */
+	private function containerCredentials(array $config, string $url): array {
+		$headers = array('Accept: application/json');
+		$token   = $this->containerAuthToken();
+
+		if ($token !== '') {
+			$headers[] = 'Authorization: ' . $token;
+		}
+
+		list($status, $body, $err) = $this->http($config, 'GET', $url, $headers);
+
+		if ($status === null || $status < 200 || $status >= 300) {
+			return array(null, __('Unable to read ECS task role credentials.', 'credentials'));
+		}
+
+		$decoded = $this->decodeJson($body);
+
+		if ($decoded === null || !isset($decoded['AccessKeyId'], $decoded['SecretAccessKey'])) {
+			return array(null, __('The ECS credentials endpoint returned no usable credentials.', 'credentials'));
+		}
+
+		return array(
+			array(
+				'key'    => (string) $decoded['AccessKeyId'],
+				'secret' => (string) $decoded['SecretAccessKey'],
+				'token'  => isset($decoded['Token']) ? (string) $decoded['Token'] : '',
+			),
+			'',
+		);
+	}
+
+	/**
+	 * The ECS container authorization token, read from a token file when one is
+	 * configured, otherwise from the token environment variable.
+	 *
+	 * @return string The token value, or '' when none is configured.
+	 */
+	private function containerAuthToken(): string {
+		$file = getenv('AWS_CONTAINER_AUTHORIZATION_TOKEN_FILE');
+
+		if ($file !== false && $file !== '' && is_readable($file)) {
+			return trim((string) file_get_contents($file));
+		}
+
+		$token = getenv('AWS_CONTAINER_AUTHORIZATION_TOKEN');
+
+		return $token !== false ? trim((string) $token) : '';
+	}
+
+	/**
+	 * Whether a full container credentials URI is an allowed target. Mirrors the
+	 * AWS SDK rule: HTTPS is always allowed; plain HTTP only to a loopback or the
+	 * ECS/EKS link-local addresses, so a crafted endpoint cannot exfiltrate the
+	 * authorization token.
+	 *
+	 * @param string $uri The configured full URI.
+	 *
+	 * @return bool
+	 */
+	private function allowedContainerUri(string $uri): bool {
+		$parts = parse_url($uri);
+
+		if (!is_array($parts) || !isset($parts['scheme'], $parts['host'])) {
+			return false;
+		}
+
+		$scheme = strtolower($parts['scheme']);
+		$host   = strtolower($parts['host']);
+
+		if ($scheme === 'https') {
+			return true;
+		}
+
+		if ($scheme !== 'http') {
+			return false;
+		}
+
+		$allowed = array('localhost', '127.0.0.1', '::1', '169.254.170.2', '169.254.170.23', 'fd00:ec2::23');
+
+		return in_array($host, $allowed, true) || strncmp($host, '127.', 4) === 0;
+	}
+
+	/**
+	 * Fetch temporary credentials from the EC2 instance metadata service using
+	 * IMDSv2 (token-protected).
+	 *
+	 * @param array $config The decrypted provider configuration.
+	 *
+	 * @return array A [array|null credentials, string error] pair.
+	 */
+	private function ec2InstanceCredentials(array $config): array {
 		$imds = 'http://169.254.169.254';
 
 		list($status, $token, $err) = $this->http($config, 'PUT', $imds . '/latest/api/token', array('X-aws-ec2-metadata-token-ttl-seconds: 60'));

@@ -115,9 +115,56 @@ cases every secret is encrypted with the same per‑installation
 
 ## Programmatic use
 
-Other Cacti code and plugins can retrieve a ready-to-use credential (with its
-secret fields decrypted) via `credentials_get($id)` from
-`plugins/credentials/includes/functions.php`.
+Other Cacti code and plugins consume a stored credential through a single
+function, `credentials_get($id)`, declared in
+`plugins/credentials/includes/functions.php`. It returns the credential's
+metadata plus a `fields` map keyed by the published type's field names, with
+every secret already made usable — decrypted for a locally stored credential,
+or resolved through the external provider for a provider-backed one. The caller
+never deals with encryption, provider selection or references.
+
+```php
+// From another plugin or a data-query/script. Make the function available:
+require_once $config['base_path'] . '/plugins/credentials/includes/functions.php';
+
+$credential = credentials_get($credential_id);
+
+if ($credential === false) {
+    cacti_log('Credential not found');
+    return;
+}
+
+// A provider-backed secret can fail closed (bad path, provider down/disabled);
+// the secret field is then boolean false and the failure is already logged.
+switch ($credential['type']) {
+    case 'snmp_community':                      // Tier 1 published type
+        $community = $credential['fields']['community'];        // read community
+        $version   = $credential['fields']['snmp_version'];     // non-secret field
+        break;
+
+    case 'userpass':                            // Tier 1 published type
+        $user = $credential['fields']['username'];
+        $pass = $credential['fields']['password'];
+        if ($pass === false) {
+            cacti_log('Secret could not be resolved from its provider');
+            return;
+        }
+        break;
+
+    case 'bearer_token':                        // Tier 2 published type
+        $header = 'Authorization: Bearer ' . $credential['fields']['token'];
+        break;
+}
+```
+
+The `fields` keys for each published type are exactly those declared in the type
+registry in `includes/arrays.php` (for example `community` / `write_community`
+for `snmp_community`; `sec_name` / `auth_passphrase` / `priv_passphrase` for
+`snmpv3`; `username` / `password` for `userpass`). The returned array also
+includes `name`, `description`, `type`, `provider_id`, `user_id` and `enabled`,
+so a consumer can tell whether a credential is locally stored (`provider_id` is
+`0`) or backed by an external provider — though it rarely needs to, because
+resolution is transparent.
 
 ## Installation
 

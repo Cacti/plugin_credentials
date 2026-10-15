@@ -19,6 +19,10 @@ beforeAll(function () {
 	require_once __DIR__ . '/../../setup.php';
 });
 
+beforeEach(function () {
+	credentials_test_reset_drivers();
+});
+
 it('registers exactly the five shipped provider drivers', function () {
 	$registry = credentials_provider_registry();
 

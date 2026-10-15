@@ -37,25 +37,32 @@ require_once(__DIR__ . '/providers/ConjurProvider.php');
  * @return array<string,CredentialProvider> The driver registry.
  */
 function credentials_provider_registry(): array {
-	static $registry = null;
+	if (!isset($GLOBALS['__credentials_provider_registry'])) {
+		$drivers = array(
+			new VaultProvider(),
+			new AwsSecretsManagerProvider(),
+			new AzureKeyVaultProvider(),
+			new GcpSecretManagerProvider(),
+			new ConjurProvider(),
+		);
 
-	if ($registry !== null) {
-		return $registry;
+		/* The unit suite may register an in-memory driver through this global so
+		 * the resolution/orchestration paths can be exercised without a network.
+		 * It is never populated in production. */
+		if (isset($GLOBALS['__credentials_test_drivers']) && is_array($GLOBALS['__credentials_test_drivers'])) {
+			$drivers = array_merge($drivers, $GLOBALS['__credentials_test_drivers']);
+		}
+
+		$registry = array();
+
+		foreach ($drivers as $driver) {
+			$registry[$driver->type()] = $driver;
+		}
+
+		$GLOBALS['__credentials_provider_registry'] = $registry;
 	}
 
-	$registry = array();
-
-	foreach (array(
-		new VaultProvider(),
-		new AwsSecretsManagerProvider(),
-		new AzureKeyVaultProvider(),
-		new GcpSecretManagerProvider(),
-		new ConjurProvider(),
-	) as $driver) {
-		$registry[$driver->type()] = $driver;
-	}
-
-	return $registry;
+	return $GLOBALS['__credentials_provider_registry'];
 }
 
 /**
@@ -235,11 +242,8 @@ function credentials_provider_resolve_reference(int $provider_id, string $refere
 		return $cache[$cache_key] = false;
 	}
 
+	/* credentials_provider_get() has already validated the driver type */
 	$driver = credentials_provider_driver($provider['type']);
-
-	if ($driver === null) {
-		return $cache[$cache_key] = false;
-	}
 
 	list($ok, $value, $error) = $driver->resolve($provider['config'], $reference);
 
@@ -267,11 +271,8 @@ function credentials_provider_test(int $id): array {
 		return array(false, __('The provider could not be found or its type is unknown.', 'credentials'));
 	}
 
+	/* credentials_provider_get() has already validated the driver type */
 	$driver = credentials_provider_driver($provider['type']);
-
-	if ($driver === null) {
-		return array(false, __('The provider type is not supported.', 'credentials'));
-	}
 
 	list($ok, $message) = $driver->test($provider['config']);
 

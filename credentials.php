@@ -139,10 +139,15 @@ function form_save(): void {
 		$existing = db_fetch_row_prepared('SELECT * FROM credentials WHERE id = ?', array($id));
 
 		if (is_array($existing) && cacti_sizeof($existing)) {
-			$prev_type  = $existing['type'];
-			$prev_owner = $existing['user_id'];
+			$prev_type     = $existing['type'];
+			$prev_owner    = $existing['user_id'];
+			$prev_provider = isset($existing['provider_id']) ? (int) $existing['provider_id'] : 0;
 
-			if ($prev_type == $type) {
+			/* only reuse stored properties when BOTH the type and the backing
+			 * provider are unchanged; otherwise the stored secret fields hold a
+			 * different kind of value (local ciphertext vs. provider reference)
+			 * and a blank input must not silently preserve the old value */
+			if ($prev_type == $type && $prev_provider == $provider_id) {
 				$prev_props = credentials_properties($existing);
 			}
 		}
