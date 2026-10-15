@@ -303,7 +303,6 @@ class AwsSecretsManagerProvider extends AbstractProvider {
 		}
 
 		$scheme = strtolower($parts['scheme']);
-		$host   = strtolower($parts['host']);
 
 		if ($scheme === 'https') {
 			return true;
@@ -313,9 +312,19 @@ class AwsSecretsManagerProvider extends AbstractProvider {
 			return false;
 		}
 
+		/* parse_url keeps the brackets around an IPv6 literal; strip them so the
+		 * bare address can be compared (for example '[::1]' -> '::1') */
+		$host = strtolower(trim((string) $parts['host'], '[]'));
+
 		$allowed = array('localhost', '127.0.0.1', '::1', '169.254.170.2', '169.254.170.23', 'fd00:ec2::23');
 
-		return in_array($host, $allowed, true) || strncmp($host, '127.', 4) === 0;
+		if (in_array($host, $allowed, true)) {
+			return true;
+		}
+
+		/* any 127.0.0.0/8 loopback, but only as a real IPv4 literal - never a DNS
+		 * name such as '127.attacker.example' that merely starts with '127.' */
+		return filter_var($host, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4) !== false && strncmp($host, '127.', 4) === 0;
 	}
 
 	/**

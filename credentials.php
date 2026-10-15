@@ -77,6 +77,14 @@ switch (get_request_var('action')) {
  * @return void
  */
 function form_save(): void {
+	/* saving changes state: require POST so the request carries Cacti's CSRF
+	 * token and cannot be triggered through a crafted GET link */
+	if (!isset($_SERVER['REQUEST_METHOD']) || strtoupper($_SERVER['REQUEST_METHOD']) !== 'POST') {
+		header('Location: credentials.php');
+
+		exit;
+	}
+
 	if (!isset_request_var('save_component_credential')) {
 		header('Location: credentials.php');
 

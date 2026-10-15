@@ -173,8 +173,8 @@ class VaultProvider extends AbstractProvider {
 		}
 
 		$kv_version = (string) $this->cfg($config, 'kv_version', '2');
-		$mount      = trim((string) $this->cfg($config, 'mount', 'secret'), '/');
-		$rel        = ltrim($path, '/');
+		$mount      = $this->encodeSegments(trim((string) $this->cfg($config, 'mount', 'secret'), '/'));
+		$rel        = $this->encodeSegments(ltrim($path, '/'));
 
 		if ($kv_version === '2') {
 			$api_path = $mount . '/data/' . $rel;
@@ -308,6 +308,23 @@ class VaultProvider extends AbstractProvider {
 		}
 
 		return $headers;
+	}
+
+	/**
+	 * Percent-encode each slash-separated segment of a Vault path while keeping
+	 * the slash separators, so a mount or secret path containing spaces or
+	 * reserved characters produces a valid, unambiguous URL.
+	 *
+	 * @param string $path The raw mount or secret path.
+	 *
+	 * @return string
+	 */
+	private function encodeSegments(string $path): string {
+		if ($path === '') {
+			return '';
+		}
+
+		return implode('/', array_map('rawurlencode', explode('/', $path)));
 	}
 
 	/**

@@ -37,19 +37,19 @@ msgstr ""
 msgid "A provider name is required."
 msgstr ""
 
-#: credential_providers.php:150 credentials.php:173
+#: credential_providers.php:150 credentials.php:181
 msgid ""
 "Cannot store a secret: the Cacti core secret encryption functions are "
 "unavailable on this installation."
 msgstr ""
 
 #: credential_providers.php:166 credential_providers.php:191
-#: credentials.php:220 credentials.php:246
+#: credentials.php:228 credentials.php:254
 #, php-format
 msgid "'%s' is required."
 msgstr ""
 
-#: credential_providers.php:175 credentials.php:229
+#: credential_providers.php:175 credentials.php:237
 msgid ""
 "Could not encrypt the secret. Verify the Cacti encryption key configuration "
 "and try again."
@@ -87,12 +87,12 @@ msgid "Disable the following secret provider(s)?"
 msgstr ""
 
 #: credential_providers.php:328 credential_providers.php:744
-#: credentials.php:398 credentials.php:850
+#: credentials.php:406 credentials.php:858
 msgid "Cancel"
 msgstr ""
 
 #: credential_providers.php:328 credential_providers.php:743
-#: credentials.php:398 credentials.php:849
+#: credentials.php:406 credentials.php:857
 msgid "Continue"
 msgstr ""
 
@@ -109,7 +109,7 @@ msgstr ""
 msgid "Secret Providers"
 msgstr ""
 
-#: credential_providers.php:489 credentials.php:544
+#: credential_providers.php:489 credentials.php:552
 msgid "Search"
 msgstr ""
 
@@ -117,46 +117,46 @@ msgstr ""
 msgid "Providers"
 msgstr ""
 
-#: credential_providers.php:496 credentials.php:562
+#: credential_providers.php:496 credentials.php:570
 msgid "All"
 msgstr ""
 
-#: credential_providers.php:507 credentials.php:573
+#: credential_providers.php:507 credentials.php:581
 msgid "Go"
 msgstr ""
 
-#: credential_providers.php:508 credentials.php:574
+#: credential_providers.php:508 credentials.php:582
 msgid "Clear"
 msgstr ""
 
 #: credential_providers.php:529 credential_providers.php:615
-#: credentials.php:595 credentials.php:719
+#: credentials.php:603 credentials.php:727
 msgid "Name"
 msgstr ""
 
-#: credential_providers.php:530 credentials.php:548 credentials.php:596
+#: credential_providers.php:530 credentials.php:556 credentials.php:604
 msgid "Type"
 msgstr ""
 
 #: credential_providers.php:531 credential_providers.php:623
-#: credentials.php:598 credentials.php:727
+#: credentials.php:606 credentials.php:735
 msgid "Description"
 msgstr ""
 
 #: credential_providers.php:532 credential_providers.php:638
-#: credentials.php:600 credentials.php:749
+#: credentials.php:608 credentials.php:757
 msgid "Enabled"
 msgstr ""
 
-#: credential_providers.php:533 credentials.php:601
+#: credential_providers.php:533 credentials.php:609
 msgid "Last Updated"
 msgstr ""
 
-#: credential_providers.php:547 credentials.php:618
+#: credential_providers.php:547 credentials.php:626
 msgid "Yes"
 msgstr ""
 
-#: credential_providers.php:547 credentials.php:618
+#: credential_providers.php:547 credentials.php:626
 msgid "No"
 msgstr ""
 
@@ -196,15 +196,15 @@ msgstr ""
 msgid "Whether this provider is available to resolve credential secrets."
 msgstr ""
 
-#: credential_providers.php:687 credentials.php:802
+#: credential_providers.php:687 credentials.php:810
 msgid "A value is currently stored (encrypted)."
 msgstr ""
 
-#: credential_providers.php:687 credentials.php:802
+#: credential_providers.php:687 credentials.php:810
 msgid "Leave this blank to keep it, or enter a new value to replace it."
 msgstr ""
 
-#: credential_providers.php:689 credentials.php:804
+#: credential_providers.php:689 credentials.php:812
 msgid "No value stored yet."
 msgstr ""
 
@@ -230,115 +230,115 @@ msgstr ""
 msgid "The test request failed."
 msgstr ""
 
-#: credentials.php:94
+#: credentials.php:102
 msgid "The selected credential type is not valid."
 msgstr ""
 
-#: credentials.php:103
+#: credentials.php:111
 msgid "A credential name is required."
 msgstr ""
 
-#: credentials.php:117
+#: credentials.php:125
 msgid "The selected secret provider does not exist."
 msgstr ""
 
-#: credentials.php:124
+#: credentials.php:132
 msgid "The selected secret provider is disabled."
 msgstr ""
 
-#: credentials.php:191
+#: credentials.php:199
 #, php-format
 msgid "A reference for '%s' is required."
 msgstr ""
 
-#: credentials.php:207
+#: credentials.php:215
 #, php-format
 msgid "The value and its confirmation for '%s' do not match."
 msgstr ""
 
-#: credentials.php:271
+#: credentials.php:279
 msgid ""
 "The credential could not be saved because one of its fields contains invalid "
 "characters. Please re-enter the affected values and try again."
 msgstr ""
 
-#: credentials.php:296
+#: credentials.php:304
 msgid "Credential saved."
 msgstr ""
 
-#: credentials.php:299
+#: credentials.php:307
 msgid "Failed to save the credential."
 msgstr ""
 
-#: credentials.php:384
+#: credentials.php:392
 msgid "Delete the following credential(s)?"
 msgstr ""
 
-#: credentials.php:386
+#: credentials.php:394
 msgid "Enable the following credential(s)?"
 msgstr ""
 
-#: credentials.php:388
+#: credentials.php:396
 msgid "Disable the following credential(s)?"
 msgstr ""
 
-#: credentials.php:536 credentials.php:559 credentials.php:586 setup.php:227
+#: credentials.php:544 credentials.php:567 credentials.php:594 setup.php:227
 #: setup.php:245 setup.php:259
 msgid "Credentials"
 msgstr ""
 
-#: credentials.php:551
+#: credentials.php:559
 msgid "Any"
 msgstr ""
 
-#: credentials.php:597 credentials.php:742
+#: credentials.php:605 credentials.php:750
 msgid "Secret Provider"
 msgstr ""
 
-#: credentials.php:599
+#: credentials.php:607
 msgid "Owner"
 msgstr ""
 
-#: credentials.php:609
+#: credentials.php:617
 msgid "Local Database"
 msgstr ""
 
-#: credentials.php:617
+#: credentials.php:625
 msgid "N/A"
 msgstr ""
 
-#: credentials.php:625
+#: credentials.php:633
 msgid "No Credentials Found"
 msgstr ""
 
-#: credentials.php:714
+#: credentials.php:722
 #, php-format
 msgid "Credential [edit: %s]"
 msgstr ""
 
-#: credentials.php:714
+#: credentials.php:722
 msgid "Credential [new]"
 msgstr ""
 
-#: credentials.php:720
+#: credentials.php:728
 msgid "A unique, meaningful name for this credential."
 msgstr ""
 
-#: credentials.php:728
+#: credentials.php:736
 msgid "An optional description of where this credential is used."
 msgstr ""
 
-#: credentials.php:735
+#: credentials.php:743
 msgid "Credential Type"
 msgstr ""
 
-#: credentials.php:736
+#: credentials.php:744
 msgid ""
 "The type of credential. Changing the type on an existing credential discards "
 "the previously stored type-specific values when you save."
 msgstr ""
 
-#: credentials.php:743
+#: credentials.php:751
 msgid ""
 "Where the secret values for this credential live. Choose the local encrypted "
 "database, or an external secret store. When an external provider is "
@@ -346,19 +346,19 @@ msgid ""
 "time instead of the secret itself."
 msgstr ""
 
-#: credentials.php:750
+#: credentials.php:758
 msgid "Whether this credential is available for use."
 msgstr ""
 
-#: credentials.php:791
+#: credentials.php:799
 msgid "(reference)"
 msgstr ""
 
-#: credentials.php:847
+#: credentials.php:855
 msgid "Change Credential Type?"
 msgstr ""
 
-#: credentials.php:848
+#: credentials.php:856
 msgid ""
 "Changing the Credential Type will discard the values stored for the current "
 "type when you save this credential. Do you want to continue?"
@@ -982,34 +982,34 @@ msgstr ""
 msgid "The ECS credentials endpoint returned no usable credentials."
 msgstr ""
 
-#: includes/providers/AwsSecretsManagerProvider.php:335
+#: includes/providers/AwsSecretsManagerProvider.php:344
 msgid ""
 "Unable to obtain an instance metadata token; is Cacti running on an AWS "
 "instance with a role?"
 msgstr ""
 
-#: includes/providers/AwsSecretsManagerProvider.php:343
+#: includes/providers/AwsSecretsManagerProvider.php:352
 msgid "No IAM role is attached to this instance."
 msgstr ""
 
-#: includes/providers/AwsSecretsManagerProvider.php:351
+#: includes/providers/AwsSecretsManagerProvider.php:360
 msgid "Unable to read instance role credentials."
 msgstr ""
 
-#: includes/providers/AwsSecretsManagerProvider.php:357
+#: includes/providers/AwsSecretsManagerProvider.php:366
 msgid "The instance metadata service returned no usable credentials."
 msgstr ""
 
-#: includes/providers/AwsSecretsManagerProvider.php:386
+#: includes/providers/AwsSecretsManagerProvider.php:395
 msgid "Unable to encode the AWS request."
 msgstr ""
 
-#: includes/providers/AwsSecretsManagerProvider.php:477
+#: includes/providers/AwsSecretsManagerProvider.php:486
 #, php-format
 msgid "AWS Secrets Manager error: %s (HTTP %d)."
 msgstr ""
 
-#: includes/providers/AwsSecretsManagerProvider.php:480
+#: includes/providers/AwsSecretsManagerProvider.php:489
 #, php-format
 msgid "AWS Secrets Manager returned HTTP %d."
 msgstr ""

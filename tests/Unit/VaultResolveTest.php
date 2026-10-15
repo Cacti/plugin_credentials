@@ -24,11 +24,14 @@ beforeAll(function () {
 	require_once __DIR__ . '/../../setup.php';
 });
 
-/** A VaultProvider whose HTTP calls return canned responses. */
+/** A VaultProvider whose HTTP calls return canned responses and record URLs. */
 class TestableVaultProvider extends VaultProvider {
 	public array $responses = array();
+	public array $urls = array();
 
 	protected function http(array $config, string $method, string $url, array $headers = array(), ?string $body = null): array {
+		$this->urls[] = $url;
+
 		return array_shift($this->responses);
 	}
 }
@@ -102,4 +105,18 @@ it('reports a not-found Vault secret path', function () {
 	expect($ok)->toBeFalse()
 		->and($value)->toBeNull()
 		->and($error)->toContain('missing/path');
+});
+
+it('percent-encodes spaces and reserved characters in the Vault path', function () {
+	$vault = new TestableVaultProvider();
+	$vault->responses = array(
+		array(200, json_encode(array('data' => array('data' => array('community' => 'public')))), ''),
+	);
+
+	list($ok, $value) = $vault->resolve(credentials_test_vault_config(), 'net/site 1#community');
+
+	expect($ok)->toBeTrue()
+		->and($value)->toBe('public')
+		->and($vault->urls[0])->toContain('/v1/secret/data/net/site%201')
+		->and($vault->urls[0])->not->toContain('site 1');
 });
