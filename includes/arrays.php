@@ -541,7 +541,7 @@ function credentials_types(): array {
 
 /**
  * Build the Credential Type drop-down option map (type code => display name),
- * grouped by tier for readability.
+ * sorted alphabetically by display name.
  *
  * @return array The option map for the credential type selector.
  */
@@ -549,8 +549,10 @@ function credentials_type_options(): array {
 	$options = array();
 
 	foreach (credentials_types() as $code => $type) {
-		$options[$code] = __('Tier %d: %s', $type['tier'], $type['name'], 'credentials');
+		$options[$code] = $type['name'];
 	}
+
+	natcasesort($options);
 
 	return $options;
 }
