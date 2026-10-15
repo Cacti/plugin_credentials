@@ -256,12 +256,21 @@ function form_actions(): void {
 				$id = intval($id);
 
 				if ($action == '1') {
+					/* delete under a transaction that locks the provider row, so a
+					 * concurrent credential save (which locks the same row before
+					 * persisting) cannot slip a reference in between the usage
+					 * count and the delete and leave an orphaned credential */
+					db_execute('START TRANSACTION');
+					db_fetch_row_prepared('SELECT id FROM credential_providers WHERE id = ? FOR UPDATE', array($id));
+
 					$in_use = db_fetch_cell_prepared('SELECT COUNT(*) FROM credentials WHERE provider_id = ?', array($id));
 
 					if ($in_use > 0) {
+						db_execute('ROLLBACK');
 						raise_message('prov_inuse_' . $id, __('A provider still used by %d credential(s) was not deleted.', $in_use, 'credentials'), MESSAGE_LEVEL_WARN);
 					} else {
 						db_execute_prepared('DELETE FROM credential_providers WHERE id = ?', array($id));
+						db_execute('COMMIT');
 					}
 				} elseif ($action == '2') {
 					db_execute_prepared('UPDATE credential_providers SET enabled = \'on\' WHERE id = ?', array($id));

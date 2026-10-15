@@ -298,7 +298,29 @@ function form_save(): void {
 		$save['user_id'] = (isset($_SESSION['sess_user_id']) ? $_SESSION['sess_user_id'] : 0);
 	}
 
-	$new_id = sql_save($save, 'credentials');
+	if ($provider_id > 0) {
+		/* persist under a transaction that locks the provider row, so a
+		 * concurrent provider delete (which locks the same row before counting
+		 * references) cannot remove it between validation and save and leave
+		 * this credential pointing at a missing provider */
+		db_execute('START TRANSACTION');
+
+		$locked = db_fetch_row_prepared('SELECT id, enabled FROM credential_providers WHERE id = ? FOR UPDATE', array($provider_id));
+
+		if (!is_array($locked) || !cacti_sizeof($locked) || $locked['enabled'] != 'on') {
+			db_execute('ROLLBACK');
+			raise_message('cred_provgone', __('The selected secret provider is no longer available. Please choose another provider.', 'credentials'), MESSAGE_LEVEL_ERROR);
+			header('Location: credentials.php?action=edit' . ($id > 0 ? '&id=' . $id : '') . '&type=' . $type);
+
+			exit;
+		}
+
+		$new_id = sql_save($save, 'credentials');
+
+		db_execute('COMMIT');
+	} else {
+		$new_id = sql_save($save, 'credentials');
+	}
 
 	if ($new_id) {
 		raise_message('cred_saved', __('Credential saved.', 'credentials'), MESSAGE_LEVEL_INFO);

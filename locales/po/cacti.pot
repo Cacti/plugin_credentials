@@ -69,164 +69,164 @@ msgstr ""
 msgid "Failed to save the secret provider."
 msgstr ""
 
-#: credential_providers.php:262
+#: credential_providers.php:270
 #, php-format
 msgid "A provider still used by %d credential(s) was not deleted."
 msgstr ""
 
-#: credential_providers.php:314
+#: credential_providers.php:323
 msgid "Delete the following secret provider(s)?"
 msgstr ""
 
-#: credential_providers.php:316
+#: credential_providers.php:325
 msgid "Enable the following secret provider(s)?"
 msgstr ""
 
-#: credential_providers.php:318
+#: credential_providers.php:327
 msgid "Disable the following secret provider(s)?"
 msgstr ""
 
-#: credential_providers.php:328 credential_providers.php:744
-#: credentials.php:406 credentials.php:858
+#: credential_providers.php:337 credential_providers.php:753
+#: credentials.php:428 credentials.php:880
 msgid "Cancel"
 msgstr ""
 
-#: credential_providers.php:328 credential_providers.php:743
-#: credentials.php:406 credentials.php:857
+#: credential_providers.php:337 credential_providers.php:752
+#: credentials.php:428 credentials.php:879
 msgid "Continue"
 msgstr ""
 
-#: credential_providers.php:357
+#: credential_providers.php:366
 msgid "Invalid request method."
 msgstr ""
 
-#: credential_providers.php:367
+#: credential_providers.php:376
 msgid "Save the provider before testing it."
 msgstr ""
 
-#: credential_providers.php:481 credential_providers.php:520 setup.php:228
+#: credential_providers.php:490 credential_providers.php:529 setup.php:228
 #: setup.php:246 setup.php:287
 msgid "Secret Providers"
 msgstr ""
 
-#: credential_providers.php:489 credentials.php:552
+#: credential_providers.php:498 credentials.php:574
 msgid "Search"
 msgstr ""
 
-#: credential_providers.php:493
+#: credential_providers.php:502
 msgid "Providers"
 msgstr ""
 
-#: credential_providers.php:496 credentials.php:570
+#: credential_providers.php:505 credentials.php:592
 msgid "All"
 msgstr ""
 
-#: credential_providers.php:507 credentials.php:581
+#: credential_providers.php:516 credentials.php:603
 msgid "Go"
 msgstr ""
 
-#: credential_providers.php:508 credentials.php:582
+#: credential_providers.php:517 credentials.php:604
 msgid "Clear"
 msgstr ""
 
-#: credential_providers.php:529 credential_providers.php:615
-#: credentials.php:603 credentials.php:727
+#: credential_providers.php:538 credential_providers.php:624
+#: credentials.php:625 credentials.php:749
 msgid "Name"
 msgstr ""
 
-#: credential_providers.php:530 credentials.php:556 credentials.php:604
+#: credential_providers.php:539 credentials.php:578 credentials.php:626
 msgid "Type"
 msgstr ""
 
-#: credential_providers.php:531 credential_providers.php:623
-#: credentials.php:606 credentials.php:735
+#: credential_providers.php:540 credential_providers.php:632
+#: credentials.php:628 credentials.php:757
 msgid "Description"
 msgstr ""
 
-#: credential_providers.php:532 credential_providers.php:638
-#: credentials.php:608 credentials.php:757
+#: credential_providers.php:541 credential_providers.php:647
+#: credentials.php:630 credentials.php:779
 msgid "Enabled"
 msgstr ""
 
-#: credential_providers.php:533 credentials.php:609
+#: credential_providers.php:542 credentials.php:631
 msgid "Last Updated"
 msgstr ""
 
-#: credential_providers.php:547 credentials.php:626
+#: credential_providers.php:556 credentials.php:648
 msgid "Yes"
 msgstr ""
 
-#: credential_providers.php:547 credentials.php:626
+#: credential_providers.php:556 credentials.php:648
 msgid "No"
 msgstr ""
 
-#: credential_providers.php:554
+#: credential_providers.php:563
 msgid "No Secret Providers Found"
 msgstr ""
 
-#: credential_providers.php:610
+#: credential_providers.php:619
 #, php-format
 msgid "Secret Provider [edit: %s]"
 msgstr ""
 
-#: credential_providers.php:610
+#: credential_providers.php:619
 msgid "Secret Provider [new]"
 msgstr ""
 
-#: credential_providers.php:616
+#: credential_providers.php:625
 msgid "A unique, meaningful name for this provider instance."
 msgstr ""
 
-#: credential_providers.php:624
+#: credential_providers.php:633
 msgid "An optional description of this provider instance."
 msgstr ""
 
-#: credential_providers.php:631
+#: credential_providers.php:640
 msgid "Provider Type"
 msgstr ""
 
-#: credential_providers.php:632
+#: credential_providers.php:641
 msgid ""
 "The external secret store this provider connects to. Changing the type on an "
 "existing provider discards the previously stored type-specific configuration "
 "when you save."
 msgstr ""
 
-#: credential_providers.php:639
+#: credential_providers.php:648
 msgid "Whether this provider is available to resolve credential secrets."
 msgstr ""
 
-#: credential_providers.php:687 credentials.php:810
+#: credential_providers.php:696 credentials.php:832
 msgid "A value is currently stored (encrypted)."
 msgstr ""
 
-#: credential_providers.php:687 credentials.php:810
+#: credential_providers.php:696 credentials.php:832
 msgid "Leave this blank to keep it, or enter a new value to replace it."
 msgstr ""
 
-#: credential_providers.php:689 credentials.php:812
+#: credential_providers.php:698 credentials.php:834
 msgid "No value stored yet."
 msgstr ""
 
-#: credential_providers.php:730
+#: credential_providers.php:739
 msgid "Test Connection"
 msgstr ""
 
-#: credential_providers.php:741
+#: credential_providers.php:750
 msgid "Change Provider Type?"
 msgstr ""
 
-#: credential_providers.php:742
+#: credential_providers.php:751
 msgid ""
 "Changing the Provider Type will discard the configuration stored for the "
 "current type when you save this provider. Do you want to continue?"
 msgstr ""
 
-#: credential_providers.php:745
+#: credential_providers.php:754
 msgid "Testing..."
 msgstr ""
 
-#: credential_providers.php:746
+#: credential_providers.php:755
 msgid "The test request failed."
 msgstr ""
 
@@ -262,83 +262,89 @@ msgid ""
 "characters. Please re-enter the affected values and try again."
 msgstr ""
 
-#: credentials.php:304
+#: credentials.php:312
+msgid ""
+"The selected secret provider is no longer available. Please choose another "
+"provider."
+msgstr ""
+
+#: credentials.php:326
 msgid "Credential saved."
 msgstr ""
 
-#: credentials.php:307
+#: credentials.php:329
 msgid "Failed to save the credential."
 msgstr ""
 
-#: credentials.php:392
+#: credentials.php:414
 msgid "Delete the following credential(s)?"
 msgstr ""
 
-#: credentials.php:394
+#: credentials.php:416
 msgid "Enable the following credential(s)?"
 msgstr ""
 
-#: credentials.php:396
+#: credentials.php:418
 msgid "Disable the following credential(s)?"
 msgstr ""
 
-#: credentials.php:544 credentials.php:567 credentials.php:594 setup.php:227
+#: credentials.php:566 credentials.php:589 credentials.php:616 setup.php:227
 #: setup.php:245 setup.php:259
 msgid "Credentials"
 msgstr ""
 
-#: credentials.php:559
+#: credentials.php:581
 msgid "Any"
 msgstr ""
 
-#: credentials.php:605 credentials.php:750
+#: credentials.php:627 credentials.php:772
 msgid "Secret Provider"
 msgstr ""
 
-#: credentials.php:607
+#: credentials.php:629
 msgid "Owner"
 msgstr ""
 
-#: credentials.php:617
+#: credentials.php:639
 msgid "Local Database"
 msgstr ""
 
-#: credentials.php:625
+#: credentials.php:647
 msgid "N/A"
 msgstr ""
 
-#: credentials.php:633
+#: credentials.php:655
 msgid "No Credentials Found"
 msgstr ""
 
-#: credentials.php:722
+#: credentials.php:744
 #, php-format
 msgid "Credential [edit: %s]"
 msgstr ""
 
-#: credentials.php:722
+#: credentials.php:744
 msgid "Credential [new]"
 msgstr ""
 
-#: credentials.php:728
+#: credentials.php:750
 msgid "A unique, meaningful name for this credential."
 msgstr ""
 
-#: credentials.php:736
+#: credentials.php:758
 msgid "An optional description of where this credential is used."
 msgstr ""
 
-#: credentials.php:743
+#: credentials.php:765
 msgid "Credential Type"
 msgstr ""
 
-#: credentials.php:744
+#: credentials.php:766
 msgid ""
 "The type of credential. Changing the type on an existing credential discards "
 "the previously stored type-specific values when you save."
 msgstr ""
 
-#: credentials.php:751
+#: credentials.php:773
 msgid ""
 "Where the secret values for this credential live. Choose the local encrypted "
 "database, or an external secret store. When an external provider is "
@@ -346,19 +352,19 @@ msgid ""
 "time instead of the secret itself."
 msgstr ""
 
-#: credentials.php:758
+#: credentials.php:780
 msgid "Whether this credential is available for use."
 msgstr ""
 
-#: credentials.php:799
+#: credentials.php:821
 msgid "(reference)"
 msgstr ""
 
-#: credentials.php:855
+#: credentials.php:877
 msgid "Change Credential Type?"
 msgstr ""
 
-#: credentials.php:856
+#: credentials.php:878
 msgid ""
 "Changing the Credential Type will discard the values stored for the current "
 "type when you save this credential. Do you want to continue?"
@@ -1391,7 +1397,7 @@ msgstr ""
 msgid "(disabled)"
 msgstr ""
 
-#: includes/providers.php:271
+#: includes/providers.php:288
 msgid "The provider could not be found or its type is unknown."
 msgstr ""
 

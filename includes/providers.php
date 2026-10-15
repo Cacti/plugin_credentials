@@ -209,10 +209,14 @@ function credentials_provider_options(int $include_disabled_id = 0): array {
 
 /**
  * Resolve a credential field reference through its provider instance to the
- * plaintext secret. Results are cached per request so a credential whose fields
- * share a provider does not trigger repeated network round trips within one
- * poll; the cache lives only for the request, so no decrypted secret is ever
- * persisted.
+ * plaintext secret. Results are cached per polling cycle so a credential whose
+ * fields share a provider does not trigger repeated network round trips; the
+ * cache holds no value on disk, only in process memory.
+ *
+ * The cache is keyed per process. Long-lived consumers (the poller and
+ * script-server) must call credentials_provider_flush_cache() once per polling
+ * cycle so a rotated, recovered or newly disabled provider is re-evaluated
+ * rather than returning a cached value for the life of the process.
  *
  * @param int    $provider_id The provider instance id.
  * @param string $reference   The field's stored reference.
@@ -220,8 +224,9 @@ function credentials_provider_options(int $include_disabled_id = 0): array {
  * @return string|false The plaintext secret, or false when it cannot be resolved.
  */
 function credentials_provider_resolve_reference(int $provider_id, string $reference): string|false {
-	static $cache = array();
+	$GLOBALS['__credentials_resolve_cache'] = $GLOBALS['__credentials_resolve_cache'] ?? array();
 
+	$cache     = &$GLOBALS['__credentials_resolve_cache'];
 	$cache_key = $provider_id . '|' . $reference;
 
 	if (array_key_exists($cache_key, $cache)) {
@@ -255,6 +260,18 @@ function credentials_provider_resolve_reference(int $provider_id, string $refere
 	}
 
 	return $cache[$cache_key] = (string) $value;
+}
+
+/**
+ * Flush the per-process credential resolution cache. Long-lived consumers (the
+ * poller and script-server) should call this once per polling cycle so a
+ * rotated secret, a recovered provider or a newly disabled provider is picked
+ * up instead of a value cached for the life of the process.
+ *
+ * @return void
+ */
+function credentials_provider_flush_cache(): void {
+	$GLOBALS['__credentials_resolve_cache'] = array();
 }
 
 /**

@@ -29,6 +29,7 @@ beforeAll(function () {
 beforeEach(function () {
 	credentials_test_reset_db_mocks();
 	credentials_test_reset_drivers();
+	credentials_provider_flush_cache();
 });
 
 afterAll(function () {
@@ -175,6 +176,23 @@ it('fails closed when the driver cannot resolve a reference', function () {
 	credentials_test_mock_db('db_fetch_row_prepared', 'credential_providers WHERE id', credentials_test_provider_row(array('id' => 12)));
 
 	expect(credentials_provider_resolve_reference(12, 'ref'))->toBeFalse();
+});
+
+it('re-resolves after the cache is flushed for a new polling cycle', function () {
+	$fake = new FakeProvider();
+	$fake->resolveReturn = array(true, 'v1', '');
+	credentials_test_register_driver($fake);
+	credentials_test_mock_db('db_fetch_row_prepared', 'credential_providers WHERE id', credentials_test_provider_row(array('id' => 13)));
+
+	expect(credentials_provider_resolve_reference(13, 'ref'))->toBe('v1')
+		->and(credentials_provider_resolve_reference(13, 'ref'))->toBe('v1')
+		->and($fake->resolveCalls)->toBe(1); // cached within the cycle
+
+	// a new polling cycle flushes the cache, so the driver is consulted again
+	credentials_provider_flush_cache();
+
+	expect(credentials_provider_resolve_reference(13, 'ref'))->toBe('v1')
+		->and($fake->resolveCalls)->toBe(2);
 });
 
 it('runs a provider self-test and reports a missing provider', function () {
