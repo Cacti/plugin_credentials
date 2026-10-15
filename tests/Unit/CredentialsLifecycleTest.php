@@ -26,9 +26,17 @@ beforeEach(function () {
 	unset($GLOBALS['menu']);
 });
 
-it('reports a complete config and no pending upgrade', function () {
+it('reports a complete config and reconciles the schema on upgrade', function () {
+	$GLOBALS['__test_db_calls'] = array();
+
 	expect(plugin_credentials_check_config())->toBeTrue()
-		->and(plugin_credentials_upgrade())->toBeFalse();
+		->and(plugin_credentials_upgrade())->toBeTrue();
+
+	$tables = array_column(array_filter($GLOBALS['__test_db_calls'], function ($call) {
+		return $call['fn'] === 'api_plugin_db_table_create';
+	}), 'sql');
+
+	expect($tables)->toBe(array('credentials', 'credential_providers'));
 });
 
 it('performs no work on uninstall', function () {
@@ -50,7 +58,7 @@ it('registers its hooks and creates the credentials table on install', function 
 		return $call['fn'] === 'api_plugin_db_table_create';
 	}), 'sql');
 
-	expect($tables)->toBe(array('credentials'));
+	expect($tables)->toBe(array('credentials', 'credential_providers'));
 });
 
 it('gates the page on the Users/Groups realm and returns early without a menu', function () {

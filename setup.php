@@ -59,11 +59,13 @@ function plugin_credentials_install(): void {
 	api_plugin_register_hook('credentials', 'page_head',            'credentials_page_head',            'setup.php');
 
 	credentials_setup_table();
+	credential_providers_setup_table();
 }
 
 /**
- * Uninstall hook. The credentials table ownership is recorded by
- * api_plugin_db_table_create(), so the framework drops it on uninstall.
+ * Uninstall hook. The credentials and credential_providers table ownership is
+ * recorded by api_plugin_db_table_create(), so the framework drops them on
+ * uninstall.
  *
  * @return void
  */
@@ -82,12 +84,17 @@ function plugin_credentials_check_config(): bool {
 
 /**
  * Apply any pending schema upgrade. Invoked by the Cacti plugin framework when
- * the installed version differs from the current version.
+ * the installed version differs from the current version. The table helpers are
+ * idempotent: they add the provider_id column and the credential_providers
+ * table to an existing installation without disturbing stored credentials.
  *
- * @return bool Always false.
+ * @return bool True; the schema is reconciled on every upgrade.
  */
 function plugin_credentials_upgrade(): bool {
-	return false;
+	credentials_setup_table();
+	credential_providers_setup_table();
+
+	return true;
 }
 
 /**
@@ -104,6 +111,7 @@ function credentials_setup_table(): void {
 	$data['columns'][] = array('name' => 'name',         'type' => 'varchar(128)', 'NULL' => false, 'default' => '');
 	$data['columns'][] = array('name' => 'description',  'type' => 'varchar(255)', 'NULL' => false, 'default' => '');
 	$data['columns'][] = array('name' => 'type',         'type' => 'varchar(64)',  'NULL' => false, 'default' => '');
+	$data['columns'][] = array('name' => 'provider_id',  'type' => 'int(10)',      'unsigned' => true, 'NULL' => false, 'default' => '0');
 	$data['columns'][] = array('name' => 'user_id',      'type' => 'int(10)',      'unsigned' => true, 'NULL' => false, 'default' => '0');
 	$data['columns'][] = array('name' => 'enabled',      'type' => 'varchar(3)',   'NULL' => false, 'default' => 'on');
 	$data['columns'][] = array('name' => 'properties',   'type' => 'longtext',     'NULL' => false);
@@ -112,14 +120,47 @@ function credentials_setup_table(): void {
 
 	$data['primary'] = 'id';
 
-	$data['keys'][] = array('name' => 'name',    'columns' => array('name'));
-	$data['keys'][] = array('name' => 'type',    'columns' => array('type'));
-	$data['keys'][] = array('name' => 'user_id', 'columns' => array('user_id'));
+	$data['keys'][] = array('name' => 'name',        'columns' => array('name'));
+	$data['keys'][] = array('name' => 'type',        'columns' => array('type'));
+	$data['keys'][] = array('name' => 'provider_id', 'columns' => array('provider_id'));
+	$data['keys'][] = array('name' => 'user_id',     'columns' => array('user_id'));
 
 	$data['type']    = 'InnoDB';
 	$data['comment'] = 'Stored credentials managed by the Credentials plugin';
 
 	api_plugin_db_table_create('credentials', 'credentials', $data);
+}
+
+/**
+ * Create the 'credential_providers' table used to store external secret-store
+ * provider instances (HashiCorp Vault, AWS Secrets Manager, Azure Key Vault,
+ * Google Cloud Secret Manager, CyberArk Conjur). The per-connection secrets
+ * inside the properties JSON are encrypted by credential_providers.php before
+ * they are written; only non-secret settings are stored in clear text.
+ *
+ * @return void
+ */
+function credential_providers_setup_table(): void {
+	$data = array('columns' => array(), 'keys' => array());
+
+	$data['columns'][] = array('name' => 'id',           'type' => 'int(10)',      'unsigned' => true, 'NULL' => false, 'auto_increment' => true);
+	$data['columns'][] = array('name' => 'name',         'type' => 'varchar(128)', 'NULL' => false, 'default' => '');
+	$data['columns'][] = array('name' => 'description',  'type' => 'varchar(255)', 'NULL' => false, 'default' => '');
+	$data['columns'][] = array('name' => 'type',         'type' => 'varchar(32)',  'NULL' => false, 'default' => '');
+	$data['columns'][] = array('name' => 'enabled',      'type' => 'varchar(3)',   'NULL' => false, 'default' => 'on');
+	$data['columns'][] = array('name' => 'properties',   'type' => 'longtext',     'NULL' => false);
+	$data['columns'][] = array('name' => 'create_date',  'type' => 'timestamp',    'NULL' => false, 'default' => 'CURRENT_TIMESTAMP');
+	$data['columns'][] = array('name' => 'last_updated', 'type' => 'timestamp',    'NULL' => false, 'default' => 'CURRENT_TIMESTAMP', 'on_update' => 'CURRENT_TIMESTAMP');
+
+	$data['primary'] = 'id';
+
+	$data['keys'][] = array('name' => 'name', 'columns' => array('name'));
+	$data['keys'][] = array('name' => 'type', 'columns' => array('type'));
+
+	$data['type']    = 'InnoDB';
+	$data['comment'] = 'External secret-store providers managed by the Credentials plugin';
+
+	api_plugin_db_table_create('credentials', 'credential_providers', $data);
 }
 
 /**
@@ -136,6 +177,7 @@ function credentials_config_arrays(): void {
 	// makes include/auth.php enforce that permission for both page access and
 	// Console menu visibility.
 	$user_auth_realm_filenames['credentials.php'] = 1;
+	$user_auth_realm_filenames['credential_providers.php'] = 1;
 
 	if (!isset($menu) || !is_array($menu)) {
 		return;
@@ -155,7 +197,8 @@ function credentials_config_arrays(): void {
 			$rebuilt[$url] = $title;
 
 			if (!$inserted && in_array($url, $anchors, true)) {
-				$rebuilt['plugins/credentials/credentials.php'] = __('Credentials', 'credentials');
+				$rebuilt['plugins/credentials/credentials.php']           = __('Credentials', 'credentials');
+				$rebuilt['plugins/credentials/credential_providers.php']  = __('Secret Providers', 'credentials');
 				$inserted = true;
 			}
 		}
@@ -167,12 +210,13 @@ function credentials_config_arrays(): void {
 		}
 	}
 
-	// No known anchor present: append to the Configuration section so the pick
-	// remains reachable.
+	// No known anchor present: append to the Configuration section so the picks
+	// remain reachable.
 	$config_section = __('Configuration');
 
 	if (isset($menu[$config_section]) && is_array($menu[$config_section])) {
-		$menu[$config_section]['plugins/credentials/credentials.php'] = __('Credentials', 'credentials');
+		$menu[$config_section]['plugins/credentials/credentials.php']          = __('Credentials', 'credentials');
+		$menu[$config_section]['plugins/credentials/credential_providers.php'] = __('Secret Providers', 'credentials');
 	}
 }
 
@@ -212,18 +256,48 @@ function credentials_draw_navigation_text(array $nav): array {
 		'level'   => 2,
 	);
 
+	$nav['credential_providers.php:'] = array(
+		'title'   => __('Secret Providers', 'credentials'),
+		'mapping' => 'index.php:',
+		'url'     => 'credential_providers.php',
+		'level'   => 1,
+	);
+
+	$nav['credential_providers.php:edit'] = array(
+		'title'   => __('(Edit)', 'credentials'),
+		'mapping' => 'index.php:,credential_providers.php:',
+		'url'     => '',
+		'level'   => 2,
+	);
+
+	$nav['credential_providers.php:actions'] = array(
+		'title'   => __('Actions', 'credentials'),
+		'mapping' => 'index.php:,credential_providers.php:',
+		'url'     => '',
+		'level'   => 2,
+	);
+
+	$nav['credential_providers.php:save'] = array(
+		'title'   => __('(Save)', 'credentials'),
+		'mapping' => 'index.php:,credential_providers.php:',
+		'url'     => '',
+		'level'   => 2,
+	);
+
 	return $nav;
 }
 
 /**
- * page_head hook: load the plugin's JavaScript on the credentials page only.
+ * page_head hook: load the plugin's JavaScript on its own pages only.
  *
  * @return void
  */
 function credentials_page_head(): void {
 	global $config;
 
-	if (basename(get_current_page()) == 'credentials.php') {
+	$page = basename(get_current_page());
+
+	if ($page == 'credentials.php' || $page == 'credential_providers.php') {
 		print '<script type=\'text/javascript\' src=\'' . $config['url_path'] . 'plugins/credentials/credentials.js\' ' . credentials_csp_nonce() . '></script>' . PHP_EOL;
 	}
 }

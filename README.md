@@ -30,8 +30,10 @@ management systems, grouped into three tiers:
 ## How it works
 
 - Each credential is stored in the `credentials` table with `name`,
-  `description`, `type`, `user_id`, `enabled`, `properties`, `create_date` and
-  `last_updated` columns (the two dates are SQL timestamps).
+  `description`, `type`, `provider_id`, `user_id`, `enabled`, `properties`,
+  `create_date` and `last_updated` columns (the two dates are SQL timestamps).
+  `provider_id` is `0` for the local encrypted store, or the id of a
+  `credential_providers` row for an external provider.
 - The type-specific attributes are rendered on the edit form using the Cacti
   Form API — every field carries its own tooltip — and are stored as JSON in the
   `properties` column.
@@ -43,12 +45,57 @@ management systems, grouped into three tiers:
   jQueryUI confirmation dialog warning that the stored type-specific values will
   be discarded on save.
 
+## External secret providers
+
+In addition to the built-in **local encrypted database**, a credential's secret
+fields can be sourced at poll time from an external secret store. The following
+providers ship with the plugin:
+
+- **HashiCorp Vault** — KV v1/v2 engines; Token or AppRole authentication
+- **AWS Secrets Manager** — IAM access keys or an EC2/ECS instance role
+  (requests are signed with AWS Signature Version 4)
+- **Azure Key Vault** — Entra ID service principal or Managed Identity
+- **Google Cloud Secret Manager** — service account key (signed JWT) or the
+  instance service account
+- **CyberArk Conjur** — host/user identity with an API key
+
+### How provider-backed credentials work
+
+- Provider **instances** are configured on the **Secret Providers** page and
+  stored in the `credential_providers` table. Each instance's own connection
+  secrets (tokens, keys, client secrets) are encrypted with the same Cacti core
+  secret functions used for local credentials.
+- You can configure **any number of providers**, including several instances of
+  the same type (for example a production and a staging Vault), and choose a
+  different provider per credential — or keep some credentials local.
+- When a credential selects a provider, each secret field stores a
+  **non-sensitive reference** (a path/locator) instead of the secret. The
+  reference supports an optional `#key` selector to pull a single field out of a
+  JSON secret (for example `network/snmp#community`), including dotted paths into
+  nested JSON.
+- `credentials_get($id)` transparently resolves references through the provider
+  driver, returning live plaintext to the caller exactly as it does for locally
+  stored secrets. Resolution is cached per request, and a provider failure
+  **fails closed** (the secret resolves to `false`) and is logged without
+  leaking the secret value.
+- Each provider instance offers a **Test Connection** self-check on its edit
+  form that verifies connectivity and authentication.
+
+### Adding another provider
+
+Providers are pluggable: implement the `CredentialProvider` interface (see
+`includes/providers/`) and register the driver in
+`credentials_provider_registry()`. Nothing in the storage or UI layer needs to
+change — the new type automatically appears in the provider type selector and
+its configuration fields render from the driver's `configFields()`.
+
 ## Access control
 
-Access to `credentials.php` is gated by the core **Users/Groups** permission —
-the same permission that governs Users and User Groups administration. The
-**Credentials** Console pick appears directly below **User Domains** on Cacti
-1.2.x and below **Login Providers** on develop / 1.3+.
+Access to `credentials.php` and `credential_providers.php` is gated by the core
+**Users/Groups** permission — the same permission that governs Users and User
+Groups administration. The **Credentials** and **Secret Providers** Console
+picks appear directly below **User Domains** on Cacti 1.2.x and below **Login
+Providers** on develop / 1.3+.
 
 ## Cacti version compatibility
 
@@ -77,3 +124,6 @@ secret fields decrypted) via `credentials_get($id)` from
 1. Place this plugin in `plugins/credentials` within your Cacti installation.
 2. Install and enable it from **Console > Configuration > Plugins**.
 3. Open **Console > Configuration > Credentials** to manage credentials.
+4. Optionally open **Console > Configuration > Secret Providers** to configure
+   external secret stores, then select one as the **Secret Provider** on a
+   credential.

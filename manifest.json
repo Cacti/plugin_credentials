@@ -7,6 +7,7 @@
         "README.md",
         "credentials.js",
         "credentials.php",
+        "credential_providers.php",
         "includes/",
         "index.php",
         "locales/",
