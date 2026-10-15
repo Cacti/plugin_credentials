@@ -970,46 +970,50 @@ msgid ""
 "is used."
 msgstr ""
 
-#: includes/providers/AwsSecretsManagerProvider.php:222
+#: includes/providers/AwsSecretsManagerProvider.php:220
+msgid "The ECS relative credentials URI is not valid."
+msgstr ""
+
+#: includes/providers/AwsSecretsManagerProvider.php:230
 msgid "The configured ECS credentials endpoint is not an allowed address."
 msgstr ""
 
-#: includes/providers/AwsSecretsManagerProvider.php:251
+#: includes/providers/AwsSecretsManagerProvider.php:259
 msgid "Unable to read ECS task role credentials."
 msgstr ""
 
-#: includes/providers/AwsSecretsManagerProvider.php:257
+#: includes/providers/AwsSecretsManagerProvider.php:265
 msgid "The ECS credentials endpoint returned no usable credentials."
 msgstr ""
 
-#: includes/providers/AwsSecretsManagerProvider.php:344
+#: includes/providers/AwsSecretsManagerProvider.php:352
 msgid ""
 "Unable to obtain an instance metadata token; is Cacti running on an AWS "
 "instance with a role?"
 msgstr ""
 
-#: includes/providers/AwsSecretsManagerProvider.php:352
+#: includes/providers/AwsSecretsManagerProvider.php:360
 msgid "No IAM role is attached to this instance."
 msgstr ""
 
-#: includes/providers/AwsSecretsManagerProvider.php:360
+#: includes/providers/AwsSecretsManagerProvider.php:368
 msgid "Unable to read instance role credentials."
 msgstr ""
 
-#: includes/providers/AwsSecretsManagerProvider.php:366
+#: includes/providers/AwsSecretsManagerProvider.php:374
 msgid "The instance metadata service returned no usable credentials."
 msgstr ""
 
-#: includes/providers/AwsSecretsManagerProvider.php:395
+#: includes/providers/AwsSecretsManagerProvider.php:403
 msgid "Unable to encode the AWS request."
 msgstr ""
 
-#: includes/providers/AwsSecretsManagerProvider.php:486
+#: includes/providers/AwsSecretsManagerProvider.php:494
 #, php-format
 msgid "AWS Secrets Manager error: %s (HTTP %d)."
 msgstr ""
 
-#: includes/providers/AwsSecretsManagerProvider.php:489
+#: includes/providers/AwsSecretsManagerProvider.php:497
 #, php-format
 msgid "AWS Secrets Manager returned HTTP %d."
 msgstr ""

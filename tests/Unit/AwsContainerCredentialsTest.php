@@ -45,3 +45,10 @@ it('rejects public hosts, 127-prefixed DNS names and non-http schemes', function
 		->and(credentials_test_aws_allowed_uri('ftp://127.0.0.1/creds'))->toBeFalse()
 		->and(credentials_test_aws_allowed_uri('not a url'))->toBeFalse();
 });
+
+it('rejects a userinfo trick that would exfiltrate the token off the link-local host', function () {
+	// an AWS_CONTAINER_CREDENTIALS_RELATIVE_URI of '@attacker.example/credentials'
+	// assembles to this URL; parse_url makes attacker.example the host
+	expect(credentials_test_aws_allowed_uri('http://169.254.170.2@attacker.example/credentials'))->toBeFalse()
+		->and(credentials_test_aws_allowed_uri('http://127.0.0.1@evil.example/x'))->toBeFalse();
+});

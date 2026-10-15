@@ -211,8 +211,16 @@ class AwsSecretsManagerProvider extends AbstractProvider {
 		$relative = getenv('AWS_CONTAINER_CREDENTIALS_RELATIVE_URI');
 
 		if ($relative !== false && $relative !== '') {
-			/* the relative URI is always the fixed ECS link-local endpoint */
-			return $this->containerCredentials($config, 'http://169.254.170.2' . $relative);
+			/* the relative URI is a path on the fixed ECS link-local endpoint;
+			 * validate the assembled URL so a value such as '@attacker.example/'
+			 * cannot turn 169.254.170.2 into userinfo and send the token offbox */
+			$url = 'http://169.254.170.2' . $relative;
+
+			if (!$this->allowedContainerUri($url)) {
+				return array(null, __('The ECS relative credentials URI is not valid.', 'credentials'));
+			}
+
+			return $this->containerCredentials($config, $url);
 		}
 
 		$full = getenv('AWS_CONTAINER_CREDENTIALS_FULL_URI');
