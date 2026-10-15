@@ -80,3 +80,16 @@ it('sorts signed headers and includes a security token when present', function (
 
 	expect($authorization)->toContain('SignedHeaders=content-type;host;x-amz-date;x-amz-security-token;x-amz-target');
 });
+
+it('selects the correct Secrets Manager endpoint per AWS partition', function () {
+	$host = new ReflectionMethod(AwsSecretsManagerProvider::class, 'host');
+	$host->setAccessible(true);
+
+	$driver = new AwsSecretsManagerProvider();
+
+	expect($host->invoke($driver, array(), 'us-east-1'))->toBe('secretsmanager.us-east-1.amazonaws.com')
+		->and($host->invoke($driver, array(), 'cn-north-1'))->toBe('secretsmanager.cn-north-1.amazonaws.com.cn')
+		->and($host->invoke($driver, array(), 'cn-northwest-1'))->toBe('secretsmanager.cn-northwest-1.amazonaws.com.cn')
+		->and($host->invoke($driver, array('endpoint' => 'https://vpce-abc.secretsmanager.us-east-1.vpce.amazonaws.com'), 'us-east-1'))
+			->toBe('vpce-abc.secretsmanager.us-east-1.vpce.amazonaws.com');
+});

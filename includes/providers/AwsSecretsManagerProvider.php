@@ -453,7 +453,11 @@ class AwsSecretsManagerProvider extends AbstractProvider {
 			return (string) parse_url($endpoint, PHP_URL_HOST);
 		}
 
-		return 'secretsmanager.' . $region . '.amazonaws.com';
+		/* the China partition (cn-north-1, cn-northwest-1) uses the
+		 * amazonaws.com.cn DNS suffix rather than amazonaws.com */
+		$suffix = strncmp($region, 'cn-', 3) === 0 ? 'amazonaws.com.cn' : 'amazonaws.com';
+
+		return 'secretsmanager.' . $region . '.' . $suffix;
 	}
 
 	/**

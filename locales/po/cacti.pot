@@ -1014,12 +1014,12 @@ msgstr ""
 msgid "Unable to encode the AWS request."
 msgstr ""
 
-#: includes/providers/AwsSecretsManagerProvider.php:494
+#: includes/providers/AwsSecretsManagerProvider.php:498
 #, php-format
 msgid "AWS Secrets Manager error: %s (HTTP %d)."
 msgstr ""
 
-#: includes/providers/AwsSecretsManagerProvider.php:497
+#: includes/providers/AwsSecretsManagerProvider.php:501
 #, php-format
 msgid "AWS Secrets Manager returned HTTP %d."
 msgstr ""
