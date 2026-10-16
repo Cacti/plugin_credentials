@@ -142,5 +142,76 @@ it('reports a missing secret without leaking a value', function () {
 
 	expect($ok)->toBeFalse()
 		->and($value)->toBeNull()
-		->and($error)->not->toBe('');
+		->and($error)->toContain('OpenBao')
+		->and($error)->toContain('missing/path')
+		->and($error)->not->toContain('Vault');
+});
+
+it('names OpenBao, not Vault, in connection-test diagnostics', function () {
+	$driver            = new TestableOpenBaoProvider();
+	$driver->responses = array(array(200, '{}', ''));
+
+	list($ok, $message) = $driver->test(credentials_test_openbao_config());
+
+	expect($ok)->toBeTrue()
+		->and($message)->toBe('Successfully authenticated to OpenBao.');
+
+	$driver->responses = array(array(403, '', ''));
+
+	list($ok, $message) = $driver->test(credentials_test_openbao_config());
+
+	expect($ok)->toBeFalse()
+		->and($message)->toContain('OpenBao returned HTTP 403')
+		->and($message)->not->toContain('Vault');
+
+	list($ok, $message) = $driver->test(array('address' => ''));
+
+	expect($ok)->toBeFalse()
+		->and($message)->toBe('The OpenBao address is required.');
+});
+
+it('names OpenBao, not Vault, in authentication and payload diagnostics', function () {
+	$base = credentials_test_openbao_config();
+
+	$driver = new TestableOpenBaoProvider();
+	list($ok, , $error) = $driver->resolve(array_merge($base, array('token' => '')), 'a/b#k');
+	expect($ok)->toBeFalse()->and($error)->toBe('The OpenBao token is required for Token authentication.');
+
+	$approle = array_merge($base, array('auth_method' => 'approle', 'role_id' => 'r', 'secret_id' => 's'));
+
+	$driver->responses = array(array(403, '', ''));
+	list($ok, , $error) = $driver->resolve($approle, 'a/b#k');
+	expect($ok)->toBeFalse()->and($error)->toBe('OpenBao AppRole login failed with HTTP 403.');
+
+	$driver->responses = array(array(200, '{}', ''));
+	list($ok, , $error) = $driver->resolve($approle, 'a/b#k');
+	expect($ok)->toBeFalse()->and($error)->toBe('OpenBao AppRole login returned no client token.');
+
+	list($ok, , $error) = $driver->resolve($base, '');
+	expect($ok)->toBeFalse()->and($error)->toBe('The OpenBao secret path is required.');
+
+	$driver->responses = array(array(500, '', ''));
+	list($ok, , $error) = $driver->resolve($base, 'a/b#k');
+	expect($ok)->toBeFalse()->and($error)->toBe('OpenBao returned HTTP 500 reading the secret.');
+
+	$driver->responses = array(array(200, 'not json', ''));
+	list($ok, , $error) = $driver->resolve($base, 'a/b#k');
+	expect($ok)->toBeFalse()->and($error)->toBe('OpenBao returned an unexpected response reading the secret.');
+
+	$driver->responses = array(array(200, json_encode(array('data' => array('data' => array('a' => '1', 'b' => '2')))), ''));
+	list($ok, , $error) = $driver->resolve($base, 'a/b');
+	expect($ok)->toBeFalse()->and($error)->toContain('The OpenBao secret holds multiple fields');
+});
+
+it('keeps Vault diagnostics naming Vault', function () {
+	$driver            = new VaultProvider();
+	$reflection        = new ReflectionMethod($driver, 'product');
+	$reflection->setAccessible(true);
+
+	expect($reflection->invoke($driver))->toBe('Vault');
+
+	list($ok, $message) = $driver->test(array('address' => ''));
+
+	expect($ok)->toBeFalse()
+		->and($message)->toBe('The Vault address is required.');
 });

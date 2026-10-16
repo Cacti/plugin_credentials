@@ -36,6 +36,10 @@ class OpenBaoProvider extends VaultProvider {
 		return __('OpenBao', 'credentials');
 	}
 
+	protected function product(): string {
+		return 'OpenBao';
+	}
+
 	public function description(): string {
 		return __('Resolve secrets from an OpenBao KV v1 or v2 secrets engine using a token or AppRole.', 'credentials');
 	}
