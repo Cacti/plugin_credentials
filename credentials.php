@@ -544,12 +544,12 @@ function credentials_list(): void {
 		strURL += '&type='   + encodeURIComponent($('#type').val());
 		strURL += '&rows='   + encodeURIComponent($('#rows').val());
 		strURL += '&page=1';
-		loadPageNoHeader(strURL);
+		loadUrl({ url: strURL });
 	}
 
 	function clearFilter() {
 		strURL = 'credentials.php?clear=true&header=false';
-		loadPageNoHeader(strURL);
+		loadUrl({ url: strURL });
 	}
 
 	$(function() {

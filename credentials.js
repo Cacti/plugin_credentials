@@ -44,7 +44,10 @@ function credentialsInitTypeWarning() {
 			url += '&provider_id=' + encodeURIComponent(credentialsProviderCurrent);
 		}
 
-		document.location = url;
+		// reload the edit form in place via an AJAX callback instead of a full
+		// page navigation; force past the unsaved-changes check because the type
+		// switch intentionally rebuilds the form
+		loadUrl({ url: url, force: true });
 	}
 
 	// Switching the backing Secret Provider re-renders the type-specific fields
@@ -62,7 +65,8 @@ function credentialsInitTypeWarning() {
 				url += '&id=' + id;
 			}
 
-			document.location = url;
+			// AJAX callback reload (see reloadForType) rather than a full refresh
+			loadUrl({ url: url, force: true });
 		});
 	}
 

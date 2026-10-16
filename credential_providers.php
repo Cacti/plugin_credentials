@@ -468,12 +468,12 @@ function provider_list(): void {
 		strURL += '&filter=' + encodeURIComponent($('#filter').val());
 		strURL += '&rows='   + encodeURIComponent($('#rows').val());
 		strURL += '&page=1';
-		loadPageNoHeader(strURL);
+		loadUrl({ url: strURL });
 	}
 
 	function clearFilter() {
 		strURL = 'credential_providers.php?clear=true&header=false';
-		loadPageNoHeader(strURL);
+		loadUrl({ url: strURL });
 	}
 
 	$(function() {
@@ -769,7 +769,10 @@ function provider_edit(): void {
 						url += '&id=' + providerId;
 					}
 
-					document.location = url;
+					/* reload the form in place via an AJAX callback rather than a
+					   full page navigation; force past the unsaved-changes check
+					   because switching the type intentionally rebuilds the form */
+					loadUrl({ url: url, force: true });
 				}
 
 				typeSelect.off('change.provider').on('change.provider', function() {
