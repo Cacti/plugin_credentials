@@ -810,11 +810,6 @@ msgstr ""
 msgid "An optional PEM CA bundle used to verify the peer."
 msgstr ""
 
-#: includes/arrays.php:552
-#, php-format
-msgid "Tier %d: %s"
-msgstr ""
-
 #: includes/functions.php:199
 msgid "A password is required for SSH password authentication."
 msgstr ""
