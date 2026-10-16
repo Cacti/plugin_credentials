@@ -34,6 +34,33 @@ function credentials_csp_nonce(): string {
 }
 
 /**
+ * Emit the JavaScript that defines the cross-version credentialsLoadUrl() page
+ * reload helper, guarded so it is only defined once per page. credentials.js
+ * defines an identical global, but that file is only loaded by the page_head
+ * hook on a full page load; when one of this plugin's pages is reached through
+ * Cacti's AJAX console navigation from another page, the file is absent, so the
+ * inline scripts emit this fallback. Cacti 1.3+/develop expose loadUrl(); the
+ * 1.2.x line (this plugin's declared compat floor of 1.2.29) only provides
+ * loadPageNoHeader(), so the helper feature-detects and degrades gracefully.
+ *
+ * @return string A JavaScript snippet suitable for emitting inside a <script>.
+ */
+function credentials_loadurl_js(): string {
+	return <<<'JS'
+	window.credentialsLoadUrl = window.credentialsLoadUrl || function(url, force) {
+		if (typeof loadUrl === 'function') {
+			loadUrl({ url: url, force: force === true });
+		} else if (typeof loadPageNoHeader === 'function') {
+			var href = url + (url.indexOf('header=') === -1 ? ((url.indexOf('?') === -1 ? '?' : '&') + 'header=false') : '');
+			loadPageNoHeader(href, false, force === true);
+		} else {
+			document.location = url;
+		}
+	};
+JS;
+}
+
+/**
  * Read this plugin's version/author metadata from its INFO file. Invoked by
  * the Cacti plugin framework to display plugin information.
  *
