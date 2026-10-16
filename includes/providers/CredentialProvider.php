@@ -21,7 +21,8 @@
 
 /**
  * Contract implemented by every external secret-store driver (HashiCorp Vault,
- * AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, CyberArk Conjur).
+ * OpenBao, AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, CyberArk
+ * Conjur).
  *
  * A driver is a stateless strategy: all per-connection state (endpoint, auth,
  * TLS settings) is supplied by the caller as a decrypted $config array sourced

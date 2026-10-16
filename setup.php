@@ -187,8 +187,9 @@ function credentials_setup_table(): void {
 
 /**
  * Create the 'credential_providers' table used to store external secret-store
- * provider instances (HashiCorp Vault, AWS Secrets Manager, Azure Key Vault,
- * Google Cloud Secret Manager, CyberArk Conjur). The per-connection secrets
+ * provider instances (HashiCorp Vault, OpenBao, AWS Secrets Manager, Azure Key
+ * Vault, Google Cloud Secret Manager, CyberArk Conjur). The per-connection
+ * secrets
  * inside the properties JSON are encrypted by credential_providers.php before
  * they are written; only non-secret settings are stored in clear text.
  *

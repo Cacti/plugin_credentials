@@ -1,5 +1,6 @@
 1.1
 -feature: External secret providers - resolve credential secrets from HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, Google Cloud Secret Manager and CyberArk Conjur
+-feature: OpenBao secret provider (Vault-API compatible KV v1/v2 with Token or AppRole authentication)
 -feature: Pluggable CredentialProvider driver interface and registry so additional secret stores can be added without changing the storage or UI layer
 -feature: New 'credential_providers' table storing provider instances; per-connection secrets (tokens, keys, client secrets) encrypted with the Cacti core secret functions
 -feature: New 'Secret Providers' management page (list/add/edit/enable/disable/delete) with a per-provider 'Test Connection' self-check

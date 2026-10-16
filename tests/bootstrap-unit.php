@@ -110,7 +110,7 @@ if (!function_exists('credentials_test_register_driver')) {
 
 if (!function_exists('credentials_test_reset_drivers')) {
 	// Remove any registered test drivers and the cached registry so the suite
-	// returns to exactly the five production drivers.
+	// returns to exactly the six production drivers.
 	function credentials_test_reset_drivers() {
 		unset($GLOBALS['__credentials_test_drivers'], $GLOBALS['__credentials_provider_registry']);
 	}
