@@ -22,6 +22,7 @@
 require_once(__DIR__ . '/providers/CredentialProvider.php');
 require_once(__DIR__ . '/providers/AbstractProvider.php');
 require_once(__DIR__ . '/providers/VaultProvider.php');
+require_once(__DIR__ . '/providers/OpenBaoProvider.php');
 require_once(__DIR__ . '/providers/AwsSecretsManagerProvider.php');
 require_once(__DIR__ . '/providers/AzureKeyVaultProvider.php');
 require_once(__DIR__ . '/providers/GcpSecretManagerProvider.php');
@@ -40,6 +41,7 @@ function credentials_provider_registry(): array {
 	if (!isset($GLOBALS['__credentials_provider_registry'])) {
 		$drivers = array(
 			new VaultProvider(),
+			new OpenBaoProvider(),
 			new AwsSecretsManagerProvider(),
 			new AzureKeyVaultProvider(),
 			new GcpSecretManagerProvider(),

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cacti 1.0\n"
 "Report-Msgid-Bugs-To: developers@cacti.net\n"
-"POT-Creation-Date: 2026-10-14 15:16-0400\n"
+"POT-Creation-Date: 2026-10-16 19:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Cacti Developers <developers@cacti.net>\n"
 "Language-Team: Cacti Developers <developers@cacti.net>\n"
@@ -86,13 +86,13 @@ msgstr ""
 msgid "Disable the following secret provider(s)?"
 msgstr ""
 
-#: credential_providers.php:337 credential_providers.php:753
-#: credentials.php:428 credentials.php:880
+#: credential_providers.php:337 credential_providers.php:755
+#: credentials.php:428 credentials.php:882
 msgid "Cancel"
 msgstr ""
 
-#: credential_providers.php:337 credential_providers.php:752
-#: credentials.php:428 credentials.php:879
+#: credential_providers.php:337 credential_providers.php:754
+#: credentials.php:428 credentials.php:881
 msgid "Continue"
 msgstr ""
 
@@ -104,129 +104,129 @@ msgstr ""
 msgid "Save the provider before testing it."
 msgstr ""
 
-#: credential_providers.php:490 credential_providers.php:529 setup.php:228
-#: setup.php:246 setup.php:287
+#: credential_providers.php:491 credential_providers.php:530 setup.php:256
+#: setup.php:274 setup.php:315
 msgid "Secret Providers"
 msgstr ""
 
-#: credential_providers.php:498 credentials.php:574
+#: credential_providers.php:499 credentials.php:575
 msgid "Search"
 msgstr ""
 
-#: credential_providers.php:502
+#: credential_providers.php:503
 msgid "Providers"
 msgstr ""
 
-#: credential_providers.php:505 credentials.php:592
+#: credential_providers.php:506 credentials.php:593
 msgid "All"
 msgstr ""
 
-#: credential_providers.php:516 credentials.php:603
+#: credential_providers.php:517 credentials.php:604
 msgid "Go"
 msgstr ""
 
-#: credential_providers.php:517 credentials.php:604
+#: credential_providers.php:518 credentials.php:605
 msgid "Clear"
 msgstr ""
 
-#: credential_providers.php:538 credential_providers.php:624
-#: credentials.php:625 credentials.php:749
+#: credential_providers.php:539 credential_providers.php:625
+#: credentials.php:626 credentials.php:750
 msgid "Name"
 msgstr ""
 
-#: credential_providers.php:539 credentials.php:578 credentials.php:626
+#: credential_providers.php:540 credentials.php:579 credentials.php:627
 msgid "Type"
 msgstr ""
 
-#: credential_providers.php:540 credential_providers.php:632
-#: credentials.php:628 credentials.php:757
+#: credential_providers.php:541 credential_providers.php:633
+#: credentials.php:629 credentials.php:758
 msgid "Description"
 msgstr ""
 
-#: credential_providers.php:541 credential_providers.php:647
-#: credentials.php:630 credentials.php:779
+#: credential_providers.php:542 credential_providers.php:648
+#: credentials.php:631 credentials.php:780
 msgid "Enabled"
 msgstr ""
 
-#: credential_providers.php:542 credentials.php:631
+#: credential_providers.php:543 credentials.php:632
 msgid "Last Updated"
 msgstr ""
 
-#: credential_providers.php:556 credentials.php:648
+#: credential_providers.php:557 credentials.php:649
 msgid "Yes"
 msgstr ""
 
-#: credential_providers.php:556 credentials.php:648
+#: credential_providers.php:557 credentials.php:649
 msgid "No"
 msgstr ""
 
-#: credential_providers.php:563
+#: credential_providers.php:564
 msgid "No Secret Providers Found"
 msgstr ""
 
-#: credential_providers.php:619
+#: credential_providers.php:620
 #, php-format
 msgid "Secret Provider [edit: %s]"
 msgstr ""
 
-#: credential_providers.php:619
+#: credential_providers.php:620
 msgid "Secret Provider [new]"
 msgstr ""
 
-#: credential_providers.php:625
+#: credential_providers.php:626
 msgid "A unique, meaningful name for this provider instance."
 msgstr ""
 
-#: credential_providers.php:633
+#: credential_providers.php:634
 msgid "An optional description of this provider instance."
 msgstr ""
 
-#: credential_providers.php:640
+#: credential_providers.php:641
 msgid "Provider Type"
 msgstr ""
 
-#: credential_providers.php:641
+#: credential_providers.php:642
 msgid ""
 "The external secret store this provider connects to. Changing the type on an "
 "existing provider discards the previously stored type-specific configuration "
 "when you save."
 msgstr ""
 
-#: credential_providers.php:648
+#: credential_providers.php:649
 msgid "Whether this provider is available to resolve credential secrets."
 msgstr ""
 
-#: credential_providers.php:696 credentials.php:832
+#: credential_providers.php:697 credentials.php:833
 msgid "A value is currently stored (encrypted)."
 msgstr ""
 
-#: credential_providers.php:696 credentials.php:832
+#: credential_providers.php:697 credentials.php:833
 msgid "Leave this blank to keep it, or enter a new value to replace it."
 msgstr ""
 
-#: credential_providers.php:698 credentials.php:834
+#: credential_providers.php:699 credentials.php:835
 msgid "No value stored yet."
 msgstr ""
 
-#: credential_providers.php:739
+#: credential_providers.php:740
 msgid "Test Connection"
 msgstr ""
 
-#: credential_providers.php:750
+#: credential_providers.php:752
 msgid "Change Provider Type?"
 msgstr ""
 
-#: credential_providers.php:751
+#: credential_providers.php:753
 msgid ""
 "Changing the Provider Type will discard the configuration stored for the "
 "current type when you save this provider. Do you want to continue?"
 msgstr ""
 
-#: credential_providers.php:754
+#: credential_providers.php:756
 msgid "Testing..."
 msgstr ""
 
-#: credential_providers.php:755
+#: credential_providers.php:757
 msgid "The test request failed."
 msgstr ""
 
@@ -288,63 +288,63 @@ msgstr ""
 msgid "Disable the following credential(s)?"
 msgstr ""
 
-#: credentials.php:566 credentials.php:589 credentials.php:616 setup.php:227
-#: setup.php:245 setup.php:259
+#: credentials.php:567 credentials.php:590 credentials.php:617 setup.php:255
+#: setup.php:273 setup.php:287
 msgid "Credentials"
 msgstr ""
 
-#: credentials.php:581
+#: credentials.php:582
 msgid "Any"
 msgstr ""
 
-#: credentials.php:627 credentials.php:772
+#: credentials.php:628 credentials.php:773
 msgid "Secret Provider"
 msgstr ""
 
-#: credentials.php:629
+#: credentials.php:630
 msgid "Owner"
 msgstr ""
 
-#: credentials.php:639
+#: credentials.php:640
 msgid "Local Database"
 msgstr ""
 
-#: credentials.php:647
+#: credentials.php:648
 msgid "N/A"
 msgstr ""
 
-#: credentials.php:655
+#: credentials.php:656
 msgid "No Credentials Found"
 msgstr ""
 
-#: credentials.php:744
+#: credentials.php:745
 #, php-format
 msgid "Credential [edit: %s]"
 msgstr ""
 
-#: credentials.php:744
+#: credentials.php:745
 msgid "Credential [new]"
 msgstr ""
 
-#: credentials.php:750
+#: credentials.php:751
 msgid "A unique, meaningful name for this credential."
 msgstr ""
 
-#: credentials.php:758
+#: credentials.php:759
 msgid "An optional description of where this credential is used."
 msgstr ""
 
-#: credentials.php:765
+#: credentials.php:766
 msgid "Credential Type"
 msgstr ""
 
-#: credentials.php:766
+#: credentials.php:767
 msgid ""
 "The type of credential. Changing the type on an existing credential discards "
 "the previously stored type-specific values when you save."
 msgstr ""
 
-#: credentials.php:773
+#: credentials.php:774
 msgid ""
 "Where the secret values for this credential live. Choose the local encrypted "
 "database, or an external secret store. When an external provider is "
@@ -352,19 +352,19 @@ msgid ""
 "time instead of the secret itself."
 msgstr ""
 
-#: credentials.php:780
+#: credentials.php:781
 msgid "Whether this credential is available for use."
 msgstr ""
 
-#: credentials.php:821
+#: credentials.php:822
 msgid "(reference)"
 msgstr ""
 
-#: credentials.php:877
+#: credentials.php:879
 msgid "Change Credential Type?"
 msgstr ""
 
-#: credentials.php:878
+#: credentials.php:880
 msgid ""
 "Changing the Credential Type will discard the values stored for the current "
 "type when you save this credential. Do you want to continue?"
@@ -517,7 +517,7 @@ msgid "The SSH login username."
 msgstr ""
 
 #: includes/arrays.php:188 includes/providers/AzureKeyVaultProvider.php:67
-#: includes/providers/VaultProvider.php:80
+#: includes/providers/VaultProvider.php:92
 msgid "Authentication Method"
 msgstr ""
 
@@ -836,6 +836,18 @@ msgid ""
 "selected."
 msgstr ""
 
+#: includes/providers.php:192
+msgid "Local Database (encrypted)"
+msgstr ""
+
+#: includes/providers.php:203
+msgid "(disabled)"
+msgstr ""
+
+#: includes/providers.php:290
+msgid "The provider could not be found or its type is unknown."
+msgstr ""
+
 #: includes/providers/AbstractProvider.php:38
 msgid "Secret Reference"
 msgstr ""
@@ -937,7 +949,7 @@ msgstr ""
 #: includes/providers/AzureKeyVaultProvider.php:103
 #: includes/providers/ConjurProvider.php:93
 #: includes/providers/GcpSecretManagerProvider.php:77
-#: includes/providers/VaultProvider.php:119
+#: includes/providers/VaultProvider.php:131
 msgid "Timeout (seconds)"
 msgstr ""
 
@@ -1205,7 +1217,7 @@ msgid "The API key for the identity. Stored encrypted."
 msgstr ""
 
 #: includes/providers/ConjurProvider.php:81
-#: includes/providers/VaultProvider.php:107
+#: includes/providers/VaultProvider.php:119
 msgid "Verify TLS Certificate"
 msgstr ""
 
@@ -1214,7 +1226,7 @@ msgid "Verify the Conjur appliance TLS certificate. Disable only for testing."
 msgstr ""
 
 #: includes/providers/ConjurProvider.php:87
-#: includes/providers/VaultProvider.php:113
+#: includes/providers/VaultProvider.php:125
 msgid "CA Bundle Path"
 msgstr ""
 
@@ -1384,198 +1396,247 @@ msgstr ""
 msgid "Google Cloud Secret Manager returned HTTP %d."
 msgstr ""
 
-#: includes/providers.php:190
-msgid "Local Database (encrypted)"
+#: includes/providers/OpenBaoProvider.php:36
+msgid "OpenBao"
 msgstr ""
 
-#: includes/providers.php:201
-msgid "(disabled)"
+#: includes/providers/OpenBaoProvider.php:44
+msgid ""
+"Resolve secrets from an OpenBao KV v1 or v2 secrets engine using a token or "
+"AppRole."
 msgstr ""
 
-#: includes/providers.php:288
-msgid "The provider could not be found or its type is unknown."
+#: includes/providers/OpenBaoProvider.php:48
+msgid ""
+"An OpenBao secret path and the key within it, separated by '#', for example "
+"'network/snmp#community'. The path is relative to the configured KV mount; "
+"append '#key' to select a field from the secret."
+msgstr ""
+
+#: includes/providers/OpenBaoProvider.php:55
+msgid "OpenBao Address"
+msgstr ""
+
+#: includes/providers/OpenBaoProvider.php:55
+msgid ""
+"The base URL of the OpenBao server, for example https://"
+"openbao.example.com:8200."
+msgstr ""
+
+#: includes/providers/OpenBaoProvider.php:56
+msgid "The optional OpenBao namespace (sent as the X-Vault-Namespace header)."
+msgstr ""
+
+#: includes/providers/OpenBaoProvider.php:57
+msgid "How this plugin authenticates to OpenBao."
+msgstr ""
+
+#: includes/providers/OpenBaoProvider.php:58
+msgid "The OpenBao token used for Token authentication. Stored encrypted."
+msgstr ""
+
+#: includes/providers/OpenBaoProvider.php:59
+msgid "Verify the OpenBao server TLS certificate. Disable only for testing."
+msgstr ""
+
+#: includes/providers/OpenBaoProvider.php:60
+msgid ""
+"An optional path on the Cacti server to a PEM CA bundle used to verify "
+"OpenBao."
+msgstr ""
+
+#: includes/providers/OpenBaoProvider.php:61
+msgid "The network timeout for OpenBao requests."
 msgstr ""
 
 #: includes/providers/VaultProvider.php:35
 msgid "HashiCorp Vault"
 msgstr ""
 
-#: includes/providers/VaultProvider.php:39
+#: includes/providers/VaultProvider.php:51
 msgid ""
 "Resolve secrets from a HashiCorp Vault KV v1 or v2 secrets engine using a "
 "token or AppRole."
 msgstr ""
 
-#: includes/providers/VaultProvider.php:43
+#: includes/providers/VaultProvider.php:55
 msgid "Secret Path and Key"
 msgstr ""
 
-#: includes/providers/VaultProvider.php:47
+#: includes/providers/VaultProvider.php:59
 msgid ""
 "A Vault secret path and the key within it, separated by '#', for example "
 "'network/snmp#community'. The path is relative to the configured KV mount; "
 "append '#key' to select a field from the secret."
 msgstr ""
 
-#: includes/providers/VaultProvider.php:53
+#: includes/providers/VaultProvider.php:65
 msgid "Vault Address"
 msgstr ""
 
-#: includes/providers/VaultProvider.php:55
+#: includes/providers/VaultProvider.php:67
 msgid ""
 "The base URL of the Vault server, for example https://vault.example.com:8200."
 msgstr ""
 
-#: includes/providers/VaultProvider.php:60
+#: includes/providers/VaultProvider.php:72
 msgid "Namespace"
 msgstr ""
 
-#: includes/providers/VaultProvider.php:62
+#: includes/providers/VaultProvider.php:74
 msgid ""
 "The optional Vault Enterprise namespace (sent as the X-Vault-Namespace "
 "header)."
 msgstr ""
 
-#: includes/providers/VaultProvider.php:66
+#: includes/providers/VaultProvider.php:78
 msgid "KV Engine Version"
 msgstr ""
 
-#: includes/providers/VaultProvider.php:68
+#: includes/providers/VaultProvider.php:80
 msgid "The version of the KV secrets engine the mount uses."
 msgstr ""
 
-#: includes/providers/VaultProvider.php:69
+#: includes/providers/VaultProvider.php:81
 msgid "KV Version 2"
 msgstr ""
 
-#: includes/providers/VaultProvider.php:69
+#: includes/providers/VaultProvider.php:81
 msgid "KV Version 1"
 msgstr ""
 
-#: includes/providers/VaultProvider.php:73
+#: includes/providers/VaultProvider.php:85
 msgid "KV Mount Path"
 msgstr ""
 
-#: includes/providers/VaultProvider.php:75
+#: includes/providers/VaultProvider.php:87
 msgid "The mount path of the KV secrets engine, for example 'secret'."
 msgstr ""
 
-#: includes/providers/VaultProvider.php:82
+#: includes/providers/VaultProvider.php:94
 msgid "How this plugin authenticates to Vault."
 msgstr ""
 
-#: includes/providers/VaultProvider.php:83
-#: includes/providers/VaultProvider.php:87
+#: includes/providers/VaultProvider.php:95
+#: includes/providers/VaultProvider.php:99
 msgid "Token"
 msgstr ""
 
-#: includes/providers/VaultProvider.php:83
+#: includes/providers/VaultProvider.php:95
 msgid "AppRole"
 msgstr ""
 
-#: includes/providers/VaultProvider.php:89
+#: includes/providers/VaultProvider.php:101
 msgid "The Vault token used for Token authentication. Stored encrypted."
 msgstr ""
 
-#: includes/providers/VaultProvider.php:94
+#: includes/providers/VaultProvider.php:106
 msgid "AppRole Role ID"
 msgstr ""
 
-#: includes/providers/VaultProvider.php:96
+#: includes/providers/VaultProvider.php:108
 msgid "The AppRole RoleID used for AppRole authentication."
 msgstr ""
 
-#: includes/providers/VaultProvider.php:100
+#: includes/providers/VaultProvider.php:112
 msgid "AppRole Secret ID"
 msgstr ""
 
-#: includes/providers/VaultProvider.php:102
+#: includes/providers/VaultProvider.php:114
 msgid "The AppRole SecretID used for AppRole authentication. Stored encrypted."
 msgstr ""
 
-#: includes/providers/VaultProvider.php:109
+#: includes/providers/VaultProvider.php:121
 msgid "Verify the Vault server TLS certificate. Disable only for testing."
 msgstr ""
 
-#: includes/providers/VaultProvider.php:115
+#: includes/providers/VaultProvider.php:127
 msgid ""
 "An optional path on the Cacti server to a PEM CA bundle used to verify Vault."
 msgstr ""
 
-#: includes/providers/VaultProvider.php:121
+#: includes/providers/VaultProvider.php:133
 msgid "The network timeout for Vault requests."
 msgstr ""
 
-#: includes/providers/VaultProvider.php:132
-msgid "A Vault address is required."
-msgstr ""
-
-#: includes/providers/VaultProvider.php:154
-msgid "Successfully authenticated to Vault."
-msgstr ""
-
-#: includes/providers/VaultProvider.php:157
+#: includes/providers/VaultProvider.php:144
 #, php-format
-msgid "Vault returned HTTP %d during token verification."
+msgid "The %s address is required."
 msgstr ""
 
-#: includes/providers/VaultProvider.php:164
-msgid "A Vault secret path is required."
-msgstr ""
-
-#: includes/providers/VaultProvider.php:197
+#: includes/providers/VaultProvider.php:166
 #, php-format
-msgid "The Vault secret path '%s' was not found."
+msgid "Successfully authenticated to %s."
 msgstr ""
 
-#: includes/providers/VaultProvider.php:201
+#: includes/providers/VaultProvider.php:169
 #, php-format
-msgid "Vault returned HTTP %d reading the secret."
+msgid "%s returned HTTP %d during token verification."
 msgstr ""
 
-#: includes/providers/VaultProvider.php:207
-msgid "Vault returned an unexpected response reading the secret."
+#: includes/providers/VaultProvider.php:176
+#, php-format
+msgid "The %s secret path is required."
 msgstr ""
 
-#: includes/providers/VaultProvider.php:216
-msgid "Vault returned an unexpected secret payload."
+#: includes/providers/VaultProvider.php:209
+#, php-format
+msgid "The %s secret path '%s' was not found."
 msgstr ""
 
-#: includes/providers/VaultProvider.php:227
+#: includes/providers/VaultProvider.php:213
+#, php-format
+msgid "%s returned HTTP %d reading the secret."
+msgstr ""
+
+#: includes/providers/VaultProvider.php:219
+#, php-format
+msgid "%s returned an unexpected response reading the secret."
+msgstr ""
+
+#: includes/providers/VaultProvider.php:228
+#, php-format
+msgid "%s returned an unexpected secret payload."
+msgstr ""
+
+#: includes/providers/VaultProvider.php:239
+#, php-format
 msgid ""
-"The Vault secret holds multiple fields; append '#key' to the reference to "
+"The %s secret holds multiple fields; append '#key' to the reference to "
 "select one."
 msgstr ""
 
-#: includes/providers/VaultProvider.php:250
+#: includes/providers/VaultProvider.php:262
 msgid "AppRole authentication requires both a RoleID and a SecretID."
 msgstr ""
 
-#: includes/providers/VaultProvider.php:268
+#: includes/providers/VaultProvider.php:280
 #, php-format
-msgid "Vault AppRole login failed with HTTP %d."
+msgid "%s AppRole login failed with HTTP %d."
 msgstr ""
 
-#: includes/providers/VaultProvider.php:274
-msgid "Vault AppRole login returned no client token."
+#: includes/providers/VaultProvider.php:286
+#, php-format
+msgid "%s AppRole login returned no client token."
 msgstr ""
 
-#: includes/providers/VaultProvider.php:283
-msgid "A Vault token is required for Token authentication."
+#: includes/providers/VaultProvider.php:295
+#, php-format
+msgid "The %s token is required for Token authentication."
 msgstr ""
 
-#: setup.php:242
+#: setup.php:270
 msgid "Configuration"
 msgstr ""
 
-#: setup.php:266 setup.php:294
+#: setup.php:294 setup.php:322
 msgid "(Edit)"
 msgstr ""
 
-#: setup.php:273 setup.php:301
+#: setup.php:301 setup.php:329
 msgid "Actions"
 msgstr ""
 
-#: setup.php:280 setup.php:308
+#: setup.php:308 setup.php:336
 msgid "(Save)"
 msgstr ""

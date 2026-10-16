@@ -165,6 +165,7 @@ $unmeasured_allowlist = [
 	'includes/providers/CredentialProvider.php',        // interface declaration; no executable statements
 	'includes/providers/AbstractProvider.php',          // shared cURL transport performing live network I/O; its pure reference/JSON helpers are unit-tested
 	'includes/providers/VaultProvider.php',             // driver performs live HTTPS calls to HashiCorp Vault; pure logic unit-tested
+	'includes/providers/OpenBaoProvider.php',           // Vault-API-compatible driver; inherits the live HTTPS calls of VaultProvider
 	'includes/providers/AwsSecretsManagerProvider.php', // driver performs live AWS API calls; SigV4 signing unit-tested
 	'includes/providers/AzureKeyVaultProvider.php',     // driver performs live Azure Key Vault API calls
 	'includes/providers/GcpSecretManagerProvider.php',  // driver performs live Google Cloud API calls; JWT signing unit-tested

@@ -52,6 +52,8 @@ fields can be sourced at poll time from an external secret store. The following
 providers ship with the plugin:
 
 - **HashiCorp Vault** — KV v1/v2 engines; Token or AppRole authentication
+- **OpenBao** — the open-source Vault fork; same KV v1/v2 engines and Token or
+  AppRole authentication
 - **AWS Secrets Manager** — IAM access keys or an EC2/ECS instance role
   (requests are signed with AWS Signature Version 4)
 - **Azure Key Vault** — Entra ID service principal or Managed Identity

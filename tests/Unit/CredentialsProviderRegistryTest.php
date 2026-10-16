@@ -11,7 +11,7 @@
 
 /*
  * Unit coverage for the external secret-provider registry in
- * includes/providers.php: the five shipped drivers, their lookup helpers and
+ * includes/providers.php: the six shipped drivers, their lookup helpers and
  * the option/config-field shape the UI renders from.
  */
 
@@ -23,13 +23,13 @@ beforeEach(function () {
 	credentials_test_reset_drivers();
 });
 
-it('registers exactly the five shipped provider drivers', function () {
+it('registers exactly the six shipped provider drivers', function () {
 	$registry = credentials_provider_registry();
 
 	expect($registry)->toBeArray()
-		->and($registry)->toHaveCount(5);
+		->and($registry)->toHaveCount(6);
 
-	foreach (array('vault', 'aws', 'azure', 'gcp', 'conjur') as $type) {
+	foreach (array('vault', 'openbao', 'aws', 'azure', 'gcp', 'conjur') as $type) {
 		expect($registry)->toHaveKey($type);
 		expect($registry[$type])->toBeInstanceOf(CredentialProvider::class);
 	}
@@ -83,9 +83,10 @@ it('builds a provider type option map keyed by type code', function () {
 	$options = credentials_provider_type_options();
 
 	expect($options)->toBeArray()
-		->and($options)->toHaveCount(5)
+		->and($options)->toHaveCount(6)
 		->and($options)->toHaveKey('vault')
 		->and($options['vault'])->toContain('Vault')
+		->and($options['openbao'])->toContain('OpenBao')
 		->and($options)->toHaveKey('aws')
 		->and($options['conjur'])->toContain('Conjur');
 });

@@ -35,6 +35,18 @@ class VaultProvider extends AbstractProvider {
 		return __('HashiCorp Vault', 'credentials');
 	}
 
+	/**
+	 * The product name interpolated into connection-test and resolution
+	 * diagnostics. Vault-API-compatible drivers override it so messages name the
+	 * product the operator actually configured. It is a proper noun and is not
+	 * translated.
+	 *
+	 * @return string
+	 */
+	protected function product(): string {
+		return 'Vault';
+	}
+
 	public function description(): string {
 		return __('Resolve secrets from a HashiCorp Vault KV v1 or v2 secrets engine using a token or AppRole.', 'credentials');
 	}
@@ -129,7 +141,7 @@ class VaultProvider extends AbstractProvider {
 		$address = $this->cfg($config, 'address');
 
 		if ($address === '') {
-			return array(false, __('A Vault address is required.', 'credentials'));
+			return array(false, __('The %s address is required.', $this->product(), 'credentials'));
 		}
 
 		list($token, $err) = $this->authToken($config);
@@ -151,17 +163,17 @@ class VaultProvider extends AbstractProvider {
 		}
 
 		if ($status >= 200 && $status < 300) {
-			return array(true, __('Successfully authenticated to Vault.', 'credentials'));
+			return array(true, __('Successfully authenticated to %s.', $this->product(), 'credentials'));
 		}
 
-		return array(false, __('Vault returned HTTP %d during token verification.', $status, 'credentials'));
+		return array(false, __('%s returned HTTP %d during token verification.', $this->product(), $status, 'credentials'));
 	}
 
 	public function resolve(array $config, string $reference): array {
 		list($path, $json_key) = $this->splitReference($reference);
 
 		if ($path === '') {
-			return array(false, null, __('A Vault secret path is required.', 'credentials'));
+			return array(false, null, __('The %s secret path is required.', $this->product(), 'credentials'));
 		}
 
 		/* a reference with no '#key' and a KV v2 data document is ambiguous;
@@ -194,17 +206,17 @@ class VaultProvider extends AbstractProvider {
 		}
 
 		if ($status === 404) {
-			return array(false, null, __('The Vault secret path \'%s\' was not found.', $path, 'credentials'));
+			return array(false, null, __('The %s secret path \'%s\' was not found.', $this->product(), $path, 'credentials'));
 		}
 
 		if ($status < 200 || $status >= 300) {
-			return array(false, null, __('Vault returned HTTP %d reading the secret.', $status, 'credentials'));
+			return array(false, null, __('%s returned HTTP %d reading the secret.', $this->product(), $status, 'credentials'));
 		}
 
 		$decoded = $this->decodeJson($body);
 
 		if ($decoded === null || !isset($decoded['data'])) {
-			return array(false, null, __('Vault returned an unexpected response reading the secret.', 'credentials'));
+			return array(false, null, __('%s returned an unexpected response reading the secret.', $this->product(), 'credentials'));
 		}
 
 		/* KV v2 nests the key/value map under data.data; KV v1 uses data */
@@ -213,7 +225,7 @@ class VaultProvider extends AbstractProvider {
 			: $decoded['data'];
 
 		if (!is_array($data)) {
-			return array(false, null, __('Vault returned an unexpected secret payload.', 'credentials'));
+			return array(false, null, __('%s returned an unexpected secret payload.', $this->product(), 'credentials'));
 		}
 
 		if ($json_key === null) {
@@ -224,7 +236,7 @@ class VaultProvider extends AbstractProvider {
 				return array(true, is_array($only) ? (string) json_encode($only) : (string) $only, '');
 			}
 
-			return array(false, null, __('The Vault secret holds multiple fields; append \'#key\' to the reference to select one.', 'credentials'));
+			return array(false, null, __('The %s secret holds multiple fields; append \'#key\' to the reference to select one.', $this->product(), 'credentials'));
 		}
 
 		/* delegate key selection - including dotted nested paths and structured
@@ -265,13 +277,13 @@ class VaultProvider extends AbstractProvider {
 			}
 
 			if ($status < 200 || $status >= 300) {
-				return array(null, __('Vault AppRole login failed with HTTP %d.', $status, 'credentials'));
+				return array(null, __('%s AppRole login failed with HTTP %d.', $this->product(), $status, 'credentials'));
 			}
 
 			$decoded = $this->decodeJson($body);
 
 			if ($decoded === null || !isset($decoded['auth']['client_token'])) {
-				return array(null, __('Vault AppRole login returned no client token.', 'credentials'));
+				return array(null, __('%s AppRole login returned no client token.', $this->product(), 'credentials'));
 			}
 
 			return array((string) $decoded['auth']['client_token'], '');
@@ -280,7 +292,7 @@ class VaultProvider extends AbstractProvider {
 		$token = (string) $this->cfg($config, 'token');
 
 		if ($token === '') {
-			return array(null, __('A Vault token is required for Token authentication.', 'credentials'));
+			return array(null, __('The %s token is required for Token authentication.', $this->product(), 'credentials'));
 		}
 
 		return array($token, '');
