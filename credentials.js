@@ -11,6 +11,24 @@
  +-------------------------------------------------------------------------+
 */
 
+// Reload a Console page/fragment via AJAX, compatible across Cacti releases.
+// Cacti 1.3+/develop expose loadUrl(); the 1.2.x line (the plugin's declared
+// compat floor) only has loadPageNoHeader(). Define this once as a global so
+// every page -- including those reached through AJAX navigation where this file
+// may not be reloaded -- can reuse it; the inline scripts emit an identical
+// guarded fallback for the case where this file is not present.
+window.credentialsLoadUrl = window.credentialsLoadUrl || function(url, force) {
+	if (typeof loadUrl === 'function') {
+		loadUrl({ url: url, force: force === true });
+	} else if (typeof loadPageNoHeader === 'function') {
+		// request an AJAX fragment; append header=false only when absent
+		var href = url + (url.indexOf('header=') === -1 ? ((url.indexOf('?') === -1 ? '?' : '&') + 'header=false') : '');
+		loadPageNoHeader(href, false, force === true);
+	} else {
+		document.location = url;
+	}
+};
+
 // Warn, via a jQueryUI dialog, before switching the Credential Type on an
 // already-created credential, because saving after the switch replaces the
 // stored type-specific values. The credentialsId / credentialsOriginalType
@@ -47,7 +65,7 @@ function credentialsInitTypeWarning() {
 		// reload the edit form in place via an AJAX callback instead of a full
 		// page navigation; force past the unsaved-changes check because the type
 		// switch intentionally rebuilds the form
-		loadUrl({ url: url, force: true });
+		credentialsLoadUrl(url, true);
 	}
 
 	// Switching the backing Secret Provider re-renders the type-specific fields
@@ -66,7 +84,7 @@ function credentialsInitTypeWarning() {
 			}
 
 			// AJAX callback reload (see reloadForType) rather than a full refresh
-			loadUrl({ url: url, force: true });
+			credentialsLoadUrl(url, true);
 		});
 	}
 

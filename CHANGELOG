@@ -9,7 +9,7 @@
 -feature: Per-request resolution cache so a poll does not repeatedly round-trip to a store; failures fail closed and are logged without leaking secrets
 -feature: Add a 'provider_id' column to the 'credentials' table and an idempotent upgrade path for existing installations
 -feature: Add a 'Secret Providers' menu pick and breadcrumb navigation, gated on the core Users/Groups permission
--bug: Changing the Provider Type or Secret Provider on an edit form now reloads via an AJAX callback (loadUrl) instead of a full page navigation, and the dropdowns keep triggering the reload after the first change
+-bug: Changing the Provider Type or Secret Provider on an edit form now reloads via an AJAX callback instead of a full page navigation, and the dropdowns keep triggering the reload after the first change; the reload helper feature-detects loadUrl() (Cacti 1.3+) and falls back to loadPageNoHeader() on the 1.2.x compat floor
 
 1.0
 -feature: Initial release of the Credentials plugin

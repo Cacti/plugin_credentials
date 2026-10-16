@@ -463,17 +463,18 @@ function provider_list(): void {
 
 	?>
 	<script type='text/javascript' <?php print credentials_csp_nonce();?>>
+	<?php print credentials_loadurl_js();?>
 	function applyFilter() {
 		strURL  = 'credential_providers.php?header=false';
 		strURL += '&filter=' + encodeURIComponent($('#filter').val());
 		strURL += '&rows='   + encodeURIComponent($('#rows').val());
 		strURL += '&page=1';
-		loadUrl({ url: strURL });
+		credentialsLoadUrl(strURL);
 	}
 
 	function clearFilter() {
 		strURL = 'credential_providers.php?clear=true&header=false';
-		loadUrl({ url: strURL });
+		credentialsLoadUrl(strURL);
 	}
 
 	$(function() {
@@ -744,6 +745,7 @@ function provider_edit(): void {
 
 	?>
 	<script type='text/javascript' <?php print credentials_csp_nonce();?>>
+	<?php print credentials_loadurl_js();?>
 	var providerId           = <?php print (int) $row['id'];?>;
 	var providerOriginalType = <?php print json_encode($row['type']);?>;
 	var providerStrings      = <?php print json_encode(array(
@@ -772,7 +774,7 @@ function provider_edit(): void {
 					/* reload the form in place via an AJAX callback rather than a
 					   full page navigation; force past the unsaved-changes check
 					   because switching the type intentionally rebuilds the form */
-					loadUrl({ url: url, force: true });
+					credentialsLoadUrl(url, true);
 				}
 
 				typeSelect.off('change.provider').on('change.provider', function() {

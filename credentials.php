@@ -538,18 +538,19 @@ function credentials_list(): void {
 
 	?>
 	<script type='text/javascript' <?php print credentials_csp_nonce();?>>
+	<?php print credentials_loadurl_js();?>
 	function applyFilter() {
 		strURL  = 'credentials.php?header=false';
 		strURL += '&filter=' + encodeURIComponent($('#filter').val());
 		strURL += '&type='   + encodeURIComponent($('#type').val());
 		strURL += '&rows='   + encodeURIComponent($('#rows').val());
 		strURL += '&page=1';
-		loadUrl({ url: strURL });
+		credentialsLoadUrl(strURL);
 	}
 
 	function clearFilter() {
 		strURL = 'credentials.php?clear=true&header=false';
-		loadUrl({ url: strURL });
+		credentialsLoadUrl(strURL);
 	}
 
 	$(function() {
@@ -869,6 +870,7 @@ function credentials_edit(): void {
 
 	?>
 	<script type='text/javascript' <?php print credentials_csp_nonce();?>>
+	<?php print credentials_loadurl_js();?>
 	var credentialsId              = <?php print (int) $row['id'];?>;
 	var credentialsOriginalType    = <?php print json_encode($row['type']);?>;
 	var credentialsCurrentType     = <?php print json_encode($type);?>;
