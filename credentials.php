@@ -77,6 +77,14 @@ switch (get_request_var('action')) {
  * @return void
  */
 function form_save(): void {
+	/* saving changes state: require POST so the request carries Cacti's CSRF
+	 * token and cannot be triggered through a crafted GET link */
+	if (!isset($_SERVER['REQUEST_METHOD']) || strtoupper($_SERVER['REQUEST_METHOD']) !== 'POST') {
+		header('Location: credentials.php');
+
+		exit;
+	}
+
 	if (!isset_request_var('save_component_credential')) {
 		header('Location: credentials.php');
 
@@ -106,6 +114,30 @@ function form_save(): void {
 		exit;
 	}
 
+	/* the secret provider backing this credential: 0 = local encrypted store,
+	 * otherwise a credential_providers row whose driver resolves references */
+	$provider_id = isset_request_var('provider_id') ? (int) get_nfilter_request_var('provider_id') : 0;
+
+	if ($provider_id > 0) {
+		$provider_row = db_fetch_row_prepared('SELECT id, enabled FROM credential_providers WHERE id = ?', array($provider_id));
+
+		if (!is_array($provider_row) || !cacti_sizeof($provider_row)) {
+			raise_message('cred_badprovider', __('The selected secret provider does not exist.', 'credentials'), MESSAGE_LEVEL_ERROR);
+			header('Location: credentials.php?action=edit' . ($id > 0 ? '&id=' . $id : '') . '&type=' . $type);
+
+			exit;
+		}
+
+		if ($provider_row['enabled'] != 'on') {
+			raise_message('cred_disprovider', __('The selected secret provider is disabled.', 'credentials'), MESSAGE_LEVEL_ERROR);
+			header('Location: credentials.php?action=edit' . ($id > 0 ? '&id=' . $id : '') . '&type=' . $type);
+
+			exit;
+		}
+	}
+
+	$use_provider = ($provider_id > 0);
+
 	/* previous row + properties, used to preserve unchanged secrets */
 	$prev_props = array();
 	$prev_type  = '';
@@ -115,24 +147,32 @@ function form_save(): void {
 		$existing = db_fetch_row_prepared('SELECT * FROM credentials WHERE id = ?', array($id));
 
 		if (is_array($existing) && cacti_sizeof($existing)) {
-			$prev_type  = $existing['type'];
-			$prev_owner = $existing['user_id'];
+			$prev_type     = $existing['type'];
+			$prev_owner    = $existing['user_id'];
+			$prev_provider = isset($existing['provider_id']) ? (int) $existing['provider_id'] : 0;
 
-			if ($prev_type == $type) {
+			/* only reuse stored properties when BOTH the type and the backing
+			 * provider are unchanged; otherwise the stored secret fields hold a
+			 * different kind of value (local ciphertext vs. provider reference)
+			 * and a blank input must not silently preserve the old value */
+			if ($prev_type == $type && $prev_provider == $provider_id) {
 				$prev_props = credentials_properties($existing);
 			}
 		}
 	}
 
-	/* if any secret is being set and core encryption is unavailable, fail closed */
+	/* if any secret is being set and core encryption is unavailable, fail closed
+	 * - provider-backed credentials store references, so they never encrypt */
 	$needs_encryption = false;
 
-	foreach ($definition['fields'] as $fname => $field) {
-		if (!empty($field['secret'])) {
-			$posted = isset_request_var($fname) ? get_nfilter_request_var($fname) : '';
+	if (!$use_provider) {
+		foreach ($definition['fields'] as $fname => $field) {
+			if (!empty($field['secret'])) {
+				$posted = isset_request_var($fname) ? get_nfilter_request_var($fname) : '';
 
-			if ($posted !== '') {
-				$needs_encryption = true;
+				if ($posted !== '') {
+					$needs_encryption = true;
+				}
 			}
 		}
 	}
@@ -151,6 +191,21 @@ function form_save(): void {
 
 		if ($is_secret) {
 			$posted = isset_request_var($fname) ? get_nfilter_request_var($fname) : '';
+
+			if ($use_provider) {
+				/* a provider-backed secret stores a reference (a path/locator),
+				 * not ciphertext: keep it in clear, it is not itself a secret */
+				if ($posted === '' && !empty($field['required'])) {
+					raise_message('cred_req_' . $fname, __('A reference for \'%s\' is required.', $field['friendly_name'], 'credentials'), MESSAGE_LEVEL_ERROR);
+					header('Location: credentials.php?action=edit' . ($id > 0 ? '&id=' . $id : '') . '&type=' . $type . '&provider_id=' . $provider_id);
+
+					exit;
+				}
+
+				$props[$fname] = $posted;
+
+				continue;
+			}
 
 			/* short secrets (textbox_password) require a matching confirm box */
 			if (empty($field['long'])) {
@@ -232,6 +287,7 @@ function form_save(): void {
 	$save['name']        = $name;
 	$save['description'] = get_nfilter_request_var('description');
 	$save['type']        = $type;
+	$save['provider_id'] = $provider_id;
 	$save['enabled']     = isset_request_var('enabled') ? 'on' : '';
 	$save['properties']  = $encoded_props;
 
@@ -242,7 +298,29 @@ function form_save(): void {
 		$save['user_id'] = (isset($_SESSION['sess_user_id']) ? $_SESSION['sess_user_id'] : 0);
 	}
 
-	$new_id = sql_save($save, 'credentials');
+	if ($provider_id > 0) {
+		/* persist under a transaction that locks the provider row, so a
+		 * concurrent provider delete (which locks the same row before counting
+		 * references) cannot remove it between validation and save and leave
+		 * this credential pointing at a missing provider */
+		db_execute('START TRANSACTION');
+
+		$locked = db_fetch_row_prepared('SELECT id, enabled FROM credential_providers WHERE id = ? FOR UPDATE', array($provider_id));
+
+		if (!is_array($locked) || !cacti_sizeof($locked) || $locked['enabled'] != 'on') {
+			db_execute('ROLLBACK');
+			raise_message('cred_provgone', __('The selected secret provider is no longer available. Please choose another provider.', 'credentials'), MESSAGE_LEVEL_ERROR);
+			header('Location: credentials.php?action=edit' . ($id > 0 ? '&id=' . $id : '') . '&type=' . $type);
+
+			exit;
+		}
+
+		$new_id = sql_save($save, 'credentials');
+
+		db_execute('COMMIT');
+	} else {
+		$new_id = sql_save($save, 'credentials');
+	}
 
 	if ($new_id) {
 		raise_message('cred_saved', __('Credential saved.', 'credentials'), MESSAGE_LEVEL_INFO);
@@ -407,6 +485,7 @@ function credentials_list(): void {
 	$allowed_sort = array(
 		'name'         => 'c.name',
 		'type'         => 'c.type',
+		'provider'     => 'provider',
 		'description'  => 'c.description',
 		'enabled'      => 'c.enabled',
 		'owner'        => 'owner',
@@ -445,10 +524,12 @@ function credentials_list(): void {
 	$page          = max(1, (int) get_request_var('page'));
 	$sql_limit     = ' LIMIT ' . ($rows_per_page * ($page - 1)) . ',' . $rows_per_page;
 
-	$credentials = db_fetch_assoc_prepared("SELECT c.*, ua.username AS owner
+	$credentials = db_fetch_assoc_prepared("SELECT c.*, ua.username AS owner, cp.name AS provider
 		FROM credentials AS c
 		LEFT JOIN user_auth AS ua
 		ON ua.id = c.user_id
+		LEFT JOIN credential_providers AS cp
+		ON cp.id = c.provider_id
 		$sql_where
 		ORDER BY $sort_column $sort_dir
 		$sql_limit", $params);
@@ -543,6 +624,7 @@ function credentials_list(): void {
 	$display_text = array(
 		'name'         => array('display' => __('Name', 'credentials'),         'sort' => 'ASC', 'align' => 'left'),
 		'type'         => array('display' => __('Type', 'credentials'),         'sort' => 'ASC', 'align' => 'left'),
+		'provider'     => array('display' => __('Secret Provider', 'credentials'), 'sort' => 'ASC', 'align' => 'left'),
 		'description'  => array('display' => __('Description', 'credentials'),   'sort' => 'ASC', 'align' => 'left', 'nohide' => true),
 		'owner'        => array('display' => __('Owner', 'credentials'),        'sort' => 'ASC', 'align' => 'left'),
 		'enabled'      => array('display' => __('Enabled', 'credentials'),      'sort' => 'ASC', 'align' => 'left'),
@@ -553,12 +635,14 @@ function credentials_list(): void {
 
 	if (cacti_sizeof($credentials)) {
 		foreach ($credentials as $row) {
-			$type_name = isset($types[$row['type']]) ? $types[$row['type']]['name'] : $row['type'];
+			$type_name     = isset($types[$row['type']]) ? $types[$row['type']]['name'] : $row['type'];
+			$provider_name = ($row['provider_id'] > 0 && $row['provider'] != '') ? $row['provider'] : __('Local Database', 'credentials');
 
 			form_alternate_row('line' . $row['id'], true);
 
 			form_selectable_cell('<a class="linkEditMain" href="' . html_escape('credentials.php?action=edit&id=' . $row['id']) . '">' . html_escape($row['name']) . '</a>', $row['id']);
 			form_selectable_cell(html_escape($type_name), $row['id']);
+			form_selectable_cell(html_escape($provider_name), $row['id']);
 			form_selectable_cell(html_escape($row['description']), $row['id']);
 			form_selectable_cell(html_escape($row['owner'] != '' ? $row['owner'] : __('N/A', 'credentials')), $row['id']);
 			form_selectable_cell($row['enabled'] == 'on' ? __('Yes', 'credentials') : __('No', 'credentials'), $row['id']);
@@ -568,7 +652,7 @@ function credentials_list(): void {
 			form_end_row();
 		}
 	} else {
-		print "<tr class='tableRow odd'><td colspan='7'><em>" . __('No Credentials Found', 'credentials') . '</em></td></tr>';
+		print "<tr class='tableRow odd'><td colspan='8'><em>" . __('No Credentials Found', 'credentials') . '</em></td></tr>';
 	}
 
 	html_end_box(false);
@@ -595,7 +679,7 @@ function credentials_edit(): void {
 	get_filter_request_var('id');
 
 	$id  = isempty_request_var('id') ? 0 : get_request_var('id');
-	$row = array('id' => 0, 'name' => '', 'description' => '', 'type' => '', 'enabled' => 'on');
+	$row = array('id' => 0, 'name' => '', 'description' => '', 'type' => '', 'provider_id' => 0, 'enabled' => 'on');
 
 	if (!empty($id)) {
 		$fetched = db_fetch_row_prepared('SELECT * FROM credentials WHERE id = ?', array($id));
@@ -627,6 +711,34 @@ function credentials_edit(): void {
 		$props = array();
 	}
 
+	/* the displayed secret provider: an explicit ?provider_id= (provider switch)
+	 * wins, else the stored provider, else the local encrypted store (0) */
+	$stored_provider = isset($row['provider_id']) ? (int) $row['provider_id'] : 0;
+	$provider_opts   = credentials_provider_options($stored_provider);
+
+	if (isset_request_var('provider_id')) {
+		$provider_id = (int) get_nfilter_request_var('provider_id');
+	} else {
+		$provider_id = $stored_provider;
+	}
+
+	if (!isset($provider_opts[$provider_id])) {
+		$provider_id = 0;
+	}
+
+	/* switching the backing provider changes how secret fields are rendered
+	 * (masked local secrets vs. plain references), so the stored secret values
+	 * no longer apply; drop them while keeping the non-secret field values */
+	if ($provider_id != $stored_provider && is_array(credentials_get_type($type))) {
+		foreach (credentials_get_type($type)['fields'] as $sname => $sf) {
+			if (!empty($sf['secret'])) {
+				unset($props[$sname]);
+			}
+		}
+	}
+
+	$provider_driver = $provider_id > 0 ? credentials_provider_driver(db_fetch_cell_prepared('SELECT type FROM credential_providers WHERE id = ?', array($provider_id))) : null;
+
 	$definition = credentials_get_type($type);
 
 	$header = ($id > 0) ? __esc('Credential [edit: %s]', $row['name'], 'credentials') : __('Credential [new]', 'credentials');
@@ -655,6 +767,13 @@ function credentials_edit(): void {
 			'value'         => $type,
 			'array'         => $options,
 		),
+		'provider_id' => array(
+			'method'        => 'drop_array',
+			'friendly_name' => __('Secret Provider', 'credentials'),
+			'description'   => __('Where the secret values for this credential live. Choose the local encrypted database, or an external secret store. When an external provider is selected, each secret field holds a reference the provider resolves at poll time instead of the secret itself.', 'credentials'),
+			'value'         => $provider_id,
+			'array'         => $provider_opts,
+		),
 		'enabled' => array(
 			'method'        => 'checkbox',
 			'friendly_name' => __('Enabled', 'credentials'),
@@ -667,13 +786,16 @@ function credentials_edit(): void {
 
 	if (is_array($definition)) {
 		foreach ($definition['fields'] as $fname => $f) {
+			$is_secret      = !empty($f['secret']);
+			$render_as_ref  = $is_secret && $provider_id > 0;
+
 			$field = array(
 				'friendly_name' => $f['friendly_name'] . (!empty($f['required']) ? ' *' : ''),
-				'method'        => $f['method'],
+				'method'        => $render_as_ref ? 'textbox' : $f['method'],
 				'description'   => $f['description'],
 			);
 
-			if ($f['method'] == 'drop_array') {
+			if ($field['method'] == 'drop_array') {
 				$field['array'] = $f['array'];
 
 				if (isset($f['default'])) {
@@ -681,18 +803,28 @@ function credentials_edit(): void {
 				}
 			}
 
-			if ($f['method'] == 'textbox' || $f['method'] == 'textbox_password') {
-				$field['max_length'] = isset($f['max_length']) ? $f['max_length'] : 255;
+			if ($field['method'] == 'textbox' || $field['method'] == 'textbox_password') {
+				$field['max_length'] = $render_as_ref ? 1024 : (isset($f['max_length']) ? $f['max_length'] : 255);
 				$field['size']       = 60;
 			}
 
-			if ($f['method'] == 'textarea') {
+			if ($field['method'] == 'textarea') {
 				$field['textarea_rows'] = 6;
 				$field['textarea_cols'] = 60;
 				$field['class']         = 'textAreaNotes';
 			}
 
-			if (!empty($f['secret'])) {
+			if ($render_as_ref) {
+				/* a provider-backed secret field holds a non-sensitive reference
+				 * (a path/locator) the provider resolves, so it is shown in clear
+				 * and editable like any other field */
+				$field['friendly_name'] = $f['friendly_name'] . ' ' . ($provider_driver !== null ? '(' . $provider_driver->referenceLabel() . ')' : __('(reference)', 'credentials')) . (!empty($f['required']) ? ' *' : '');
+				$field['value']         = isset($props[$fname]) ? $props[$fname] : '';
+
+				if ($provider_driver !== null) {
+					$field['description'] .= '<br><br>' . $provider_driver->referenceHint();
+				}
+			} elseif ($is_secret) {
 				/* never echo a stored secret back to the browser */
 				$field['value'] = '';
 
@@ -737,8 +869,10 @@ function credentials_edit(): void {
 
 	?>
 	<script type='text/javascript' <?php print credentials_csp_nonce();?>>
-	var credentialsId           = <?php print (int) $row['id'];?>;
-	var credentialsOriginalType = <?php print json_encode($row['type']);?>;
+	var credentialsId              = <?php print (int) $row['id'];?>;
+	var credentialsOriginalType    = <?php print json_encode($row['type']);?>;
+	var credentialsCurrentType     = <?php print json_encode($type);?>;
+	var credentialsProviderCurrent = <?php print (int) $provider_id;?>;
 	var credentialsStrings      = <?php print json_encode(array(
 		'title'    => __('Change Credential Type?', 'credentials'),
 		'body'     => __('Changing the Credential Type will discard the values stored for the current type when you save this credential. Do you want to continue?', 'credentials'),

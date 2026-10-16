@@ -19,6 +19,8 @@
  +-------------------------------------------------------------------------+
 */
 
+require_once(__DIR__ . '/providers.php');
+
 /*
  * Cacti core's AES-256-GCM secret helpers (cacti_encrypt_secret /
  * cacti_encrypt_secret_with_key / cacti_decrypt_secret /
@@ -270,14 +272,16 @@ function credentials_secret_is_set(array $props, string $field): bool {
 }
 
 /**
- * Fetch and decrypt a single credential, returning its non-secret fields as
- * stored and its secret fields decrypted. Intended for other Cacti code and
- * plugins that need to use a credential at poll time.
+ * Fetch and resolve a single credential, returning its non-secret fields as
+ * stored and its secret fields as live plaintext. For a credential backed by
+ * the local store the secret is decrypted; for one backed by an external
+ * provider the stored reference is resolved through the provider driver.
+ * Intended for other Cacti code and plugins that need a credential at poll time.
  *
  * @param int $id The credential id.
  *
- * @return array|false The credential meta plus a 'fields' map, or false when
- *                     the credential does not exist.
+ * @return array|false The credential meta (including 'provider_id') plus a
+ *                     'fields' map, or false when the credential does not exist.
  */
 function credentials_get(int $id): array|false {
 	$credential = db_fetch_row_prepared('SELECT * FROM credentials WHERE id = ?', array($id));
@@ -286,16 +290,23 @@ function credentials_get(int $id): array|false {
 		return false;
 	}
 
-	$type   = credentials_get_type($credential['type']);
-	$props  = credentials_properties($credential);
-	$fields = array();
+	$type        = credentials_get_type($credential['type']);
+	$props       = credentials_properties($credential);
+	$provider_id = isset($credential['provider_id']) ? (int) $credential['provider_id'] : 0;
+	$fields      = array();
 
 	if (is_array($type)) {
 		foreach ($type['fields'] as $name => $def) {
 			$value = isset($props[$name]) ? $props[$name] : '';
 
 			if (!empty($def['secret']) && $value !== '') {
-				$value = credentials_decrypt($value);
+				if ($provider_id > 0) {
+					/* an external provider stores a reference, not ciphertext:
+					 * resolve it to the live secret through the provider driver */
+					$value = credentials_provider_resolve_reference($provider_id, $value);
+				} else {
+					$value = credentials_decrypt($value);
+				}
 			}
 
 			$fields[$name] = $value;
@@ -307,6 +318,7 @@ function credentials_get(int $id): array|false {
 		'name'         => $credential['name'],
 		'description'  => $credential['description'],
 		'type'         => $credential['type'],
+		'provider_id'  => $provider_id,
 		'user_id'      => $credential['user_id'],
 		'enabled'      => $credential['enabled'],
 		'create_date'  => $credential['create_date'],

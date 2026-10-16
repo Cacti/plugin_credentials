@@ -26,9 +26,17 @@ beforeEach(function () {
 	unset($GLOBALS['menu']);
 });
 
-it('reports a complete config and no pending upgrade', function () {
+it('reports a complete config and reconciles the schema on upgrade', function () {
+	$GLOBALS['__test_db_calls'] = array();
+
 	expect(plugin_credentials_check_config())->toBeTrue()
-		->and(plugin_credentials_upgrade())->toBeFalse();
+		->and(plugin_credentials_upgrade())->toBeTrue();
+
+	$tables = array_column(array_filter($GLOBALS['__test_db_calls'], function ($call) {
+		return $call['fn'] === 'api_plugin_db_table_create';
+	}), 'sql');
+
+	expect($tables)->toBe(array('credentials', 'credential_providers'));
 });
 
 it('performs no work on uninstall', function () {
@@ -50,7 +58,19 @@ it('registers its hooks and creates the credentials table on install', function 
 		return $call['fn'] === 'api_plugin_db_table_create';
 	}), 'sql');
 
-	expect($tables)->toBe(array('credentials'));
+	expect($tables)->toBe(array('credentials', 'credential_providers'));
+
+	// the idempotent migration adds the provider_id column for installations
+	// predating 1.1 (and is a no-op on a freshly created table)
+	$added_columns = array_column(array_filter($GLOBALS['__test_db_calls'], function ($call) {
+		return $call['fn'] === 'api_plugin_db_add_column';
+	}), 'params');
+
+	$column_names = array_map(function ($column) {
+		return $column['name'];
+	}, $added_columns);
+
+	expect($column_names)->toContain('provider_id');
 });
 
 it('gates the page on the Users/Groups realm and returns early without a menu', function () {
