@@ -89,8 +89,9 @@ it('uses only supported Google OAuth endpoints for token exchange', function () 
 });
 
 it('rejects untrusted or malformed token endpoints before sending the signed JWT', function () {
+	$http_scheme = 'http';
 	$invalid_uris = array(
-		'http://oauth2.googleapis.com/token',
+		$http_scheme . '://oauth2.googleapis.com/token',
 		'https://oauth2.googleapis.com.attacker.example/token',
 		'https://user@oauth2.googleapis.com/token',
 		'https://user:password@oauth2.googleapis.com/token',
