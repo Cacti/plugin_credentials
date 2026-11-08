@@ -18,9 +18,9 @@
  * Fail a pull request that changes translatable strings without refreshing the
  * gettext template.
  *
- * locales/po/cacti.pot is produced by locales/build_gettext.sh, which runs
- * xgettext over `find . -maxdepth 2 -name '*.php'` extracting the Cacti i18n
- * helpers (__(), __n(), __esc(), ...). Rather than regenerating the template
+ * locales/po/cacti.pot is produced from the plugin's PHP source files by
+ * xgettext, extracting the Cacti i18n helpers (__(), __n(), __esc(), ...).
+ * Rather than regenerating the template
  * and comparing timestamps (which couples CI to one exact gettext toolchain),
  * this reconstructs the set of translatable strings xgettext would extract at
  * the merge-base and at HEAD and compares them. If that set changed, then
@@ -188,8 +188,7 @@ function collect_strings($ref, $keywords) {
 }
 
 /**
- * List the PHP files that feed build_gettext.sh at a revision, i.e. those no
- * more than one directory below the plugin root (`find . -maxdepth 2`).
+ * List the plugin PHP source files at a revision, excluding test code.
  *
  * @param string $ref Git revision to read the tree from.
  *
@@ -221,8 +220,7 @@ function template_files($ref) {
 }
 
 /**
- * Whether a path is scanned by build_gettext.sh, i.e. a PHP file no more than
- * one directory below the plugin root.
+ * Whether a path is a PHP source file used to build the plugin template.
  *
  * @param string $file Repository-relative path.
  *
@@ -233,7 +231,7 @@ function feeds_template($file) {
 		return false;
 	}
 
-	return substr_count($file, '/') <= 1;
+	return strpos($file, 'tests/') !== 0;
 }
 
 /**
