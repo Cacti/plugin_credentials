@@ -38,6 +38,7 @@
             <file>includes/arrays.php</file>
             <file>includes/functions.php</file>
             <file>includes/providers.php</file>
+            <file>includes/providers/GcpSecretManagerProvider.php</file>
         </include>
     </source>
 </phpunit>

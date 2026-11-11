@@ -184,7 +184,12 @@ class GcpSecretManagerProvider extends AbstractProvider {
 			return array(null, __('The service account key JSON is invalid or incomplete.', 'credentials'));
 		}
 
-		$token_uri = isset($sa['token_uri']) ? (string) $sa['token_uri'] : 'https://oauth2.googleapis.com/token';
+	$token_uri = array_key_exists('token_uri', $sa) ? $sa['token_uri'] : 'https://oauth2.googleapis.com/token';
+
+		if (!is_string($token_uri) || !$this->validTokenUri($token_uri)) {
+			return array(null, __('The service account token URI must be a supported Google OAuth endpoint.', 'credentials'));
+		}
+
 		$now       = time();
 
 		$claims = array(
@@ -223,6 +228,31 @@ class GcpSecretManagerProvider extends AbstractProvider {
 		}
 
 		return array((string) $decoded['access_token'], '');
+	}
+
+	/**
+	 * Restrict service-account token exchanges to Google's documented HTTPS
+	 * endpoints so an imported key file cannot redirect its signed JWT elsewhere.
+	 *
+	 * @param string $uri The token URI from the service-account JSON.
+	 *
+	 * @return bool True when the URI is a supported Google OAuth endpoint.
+	 */
+	private function validTokenUri(string $uri): bool {
+		$parts = parse_url($uri);
+
+		if (!is_array($parts) || strtolower($parts['scheme'] ?? '') !== 'https' ||
+			!isset($parts['host']) || isset($parts['user']) || isset($parts['pass']) ||
+			isset($parts['query']) || isset($parts['fragment']) ||
+			(isset($parts['port']) && $parts['port'] !== 443)) {
+			return false;
+		}
+
+		$host = strtolower($parts['host']);
+		$path = $parts['path'] ?? '';
+
+		return ($host === 'oauth2.googleapis.com' && $path === '/token') ||
+			($host === 'accounts.google.com' && $path === '/o/oauth2/token');
 	}
 
 	/**

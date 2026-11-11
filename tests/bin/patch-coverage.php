@@ -168,7 +168,6 @@ $unmeasured_allowlist = [
 	'includes/providers/OpenBaoProvider.php',           // Vault-API-compatible driver; inherits the live HTTPS calls of VaultProvider
 	'includes/providers/AwsSecretsManagerProvider.php', // driver performs live AWS API calls; SigV4 signing unit-tested
 	'includes/providers/AzureKeyVaultProvider.php',     // driver performs live Azure Key Vault API calls
-	'includes/providers/GcpSecretManagerProvider.php',  // driver performs live Google Cloud API calls; JWT signing unit-tested
 	'includes/providers/ConjurProvider.php',            // driver performs live CyberArk Conjur API calls
 	'index.php',            // directory access-protection stub (exits at top level); not loadable in the isolated unit process
 	'includes/index.php',   // directory access-protection stub (exits at top level); not loadable in the isolated unit process

@@ -1359,39 +1359,43 @@ msgstr ""
 msgid "The service account key JSON is invalid or incomplete."
 msgstr ""
 
-#: includes/providers/GcpSecretManagerProvider.php:216
+#: includes/providers/GcpSecretManagerProvider.php:190
+msgid "The service account token URI must be a supported Google OAuth endpoint."
+msgstr ""
+
+#: includes/providers/GcpSecretManagerProvider.php:221
 #, php-format
 msgid "Google Cloud token request failed with HTTP %d."
 msgstr ""
 
-#: includes/providers/GcpSecretManagerProvider.php:222
+#: includes/providers/GcpSecretManagerProvider.php:227
 msgid "Google Cloud token request returned no access token."
 msgstr ""
 
-#: includes/providers/GcpSecretManagerProvider.php:241
+#: includes/providers/GcpSecretManagerProvider.php:271
 msgid ""
 "Unable to obtain a token from the GCE metadata server; is Cacti running on a "
 "Google Cloud instance?"
 msgstr ""
 
-#: includes/providers/GcpSecretManagerProvider.php:247
+#: includes/providers/GcpSecretManagerProvider.php:277
 msgid "The GCE metadata server returned no access token."
 msgstr ""
 
-#: includes/providers/GcpSecretManagerProvider.php:270
+#: includes/providers/GcpSecretManagerProvider.php:300
 msgid "The service account private key could not be read."
 msgstr ""
 
-#: includes/providers/GcpSecretManagerProvider.php:277
+#: includes/providers/GcpSecretManagerProvider.php:307
 msgid "The service account JWT could not be signed."
 msgstr ""
 
-#: includes/providers/GcpSecretManagerProvider.php:306
+#: includes/providers/GcpSecretManagerProvider.php:336
 #, php-format
 msgid "Google Cloud Secret Manager error: %s (HTTP %d)."
 msgstr ""
 
-#: includes/providers/GcpSecretManagerProvider.php:309
+#: includes/providers/GcpSecretManagerProvider.php:339
 #, php-format
 msgid "Google Cloud Secret Manager returned HTTP %d."
 msgstr ""
