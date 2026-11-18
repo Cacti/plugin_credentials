@@ -13,6 +13,9 @@
 -bug: Changing the Provider Type or Secret Provider on an edit form now reloads via an AJAX callback instead of a full page navigation, and the dropdowns keep triggering the reload after the first change; the reload helper feature-detects loadUrl() (Cacti 1.3+) and falls back to loadPageNoHeader() on the 1.2.x compat floor
 -bug: Restrict Google service-account token exchanges to supported Google OAuth endpoints
 
+Documentation update (unreleased): Refresh README release/source compatibility,
+installation guidance and source-checked behavior.
+
 1.0
 -feature: Initial release of the Credentials plugin
 -feature: Tier 1 credential types - SNMP v1/v2c Community, SNMP v3 (USM), Username/Password, SSH

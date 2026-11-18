@@ -27,6 +27,23 @@ management systems, grouped into three tiers:
 - **VMware / vCenter**
 - **TLS Client Certificate**
 
+## Versions and compatibility
+
+This README describes the `main` source branch.
+
+| Code | Plugin version | Minimum Cacti declared in `INFO` |
+| --- | --- | --- |
+| [Source branch](INFO) | 1.1 | 1.2.29 |
+
+No GitHub release is published for this repository. The source version above
+is not a published-release designation. Follow the development caveats and
+requirements in this README before deployment.
+
+Install this plugin in **`<cacti-root>/plugins/credentials`**, using the directory
+name `credentials` rather than `plugin_credentials`.
+
+See [CHANGELOG](CHANGELOG) for the version history.
+
 ## How it works
 
 - Each credential is stored in the `credentials` table with `name`,
