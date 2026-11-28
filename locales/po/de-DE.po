@@ -1,0 +1,1542 @@
+# German translations for Cacti package.
+# Copyright (C) 2004-2026 The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti 1.0\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-10-16 19:37+0000\n"
+"PO-Revision-Date: 2026-11-28 02:15+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: German <https://translate.cacti.net/projects/cacti/core/de/>\n"
+"Language: de-DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: credential_providers.php:37 credentials.php:37
+msgid "Delete"
+msgstr "Löschen"
+
+#: credential_providers.php:38 credentials.php:38
+msgid "Enable"
+msgstr "Aktivieren"
+
+#: credential_providers.php:39 credentials.php:39
+msgid "Disable"
+msgstr "Deaktivieren"
+
+#: credential_providers.php:107
+msgid "The selected provider type is not valid."
+msgstr "Der ausgewählte Anbietertyp ist nicht gültig."
+
+#: credential_providers.php:116
+msgid "A provider name is required."
+msgstr "Ein Anbietername ist erforderlich."
+
+#: credential_providers.php:150 credentials.php:181
+msgid "Cannot store a secret: the Cacti core secret encryption functions are unavailable on this installation."
+msgstr "Geheimnis kann nicht gespeichert werden: Die Cacti-Kernfunktionen zur Geheimnisverschlüsselung sind in dieser Installation nicht verfügbar."
+
+#: credential_providers.php:166 credential_providers.php:191
+#: credentials.php:228 credentials.php:254
+#, php-format
+msgid "'%s' is required."
+msgstr "'%s' ist erforderlich."
+
+#: credential_providers.php:175 credentials.php:237
+msgid "Could not encrypt the secret. Verify the Cacti encryption key configuration and try again."
+msgstr "Das Geheimnis konnte nicht verschlüsselt werden. Überprüfen Sie die Cacti-Verschlüsselungsschlüssel-Konfiguration und versuchen Sie es erneut."
+
+#: credential_providers.php:204
+msgid "The provider could not be saved because one of its fields contains invalid characters. Please re-enter the affected values and try again."
+msgstr "Der Anbieter konnte nicht gespeichert werden, da eines der Felder ungültige Zeichen enthält. Bitte geben Sie die betroffenen Werte erneut ein und versuchen Sie es noch einmal."
+
+#: credential_providers.php:221
+msgid "Secret provider saved."
+msgstr "Geheimnisanbieter gespeichert."
+
+#: credential_providers.php:224
+msgid "Failed to save the secret provider."
+msgstr "Der Geheimnisanbieter konnte nicht gespeichert werden."
+
+#: credential_providers.php:270
+#, php-format
+msgid "A provider still used by %d credential(s) was not deleted."
+msgstr "Ein Anbieter, der noch von %d Zugangsdatensätzen verwendet wird, wurde nicht gelöscht."
+
+#: credential_providers.php:323
+msgid "Delete the following secret provider(s)?"
+msgstr "Folgende(n) Geheimnisanbieter löschen?"
+
+#: credential_providers.php:325
+msgid "Enable the following secret provider(s)?"
+msgstr "Folgende(n) Geheimnisanbieter aktivieren?"
+
+#: credential_providers.php:327
+msgid "Disable the following secret provider(s)?"
+msgstr "Folgende(n) Geheimnisanbieter deaktivieren?"
+
+#: credential_providers.php:337 credential_providers.php:755
+#: credentials.php:428 credentials.php:882
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: credential_providers.php:337 credential_providers.php:754
+#: credentials.php:428 credentials.php:881
+msgid "Continue"
+msgstr "Fortsetzen"
+
+#: credential_providers.php:366
+msgid "Invalid request method."
+msgstr "Ungültige Anforderungsmethode."
+
+#: credential_providers.php:376
+msgid "Save the provider before testing it."
+msgstr "Speichern Sie den Anbieter, bevor Sie ihn testen."
+
+#: credential_providers.php:491 credential_providers.php:530 setup.php:256
+#: setup.php:274 setup.php:315
+msgid "Secret Providers"
+msgstr "Geheimnisanbieter"
+
+#: credential_providers.php:499 credentials.php:575
+msgid "Search"
+msgstr "Suche"
+
+#: credential_providers.php:503
+msgid "Providers"
+msgstr "Anbieter"
+
+#: credential_providers.php:506 credentials.php:593
+msgid "All"
+msgstr "Alle"
+
+#: credential_providers.php:517 credentials.php:604
+msgid "Go"
+msgstr "Los"
+
+#: credential_providers.php:518 credentials.php:605
+msgid "Clear"
+msgstr "Löschen"
+
+#: credential_providers.php:539 credential_providers.php:625
+#: credentials.php:626 credentials.php:750
+msgid "Name"
+msgstr "Name"
+
+#: credential_providers.php:540 credentials.php:579 credentials.php:627
+msgid "Type"
+msgstr "Typ"
+
+#: credential_providers.php:541 credential_providers.php:633
+#: credentials.php:629 credentials.php:758
+msgid "Description"
+msgstr "Beschreibung"
+
+#: credential_providers.php:542 credential_providers.php:648
+#: credentials.php:631 credentials.php:780
+msgid "Enabled"
+msgstr "Aktiviert"
+
+#: credential_providers.php:543 credentials.php:632
+msgid "Last Updated"
+msgstr "Zuletzt aktualisiert"
+
+#: credential_providers.php:557 credentials.php:649
+msgid "Yes"
+msgstr "Ja"
+
+#: credential_providers.php:557 credentials.php:649
+msgid "No"
+msgstr "Nein"
+
+#: credential_providers.php:564
+msgid "No Secret Providers Found"
+msgstr "Keine Geheimnisanbieter gefunden"
+
+#: credential_providers.php:620
+#, php-format
+msgid "Secret Provider [edit: %s]"
+msgstr "Geheimnisanbieter [Bearbeiten: %s]"
+
+#: credential_providers.php:620
+msgid "Secret Provider [new]"
+msgstr "Geheimnisanbieter [Neu]"
+
+#: credential_providers.php:626
+msgid "A unique, meaningful name for this provider instance."
+msgstr "Ein eindeutiger, aussagekräftiger Name für diese Anbieterinstanz."
+
+#: credential_providers.php:634
+msgid "An optional description of this provider instance."
+msgstr "Eine optionale Beschreibung dieser Anbieterinstanz."
+
+#: credential_providers.php:641
+msgid "Provider Type"
+msgstr "Anbietertyp"
+
+#: credential_providers.php:642
+msgid "The external secret store this provider connects to. Changing the type on an existing provider discards the previously stored type-specific configuration when you save."
+msgstr "Der externe Geheimnisspeicher, mit dem sich dieser Anbieter verbindet. Das Ändern des Typs bei einem bestehenden Anbieter verwirft beim Speichern die zuvor gespeicherte typspezifische Konfiguration."
+
+#: credential_providers.php:649
+msgid "Whether this provider is available to resolve credential secrets."
+msgstr "Ob dieser Anbieter zum Auflösen von Zugangsdatengeheimnissen verfügbar ist."
+
+#: credential_providers.php:697 credentials.php:833
+msgid "A value is currently stored (encrypted)."
+msgstr "Ein Wert ist derzeit gespeichert (verschlüsselt)."
+
+#: credential_providers.php:697 credentials.php:833
+msgid "Leave this blank to keep it, or enter a new value to replace it."
+msgstr "Lassen Sie dieses Feld leer, um den Wert beizubehalten, oder geben Sie einen neuen Wert ein, um ihn zu ersetzen."
+
+#: credential_providers.php:699 credentials.php:835
+msgid "No value stored yet."
+msgstr "Noch kein Wert gespeichert."
+
+#: credential_providers.php:740
+msgid "Test Connection"
+msgstr "Verbindung prüfen"
+
+#: credential_providers.php:752
+msgid "Change Provider Type?"
+msgstr "Anbietertyp ändern?"
+
+#: credential_providers.php:753
+msgid "Changing the Provider Type will discard the configuration stored for the current type when you save this provider. Do you want to continue?"
+msgstr "Durch das Ändern des Anbietertyps wird die für den aktuellen Typ gespeicherte Konfiguration beim Speichern dieses Anbieters verworfen. Möchten Sie fortfahren?"
+
+#: credential_providers.php:756
+msgid "Testing..."
+msgstr "Wird getestet..."
+
+#: credential_providers.php:757
+msgid "The test request failed."
+msgstr "Die Testanfrage ist fehlgeschlagen."
+
+#: credentials.php:102
+msgid "The selected credential type is not valid."
+msgstr "Der ausgewählte Zugangsdatentyp ist nicht gültig."
+
+#: credentials.php:111
+msgid "A credential name is required."
+msgstr "Ein Name für die Zugangsdaten ist erforderlich."
+
+#: credentials.php:125
+msgid "The selected secret provider does not exist."
+msgstr "Der ausgewählte Geheimnisanbieter existiert nicht."
+
+#: credentials.php:132
+msgid "The selected secret provider is disabled."
+msgstr "Der ausgewählte Geheimnisanbieter ist deaktiviert."
+
+#: credentials.php:199
+#, php-format
+msgid "A reference for '%s' is required."
+msgstr "Eine Referenz für '%s' ist erforderlich."
+
+#: credentials.php:215
+#, php-format
+msgid "The value and its confirmation for '%s' do not match."
+msgstr "Der Wert und seine Bestätigung für '%s' stimmen nicht überein."
+
+#: credentials.php:279
+msgid "The credential could not be saved because one of its fields contains invalid characters. Please re-enter the affected values and try again."
+msgstr "Die Zugangsdaten konnten nicht gespeichert werden, da eines der Felder ungültige Zeichen enthält. Bitte geben Sie die betroffenen Werte erneut ein und versuchen Sie es noch einmal."
+
+#: credentials.php:312
+msgid "The selected secret provider is no longer available. Please choose another provider."
+msgstr "Der ausgewählte Geheimnisanbieter ist nicht mehr verfügbar. Bitte wählen Sie einen anderen Anbieter aus."
+
+#: credentials.php:326
+msgid "Credential saved."
+msgstr "Zugangsdaten gespeichert."
+
+#: credentials.php:329
+msgid "Failed to save the credential."
+msgstr "Die Zugangsdaten konnten nicht gespeichert werden."
+
+#: credentials.php:414
+msgid "Delete the following credential(s)?"
+msgstr "Folgende Zugangsdaten löschen?"
+
+#: credentials.php:416
+msgid "Enable the following credential(s)?"
+msgstr "Folgende Zugangsdaten aktivieren?"
+
+#: credentials.php:418
+msgid "Disable the following credential(s)?"
+msgstr "Folgende Zugangsdaten deaktivieren?"
+
+#: credentials.php:567 credentials.php:590 credentials.php:617 setup.php:255
+#: setup.php:273 setup.php:287
+msgid "Credentials"
+msgstr "Zugangsdaten"
+
+#: credentials.php:582
+msgid "Any"
+msgstr "Beliebig"
+
+#: credentials.php:628 credentials.php:773
+msgid "Secret Provider"
+msgstr "Geheimnisanbieter"
+
+#: credentials.php:630
+msgid "Owner"
+msgstr "Inhaber"
+
+#: credentials.php:640
+msgid "Local Database"
+msgstr "Lokale Datenbank"
+
+#: credentials.php:648
+msgid "N/A"
+msgstr "Nicht zutreffend"
+
+#: credentials.php:656
+msgid "No Credentials Found"
+msgstr "Keine Zugangsdaten gefunden"
+
+#: credentials.php:745
+#, php-format
+msgid "Credential [edit: %s]"
+msgstr "Zugangsdaten [Bearbeiten: %s]"
+
+#: credentials.php:745
+msgid "Credential [new]"
+msgstr "Zugangsdaten [Neu]"
+
+#: credentials.php:751
+msgid "A unique, meaningful name for this credential."
+msgstr "Ein eindeutiger, aussagekräftiger Name für diese Zugangsdaten."
+
+#: credentials.php:759
+msgid "An optional description of where this credential is used."
+msgstr "Eine optionale Beschreibung, wo diese Zugangsdaten verwendet werden."
+
+#: credentials.php:766
+msgid "Credential Type"
+msgstr "Zugangsdatentyp"
+
+#: credentials.php:767
+msgid "The type of credential. Changing the type on an existing credential discards the previously stored type-specific values when you save."
+msgstr "Der Typ der Zugangsdaten. Das Ändern des Typs bei bestehenden Zugangsdaten verwirft beim Speichern die zuvor gespeicherten typspezifischen Werte."
+
+#: credentials.php:774
+msgid "Where the secret values for this credential live. Choose the local encrypted database, or an external secret store. When an external provider is selected, each secret field holds a reference the provider resolves at poll time instead of the secret itself."
+msgstr "Wo die Geheimniswerte für diese Zugangsdaten gespeichert sind. Wählen Sie die lokale verschlüsselte Datenbank oder einen externen Geheimnisspeicher. Wenn ein externer Anbieter ausgewählt ist, enthält jedes Geheimnisfeld eine Referenz, die der Anbieter zur Abfragezeit auflöst, anstatt des Geheimnisses selbst."
+
+#: credentials.php:781
+msgid "Whether this credential is available for use."
+msgstr "Ob diese Zugangsdaten zur Verwendung verfügbar sind."
+
+#: credentials.php:822
+msgid "(reference)"
+msgstr "(Referenz)"
+
+#: credentials.php:879
+msgid "Change Credential Type?"
+msgstr "Zugangsdatentyp ändern?"
+
+#: credentials.php:880
+msgid "Changing the Credential Type will discard the values stored for the current type when you save this credential. Do you want to continue?"
+msgstr "Durch das Ändern des Zugangsdatentyps werden die für den aktuellen Typ gespeicherten Werte beim Speichern dieser Zugangsdaten verworfen. Möchten Sie fortfahren?"
+
+#: includes/arrays.php:53
+msgid "SNMP v1/v2c Community"
+msgstr "SNMP v1/v2c Community"
+
+#: includes/arrays.php:55 includes/arrays.php:86
+msgid "SNMP"
+msgstr "SNMP"
+
+#: includes/arrays.php:58
+msgid "SNMP Version"
+msgstr "SNMP Version"
+
+#: includes/arrays.php:60
+msgid "The community-based SNMP protocol version this credential is used with."
+msgstr "Die Community-basierte SNMP-Protokollversion, mit der diese Zugangsdaten verwendet werden."
+
+#: includes/arrays.php:61
+msgid "Version 1"
+msgstr "Version 1"
+
+#: includes/arrays.php:61
+msgid "Version 2"
+msgstr "Version 2"
+
+#: includes/arrays.php:66
+msgid "Read Community"
+msgstr "Lese-Community"
+
+#: includes/arrays.php:68
+msgid "The SNMP read community string. Treated as a secret and stored encrypted."
+msgstr "Der SNMP-Lese-Community-String. Wird als Geheimnis behandelt und verschlüsselt gespeichert."
+
+#: includes/arrays.php:74
+msgid "Write Community"
+msgstr "Schreib-Community"
+
+#: includes/arrays.php:76
+msgid "The optional SNMP write community string. Stored encrypted."
+msgstr "Der optionale SNMP-Schreib-Community-String. Wird verschlüsselt gespeichert."
+
+#: includes/arrays.php:84
+msgid "SNMP v3 (USM)"
+msgstr "SNMP v3 (USM)"
+
+#: includes/arrays.php:89
+msgid "Security Name"
+msgstr "Sicherheitsname"
+
+#: includes/arrays.php:91
+msgid "The SNMP v3 USM security (user) name."
+msgstr "Der SNMP-v3-USM-Sicherheitsname (Benutzername)."
+
+#: includes/arrays.php:96
+msgid "Authentication Protocol"
+msgstr "Authentifizierungsprotokoll"
+
+#: includes/arrays.php:98
+msgid "The USM authentication protocol. Choose [None] for noAuthNoPriv."
+msgstr "Das USM-Authentifizierungsprotokoll. Wählen Sie [Keine] für noAuthNoPriv."
+
+#: includes/arrays.php:100 includes/arrays.php:122
+msgid "None"
+msgstr "Nichts"
+
+#: includes/arrays.php:111
+msgid "Authentication Passphrase"
+msgstr "Authentifizierungs-Passphrase"
+
+#: includes/arrays.php:113
+msgid "The USM authentication passphrase. Stored encrypted."
+msgstr "Die USM-Authentifizierungs-Passphrase. Wird verschlüsselt gespeichert."
+
+#: includes/arrays.php:118
+msgid "Privacy Protocol"
+msgstr "Datenschutzprotokoll"
+
+#: includes/arrays.php:120
+msgid "The USM privacy (encryption) protocol. Choose [None] for authNoPriv."
+msgstr "Das USM-Datenschutzprotokoll (Verschlüsselung). Wählen Sie [Keine] für authNoPriv."
+
+#: includes/arrays.php:131
+msgid "Privacy Passphrase"
+msgstr "Datenschutz-Passphrase"
+
+#: includes/arrays.php:133
+msgid "The USM privacy passphrase. Stored encrypted."
+msgstr "Die USM-Datenschutz-Passphrase. Wird verschlüsselt gespeichert."
+
+#: includes/arrays.php:138
+msgid "Context Name"
+msgstr "Kontextname"
+
+#: includes/arrays.php:140
+msgid "The optional SNMP v3 context name."
+msgstr "Der optionale SNMP-v3-Kontextname."
+
+#: includes/arrays.php:145
+msgid "Engine ID"
+msgstr "Engine-ID"
+
+#: includes/arrays.php:147
+msgid "The optional SNMP v3 context engine id."
+msgstr "Die optionale SNMP-v3-Kontext-Engine-ID."
+
+#: includes/arrays.php:154
+msgid "Username / Password"
+msgstr "Benutzername / Passwort"
+
+#: includes/arrays.php:156
+msgid "Generic"
+msgstr "Allgemein"
+
+#: includes/arrays.php:159 includes/arrays.php:181 includes/arrays.php:289
+#: includes/arrays.php:347 includes/arrays.php:378 includes/arrays.php:400
+#: includes/arrays.php:450 includes/arrays.php:486
+msgid "Username"
+msgstr "Benutzername"
+
+#: includes/arrays.php:161
+msgid "A reusable username for HTTP Basic, Telnet, web UI logins or script inputs."
+msgstr "Ein wiederverwendbarer Benutzername für HTTP Basic, Telnet, Web-UI-Anmeldungen oder Skripteingaben."
+
+#: includes/arrays.php:166 includes/arrays.php:191 includes/arrays.php:195
+#: includes/arrays.php:354 includes/arrays.php:385 includes/arrays.php:407
+#: includes/arrays.php:457 includes/arrays.php:493
+msgid "Password"
+msgstr "Kennwort"
+
+#: includes/arrays.php:168
+msgid "The password paired with the username. Stored encrypted."
+msgstr "Das zum Benutzernamen gehörende Passwort. Wird verschlüsselt gespeichert."
+
+#: includes/arrays.php:176
+msgid "SSH"
+msgstr "SSH"
+
+#: includes/arrays.php:178
+msgid "CLI"
+msgstr "CLI"
+
+#: includes/arrays.php:183
+msgid "The SSH login username."
+msgstr "Der SSH-Anmeldebenutzername."
+
+#: includes/arrays.php:188 includes/providers/AzureKeyVaultProvider.php:67
+#: includes/providers/VaultProvider.php:92
+msgid "Authentication Method"
+msgstr "Authentisierungsmethode"
+
+#: includes/arrays.php:190
+msgid "Authenticate with a password or a private key."
+msgstr "Mit einem Passwort oder einem privaten Schlüssel authentifizieren."
+
+#: includes/arrays.php:191 includes/arrays.php:203
+msgid "Private Key"
+msgstr "Privater Schlüssel"
+
+#: includes/arrays.php:197
+msgid "The SSH password (when using password authentication). Stored encrypted."
+msgstr "Das SSH-Passwort (bei Verwendung der Passwortauthentifizierung). Wird verschlüsselt gespeichert."
+
+#: includes/arrays.php:205
+msgid "The PEM private key (when using key authentication). Stored encrypted."
+msgstr "Der private PEM-Schlüssel (bei Verwendung der Schlüsselauthentifizierung). Wird verschlüsselt gespeichert."
+
+#: includes/arrays.php:211 includes/arrays.php:522
+msgid "Key Passphrase"
+msgstr "Schlüssel-Passphrase"
+
+#: includes/arrays.php:213 includes/arrays.php:524
+msgid "The optional passphrase protecting the private key. Stored encrypted."
+msgstr "Die optionale Passphrase zum Schutz des privaten Schlüssels. Wird verschlüsselt gespeichert."
+
+#: includes/arrays.php:219 includes/arrays.php:443
+msgid "Port"
+msgstr "Port"
+
+#: includes/arrays.php:221
+msgid "The TCP port for the SSH service."
+msgstr "Der TCP-Port für den SSH-Dienst."
+
+#: includes/arrays.php:231
+msgid "Bearer / API Token"
+msgstr "Bearer- / API-Token"
+
+#: includes/arrays.php:233 includes/arrays.php:256 includes/arrays.php:286
+#: includes/arrays.php:308 includes/arrays.php:344
+msgid "API"
+msgstr "API"
+
+#: includes/arrays.php:236
+msgid "Bearer Token"
+msgstr "Bearer-Token"
+
+#: includes/arrays.php:238
+msgid "The opaque bearer token sent as an Authorization header. Stored encrypted."
+msgstr "Das opake Bearer-Token, das als Authorization-Header gesendet wird. Wird verschlüsselt gespeichert."
+
+#: includes/arrays.php:244
+msgid "Header Name"
+msgstr "Header-Name"
+
+#: includes/arrays.php:246
+msgid "The HTTP header the token is sent in."
+msgstr "Der HTTP-Header, in dem das Token gesendet wird."
+
+#: includes/arrays.php:254 includes/arrays.php:259
+#: includes/providers/ConjurProvider.php:74
+msgid "API Key"
+msgstr "API-Schlüssel"
+
+#: includes/arrays.php:261
+msgid "The API key value. Stored encrypted."
+msgstr "Der Wert des API-Schlüssels. Wird verschlüsselt gespeichert."
+
+#: includes/arrays.php:267
+msgid "Placement"
+msgstr "Platzierung"
+
+#: includes/arrays.php:269
+msgid "Whether the key is sent as an HTTP header or a query parameter."
+msgstr "Ob der Schlüssel als HTTP-Header oder als Abfrageparameter gesendet wird."
+
+#: includes/arrays.php:270
+msgid "Header"
+msgstr "Kopfzeile"
+
+#: includes/arrays.php:270
+msgid "Query Parameter"
+msgstr "Abfrageparameter"
+
+#: includes/arrays.php:274
+msgid "Parameter Name"
+msgstr "Parametername"
+
+#: includes/arrays.php:276
+msgid "The header or query parameter name carrying the key (e.g. X-API-Key)."
+msgstr "Der Name des Headers oder Abfrageparameters, der den Schlüssel überträgt (z. B. X-API-Key)."
+
+#: includes/arrays.php:284
+msgid "GitHub Personal Access Token"
+msgstr "GitHub Personal Access Token"
+
+#: includes/arrays.php:291
+msgid "The optional GitHub username associated with the token."
+msgstr "Der optionale GitHub-Benutzername, der mit dem Token verknüpft ist."
+
+#: includes/arrays.php:296
+msgid "Personal Access Token"
+msgstr "Persönlicher Zugriffstoken"
+
+#: includes/arrays.php:298
+msgid "The GitHub personal access token. Stored encrypted."
+msgstr "Das GitHub Personal Access Token. Wird verschlüsselt gespeichert."
+
+#: includes/arrays.php:306
+msgid "OAuth 2.0 Client Credentials"
+msgstr "OAuth 2.0 Client Credentials"
+
+#: includes/arrays.php:311
+msgid "Client ID"
+msgstr "Client-ID"
+
+#: includes/arrays.php:313
+msgid "The OAuth 2.0 client identifier."
+msgstr "Die OAuth-2.0-Client-ID."
+
+#: includes/arrays.php:318 includes/providers/AzureKeyVaultProvider.php:89
+msgid "Client Secret"
+msgstr "Client-Geheimnis"
+
+#: includes/arrays.php:320
+msgid "The OAuth 2.0 client secret. Stored encrypted."
+msgstr "Das OAuth-2.0-Client-Geheimnis. Wird verschlüsselt gespeichert."
+
+#: includes/arrays.php:326
+msgid "Token URL"
+msgstr "Token-URL"
+
+#: includes/arrays.php:328
+msgid "The token endpoint used for the client_credentials grant."
+msgstr "Der Token-Endpunkt, der für den Grant-Typ client_credentials verwendet wird."
+
+#: includes/arrays.php:333
+msgid "Scopes"
+msgstr "Berechtigungsbereiche (Scopes)"
+
+#: includes/arrays.php:335
+msgid "An optional space delimited list of scopes to request."
+msgstr "Eine optionale, durch Leerzeichen getrennte Liste anzufordernder Berechtigungsbereiche (Scopes)."
+
+#: includes/arrays.php:342
+msgid "HTTP Basic Auth"
+msgstr "HTTP Basic-Authentifizierung"
+
+#: includes/arrays.php:349
+msgid "The HTTP Basic auth username."
+msgstr "Der Benutzername für die HTTP-Basic-Authentifizierung."
+
+#: includes/arrays.php:356
+msgid "The HTTP Basic auth password. Stored encrypted."
+msgstr "Das Passwort für die HTTP-Basic-Authentifizierung. Wird verschlüsselt gespeichert."
+
+#: includes/arrays.php:366
+msgid "WMI (Windows)"
+msgstr "WMI (Windows)"
+
+#: includes/arrays.php:368 includes/arrays.php:397 includes/arrays.php:426
+#: includes/arrays.php:476 includes/arrays.php:505
+msgid "Device"
+msgstr "Zielsysteme"
+
+#: includes/arrays.php:371
+msgid "Domain"
+msgstr "Domäne"
+
+#: includes/arrays.php:373
+msgid "The optional Windows domain."
+msgstr "Die optionale Windows-Domäne."
+
+#: includes/arrays.php:380
+msgid "The Windows account username."
+msgstr "Der Benutzername des Windows-Kontos."
+
+#: includes/arrays.php:387
+msgid "The Windows account password. Stored encrypted."
+msgstr "Das Passwort des Windows-Kontos. Wird verschlüsselt gespeichert."
+
+#: includes/arrays.php:395
+msgid "IPMI / Redfish (BMC)"
+msgstr "IPMI / Redfish (BMC)"
+
+#: includes/arrays.php:402
+msgid "The out-of-band controller username."
+msgstr "Der Benutzername des Out-of-Band-Controllers."
+
+#: includes/arrays.php:409
+msgid "The out-of-band controller password. Stored encrypted."
+msgstr "Das Passwort des Out-of-Band-Controllers. Wird verschlüsselt gespeichert."
+
+#: includes/arrays.php:415
+msgid "Protocol"
+msgstr "Protokoll"
+
+#: includes/arrays.php:417
+msgid "The management protocol exposed by the controller."
+msgstr "Das vom Controller bereitgestellte Verwaltungsprotokoll."
+
+#: includes/arrays.php:424
+msgid "Database"
+msgstr "Datenbank"
+
+#: includes/arrays.php:429
+msgid "Driver"
+msgstr "Treiber"
+
+#: includes/arrays.php:431
+msgid "The database engine this credential connects to."
+msgstr "Die Datenbank-Engine, mit der sich diese Zugangsdaten verbinden."
+
+#: includes/arrays.php:436
+msgid "Host"
+msgstr "Zielsystem"
+
+#: includes/arrays.php:438
+msgid "The database server hostname or IP address."
+msgstr "Der Hostname oder die IP-Adresse des Datenbankservers."
+
+#: includes/arrays.php:445
+msgid "The database server TCP port."
+msgstr "Der TCP-Port des Datenbankservers."
+
+#: includes/arrays.php:452
+msgid "The database account username."
+msgstr "Der Benutzername des Datenbankkontos."
+
+#: includes/arrays.php:459
+msgid "The database account password. Stored encrypted."
+msgstr "Das Passwort des Datenbankkontos. Wird verschlüsselt gespeichert."
+
+#: includes/arrays.php:465
+msgid "Database Name"
+msgstr "Datenbankname"
+
+#: includes/arrays.php:467
+msgid "The optional default database/schema name."
+msgstr "Der optionale Standard-Datenbank-/Schemaname."
+
+#: includes/arrays.php:474
+msgid "VMware / vCenter"
+msgstr "VMware / vCenter"
+
+#: includes/arrays.php:479
+msgid "Server"
+msgstr "Server"
+
+#: includes/arrays.php:481
+msgid "The vCenter or ESXi API endpoint."
+msgstr "Der vCenter- oder ESXi-API-Endpunkt."
+
+#: includes/arrays.php:488
+msgid "The hypervisor API username."
+msgstr "Der Hypervisor-API-Benutzername."
+
+#: includes/arrays.php:495
+msgid "The hypervisor API password. Stored encrypted."
+msgstr "Das Hypervisor-API-Passwort. Wird verschlüsselt gespeichert."
+
+#: includes/arrays.php:503
+msgid "TLS Client Certificate"
+msgstr "TLS-Clientzertifikat"
+
+#: includes/arrays.php:508
+msgid "Certificate (PEM)"
+msgstr "Zertifikat (PEM)"
+
+#: includes/arrays.php:510
+msgid "The PEM client certificate. Public material, stored as entered."
+msgstr "Das PEM-Clientzertifikat. Öffentliches Material, wird wie eingegeben gespeichert."
+
+#: includes/arrays.php:514
+msgid "Private Key (PEM)"
+msgstr "Privater Schlüssel (PEM)"
+
+#: includes/arrays.php:516
+msgid "The PEM private key for the client certificate. Stored encrypted."
+msgstr "Der private PEM-Schlüssel für das Clientzertifikat. Wird verschlüsselt gespeichert."
+
+#: includes/arrays.php:530
+msgid "CA Bundle (PEM)"
+msgstr "CA-Bundle (PEM)"
+
+#: includes/arrays.php:532
+msgid "An optional PEM CA bundle used to verify the peer."
+msgstr "Ein optionales PEM-CA-Bundle zur Überprüfung der Gegenstelle."
+
+#: includes/functions.php:199
+msgid "A password is required for SSH password authentication."
+msgstr "Für die SSH-Passwortauthentifizierung ist ein Passwort erforderlich."
+
+#: includes/functions.php:203
+msgid "A private key is required for SSH key authentication."
+msgstr "Für die SSH-Schlüsselauthentifizierung ist ein privater Schlüssel erforderlich."
+
+#: includes/functions.php:210
+msgid "SNMP v3 privacy requires an authentication protocol; noAuthPriv is not a valid security level."
+msgstr "SNMP-v3-Datenschutz erfordert ein Authentifizierungsprotokoll; noAuthPriv ist keine gültige Sicherheitsstufe."
+
+#: includes/functions.php:214
+msgid "An authentication passphrase is required when an SNMP v3 authentication protocol is selected."
+msgstr "Eine Authentifizierungs-Passphrase ist erforderlich, wenn ein SNMP-v3-Authentifizierungsprotokoll ausgewählt ist."
+
+#: includes/functions.php:218
+msgid "A privacy passphrase is required when an SNMP v3 privacy protocol is selected."
+msgstr "Eine Datenschutz-Passphrase ist erforderlich, wenn ein SNMP-v3-Datenschutzprotokoll ausgewählt ist."
+
+#: includes/providers.php:192
+msgid "Local Database (encrypted)"
+msgstr "Lokale Datenbank (verschlüsselt)"
+
+#: includes/providers.php:203
+msgid "(disabled)"
+msgstr "(deaktiviert)"
+
+#: includes/providers.php:290
+msgid "The provider could not be found or its type is unknown."
+msgstr "Der Anbieter wurde nicht gefunden oder sein Typ ist unbekannt."
+
+#: includes/providers/AbstractProvider.php:38
+msgid "Secret Reference"
+msgstr "Geheimnisreferenz"
+
+#: includes/providers/AbstractProvider.php:124
+#, php-format
+msgid "The stored secret is not a JSON object, so the '%s' key cannot be selected."
+msgstr "Das gespeicherte Geheimnis ist kein JSON-Objekt, sodass der Schlüssel '%s' nicht ausgewählt werden kann."
+
+#: includes/providers/AbstractProvider.php:132
+#, php-format
+msgid "The stored secret does not contain the '%s' key."
+msgstr "Das gespeicherte Geheimnis enthält den Schlüssel '%s' nicht."
+
+#: includes/providers/AbstractProvider.php:162
+msgid "The PHP cURL extension is required to reach external secret providers."
+msgstr "Die PHP-cURL-Erweiterung ist erforderlich, um externe Geheimnisanbieter zu erreichen."
+
+#: includes/providers/AbstractProvider.php:208
+msgid "The request to the secret provider failed."
+msgstr "Die Anfrage an den Geheimnisanbieter ist fehlgeschlagen."
+
+#: includes/providers/AwsSecretsManagerProvider.php:39
+msgid "AWS Secrets Manager"
+msgstr "AWS Secrets Manager"
+
+#: includes/providers/AwsSecretsManagerProvider.php:43
+msgid "Resolve secrets from AWS Secrets Manager using IAM access keys or an EC2/ECS instance role."
+msgstr "Geheimnisse aus AWS Secrets Manager mithilfe von IAM-Zugriffsschlüsseln oder einer EC2/ECS-Instanzrolle auflösen."
+
+#: includes/providers/AwsSecretsManagerProvider.php:47
+msgid "Secret Id or Name"
+msgstr "Geheimnis-ID oder Name"
+
+#: includes/providers/AwsSecretsManagerProvider.php:51
+msgid "An AWS Secrets Manager secret id or name, optionally with '#key' to select a field from a JSON secret, for example 'prod/snmp#community'."
+msgstr "Eine AWS Secrets Manager-Geheimnis-ID oder ein Name, optional mit '#key' zur Auswahl eines Felds aus einem JSON-Geheimnis, zum Beispiel 'prod/snmp#community'."
+
+#: includes/providers/AwsSecretsManagerProvider.php:57
+msgid "Region"
+msgstr "Region"
+
+#: includes/providers/AwsSecretsManagerProvider.php:59
+msgid "The AWS region hosting the secrets, for example us-east-1."
+msgstr "Die AWS-Region, in der die Geheimnisse gehostet werden, z. B. us-east-1."
+
+#: includes/providers/AwsSecretsManagerProvider.php:64
+msgid "Use Instance Role"
+msgstr "Instanzrolle verwenden"
+
+#: includes/providers/AwsSecretsManagerProvider.php:66
+msgid "Obtain temporary credentials from the EC2/ECS instance metadata service instead of static keys."
+msgstr "Temporäre Zugangsdaten vom EC2/ECS-Instanz-Metadatendienst anstatt statischer Schlüssel beziehen."
+
+#: includes/providers/AwsSecretsManagerProvider.php:70
+msgid "Access Key Id"
+msgstr "Zugriffsschlüssel-ID"
+
+#: includes/providers/AwsSecretsManagerProvider.php:72
+msgid "The IAM access key id used when not using an instance role."
+msgstr "Die IAM-Zugriffsschlüssel-ID, die verwendet wird, wenn keine Instanzrolle genutzt wird."
+
+#: includes/providers/AwsSecretsManagerProvider.php:76
+msgid "Secret Access Key"
+msgstr "Geheimer Zugriffsschlüssel"
+
+#: includes/providers/AwsSecretsManagerProvider.php:78
+msgid "The IAM secret access key. Stored encrypted."
+msgstr "Der geheime IAM-Zugriffsschlüssel. Wird verschlüsselt gespeichert."
+
+#: includes/providers/AwsSecretsManagerProvider.php:83
+msgid "Session Token"
+msgstr "Sitzungstoken"
+
+#: includes/providers/AwsSecretsManagerProvider.php:85
+msgid "An optional STS session token for temporary static credentials. Stored encrypted."
+msgstr "Ein optionales STS-Sitzungstoken für temporäre statische Zugangsdaten. Wird verschlüsselt gespeichert."
+
+#: includes/providers/AwsSecretsManagerProvider.php:90
+msgid "Endpoint Override"
+msgstr "Endpunkt-Überschreibung"
+
+#: includes/providers/AwsSecretsManagerProvider.php:92
+msgid "An optional endpoint override (for VPC endpoints or testing). Defaults to the public AWS endpoint for the region."
+msgstr "Eine optionale Endpunkt-Überschreibung (für VPC-Endpunkte oder Tests). Standardmäßig wird der öffentliche AWS-Endpunkt der Region verwendet."
+
+#: includes/providers/AwsSecretsManagerProvider.php:96
+#: includes/providers/AzureKeyVaultProvider.php:103
+#: includes/providers/ConjurProvider.php:93
+#: includes/providers/GcpSecretManagerProvider.php:77
+#: includes/providers/VaultProvider.php:131
+msgid "Timeout (seconds)"
+msgstr "Timeout (Sekunden)"
+
+#: includes/providers/AwsSecretsManagerProvider.php:98
+msgid "The network timeout for AWS requests."
+msgstr "Das Netzwerk-Timeout für AWS-Anfragen."
+
+#: includes/providers/AwsSecretsManagerProvider.php:107
+msgid "An AWS region is required."
+msgstr "Eine AWS-Region ist erforderlich."
+
+#: includes/providers/AwsSecretsManagerProvider.php:125
+msgid "Successfully authenticated to AWS Secrets Manager."
+msgstr "Erfolgreich bei AWS Secrets Manager authentifiziert."
+
+#: includes/providers/AwsSecretsManagerProvider.php:135
+msgid "An AWS secret id is required."
+msgstr "Eine AWS-Geheimnis-ID ist erforderlich."
+
+#: includes/providers/AwsSecretsManagerProvider.php:157
+msgid "AWS returned an unexpected response reading the secret."
+msgstr "AWS hat beim Lesen des Geheimnisses eine unerwartete Antwort zurückgegeben."
+
+#: includes/providers/AwsSecretsManagerProvider.php:165
+msgid "The AWS secret has no retrievable value."
+msgstr "Das AWS-Geheimnis hat keinen abrufbaren Wert."
+
+#: includes/providers/AwsSecretsManagerProvider.php:189
+msgid "An access key id and secret access key are required unless an instance role is used."
+msgstr "Eine Zugriffsschlüssel-ID und ein geheimer Zugriffsschlüssel sind erforderlich, sofern keine Instanzrolle verwendet wird."
+
+#: includes/providers/AwsSecretsManagerProvider.php:220
+msgid "The ECS relative credentials URI is not valid."
+msgstr "Die relative ECS-Zugangsdaten-URI ist nicht gültig."
+
+#: includes/providers/AwsSecretsManagerProvider.php:230
+msgid "The configured ECS credentials endpoint is not an allowed address."
+msgstr "Der konfigurierte ECS-Zugangsdaten-Endpunkt ist keine zulässige Adresse."
+
+#: includes/providers/AwsSecretsManagerProvider.php:259
+msgid "Unable to read ECS task role credentials."
+msgstr "Zugangsdaten der ECS-Task-Rolle konnten nicht gelesen werden."
+
+#: includes/providers/AwsSecretsManagerProvider.php:265
+msgid "The ECS credentials endpoint returned no usable credentials."
+msgstr "Der ECS-Zugangsdaten-Endpunkt hat keine verwendbaren Zugangsdaten zurückgegeben."
+
+#: includes/providers/AwsSecretsManagerProvider.php:352
+msgid "Unable to obtain an instance metadata token; is Cacti running on an AWS instance with a role?"
+msgstr "Es konnte kein Instanz-Metadatentoken abgerufen werden; läuft Cacti auf einer AWS-Instanz mit einer Rolle?"
+
+#: includes/providers/AwsSecretsManagerProvider.php:360
+msgid "No IAM role is attached to this instance."
+msgstr "Dieser Instanz ist keine IAM-Rolle zugeordnet."
+
+#: includes/providers/AwsSecretsManagerProvider.php:368
+msgid "Unable to read instance role credentials."
+msgstr "Zugangsdaten der Instanzrolle konnten nicht gelesen werden."
+
+#: includes/providers/AwsSecretsManagerProvider.php:374
+msgid "The instance metadata service returned no usable credentials."
+msgstr "Der Instanz-Metadatendienst hat keine verwendbaren Zugangsdaten zurückgegeben."
+
+#: includes/providers/AwsSecretsManagerProvider.php:403
+msgid "Unable to encode the AWS request."
+msgstr "Die AWS-Anfrage konnte nicht kodiert werden."
+
+#: includes/providers/AwsSecretsManagerProvider.php:498
+#, php-format
+msgid "AWS Secrets Manager error: %s (HTTP %d)."
+msgstr "AWS Secrets Manager-Fehler: %s (HTTP %d)."
+
+#: includes/providers/AwsSecretsManagerProvider.php:501
+#, php-format
+msgid "AWS Secrets Manager returned HTTP %d."
+msgstr "AWS Secrets Manager hat HTTP %d zurückgegeben."
+
+#: includes/providers/AzureKeyVaultProvider.php:42
+msgid "Azure Key Vault"
+msgstr "Azure Key Vault"
+
+#: includes/providers/AzureKeyVaultProvider.php:46
+msgid "Resolve secrets from Azure Key Vault using an Entra ID service principal or a Managed Identity."
+msgstr "Geheimnisse aus Azure Key Vault mithilfe eines Entra-ID-Dienstprinzipals oder einer verwalteten Identität auflösen."
+
+#: includes/providers/AzureKeyVaultProvider.php:50
+#: includes/providers/GcpSecretManagerProvider.php:47
+msgid "Secret Name"
+msgstr "Geheimnisname"
+
+#: includes/providers/AzureKeyVaultProvider.php:54
+msgid "A Key Vault secret name, optionally a specific version as 'name/version', with an optional '#key' to select a field from a JSON secret, for example 'snmp-community'."
+msgstr "Ein Key Vault-Geheimnisname, optional eine bestimmte Version als 'name/version', mit optionalem '#key' zur Auswahl eines Felds aus einem JSON-Geheimnis, zum Beispiel 'snmp-community'."
+
+#: includes/providers/AzureKeyVaultProvider.php:60
+msgid "Vault URL"
+msgstr "Vault-URL"
+
+#: includes/providers/AzureKeyVaultProvider.php:62
+msgid "The Key Vault base URL, for example https://my-vault.vault.azure.net."
+msgstr "Die Basis-URL des Key Vault, z. B. https://my-vault.vault.azure.net."
+
+#: includes/providers/AzureKeyVaultProvider.php:69
+msgid "How this plugin obtains an access token."
+msgstr "Wie dieses Plugin ein Zugriffstoken bezieht."
+
+#: includes/providers/AzureKeyVaultProvider.php:71
+msgid "Service Principal (client secret)"
+msgstr "Dienstprinzipal (Client-Geheimnis)"
+
+#: includes/providers/AzureKeyVaultProvider.php:72
+msgid "Managed Identity"
+msgstr "Verwaltete Identität"
+
+#: includes/providers/AzureKeyVaultProvider.php:77
+msgid "Tenant Id"
+msgstr "Mandanten-ID"
+
+#: includes/providers/AzureKeyVaultProvider.php:79
+msgid "The Entra ID tenant (directory) id, used for service principal authentication."
+msgstr "Die Entra-ID-Mandanten-ID (Verzeichnis-ID), die für die Dienstprinzipal-Authentifizierung verwendet wird."
+
+#: includes/providers/AzureKeyVaultProvider.php:83
+msgid "Client Id"
+msgstr "Client-ID"
+
+#: includes/providers/AzureKeyVaultProvider.php:85
+msgid "The application (client) id. For a user-assigned Managed Identity, the identity client id."
+msgstr "Die Anwendungs-ID (Client-ID). Bei einer benutzerseitig zugewiesenen verwalteten Identität die Client-ID der Identität."
+
+#: includes/providers/AzureKeyVaultProvider.php:91
+msgid "The service principal client secret. Stored encrypted."
+msgstr "Das Client-Geheimnis des Dienstprinzipals. Wird verschlüsselt gespeichert."
+
+#: includes/providers/AzureKeyVaultProvider.php:96
+msgid "API Version"
+msgstr "API-Version"
+
+#: includes/providers/AzureKeyVaultProvider.php:98
+msgid "The Key Vault data-plane API version."
+msgstr "Die API-Version der Key Vault-Datenebene."
+
+#: includes/providers/AzureKeyVaultProvider.php:105
+msgid "The network timeout for Azure requests."
+msgstr "Das Netzwerk-Timeout für Azure-Anfragen."
+
+#: includes/providers/AzureKeyVaultProvider.php:114
+msgid "A Key Vault URL is required."
+msgstr "Eine Key Vault-URL ist erforderlich."
+
+#: includes/providers/AzureKeyVaultProvider.php:133
+msgid "Successfully authenticated to Azure Key Vault."
+msgstr "Erfolgreich bei Azure Key Vault authentifiziert."
+
+#: includes/providers/AzureKeyVaultProvider.php:143
+msgid "A Key Vault secret name is required."
+msgstr "Ein Key Vault-Geheimnisname ist erforderlich."
+
+#: includes/providers/AzureKeyVaultProvider.php:167
+#, php-format
+msgid "The Key Vault secret '%s' was not found."
+msgstr "Das Key Vault-Geheimnis '%s' wurde nicht gefunden."
+
+#: includes/providers/AzureKeyVaultProvider.php:177
+msgid "Azure returned an unexpected response reading the secret."
+msgstr "Azure hat beim Lesen des Geheimnisses eine unerwartete Antwort zurückgegeben."
+
+#: includes/providers/AzureKeyVaultProvider.php:200
+msgid "Service principal authentication requires a tenant id, client id and client secret."
+msgstr "Die Dienstprinzipal-Authentifizierung erfordert eine Mandanten-ID, eine Client-ID und ein Client-Geheimnis."
+
+#: includes/providers/AzureKeyVaultProvider.php:218
+#, php-format
+msgid "Azure token request failed with HTTP %d."
+msgstr "Azure-Token-Anforderung fehlgeschlagen mit HTTP %d."
+
+#: includes/providers/AzureKeyVaultProvider.php:224
+msgid "Azure token request returned no access token."
+msgstr "Azure-Token-Anforderung hat kein Zugriffstoken zurückgegeben."
+
+#: includes/providers/AzureKeyVaultProvider.php:249
+msgid "Unable to obtain a Managed Identity token; is Cacti running on an Azure resource with an identity assigned?"
+msgstr "Es konnte kein Token für die verwaltete Identität abgerufen werden; läuft Cacti auf einer Azure-Ressource mit zugewiesener Identität?"
+
+#: includes/providers/AzureKeyVaultProvider.php:255
+msgid "The Managed Identity endpoint returned no access token."
+msgstr "Der Endpunkt für verwaltete Identitäten hat kein Zugriffstoken zurückgegeben."
+
+#: includes/providers/AzureKeyVaultProvider.php:273
+#, php-format
+msgid "Azure Key Vault error: %s (HTTP %d)."
+msgstr "Azure Key Vault-Fehler: %s (HTTP %d)."
+
+#: includes/providers/AzureKeyVaultProvider.php:276
+#, php-format
+msgid "Azure Key Vault returned HTTP %d."
+msgstr "Azure Key Vault hat HTTP %d zurückgegeben."
+
+#: includes/providers/ConjurProvider.php:35
+msgid "CyberArk Conjur"
+msgstr "CyberArk Conjur"
+
+#: includes/providers/ConjurProvider.php:39
+msgid "Resolve secrets from CyberArk Conjur using a host or user identity and its API key."
+msgstr "Geheimnisse aus CyberArk Conjur mithilfe einer Host- oder Benutzeridentität und ihres API-Schlüssels auflösen."
+
+#: includes/providers/ConjurProvider.php:43
+msgid "Variable Id"
+msgstr "Variablen-ID"
+
+#: includes/providers/ConjurProvider.php:47
+msgid "A Conjur variable id, with an optional '#key' to select a field from a JSON secret, for example 'prod/network/snmp'."
+msgstr "Eine Conjur-Variablen-ID, optional mit '#key' zur Auswahl eines Felds aus einem JSON-Geheimnis, zum Beispiel 'prod/network/snmp'."
+
+#: includes/providers/ConjurProvider.php:53
+msgid "Appliance URL"
+msgstr "Appliance-URL"
+
+#: includes/providers/ConjurProvider.php:55
+msgid "The base URL of the Conjur appliance, for example https://conjur.example.com."
+msgstr "Die Basis-URL der Conjur-Appliance, z. B. https://conjur.example.com."
+
+#: includes/providers/ConjurProvider.php:60
+msgid "Account"
+msgstr "Konto"
+
+#: includes/providers/ConjurProvider.php:62
+msgid "The Conjur account (organization) name."
+msgstr "Der Name des Conjur-Kontos (der Organisation)."
+
+#: includes/providers/ConjurProvider.php:67
+msgid "Login (Host or User)"
+msgstr "Anmeldung (Host oder Benutzer)"
+
+#: includes/providers/ConjurProvider.php:69
+msgid "The identity used to authenticate, for example host/cacti-poller or a username."
+msgstr "Die zur Authentifizierung verwendete Identität, z. B. host/cacti-poller oder ein Benutzername."
+
+#: includes/providers/ConjurProvider.php:76
+msgid "The API key for the identity. Stored encrypted."
+msgstr "Der API-Schlüssel für die Identität. Wird verschlüsselt gespeichert."
+
+#: includes/providers/ConjurProvider.php:81
+#: includes/providers/VaultProvider.php:119
+msgid "Verify TLS Certificate"
+msgstr "TLS-Zertifikat überprüfen"
+
+#: includes/providers/ConjurProvider.php:83
+msgid "Verify the Conjur appliance TLS certificate. Disable only for testing."
+msgstr "Das TLS-Zertifikat der Conjur-Appliance überprüfen. Nur zu Testzwecken deaktivieren."
+
+#: includes/providers/ConjurProvider.php:87
+#: includes/providers/VaultProvider.php:125
+msgid "CA Bundle Path"
+msgstr "CA-Bundle-Pfad"
+
+#: includes/providers/ConjurProvider.php:89
+msgid "An optional path on the Cacti server to a PEM CA bundle used to verify Conjur."
+msgstr "Ein optionaler Pfad auf dem Cacti-Server zu einem PEM-CA-Bundle zur Überprüfung von Conjur."
+
+#: includes/providers/ConjurProvider.php:95
+msgid "The network timeout for Conjur requests."
+msgstr "Das Netzwerk-Timeout für Conjur-Anfragen."
+
+#: includes/providers/ConjurProvider.php:105
+msgid "The Conjur appliance URL, account, login and API key are all required."
+msgstr "Die Conjur-Appliance-URL, das Konto, die Anmeldung und der API-Schlüssel sind alle erforderlich."
+
+#: includes/providers/ConjurProvider.php:115
+msgid "Successfully authenticated to CyberArk Conjur."
+msgstr "Erfolgreich bei CyberArk Conjur authentifiziert."
+
+#: includes/providers/ConjurProvider.php:122
+msgid "A Conjur variable id is required."
+msgstr "Eine Conjur-Variablen-ID ist erforderlich."
+
+#: includes/providers/ConjurProvider.php:142
+#, php-format
+msgid "The Conjur variable '%s' was not found or has no value."
+msgstr "Die Conjur-Variable '%s' wurde nicht gefunden oder hat keinen Wert."
+
+#: includes/providers/ConjurProvider.php:146
+#, php-format
+msgid "Conjur returned HTTP %d reading the variable."
+msgstr "Conjur hat beim Lesen der Variable HTTP %d zurückgegeben."
+
+#: includes/providers/ConjurProvider.php:166
+msgid "Conjur authentication requires an account, login and API key."
+msgstr "Die Conjur-Authentifizierung erfordert ein Konto, eine Anmeldung und einen API-Schlüssel."
+
+#: includes/providers/ConjurProvider.php:178
+#, php-format
+msgid "Conjur authentication failed with HTTP %d."
+msgstr "Conjur-Authentifizierung fehlgeschlagen mit HTTP %d."
+
+#: includes/providers/ConjurProvider.php:184
+msgid "Conjur authentication returned an empty token."
+msgstr "Die Conjur-Authentifizierung hat ein leeres Token zurückgegeben."
+
+#: includes/providers/GcpSecretManagerProvider.php:39
+msgid "Google Cloud Secret Manager"
+msgstr "Google Cloud Secret Manager"
+
+#: includes/providers/GcpSecretManagerProvider.php:43
+msgid "Resolve secrets from Google Cloud Secret Manager using a service account key or the instance service account."
+msgstr "Geheimnisse aus Google Cloud Secret Manager mithilfe eines Dienstkonto-Schlüssels oder des Instanz-Dienstkontos auflösen."
+
+#: includes/providers/GcpSecretManagerProvider.php:51
+msgid "A Secret Manager secret id, optionally a version as 'name/version' (default 'latest'), with an optional '#key' to select a field from a JSON secret, for example 'snmp-community'."
+msgstr "Eine Secret Manager-Geheimnis-ID, optional eine Version als 'name/version' (Standard 'latest'), mit optionalem '#key' zur Auswahl eines Felds aus einem JSON-Geheimnis, zum Beispiel 'snmp-community'."
+
+#: includes/providers/GcpSecretManagerProvider.php:57
+msgid "Project Id"
+msgstr "Projekt-ID"
+
+#: includes/providers/GcpSecretManagerProvider.php:59
+msgid "The Google Cloud project id that owns the secrets."
+msgstr "Die Google Cloud-Projekt-ID, zu der die Geheimnisse gehören."
+
+#: includes/providers/GcpSecretManagerProvider.php:64
+msgid "Use Instance Service Account"
+msgstr "Instanz-Dienstkonto verwenden"
+
+#: includes/providers/GcpSecretManagerProvider.php:66
+msgid "Obtain an access token from the GCE metadata server instead of a service account key."
+msgstr "Zugriffstoken vom GCE-Metadatenserver anstatt über einen Dienstkonto-Schlüssel beziehen."
+
+#: includes/providers/GcpSecretManagerProvider.php:70
+msgid "Service Account Key (JSON)"
+msgstr "Dienstkonto-Schlüssel (JSON)"
+
+#: includes/providers/GcpSecretManagerProvider.php:72
+msgid "The full service account key JSON. Stored encrypted. Not required when using the instance service account."
+msgstr "Das vollständige Dienstkonto-Schlüssel-JSON. Wird verschlüsselt gespeichert. Nicht erforderlich, wenn das Instanz-Dienstkonto verwendet wird."
+
+#: includes/providers/GcpSecretManagerProvider.php:79
+msgid "The network timeout for Google Cloud requests."
+msgstr "Das Netzwerk-Timeout für Google Cloud-Anfragen."
+
+#: includes/providers/GcpSecretManagerProvider.php:88
+msgid "A Google Cloud project id is required."
+msgstr "Eine Google Cloud-Projekt-ID ist erforderlich."
+
+#: includes/providers/GcpSecretManagerProvider.php:107
+msgid "Successfully authenticated to Google Cloud Secret Manager."
+msgstr "Erfolgreich bei Google Cloud Secret Manager authentifiziert."
+
+#: includes/providers/GcpSecretManagerProvider.php:117
+msgid "A Secret Manager secret name is required."
+msgstr "Ein Secret Manager-Geheimnisname ist erforderlich."
+
+#: includes/providers/GcpSecretManagerProvider.php:140
+#, php-format
+msgid "The Secret Manager secret '%s' was not found."
+msgstr "Das Secret Manager-Geheimnis '%s' wurde nicht gefunden."
+
+#: includes/providers/GcpSecretManagerProvider.php:150
+msgid "Google Cloud returned an unexpected response reading the secret."
+msgstr "Google Cloud hat beim Lesen des Geheimnisses eine unerwartete Antwort zurückgegeben."
+
+#: includes/providers/GcpSecretManagerProvider.php:156
+msgid "The Secret Manager payload could not be decoded."
+msgstr "Die Secret Manager-Nutzlast konnte nicht dekodiert werden."
+
+#: includes/providers/GcpSecretManagerProvider.php:178
+msgid "A service account key JSON is required unless the instance service account is used."
+msgstr "Ein Dienstkonto-Schlüssel-JSON ist erforderlich, sofern nicht das Instanz-Dienstkonto verwendet wird."
+
+#: includes/providers/GcpSecretManagerProvider.php:184
+msgid "The service account key JSON is invalid or incomplete."
+msgstr "Das Dienstkonto-Schlüssel-JSON ist ungültig oder unvollständig."
+
+#: includes/providers/GcpSecretManagerProvider.php:190
+msgid "The service account token URI must be a supported Google OAuth endpoint."
+msgstr "Die Dienstkonto-Token-URI muss ein unterstützter Google-OAuth-Endpunkt sein."
+
+#: includes/providers/GcpSecretManagerProvider.php:221
+#, php-format
+msgid "Google Cloud token request failed with HTTP %d."
+msgstr "Google Cloud-Token-Anforderung fehlgeschlagen mit HTTP %d."
+
+#: includes/providers/GcpSecretManagerProvider.php:227
+msgid "Google Cloud token request returned no access token."
+msgstr "Google Cloud-Token-Anforderung hat kein Zugriffstoken zurückgegeben."
+
+#: includes/providers/GcpSecretManagerProvider.php:271
+msgid "Unable to obtain a token from the GCE metadata server; is Cacti running on a Google Cloud instance?"
+msgstr "Es konnte kein Token vom GCE-Metadatenserver abgerufen werden; läuft Cacti auf einer Google Cloud-Instanz?"
+
+#: includes/providers/GcpSecretManagerProvider.php:277
+msgid "The GCE metadata server returned no access token."
+msgstr "Der GCE-Metadatenserver hat kein Zugriffstoken zurückgegeben."
+
+#: includes/providers/GcpSecretManagerProvider.php:300
+msgid "The service account private key could not be read."
+msgstr "Der private Schlüssel des Dienstkontos konnte nicht gelesen werden."
+
+#: includes/providers/GcpSecretManagerProvider.php:307
+msgid "The service account JWT could not be signed."
+msgstr "Das Dienstkonto-JWT konnte nicht signiert werden."
+
+#: includes/providers/GcpSecretManagerProvider.php:336
+#, php-format
+msgid "Google Cloud Secret Manager error: %s (HTTP %d)."
+msgstr "Google Cloud Secret Manager-Fehler: %s (HTTP %d)."
+
+#: includes/providers/GcpSecretManagerProvider.php:339
+#, php-format
+msgid "Google Cloud Secret Manager returned HTTP %d."
+msgstr "Google Cloud Secret Manager hat HTTP %d zurückgegeben."
+
+#: includes/providers/OpenBaoProvider.php:36
+msgid "OpenBao"
+msgstr "OpenBao"
+
+#: includes/providers/OpenBaoProvider.php:44
+msgid "Resolve secrets from an OpenBao KV v1 or v2 secrets engine using a token or AppRole."
+msgstr "Geheimnisse aus einer OpenBao KV-v1- oder v2-Secrets-Engine mithilfe eines Tokens oder von AppRole auflösen."
+
+#: includes/providers/OpenBaoProvider.php:48
+msgid "An OpenBao secret path and the key within it, separated by '#', for example 'network/snmp#community'. The path is relative to the configured KV mount; append '#key' to select a field from the secret."
+msgstr "Ein OpenBao-Geheimnispfad und der darin enthaltene Schlüssel, getrennt durch '#', zum Beispiel 'network/snmp#community'. Der Pfad ist relativ zum konfigurierten KV-Mount; hängen Sie '#key' an, um ein Feld aus dem Geheimnis auszuwählen."
+
+#: includes/providers/OpenBaoProvider.php:55
+msgid "OpenBao Address"
+msgstr "OpenBao-Adresse"
+
+#: includes/providers/OpenBaoProvider.php:55
+msgid "The base URL of the OpenBao server, for example https://openbao.example.com:8200."
+msgstr "Die Basis-URL des OpenBao-Servers, z. B. https://openbao.example.com:8200."
+
+#: includes/providers/OpenBaoProvider.php:56
+msgid "The optional OpenBao namespace (sent as the X-Vault-Namespace header)."
+msgstr "Der optionale OpenBao-Namensraum (wird als Header X-Vault-Namespace gesendet)."
+
+#: includes/providers/OpenBaoProvider.php:57
+msgid "How this plugin authenticates to OpenBao."
+msgstr "Wie sich dieses Plugin bei OpenBao authentifiziert."
+
+#: includes/providers/OpenBaoProvider.php:58
+msgid "The OpenBao token used for Token authentication. Stored encrypted."
+msgstr "Das für die Token-Authentifizierung verwendete OpenBao-Token. Wird verschlüsselt gespeichert."
+
+#: includes/providers/OpenBaoProvider.php:59
+msgid "Verify the OpenBao server TLS certificate. Disable only for testing."
+msgstr "Das TLS-Zertifikat des OpenBao-Servers überprüfen. Nur zu Testzwecken deaktivieren."
+
+#: includes/providers/OpenBaoProvider.php:60
+msgid "An optional path on the Cacti server to a PEM CA bundle used to verify OpenBao."
+msgstr "Ein optionaler Pfad auf dem Cacti-Server zu einem PEM-CA-Bundle zur Überprüfung von OpenBao."
+
+#: includes/providers/OpenBaoProvider.php:61
+msgid "The network timeout for OpenBao requests."
+msgstr "Das Netzwerk-Timeout für OpenBao-Anfragen."
+
+#: includes/providers/VaultProvider.php:35
+msgid "HashiCorp Vault"
+msgstr "HashiCorp Vault"
+
+#: includes/providers/VaultProvider.php:51
+msgid "Resolve secrets from a HashiCorp Vault KV v1 or v2 secrets engine using a token or AppRole."
+msgstr "Geheimnisse aus einer HashiCorp Vault KV-v1- oder v2-Secrets-Engine mithilfe eines Tokens oder von AppRole auflösen."
+
+#: includes/providers/VaultProvider.php:55
+msgid "Secret Path and Key"
+msgstr "Geheimnispfad und Schlüssel"
+
+#: includes/providers/VaultProvider.php:59
+msgid "A Vault secret path and the key within it, separated by '#', for example 'network/snmp#community'. The path is relative to the configured KV mount; append '#key' to select a field from the secret."
+msgstr "Ein Vault-Geheimnispfad und der darin enthaltene Schlüssel, getrennt durch '#', zum Beispiel 'network/snmp#community'. Der Pfad ist relativ zum konfigurierten KV-Mount; hängen Sie '#key' an, um ein Feld aus dem Geheimnis auszuwählen."
+
+#: includes/providers/VaultProvider.php:65
+msgid "Vault Address"
+msgstr "Vault-Adresse"
+
+#: includes/providers/VaultProvider.php:67
+msgid "The base URL of the Vault server, for example https://vault.example.com:8200."
+msgstr "Die Basis-URL des Vault-Servers, z. B. https://vault.example.com:8200."
+
+#: includes/providers/VaultProvider.php:72
+msgid "Namespace"
+msgstr "Namensraum"
+
+#: includes/providers/VaultProvider.php:74
+msgid "The optional Vault Enterprise namespace (sent as the X-Vault-Namespace header)."
+msgstr "Der optionale Vault-Enterprise-Namensraum (wird als Header X-Vault-Namespace gesendet)."
+
+#: includes/providers/VaultProvider.php:78
+msgid "KV Engine Version"
+msgstr "KV-Engine-Version"
+
+#: includes/providers/VaultProvider.php:80
+msgid "The version of the KV secrets engine the mount uses."
+msgstr "Die Version der KV-Secrets-Engine, die der Mount verwendet."
+
+#: includes/providers/VaultProvider.php:81
+msgid "KV Version 2"
+msgstr "KV-Version 2"
+
+#: includes/providers/VaultProvider.php:81
+msgid "KV Version 1"
+msgstr "KV-Version 1"
+
+#: includes/providers/VaultProvider.php:85
+msgid "KV Mount Path"
+msgstr "KV-Mount-Pfad"
+
+#: includes/providers/VaultProvider.php:87
+msgid "The mount path of the KV secrets engine, for example 'secret'."
+msgstr "Der Mount-Pfad der KV-Secrets-Engine, z. B. 'secret'."
+
+#: includes/providers/VaultProvider.php:94
+msgid "How this plugin authenticates to Vault."
+msgstr "Wie sich dieses Plugin bei Vault authentifiziert."
+
+#: includes/providers/VaultProvider.php:95
+#: includes/providers/VaultProvider.php:99
+msgid "Token"
+msgstr "Token"
+
+#: includes/providers/VaultProvider.php:95
+msgid "AppRole"
+msgstr "AppRole"
+
+#: includes/providers/VaultProvider.php:101
+msgid "The Vault token used for Token authentication. Stored encrypted."
+msgstr "Das für die Token-Authentifizierung verwendete Vault-Token. Wird verschlüsselt gespeichert."
+
+#: includes/providers/VaultProvider.php:106
+msgid "AppRole Role ID"
+msgstr "AppRole Role ID"
+
+#: includes/providers/VaultProvider.php:108
+msgid "The AppRole RoleID used for AppRole authentication."
+msgstr "Die für die AppRole-Authentifizierung verwendete AppRole RoleID."
+
+#: includes/providers/VaultProvider.php:112
+msgid "AppRole Secret ID"
+msgstr "AppRole Secret ID"
+
+#: includes/providers/VaultProvider.php:114
+msgid "The AppRole SecretID used for AppRole authentication. Stored encrypted."
+msgstr "Die für die AppRole-Authentifizierung verwendete AppRole SecretID. Wird verschlüsselt gespeichert."
+
+#: includes/providers/VaultProvider.php:121
+msgid "Verify the Vault server TLS certificate. Disable only for testing."
+msgstr "Das TLS-Zertifikat des Vault-Servers überprüfen. Nur zu Testzwecken deaktivieren."
+
+#: includes/providers/VaultProvider.php:127
+msgid "An optional path on the Cacti server to a PEM CA bundle used to verify Vault."
+msgstr "Ein optionaler Pfad auf dem Cacti-Server zu einem PEM-CA-Bundle zur Überprüfung von Vault."
+
+#: includes/providers/VaultProvider.php:133
+msgid "The network timeout for Vault requests."
+msgstr "Das Netzwerk-Timeout für Vault-Anfragen."
+
+#: includes/providers/VaultProvider.php:144
+#, php-format
+msgid "The %s address is required."
+msgstr "Die %s-Adresse ist erforderlich."
+
+#: includes/providers/VaultProvider.php:166
+#, php-format
+msgid "Successfully authenticated to %s."
+msgstr "Erfolgreich bei %s authentifiziert."
+
+#: includes/providers/VaultProvider.php:169
+#, php-format
+msgid "%s returned HTTP %d during token verification."
+msgstr "%s hat bei der Token-Überprüfung HTTP %d zurückgegeben."
+
+#: includes/providers/VaultProvider.php:176
+#, php-format
+msgid "The %s secret path is required."
+msgstr "Der %s-Geheimnispfad ist erforderlich."
+
+#: includes/providers/VaultProvider.php:209
+#, php-format
+msgid "The %s secret path '%s' was not found."
+msgstr "Der %s-Geheimnispfad '%s' wurde nicht gefunden."
+
+#: includes/providers/VaultProvider.php:213
+#, php-format
+msgid "%s returned HTTP %d reading the secret."
+msgstr "%s hat beim Lesen des Geheimnisses HTTP %d zurückgegeben."
+
+#: includes/providers/VaultProvider.php:219
+#, php-format
+msgid "%s returned an unexpected response reading the secret."
+msgstr "%s hat beim Lesen des Geheimnisses eine unerwartete Antwort zurückgegeben."
+
+#: includes/providers/VaultProvider.php:228
+#, php-format
+msgid "%s returned an unexpected secret payload."
+msgstr "%s hat eine unerwartete Geheimnis-Nutzlast zurückgegeben."
+
+#: includes/providers/VaultProvider.php:239
+#, php-format
+msgid "The %s secret holds multiple fields; append '#key' to the reference to select one."
+msgstr "Das %s-Geheimnis enthält mehrere Felder; hängen Sie '#key' an die Referenz an, um eines auszuwählen."
+
+#: includes/providers/VaultProvider.php:262
+msgid "AppRole authentication requires both a RoleID and a SecretID."
+msgstr "Die AppRole-Authentifizierung erfordert sowohl eine RoleID als auch eine SecretID."
+
+#: includes/providers/VaultProvider.php:280
+#, php-format
+msgid "%s AppRole login failed with HTTP %d."
+msgstr "%s AppRole-Anmeldung fehlgeschlagen mit HTTP %d."
+
+#: includes/providers/VaultProvider.php:286
+#, php-format
+msgid "%s AppRole login returned no client token."
+msgstr "%s AppRole-Anmeldung hat kein Client-Token zurückgegeben."
+
+#: includes/providers/VaultProvider.php:295
+#, php-format
+msgid "The %s token is required for Token authentication."
+msgstr "Das %s-Token ist für die Token-Authentifizierung erforderlich."
+
+#: setup.php:270
+msgid "Configuration"
+msgstr "Konfiguration"
+
+#: setup.php:294 setup.php:322
+msgid "(Edit)"
+msgstr "(Verändern)"
+
+#: setup.php:301 setup.php:329
+msgid "Actions"
+msgstr "Aktionen"
+
+#: setup.php:308 setup.php:336
+msgid "(Save)"
+msgstr "(Speichern)"

@@ -1,0 +1,1542 @@
+# Bosnian translations for Cacti package.
+# Copyright (C) 2004-2026 The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti 1.0\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-10-16 19:37+0000\n"
+"PO-Revision-Date: 2026-11-28 02:15+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Bosnian <developers@cacti.net>\n"
+"Language: bs-BA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+
+#: credential_providers.php:37 credentials.php:37
+msgid "Delete"
+msgstr "Obriši"
+
+#: credential_providers.php:38 credentials.php:38
+msgid "Enable"
+msgstr "Omogući"
+
+#: credential_providers.php:39 credentials.php:39
+msgid "Disable"
+msgstr "Onemogući"
+
+#: credential_providers.php:107
+msgid "The selected provider type is not valid."
+msgstr "Odabrani tip dobavljača nije ispravan."
+
+#: credential_providers.php:116
+msgid "A provider name is required."
+msgstr "Naziv dobavljača je obavezan."
+
+#: credential_providers.php:150 credentials.php:181
+msgid "Cannot store a secret: the Cacti core secret encryption functions are unavailable on this installation."
+msgstr "Nije moguće sačuvati tajnu: funkcije za šifriranje tajni u Cacti jezgri nisu dostupne na ovoj instalaciji."
+
+#: credential_providers.php:166 credential_providers.php:191
+#: credentials.php:228 credentials.php:254
+#, php-format
+msgid "'%s' is required."
+msgstr "'%s' je obavezno."
+
+#: credential_providers.php:175 credentials.php:237
+msgid "Could not encrypt the secret. Verify the Cacti encryption key configuration and try again."
+msgstr "Nije moguće šifrirati tajnu. Provjerite konfiguraciju Cacti ključa za šifriranje i pokušajte ponovo."
+
+#: credential_providers.php:204
+msgid "The provider could not be saved because one of its fields contains invalid characters. Please re-enter the affected values and try again."
+msgstr "Dobavljač nije mogao biti sačuvan jer jedno od njegovih polja sadrži neispravne znakove. Molimo ponovo unesite pogođene vrijednosti i pokušajte ponovo."
+
+#: credential_providers.php:221
+msgid "Secret provider saved."
+msgstr "Dobavljač tajni je sačuvan."
+
+#: credential_providers.php:224
+msgid "Failed to save the secret provider."
+msgstr "Čuvanje dobavljača tajni nije uspjelo."
+
+#: credential_providers.php:270
+#, php-format
+msgid "A provider still used by %d credential(s) was not deleted."
+msgstr "Dobavljač koji još uvijek koristi %d akreditiv(a) nije obrisan."
+
+#: credential_providers.php:323
+msgid "Delete the following secret provider(s)?"
+msgstr "Obrisati sljedećeg dobavljača tajni?"
+
+#: credential_providers.php:325
+msgid "Enable the following secret provider(s)?"
+msgstr "Omogućiti sljedećeg dobavljača tajni?"
+
+#: credential_providers.php:327
+msgid "Disable the following secret provider(s)?"
+msgstr "Onemogućiti sljedećeg dobavljača tajni?"
+
+#: credential_providers.php:337 credential_providers.php:755
+#: credentials.php:428 credentials.php:882
+msgid "Cancel"
+msgstr "Otkaži"
+
+#: credential_providers.php:337 credential_providers.php:754
+#: credentials.php:428 credentials.php:881
+msgid "Continue"
+msgstr "Nastavi"
+
+#: credential_providers.php:366
+msgid "Invalid request method."
+msgstr "Neispravna metoda zahtjeva."
+
+#: credential_providers.php:376
+msgid "Save the provider before testing it."
+msgstr "Sačuvajte dobavljača prije testiranja."
+
+#: credential_providers.php:491 credential_providers.php:530 setup.php:256
+#: setup.php:274 setup.php:315
+msgid "Secret Providers"
+msgstr "Dobavljači tajni"
+
+#: credential_providers.php:499 credentials.php:575
+msgid "Search"
+msgstr "Pretraži"
+
+#: credential_providers.php:503
+msgid "Providers"
+msgstr "Provajderi"
+
+#: credential_providers.php:506 credentials.php:593
+msgid "All"
+msgstr "Sve"
+
+#: credential_providers.php:517 credentials.php:604
+msgid "Go"
+msgstr "Idi"
+
+#: credential_providers.php:518 credentials.php:605
+msgid "Clear"
+msgstr "Očisti"
+
+#: credential_providers.php:539 credential_providers.php:625
+#: credentials.php:626 credentials.php:750
+msgid "Name"
+msgstr "Naziv"
+
+#: credential_providers.php:540 credentials.php:579 credentials.php:627
+msgid "Type"
+msgstr "Tip"
+
+#: credential_providers.php:541 credential_providers.php:633
+#: credentials.php:629 credentials.php:758
+msgid "Description"
+msgstr "Opis"
+
+#: credential_providers.php:542 credential_providers.php:648
+#: credentials.php:631 credentials.php:780
+msgid "Enabled"
+msgstr "Omogućeno"
+
+#: credential_providers.php:543 credentials.php:632
+msgid "Last Updated"
+msgstr "Posljednje ažuriranje"
+
+#: credential_providers.php:557 credentials.php:649
+msgid "Yes"
+msgstr "Da"
+
+#: credential_providers.php:557 credentials.php:649
+msgid "No"
+msgstr "Ne"
+
+#: credential_providers.php:564
+msgid "No Secret Providers Found"
+msgstr "Nisu pronađeni dobavljači tajni"
+
+#: credential_providers.php:620
+#, php-format
+msgid "Secret Provider [edit: %s]"
+msgstr "Dobavljač tajni [uređivanje: %s]"
+
+#: credential_providers.php:620
+msgid "Secret Provider [new]"
+msgstr "Dobavljač tajni [novi]"
+
+#: credential_providers.php:626
+msgid "A unique, meaningful name for this provider instance."
+msgstr "Jedinstven, smislen naziv za ovu instancu dobavljača."
+
+#: credential_providers.php:634
+msgid "An optional description of this provider instance."
+msgstr "Opcionalni opis ove instance dobavljača."
+
+#: credential_providers.php:641
+msgid "Provider Type"
+msgstr "Tip pružaoca"
+
+#: credential_providers.php:642
+msgid "The external secret store this provider connects to. Changing the type on an existing provider discards the previously stored type-specific configuration when you save."
+msgstr "Vanjsko skladište tajni na koje se ovaj dobavljač povezuje. Promjena tipa na postojećem dobavljaču odbacuje prethodno sačuvanu konfiguraciju specifičnu za tip prilikom čuvanja."
+
+#: credential_providers.php:649
+msgid "Whether this provider is available to resolve credential secrets."
+msgstr "Da li je ovaj dobavljač dostupan za razrješavanje tajni akreditiva."
+
+#: credential_providers.php:697 credentials.php:833
+msgid "A value is currently stored (encrypted)."
+msgstr "Vrijednost je trenutno sačuvana (šifrirano)."
+
+#: credential_providers.php:697 credentials.php:833
+msgid "Leave this blank to keep it, or enter a new value to replace it."
+msgstr "Ostavite ovo polje prazno da zadržite vrijednost ili unesite novu vrijednost za zamjenu."
+
+#: credential_providers.php:699 credentials.php:835
+msgid "No value stored yet."
+msgstr "Još nije sačuvana nijedna vrijednost."
+
+#: credential_providers.php:740
+msgid "Test Connection"
+msgstr "Testiraj vezu"
+
+#: credential_providers.php:752
+msgid "Change Provider Type?"
+msgstr "Promijeniti tip dobavljača?"
+
+#: credential_providers.php:753
+msgid "Changing the Provider Type will discard the configuration stored for the current type when you save this provider. Do you want to continue?"
+msgstr "Promjenom tipa dobavljača odbacit će se konfiguracija sačuvana za trenutni tip kada sačuvate ovog dobavljača. Želite li nastaviti?"
+
+#: credential_providers.php:756
+msgid "Testing..."
+msgstr "Testiranje..."
+
+#: credential_providers.php:757
+msgid "The test request failed."
+msgstr "Probni zahtjev nije uspio."
+
+#: credentials.php:102
+msgid "The selected credential type is not valid."
+msgstr "Odabrani tip akreditiva nije ispravan."
+
+#: credentials.php:111
+msgid "A credential name is required."
+msgstr "Naziv akreditiva je obavezan."
+
+#: credentials.php:125
+msgid "The selected secret provider does not exist."
+msgstr "Odabrani dobavljač tajni ne postoji."
+
+#: credentials.php:132
+msgid "The selected secret provider is disabled."
+msgstr "Odabrani dobavljač tajni je onemogućen."
+
+#: credentials.php:199
+#, php-format
+msgid "A reference for '%s' is required."
+msgstr "Referenca za '%s' je obavezna."
+
+#: credentials.php:215
+#, php-format
+msgid "The value and its confirmation for '%s' do not match."
+msgstr "Vrijednost i njena potvrda za '%s' se ne podudaraju."
+
+#: credentials.php:279
+msgid "The credential could not be saved because one of its fields contains invalid characters. Please re-enter the affected values and try again."
+msgstr "Akreditiv nije mogao biti sačuvan jer jedno od njegovih polja sadrži neispravne znakove. Molimo ponovo unesite pogođene vrijednosti i pokušajte ponovo."
+
+#: credentials.php:312
+msgid "The selected secret provider is no longer available. Please choose another provider."
+msgstr "Odabrani dobavljač tajni više nije dostupan. Molimo odaberite drugog dobavljača."
+
+#: credentials.php:326
+msgid "Credential saved."
+msgstr "Akreditiv je sačuvan."
+
+#: credentials.php:329
+msgid "Failed to save the credential."
+msgstr "Čuvanje akreditiva nije uspjelo."
+
+#: credentials.php:414
+msgid "Delete the following credential(s)?"
+msgstr "Obrisati sljedeći akreditiv(e)?"
+
+#: credentials.php:416
+msgid "Enable the following credential(s)?"
+msgstr "Omogućiti sljedeći akreditiv(e)?"
+
+#: credentials.php:418
+msgid "Disable the following credential(s)?"
+msgstr "Onemogućiti sljedeći akreditiv(e)?"
+
+#: credentials.php:567 credentials.php:590 credentials.php:617 setup.php:255
+#: setup.php:273 setup.php:287
+msgid "Credentials"
+msgstr "Akreditivi"
+
+#: credentials.php:582
+msgid "Any"
+msgstr "Bilo koji"
+
+#: credentials.php:628 credentials.php:773
+msgid "Secret Provider"
+msgstr "Dobavljač tajni"
+
+#: credentials.php:630
+msgid "Owner"
+msgstr "Vlasnik"
+
+#: credentials.php:640
+msgid "Local Database"
+msgstr "Lokalna baza podataka"
+
+#: credentials.php:648
+msgid "N/A"
+msgstr "N/D"
+
+#: credentials.php:656
+msgid "No Credentials Found"
+msgstr "Nisu pronađeni akreditivi"
+
+#: credentials.php:745
+#, php-format
+msgid "Credential [edit: %s]"
+msgstr "Akreditiv [uređivanje: %s]"
+
+#: credentials.php:745
+msgid "Credential [new]"
+msgstr "Akreditiv [novi]"
+
+#: credentials.php:751
+msgid "A unique, meaningful name for this credential."
+msgstr "Jedinstven, smislen naziv za ovaj akreditiv."
+
+#: credentials.php:759
+msgid "An optional description of where this credential is used."
+msgstr "Opcionalni opis mjesta gdje se ovaj akreditiv koristi."
+
+#: credentials.php:766
+msgid "Credential Type"
+msgstr "Tip akreditiva"
+
+#: credentials.php:767
+msgid "The type of credential. Changing the type on an existing credential discards the previously stored type-specific values when you save."
+msgstr "Tip akreditiva. Promjena tipa na postojećem akreditivu odbacuje prethodno sačuvane vrijednosti specifične za tip prilikom čuvanja."
+
+#: credentials.php:774
+msgid "Where the secret values for this credential live. Choose the local encrypted database, or an external secret store. When an external provider is selected, each secret field holds a reference the provider resolves at poll time instead of the secret itself."
+msgstr "Mjesto gdje se čuvaju tajne vrijednosti za ovaj akreditiv. Odaberite lokalnu šifriranu bazu podataka ili vanjsko skladište tajni. Kada je odabran vanjski dobavljač, svako polje tajne sadrži referencu koju dobavljač razrješava u vrijeme prikupljanja umjesto same tajne."
+
+#: credentials.php:781
+msgid "Whether this credential is available for use."
+msgstr "Da li je ovaj akreditiv dostupan za upotrebu."
+
+#: credentials.php:822
+msgid "(reference)"
+msgstr "(referenca)"
+
+#: credentials.php:879
+msgid "Change Credential Type?"
+msgstr "Promijeniti tip akreditiva?"
+
+#: credentials.php:880
+msgid "Changing the Credential Type will discard the values stored for the current type when you save this credential. Do you want to continue?"
+msgstr "Promjenom tipa akreditiva odbacit će se vrijednosti sačuvane za trenutni tip kada sačuvate ovaj akreditiv. Želite li nastaviti?"
+
+#: includes/arrays.php:53
+msgid "SNMP v1/v2c Community"
+msgstr "SNMP v1/v2c zajednica"
+
+#: includes/arrays.php:55 includes/arrays.php:86
+msgid "SNMP"
+msgstr "SNMP"
+
+#: includes/arrays.php:58
+msgid "SNMP Version"
+msgstr "SNMP verzija"
+
+#: includes/arrays.php:60
+msgid "The community-based SNMP protocol version this credential is used with."
+msgstr "Verzija SNMP protokola zasnovana na zajednici s kojom se ovaj akreditiv koristi."
+
+#: includes/arrays.php:61
+msgid "Version 1"
+msgstr "Verzija 1"
+
+#: includes/arrays.php:61
+msgid "Version 2"
+msgstr "Verzija 2"
+
+#: includes/arrays.php:66
+msgid "Read Community"
+msgstr "Zajednica za čitanje"
+
+#: includes/arrays.php:68
+msgid "The SNMP read community string. Treated as a secret and stored encrypted."
+msgstr "SNMP zajednica za čitanje. Tretira se kao tajna i čuva se šifrirano."
+
+#: includes/arrays.php:74
+msgid "Write Community"
+msgstr "Zajednica za pisanje"
+
+#: includes/arrays.php:76
+msgid "The optional SNMP write community string. Stored encrypted."
+msgstr "Opcionalna SNMP zajednica za pisanje. Čuva se šifrirano."
+
+#: includes/arrays.php:84
+msgid "SNMP v3 (USM)"
+msgstr "SNMP v3 (USM)"
+
+#: includes/arrays.php:89
+msgid "Security Name"
+msgstr "Sigurnosno ime"
+
+#: includes/arrays.php:91
+msgid "The SNMP v3 USM security (user) name."
+msgstr "SNMP v3 USM sigurnosno (korisničko) ime."
+
+#: includes/arrays.php:96
+msgid "Authentication Protocol"
+msgstr "Protokol autentifikacije"
+
+#: includes/arrays.php:98
+msgid "The USM authentication protocol. Choose [None] for noAuthNoPriv."
+msgstr "USM protokol autentifikacije. Odaberite [None] za noAuthNoPriv."
+
+#: includes/arrays.php:100 includes/arrays.php:122
+msgid "None"
+msgstr "Nijedan"
+
+#: includes/arrays.php:111
+msgid "Authentication Passphrase"
+msgstr "Pristupna fraza autentifikacije"
+
+#: includes/arrays.php:113
+msgid "The USM authentication passphrase. Stored encrypted."
+msgstr "USM pristupna fraza autentifikacije. Čuva se šifrirano."
+
+#: includes/arrays.php:118
+msgid "Privacy Protocol"
+msgstr "Protokol privatnosti"
+
+#: includes/arrays.php:120
+msgid "The USM privacy (encryption) protocol. Choose [None] for authNoPriv."
+msgstr "USM protokol privatnosti (šifriranja). Odaberite [None] za authNoPriv."
+
+#: includes/arrays.php:131
+msgid "Privacy Passphrase"
+msgstr "Pristupna fraza privatnosti"
+
+#: includes/arrays.php:133
+msgid "The USM privacy passphrase. Stored encrypted."
+msgstr "USM pristupna fraza privatnosti. Čuva se šifrirano."
+
+#: includes/arrays.php:138
+msgid "Context Name"
+msgstr "Naziv konteksta"
+
+#: includes/arrays.php:140
+msgid "The optional SNMP v3 context name."
+msgstr "Opcionalni naziv konteksta za SNMP v3."
+
+#: includes/arrays.php:145
+msgid "Engine ID"
+msgstr "ID pogona"
+
+#: includes/arrays.php:147
+msgid "The optional SNMP v3 context engine id."
+msgstr "Opcionalni ID pogona konteksta za SNMP v3."
+
+#: includes/arrays.php:154
+msgid "Username / Password"
+msgstr "Korisničko ime / Lozinka"
+
+#: includes/arrays.php:156
+msgid "Generic"
+msgstr "Opće"
+
+#: includes/arrays.php:159 includes/arrays.php:181 includes/arrays.php:289
+#: includes/arrays.php:347 includes/arrays.php:378 includes/arrays.php:400
+#: includes/arrays.php:450 includes/arrays.php:486
+msgid "Username"
+msgstr "Korisničko ime"
+
+#: includes/arrays.php:161
+msgid "A reusable username for HTTP Basic, Telnet, web UI logins or script inputs."
+msgstr "Korisničko ime za višekratnu upotrebu za HTTP Basic, Telnet, prijave na web interfejs ili ulaze skripti."
+
+#: includes/arrays.php:166 includes/arrays.php:191 includes/arrays.php:195
+#: includes/arrays.php:354 includes/arrays.php:385 includes/arrays.php:407
+#: includes/arrays.php:457 includes/arrays.php:493
+msgid "Password"
+msgstr "Lozinka"
+
+#: includes/arrays.php:168
+msgid "The password paired with the username. Stored encrypted."
+msgstr "Lozinka uparena s korisničkim imenom. Čuva se šifrirano."
+
+#: includes/arrays.php:176
+msgid "SSH"
+msgstr "SSH"
+
+#: includes/arrays.php:178
+msgid "CLI"
+msgstr "CLI"
+
+#: includes/arrays.php:183
+msgid "The SSH login username."
+msgstr "Korisničko ime za SSH prijavu."
+
+#: includes/arrays.php:188 includes/providers/AzureKeyVaultProvider.php:67
+#: includes/providers/VaultProvider.php:92
+msgid "Authentication Method"
+msgstr "Metoda autentifikacije"
+
+#: includes/arrays.php:190
+msgid "Authenticate with a password or a private key."
+msgstr "Autentifikacija pomoću lozinke ili privatnog ključa."
+
+#: includes/arrays.php:191 includes/arrays.php:203
+msgid "Private Key"
+msgstr "Privatni ključ"
+
+#: includes/arrays.php:197
+msgid "The SSH password (when using password authentication). Stored encrypted."
+msgstr "SSH lozinka (kada se koristi autentifikacija lozinkom). Čuva se šifrirano."
+
+#: includes/arrays.php:205
+msgid "The PEM private key (when using key authentication). Stored encrypted."
+msgstr "PEM privatni ključ (kada se koristi autentifikacija ključem). Čuva se šifrirano."
+
+#: includes/arrays.php:211 includes/arrays.php:522
+msgid "Key Passphrase"
+msgstr "Pristupna fraza ključa"
+
+#: includes/arrays.php:213 includes/arrays.php:524
+msgid "The optional passphrase protecting the private key. Stored encrypted."
+msgstr "Opcionalna pristupna fraza koja štiti privatni ključ. Čuva se šifrirano."
+
+#: includes/arrays.php:219 includes/arrays.php:443
+msgid "Port"
+msgstr "Port"
+
+#: includes/arrays.php:221
+msgid "The TCP port for the SSH service."
+msgstr "TCP port za SSH servis."
+
+#: includes/arrays.php:231
+msgid "Bearer / API Token"
+msgstr "Bearer / API token"
+
+#: includes/arrays.php:233 includes/arrays.php:256 includes/arrays.php:286
+#: includes/arrays.php:308 includes/arrays.php:344
+msgid "API"
+msgstr "API"
+
+#: includes/arrays.php:236
+msgid "Bearer Token"
+msgstr "Bearer token"
+
+#: includes/arrays.php:238
+msgid "The opaque bearer token sent as an Authorization header. Stored encrypted."
+msgstr "Neproziran bearer token koji se šalje u Authorization zaglavlju. Čuva se šifrirano."
+
+#: includes/arrays.php:244
+msgid "Header Name"
+msgstr "Naziv zaglavlja"
+
+#: includes/arrays.php:246
+msgid "The HTTP header the token is sent in."
+msgstr "HTTP zaglavlje u kojem se šalje token."
+
+#: includes/arrays.php:254 includes/arrays.php:259
+#: includes/providers/ConjurProvider.php:74
+msgid "API Key"
+msgstr "API ključ"
+
+#: includes/arrays.php:261
+msgid "The API key value. Stored encrypted."
+msgstr "Vrijednost API ključa. Čuva se šifrirano."
+
+#: includes/arrays.php:267
+msgid "Placement"
+msgstr "Smještaj"
+
+#: includes/arrays.php:269
+msgid "Whether the key is sent as an HTTP header or a query parameter."
+msgstr "Da li se ključ šalje kao HTTP zaglavlje ili kao parametar upita."
+
+#: includes/arrays.php:270
+msgid "Header"
+msgstr "Zaglavlje"
+
+#: includes/arrays.php:270
+msgid "Query Parameter"
+msgstr "Parametar upita"
+
+#: includes/arrays.php:274
+msgid "Parameter Name"
+msgstr "Naziv parametra"
+
+#: includes/arrays.php:276
+msgid "The header or query parameter name carrying the key (e.g. X-API-Key)."
+msgstr "Naziv zaglavlja ili parametra upita koji nosi ključ (npr. X-API-Key)."
+
+#: includes/arrays.php:284
+msgid "GitHub Personal Access Token"
+msgstr "GitHub lični pristupni token"
+
+#: includes/arrays.php:291
+msgid "The optional GitHub username associated with the token."
+msgstr "Opcionalno GitHub korisničko ime povezano s tokenom."
+
+#: includes/arrays.php:296
+msgid "Personal Access Token"
+msgstr "Lični pristupni token"
+
+#: includes/arrays.php:298
+msgid "The GitHub personal access token. Stored encrypted."
+msgstr "GitHub lični pristupni token. Čuva se šifrirano."
+
+#: includes/arrays.php:306
+msgid "OAuth 2.0 Client Credentials"
+msgstr "OAuth 2.0 klijentski akreditivi"
+
+#: includes/arrays.php:311
+msgid "Client ID"
+msgstr "ID klijenta"
+
+#: includes/arrays.php:313
+msgid "The OAuth 2.0 client identifier."
+msgstr "OAuth 2.0 identifikator klijenta."
+
+#: includes/arrays.php:318 includes/providers/AzureKeyVaultProvider.php:89
+msgid "Client Secret"
+msgstr "Tajna klijenta"
+
+#: includes/arrays.php:320
+msgid "The OAuth 2.0 client secret. Stored encrypted."
+msgstr "OAuth 2.0 klijentska tajna. Čuva se šifrirano."
+
+#: includes/arrays.php:326
+msgid "Token URL"
+msgstr "URL tokena"
+
+#: includes/arrays.php:328
+msgid "The token endpoint used for the client_credentials grant."
+msgstr "Krajnja tačka tokena koja se koristi za client_credentials odobrenje."
+
+#: includes/arrays.php:333
+msgid "Scopes"
+msgstr "Opsezi"
+
+#: includes/arrays.php:335
+msgid "An optional space delimited list of scopes to request."
+msgstr "Opcionalna lista opsega razdvojenih razmakom koje treba zatražiti."
+
+#: includes/arrays.php:342
+msgid "HTTP Basic Auth"
+msgstr "HTTP Basic autentifikacija"
+
+#: includes/arrays.php:349
+msgid "The HTTP Basic auth username."
+msgstr "Korisničko ime za HTTP Basic autentifikaciju."
+
+#: includes/arrays.php:356
+msgid "The HTTP Basic auth password. Stored encrypted."
+msgstr "Lozinka za HTTP Basic autentifikaciju. Čuva se šifrirano."
+
+#: includes/arrays.php:366
+msgid "WMI (Windows)"
+msgstr "WMI (Windows)"
+
+#: includes/arrays.php:368 includes/arrays.php:397 includes/arrays.php:426
+#: includes/arrays.php:476 includes/arrays.php:505
+msgid "Device"
+msgstr "Uređaj"
+
+#: includes/arrays.php:371
+msgid "Domain"
+msgstr "Domena"
+
+#: includes/arrays.php:373
+msgid "The optional Windows domain."
+msgstr "Opcionalna Windows domena."
+
+#: includes/arrays.php:380
+msgid "The Windows account username."
+msgstr "Korisničko ime Windows naloga."
+
+#: includes/arrays.php:387
+msgid "The Windows account password. Stored encrypted."
+msgstr "Lozinka Windows naloga. Čuva se šifrirano."
+
+#: includes/arrays.php:395
+msgid "IPMI / Redfish (BMC)"
+msgstr "IPMI / Redfish (BMC)"
+
+#: includes/arrays.php:402
+msgid "The out-of-band controller username."
+msgstr "Korisničko ime kontrolera za vanpojasno upravljanje."
+
+#: includes/arrays.php:409
+msgid "The out-of-band controller password. Stored encrypted."
+msgstr "Lozinka kontrolera za vanpojasno upravljanje. Čuva se šifrirano."
+
+#: includes/arrays.php:415
+msgid "Protocol"
+msgstr "Protokol"
+
+#: includes/arrays.php:417
+msgid "The management protocol exposed by the controller."
+msgstr "Upravljački protokol koji izlaže kontroler."
+
+#: includes/arrays.php:424
+msgid "Database"
+msgstr "Baza podataka"
+
+#: includes/arrays.php:429
+msgid "Driver"
+msgstr "Drajver"
+
+#: includes/arrays.php:431
+msgid "The database engine this credential connects to."
+msgstr "Sistem baze podataka na koji se ovaj akreditiv povezuje."
+
+#: includes/arrays.php:436
+msgid "Host"
+msgstr "Host"
+
+#: includes/arrays.php:438
+msgid "The database server hostname or IP address."
+msgstr "Naziv hosta ili IP adresa servera baze podataka."
+
+#: includes/arrays.php:445
+msgid "The database server TCP port."
+msgstr "TCP port servera baze podataka."
+
+#: includes/arrays.php:452
+msgid "The database account username."
+msgstr "Korisničko ime naloga baze podataka."
+
+#: includes/arrays.php:459
+msgid "The database account password. Stored encrypted."
+msgstr "Lozinka naloga baze podataka. Čuva se šifrirano."
+
+#: includes/arrays.php:465
+msgid "Database Name"
+msgstr "Naziv baze podataka"
+
+#: includes/arrays.php:467
+msgid "The optional default database/schema name."
+msgstr "Opcionalni zadani naziv baze podataka/šeme."
+
+#: includes/arrays.php:474
+msgid "VMware / vCenter"
+msgstr "VMware / vCenter"
+
+#: includes/arrays.php:479
+msgid "Server"
+msgstr "Server"
+
+#: includes/arrays.php:481
+msgid "The vCenter or ESXi API endpoint."
+msgstr "API krajnja tačka za vCenter ili ESXi."
+
+#: includes/arrays.php:488
+msgid "The hypervisor API username."
+msgstr "API korisničko ime hipervizora."
+
+#: includes/arrays.php:495
+msgid "The hypervisor API password. Stored encrypted."
+msgstr "API lozinka hipervizora. Čuva se šifrirano."
+
+#: includes/arrays.php:503
+msgid "TLS Client Certificate"
+msgstr "TLS klijentski certifikat"
+
+#: includes/arrays.php:508
+msgid "Certificate (PEM)"
+msgstr "Certifikat (PEM)"
+
+#: includes/arrays.php:510
+msgid "The PEM client certificate. Public material, stored as entered."
+msgstr "PEM klijentski certifikat. Javni podatak, čuva se kako je unesen."
+
+#: includes/arrays.php:514
+msgid "Private Key (PEM)"
+msgstr "Privatni ključ (PEM)"
+
+#: includes/arrays.php:516
+msgid "The PEM private key for the client certificate. Stored encrypted."
+msgstr "PEM privatni ključ za klijentski certifikat. Čuva se šifrirano."
+
+#: includes/arrays.php:530
+msgid "CA Bundle (PEM)"
+msgstr "CA paket (PEM)"
+
+#: includes/arrays.php:532
+msgid "An optional PEM CA bundle used to verify the peer."
+msgstr "Opcionalni PEM CA paket koji se koristi za provjeru udaljene strane."
+
+#: includes/functions.php:199
+msgid "A password is required for SSH password authentication."
+msgstr "Lozinka je obavezna za SSH autentifikaciju lozinkom."
+
+#: includes/functions.php:203
+msgid "A private key is required for SSH key authentication."
+msgstr "Privatni ključ je obavezan za SSH autentifikaciju ključem."
+
+#: includes/functions.php:210
+msgid "SNMP v3 privacy requires an authentication protocol; noAuthPriv is not a valid security level."
+msgstr "SNMP v3 privatnost zahtijeva protokol autentifikacije; noAuthPriv nije ispravan nivo sigurnosti."
+
+#: includes/functions.php:214
+msgid "An authentication passphrase is required when an SNMP v3 authentication protocol is selected."
+msgstr "Pristupna fraza autentifikacije je obavezna kada je odabran SNMP v3 protokol autentifikacije."
+
+#: includes/functions.php:218
+msgid "A privacy passphrase is required when an SNMP v3 privacy protocol is selected."
+msgstr "Pristupna fraza privatnosti je obavezna kada je odabran SNMP v3 protokol privatnosti."
+
+#: includes/providers.php:192
+msgid "Local Database (encrypted)"
+msgstr "Lokalna baza podataka (šifrirano)"
+
+#: includes/providers.php:203
+msgid "(disabled)"
+msgstr "(onemogućeno)"
+
+#: includes/providers.php:290
+msgid "The provider could not be found or its type is unknown."
+msgstr "Dobavljač nije pronađen ili je njegov tip nepoznat."
+
+#: includes/providers/AbstractProvider.php:38
+msgid "Secret Reference"
+msgstr "Referenca tajne"
+
+#: includes/providers/AbstractProvider.php:124
+#, php-format
+msgid "The stored secret is not a JSON object, so the '%s' key cannot be selected."
+msgstr "Sačuvana tajna nije JSON objekat, pa se ključ '%s' ne može odabrati."
+
+#: includes/providers/AbstractProvider.php:132
+#, php-format
+msgid "The stored secret does not contain the '%s' key."
+msgstr "Sačuvana tajna ne sadrži ključ '%s'."
+
+#: includes/providers/AbstractProvider.php:162
+msgid "The PHP cURL extension is required to reach external secret providers."
+msgstr "PHP cURL ekstenzija je neophodna za pristup vanjskim dobavljačima tajni."
+
+#: includes/providers/AbstractProvider.php:208
+msgid "The request to the secret provider failed."
+msgstr "Zahtjev prema dobavljaču tajni nije uspio."
+
+#: includes/providers/AwsSecretsManagerProvider.php:39
+msgid "AWS Secrets Manager"
+msgstr "AWS Secrets Manager"
+
+#: includes/providers/AwsSecretsManagerProvider.php:43
+msgid "Resolve secrets from AWS Secrets Manager using IAM access keys or an EC2/ECS instance role."
+msgstr "Razriješite tajne iz AWS Secrets Managera koristeći IAM pristupne ključeve ili EC2/ECS ulogu instance."
+
+#: includes/providers/AwsSecretsManagerProvider.php:47
+msgid "Secret Id or Name"
+msgstr "ID ili naziv tajne"
+
+#: includes/providers/AwsSecretsManagerProvider.php:51
+msgid "An AWS Secrets Manager secret id or name, optionally with '#key' to select a field from a JSON secret, for example 'prod/snmp#community'."
+msgstr "ID ili naziv AWS Secrets Manager tajne, opcionalno sa '#key' za odabir polja iz JSON tajne, na primjer 'prod/snmp#community'."
+
+#: includes/providers/AwsSecretsManagerProvider.php:57
+msgid "Region"
+msgstr "Regija"
+
+#: includes/providers/AwsSecretsManagerProvider.php:59
+msgid "The AWS region hosting the secrets, for example us-east-1."
+msgstr "AWS regija u kojoj se nalaze tajne, na primjer us-east-1."
+
+#: includes/providers/AwsSecretsManagerProvider.php:64
+msgid "Use Instance Role"
+msgstr "Koristi ulogu instance"
+
+#: includes/providers/AwsSecretsManagerProvider.php:66
+msgid "Obtain temporary credentials from the EC2/ECS instance metadata service instead of static keys."
+msgstr "Preuzmi privremene akreditive sa servisa metapodataka EC2/ECS instance umjesto statičkih ključeva."
+
+#: includes/providers/AwsSecretsManagerProvider.php:70
+msgid "Access Key Id"
+msgstr "ID pristupnog ključa"
+
+#: includes/providers/AwsSecretsManagerProvider.php:72
+msgid "The IAM access key id used when not using an instance role."
+msgstr "ID IAM pristupnog ključa koji se koristi kada se ne koristi uloga instance."
+
+#: includes/providers/AwsSecretsManagerProvider.php:76
+msgid "Secret Access Key"
+msgstr "Tajni pristupni ključ"
+
+#: includes/providers/AwsSecretsManagerProvider.php:78
+msgid "The IAM secret access key. Stored encrypted."
+msgstr "IAM tajni pristupni ključ. Čuva se šifrirano."
+
+#: includes/providers/AwsSecretsManagerProvider.php:83
+msgid "Session Token"
+msgstr "Sesijski token"
+
+#: includes/providers/AwsSecretsManagerProvider.php:85
+msgid "An optional STS session token for temporary static credentials. Stored encrypted."
+msgstr "Opcionalni STS sesijski token za privremene statičke akreditive. Čuva se šifrirano."
+
+#: includes/providers/AwsSecretsManagerProvider.php:90
+msgid "Endpoint Override"
+msgstr "Zamjena krajnje tačke"
+
+#: includes/providers/AwsSecretsManagerProvider.php:92
+msgid "An optional endpoint override (for VPC endpoints or testing). Defaults to the public AWS endpoint for the region."
+msgstr "Opcionalna zamjena krajnje tačke (za VPC krajnje tačke ili testiranje). Zadano koristi javnu AWS krajnju tačku za regiju."
+
+#: includes/providers/AwsSecretsManagerProvider.php:96
+#: includes/providers/AzureKeyVaultProvider.php:103
+#: includes/providers/ConjurProvider.php:93
+#: includes/providers/GcpSecretManagerProvider.php:77
+#: includes/providers/VaultProvider.php:131
+msgid "Timeout (seconds)"
+msgstr "Vremensko ograničenje (sekunde)"
+
+#: includes/providers/AwsSecretsManagerProvider.php:98
+msgid "The network timeout for AWS requests."
+msgstr "Mrežno vremensko ograničenje za AWS zahtjeve."
+
+#: includes/providers/AwsSecretsManagerProvider.php:107
+msgid "An AWS region is required."
+msgstr "AWS regija je obavezna."
+
+#: includes/providers/AwsSecretsManagerProvider.php:125
+msgid "Successfully authenticated to AWS Secrets Manager."
+msgstr "Uspješna autentifikacija prema AWS Secrets Manageru."
+
+#: includes/providers/AwsSecretsManagerProvider.php:135
+msgid "An AWS secret id is required."
+msgstr "ID AWS tajne je obavezan."
+
+#: includes/providers/AwsSecretsManagerProvider.php:157
+msgid "AWS returned an unexpected response reading the secret."
+msgstr "AWS je vratio neočekivan odgovor prilikom čitanja tajne."
+
+#: includes/providers/AwsSecretsManagerProvider.php:165
+msgid "The AWS secret has no retrievable value."
+msgstr "AWS tajna nema vrijednost koja se može preuzeti."
+
+#: includes/providers/AwsSecretsManagerProvider.php:189
+msgid "An access key id and secret access key are required unless an instance role is used."
+msgstr "ID pristupnog ključa i tajni pristupni ključ su obavezni osim ako se koristi uloga instance."
+
+#: includes/providers/AwsSecretsManagerProvider.php:220
+msgid "The ECS relative credentials URI is not valid."
+msgstr "Relativni URI ECS akreditiva nije ispravan."
+
+#: includes/providers/AwsSecretsManagerProvider.php:230
+msgid "The configured ECS credentials endpoint is not an allowed address."
+msgstr "Podešena ECS krajnja tačka akreditiva nije dozvoljena adresa."
+
+#: includes/providers/AwsSecretsManagerProvider.php:259
+msgid "Unable to read ECS task role credentials."
+msgstr "Nije moguće pročitati akreditive ECS uloge zadatka."
+
+#: includes/providers/AwsSecretsManagerProvider.php:265
+msgid "The ECS credentials endpoint returned no usable credentials."
+msgstr "ECS krajnja tačka akreditiva nije vratila upotrebljive akreditive."
+
+#: includes/providers/AwsSecretsManagerProvider.php:352
+msgid "Unable to obtain an instance metadata token; is Cacti running on an AWS instance with a role?"
+msgstr "Nije moguće dobiti token metapodataka instance; da li Cacti radi na AWS instanci s ulogom?"
+
+#: includes/providers/AwsSecretsManagerProvider.php:360
+msgid "No IAM role is attached to this instance."
+msgstr "Nijedna IAM uloga nije dodijeljena ovoj instanci."
+
+#: includes/providers/AwsSecretsManagerProvider.php:368
+msgid "Unable to read instance role credentials."
+msgstr "Nije moguće pročitati akreditive uloge instance."
+
+#: includes/providers/AwsSecretsManagerProvider.php:374
+msgid "The instance metadata service returned no usable credentials."
+msgstr "Servis metapodataka instance nije vratio upotrebljive akreditive."
+
+#: includes/providers/AwsSecretsManagerProvider.php:403
+msgid "Unable to encode the AWS request."
+msgstr "Nije moguće kodirati AWS zahtjev."
+
+#: includes/providers/AwsSecretsManagerProvider.php:498
+#, php-format
+msgid "AWS Secrets Manager error: %s (HTTP %d)."
+msgstr "Greška AWS Secrets Managera: %s (HTTP %d)."
+
+#: includes/providers/AwsSecretsManagerProvider.php:501
+#, php-format
+msgid "AWS Secrets Manager returned HTTP %d."
+msgstr "AWS Secrets Manager je vratio HTTP %d."
+
+#: includes/providers/AzureKeyVaultProvider.php:42
+msgid "Azure Key Vault"
+msgstr "Azure Key Vault"
+
+#: includes/providers/AzureKeyVaultProvider.php:46
+msgid "Resolve secrets from Azure Key Vault using an Entra ID service principal or a Managed Identity."
+msgstr "Razriješite tajne iz Azure Key Vaulta koristeći Entra ID servisni principal ili Upravljani identitet."
+
+#: includes/providers/AzureKeyVaultProvider.php:50
+#: includes/providers/GcpSecretManagerProvider.php:47
+msgid "Secret Name"
+msgstr "Naziv tajne"
+
+#: includes/providers/AzureKeyVaultProvider.php:54
+msgid "A Key Vault secret name, optionally a specific version as 'name/version', with an optional '#key' to select a field from a JSON secret, for example 'snmp-community'."
+msgstr "Naziv Key Vault tajne, opcionalno određena verzija u obliku 'naziv/verzija', uz opcionalni '#key' za odabir polja iz JSON tajne, na primjer 'snmp-community'."
+
+#: includes/providers/AzureKeyVaultProvider.php:60
+msgid "Vault URL"
+msgstr "URL Vaulta"
+
+#: includes/providers/AzureKeyVaultProvider.php:62
+msgid "The Key Vault base URL, for example https://my-vault.vault.azure.net."
+msgstr "Osnovni URL Key Vaulta, na primjer https://my-vault.vault.azure.net."
+
+#: includes/providers/AzureKeyVaultProvider.php:69
+msgid "How this plugin obtains an access token."
+msgstr "Način na koji ovaj dodatak dobija pristupni token."
+
+#: includes/providers/AzureKeyVaultProvider.php:71
+msgid "Service Principal (client secret)"
+msgstr "Servisni principal (klijentska tajna)"
+
+#: includes/providers/AzureKeyVaultProvider.php:72
+msgid "Managed Identity"
+msgstr "Upravljani identitet"
+
+#: includes/providers/AzureKeyVaultProvider.php:77
+msgid "Tenant Id"
+msgstr "ID zakupca"
+
+#: includes/providers/AzureKeyVaultProvider.php:79
+msgid "The Entra ID tenant (directory) id, used for service principal authentication."
+msgstr "ID Entra ID zakupca (direktorija), koristi se za autentifikaciju servisnim principalom."
+
+#: includes/providers/AzureKeyVaultProvider.php:83
+msgid "Client Id"
+msgstr "ID klijenta"
+
+#: includes/providers/AzureKeyVaultProvider.php:85
+msgid "The application (client) id. For a user-assigned Managed Identity, the identity client id."
+msgstr "ID aplikacije (klijenta). Za korisnički dodijeljeni Upravljani identitet, ID klijenta identiteta."
+
+#: includes/providers/AzureKeyVaultProvider.php:91
+msgid "The service principal client secret. Stored encrypted."
+msgstr "Klijentska tajna servisnog principala. Čuva se šifrirano."
+
+#: includes/providers/AzureKeyVaultProvider.php:96
+msgid "API Version"
+msgstr "Verzija API-ja"
+
+#: includes/providers/AzureKeyVaultProvider.php:98
+msgid "The Key Vault data-plane API version."
+msgstr "Verzija API-ja podatkovne ravni Key Vaulta."
+
+#: includes/providers/AzureKeyVaultProvider.php:105
+msgid "The network timeout for Azure requests."
+msgstr "Mrežno vremensko ograničenje za Azure zahtjeve."
+
+#: includes/providers/AzureKeyVaultProvider.php:114
+msgid "A Key Vault URL is required."
+msgstr "URL Key Vaulta je obavezan."
+
+#: includes/providers/AzureKeyVaultProvider.php:133
+msgid "Successfully authenticated to Azure Key Vault."
+msgstr "Uspješna autentifikacija prema Azure Key Vaultu."
+
+#: includes/providers/AzureKeyVaultProvider.php:143
+msgid "A Key Vault secret name is required."
+msgstr "Naziv Key Vault tajne je obavezan."
+
+#: includes/providers/AzureKeyVaultProvider.php:167
+#, php-format
+msgid "The Key Vault secret '%s' was not found."
+msgstr "Key Vault tajna '%s' nije pronađena."
+
+#: includes/providers/AzureKeyVaultProvider.php:177
+msgid "Azure returned an unexpected response reading the secret."
+msgstr "Azure je vratio neočekivan odgovor prilikom čitanja tajne."
+
+#: includes/providers/AzureKeyVaultProvider.php:200
+msgid "Service principal authentication requires a tenant id, client id and client secret."
+msgstr "Autentifikacija servisnim principalom zahtijeva ID zakupca, ID klijenta i klijentsku tajnu."
+
+#: includes/providers/AzureKeyVaultProvider.php:218
+#, php-format
+msgid "Azure token request failed with HTTP %d."
+msgstr "Zahtjev za Azure token nije uspio uz HTTP %d."
+
+#: includes/providers/AzureKeyVaultProvider.php:224
+msgid "Azure token request returned no access token."
+msgstr "Zahtjev za Azure token nije vratio pristupni token."
+
+#: includes/providers/AzureKeyVaultProvider.php:249
+msgid "Unable to obtain a Managed Identity token; is Cacti running on an Azure resource with an identity assigned?"
+msgstr "Nije moguće dobiti token Upravljanog identiteta; da li Cacti radi na Azure resursu kojem je dodijeljen identitet?"
+
+#: includes/providers/AzureKeyVaultProvider.php:255
+msgid "The Managed Identity endpoint returned no access token."
+msgstr "Krajnja tačka Upravljanog identiteta nije vratila pristupni token."
+
+#: includes/providers/AzureKeyVaultProvider.php:273
+#, php-format
+msgid "Azure Key Vault error: %s (HTTP %d)."
+msgstr "Greška Azure Key Vaulta: %s (HTTP %d)."
+
+#: includes/providers/AzureKeyVaultProvider.php:276
+#, php-format
+msgid "Azure Key Vault returned HTTP %d."
+msgstr "Azure Key Vault je vratio HTTP %d."
+
+#: includes/providers/ConjurProvider.php:35
+msgid "CyberArk Conjur"
+msgstr "CyberArk Conjur"
+
+#: includes/providers/ConjurProvider.php:39
+msgid "Resolve secrets from CyberArk Conjur using a host or user identity and its API key."
+msgstr "Razriješite tajne iz CyberArk Conjura koristeći identitet hosta ili korisnika i njegov API ključ."
+
+#: includes/providers/ConjurProvider.php:43
+msgid "Variable Id"
+msgstr "ID varijable"
+
+#: includes/providers/ConjurProvider.php:47
+msgid "A Conjur variable id, with an optional '#key' to select a field from a JSON secret, for example 'prod/network/snmp'."
+msgstr "ID Conjur varijable, uz opcionalni '#key' za odabir polja iz JSON tajne, na primjer 'prod/network/snmp'."
+
+#: includes/providers/ConjurProvider.php:53
+msgid "Appliance URL"
+msgstr "URL uređaja"
+
+#: includes/providers/ConjurProvider.php:55
+msgid "The base URL of the Conjur appliance, for example https://conjur.example.com."
+msgstr "Osnovni URL Conjur uređaja, na primjer https://conjur.example.com."
+
+#: includes/providers/ConjurProvider.php:60
+msgid "Account"
+msgstr "Nalog"
+
+#: includes/providers/ConjurProvider.php:62
+msgid "The Conjur account (organization) name."
+msgstr "Naziv Conjur naloga (organizacije)."
+
+#: includes/providers/ConjurProvider.php:67
+msgid "Login (Host or User)"
+msgstr "Prijava (host ili korisnik)"
+
+#: includes/providers/ConjurProvider.php:69
+msgid "The identity used to authenticate, for example host/cacti-poller or a username."
+msgstr "Identitet koji se koristi za autentifikaciju, na primjer host/cacti-poller ili korisničko ime."
+
+#: includes/providers/ConjurProvider.php:76
+msgid "The API key for the identity. Stored encrypted."
+msgstr "API ključ za identitet. Čuva se šifrirano."
+
+#: includes/providers/ConjurProvider.php:81
+#: includes/providers/VaultProvider.php:119
+msgid "Verify TLS Certificate"
+msgstr "Provjeri TLS certifikat"
+
+#: includes/providers/ConjurProvider.php:83
+msgid "Verify the Conjur appliance TLS certificate. Disable only for testing."
+msgstr "Provjeri TLS certifikat Conjur uređaja. Onemogućite samo za testiranje."
+
+#: includes/providers/ConjurProvider.php:87
+#: includes/providers/VaultProvider.php:125
+msgid "CA Bundle Path"
+msgstr "Putanja CA paketa"
+
+#: includes/providers/ConjurProvider.php:89
+msgid "An optional path on the Cacti server to a PEM CA bundle used to verify Conjur."
+msgstr "Opcionalna putanja na Cacti serveru do PEM CA paketa koji se koristi za provjeru Conjura."
+
+#: includes/providers/ConjurProvider.php:95
+msgid "The network timeout for Conjur requests."
+msgstr "Mrežno vremensko ograničenje za Conjur zahtjeve."
+
+#: includes/providers/ConjurProvider.php:105
+msgid "The Conjur appliance URL, account, login and API key are all required."
+msgstr "URL Conjur uređaja, nalog, prijava i API ključ su svi obavezni."
+
+#: includes/providers/ConjurProvider.php:115
+msgid "Successfully authenticated to CyberArk Conjur."
+msgstr "Uspješna autentifikacija prema CyberArk Conjuru."
+
+#: includes/providers/ConjurProvider.php:122
+msgid "A Conjur variable id is required."
+msgstr "ID Conjur varijable je obavezan."
+
+#: includes/providers/ConjurProvider.php:142
+#, php-format
+msgid "The Conjur variable '%s' was not found or has no value."
+msgstr "Conjur varijabla '%s' nije pronađena ili nema vrijednost."
+
+#: includes/providers/ConjurProvider.php:146
+#, php-format
+msgid "Conjur returned HTTP %d reading the variable."
+msgstr "Conjur je vratio HTTP %d prilikom čitanja varijable."
+
+#: includes/providers/ConjurProvider.php:166
+msgid "Conjur authentication requires an account, login and API key."
+msgstr "Conjur autentifikacija zahtijeva nalog, prijavu i API ključ."
+
+#: includes/providers/ConjurProvider.php:178
+#, php-format
+msgid "Conjur authentication failed with HTTP %d."
+msgstr "Conjur autentifikacija nije uspjela uz HTTP %d."
+
+#: includes/providers/ConjurProvider.php:184
+msgid "Conjur authentication returned an empty token."
+msgstr "Conjur autentifikacija je vratila prazan token."
+
+#: includes/providers/GcpSecretManagerProvider.php:39
+msgid "Google Cloud Secret Manager"
+msgstr "Google Cloud Secret Manager"
+
+#: includes/providers/GcpSecretManagerProvider.php:43
+msgid "Resolve secrets from Google Cloud Secret Manager using a service account key or the instance service account."
+msgstr "Razriješite tajne iz Google Cloud Secret Managera koristeći ključ servisnog naloga ili servisni nalog instance."
+
+#: includes/providers/GcpSecretManagerProvider.php:51
+msgid "A Secret Manager secret id, optionally a version as 'name/version' (default 'latest'), with an optional '#key' to select a field from a JSON secret, for example 'snmp-community'."
+msgstr "ID Secret Manager tajne, opcionalno verzija u obliku 'naziv/verzija' (zadano 'latest'), uz opcionalni '#key' za odabir polja iz JSON tajne, na primjer 'snmp-community'."
+
+#: includes/providers/GcpSecretManagerProvider.php:57
+msgid "Project Id"
+msgstr "ID projekta"
+
+#: includes/providers/GcpSecretManagerProvider.php:59
+msgid "The Google Cloud project id that owns the secrets."
+msgstr "ID Google Cloud projekta kojem pripadaju tajne."
+
+#: includes/providers/GcpSecretManagerProvider.php:64
+msgid "Use Instance Service Account"
+msgstr "Koristi servisni nalog instance"
+
+#: includes/providers/GcpSecretManagerProvider.php:66
+msgid "Obtain an access token from the GCE metadata server instead of a service account key."
+msgstr "Preuzmi pristupni token sa GCE servera metapodataka umjesto ključa servisnog naloga."
+
+#: includes/providers/GcpSecretManagerProvider.php:70
+msgid "Service Account Key (JSON)"
+msgstr "Ključ servisnog naloga (JSON)"
+
+#: includes/providers/GcpSecretManagerProvider.php:72
+msgid "The full service account key JSON. Stored encrypted. Not required when using the instance service account."
+msgstr "Potpuni JSON ključ servisnog naloga. Čuva se šifrirano. Nije potreban kada se koristi servisni nalog instance."
+
+#: includes/providers/GcpSecretManagerProvider.php:79
+msgid "The network timeout for Google Cloud requests."
+msgstr "Mrežno vremensko ograničenje za Google Cloud zahtjeve."
+
+#: includes/providers/GcpSecretManagerProvider.php:88
+msgid "A Google Cloud project id is required."
+msgstr "ID Google Cloud projekta je obavezan."
+
+#: includes/providers/GcpSecretManagerProvider.php:107
+msgid "Successfully authenticated to Google Cloud Secret Manager."
+msgstr "Uspješna autentifikacija prema Google Cloud Secret Manageru."
+
+#: includes/providers/GcpSecretManagerProvider.php:117
+msgid "A Secret Manager secret name is required."
+msgstr "Naziv Secret Manager tajne je obavezan."
+
+#: includes/providers/GcpSecretManagerProvider.php:140
+#, php-format
+msgid "The Secret Manager secret '%s' was not found."
+msgstr "Secret Manager tajna '%s' nije pronađena."
+
+#: includes/providers/GcpSecretManagerProvider.php:150
+msgid "Google Cloud returned an unexpected response reading the secret."
+msgstr "Google Cloud je vratio neočekivan odgovor prilikom čitanja tajne."
+
+#: includes/providers/GcpSecretManagerProvider.php:156
+msgid "The Secret Manager payload could not be decoded."
+msgstr "Sadržaj iz Secret Managera nije mogao biti dekodiran."
+
+#: includes/providers/GcpSecretManagerProvider.php:178
+msgid "A service account key JSON is required unless the instance service account is used."
+msgstr "JSON ključ servisnog naloga je obavezan osim ako se koristi servisni nalog instance."
+
+#: includes/providers/GcpSecretManagerProvider.php:184
+msgid "The service account key JSON is invalid or incomplete."
+msgstr "JSON ključ servisnog naloga je neispravan ili nepotpun."
+
+#: includes/providers/GcpSecretManagerProvider.php:190
+msgid "The service account token URI must be a supported Google OAuth endpoint."
+msgstr "URI tokena servisnog naloga mora biti podržana Google OAuth krajnja tačka."
+
+#: includes/providers/GcpSecretManagerProvider.php:221
+#, php-format
+msgid "Google Cloud token request failed with HTTP %d."
+msgstr "Zahtjev za Google Cloud token nije uspio uz HTTP %d."
+
+#: includes/providers/GcpSecretManagerProvider.php:227
+msgid "Google Cloud token request returned no access token."
+msgstr "Zahtjev za Google Cloud token nije vratio pristupni token."
+
+#: includes/providers/GcpSecretManagerProvider.php:271
+msgid "Unable to obtain a token from the GCE metadata server; is Cacti running on a Google Cloud instance?"
+msgstr "Nije moguće dobiti token sa GCE servera metapodataka; da li Cacti radi na Google Cloud instanci?"
+
+#: includes/providers/GcpSecretManagerProvider.php:277
+msgid "The GCE metadata server returned no access token."
+msgstr "GCE server metapodataka nije vratio pristupni token."
+
+#: includes/providers/GcpSecretManagerProvider.php:300
+msgid "The service account private key could not be read."
+msgstr "Privatni ključ servisnog naloga nije mogao biti pročitan."
+
+#: includes/providers/GcpSecretManagerProvider.php:307
+msgid "The service account JWT could not be signed."
+msgstr "JWT servisnog naloga nije mogao biti potpisan."
+
+#: includes/providers/GcpSecretManagerProvider.php:336
+#, php-format
+msgid "Google Cloud Secret Manager error: %s (HTTP %d)."
+msgstr "Greška Google Cloud Secret Managera: %s (HTTP %d)."
+
+#: includes/providers/GcpSecretManagerProvider.php:339
+#, php-format
+msgid "Google Cloud Secret Manager returned HTTP %d."
+msgstr "Google Cloud Secret Manager je vratio HTTP %d."
+
+#: includes/providers/OpenBaoProvider.php:36
+msgid "OpenBao"
+msgstr "OpenBao"
+
+#: includes/providers/OpenBaoProvider.php:44
+msgid "Resolve secrets from an OpenBao KV v1 or v2 secrets engine using a token or AppRole."
+msgstr "Razriješite tajne iz OpenBao KV v1 ili v2 pogona tajni koristeći token ili AppRole."
+
+#: includes/providers/OpenBaoProvider.php:48
+msgid "An OpenBao secret path and the key within it, separated by '#', for example 'network/snmp#community'. The path is relative to the configured KV mount; append '#key' to select a field from the secret."
+msgstr "Putanja OpenBao tajne i ključ unutar nje, razdvojeni znakom '#', na primjer 'network/snmp#community'. Putanja je relativna u odnosu na podešeni KV mount; dodajte '#key' za odabir polja iz tajne."
+
+#: includes/providers/OpenBaoProvider.php:55
+msgid "OpenBao Address"
+msgstr "Adresa OpenBao servera"
+
+#: includes/providers/OpenBaoProvider.php:55
+msgid "The base URL of the OpenBao server, for example https://openbao.example.com:8200."
+msgstr "Osnovni URL OpenBao servera, na primjer https://openbao.example.com:8200."
+
+#: includes/providers/OpenBaoProvider.php:56
+msgid "The optional OpenBao namespace (sent as the X-Vault-Namespace header)."
+msgstr "Opcionalni OpenBao imenski prostor (šalje se kao zaglavlje X-Vault-Namespace)."
+
+#: includes/providers/OpenBaoProvider.php:57
+msgid "How this plugin authenticates to OpenBao."
+msgstr "Način na koji se ovaj dodatak autentificira prema OpenBao serveru."
+
+#: includes/providers/OpenBaoProvider.php:58
+msgid "The OpenBao token used for Token authentication. Stored encrypted."
+msgstr "OpenBao token koji se koristi za autentifikaciju tokenom. Čuva se šifrirano."
+
+#: includes/providers/OpenBaoProvider.php:59
+msgid "Verify the OpenBao server TLS certificate. Disable only for testing."
+msgstr "Provjeri TLS certifikat OpenBao servera. Onemogućite samo za testiranje."
+
+#: includes/providers/OpenBaoProvider.php:60
+msgid "An optional path on the Cacti server to a PEM CA bundle used to verify OpenBao."
+msgstr "Opcionalna putanja na Cacti serveru do PEM CA paketa koji se koristi za provjeru OpenBaoa."
+
+#: includes/providers/OpenBaoProvider.php:61
+msgid "The network timeout for OpenBao requests."
+msgstr "Mrežno vremensko ograničenje za OpenBao zahtjeve."
+
+#: includes/providers/VaultProvider.php:35
+msgid "HashiCorp Vault"
+msgstr "HashiCorp Vault"
+
+#: includes/providers/VaultProvider.php:51
+msgid "Resolve secrets from a HashiCorp Vault KV v1 or v2 secrets engine using a token or AppRole."
+msgstr "Razriješite tajne iz HashiCorp Vault KV v1 ili v2 pogona tajni koristeći token ili AppRole."
+
+#: includes/providers/VaultProvider.php:55
+msgid "Secret Path and Key"
+msgstr "Putanja i ključ tajne"
+
+#: includes/providers/VaultProvider.php:59
+msgid "A Vault secret path and the key within it, separated by '#', for example 'network/snmp#community'. The path is relative to the configured KV mount; append '#key' to select a field from the secret."
+msgstr "Putanja Vault tajne i ključ unutar nje, razdvojeni znakom '#', na primjer 'network/snmp#community'. Putanja je relativna u odnosu na podešeni KV mount; dodajte '#key' za odabir polja iz tajne."
+
+#: includes/providers/VaultProvider.php:65
+msgid "Vault Address"
+msgstr "Adresa Vault servera"
+
+#: includes/providers/VaultProvider.php:67
+msgid "The base URL of the Vault server, for example https://vault.example.com:8200."
+msgstr "Osnovni URL Vault servera, na primjer https://vault.example.com:8200."
+
+#: includes/providers/VaultProvider.php:72
+msgid "Namespace"
+msgstr "Imenski prostor"
+
+#: includes/providers/VaultProvider.php:74
+msgid "The optional Vault Enterprise namespace (sent as the X-Vault-Namespace header)."
+msgstr "Opcionalni Vault Enterprise imenski prostor (šalje se kao zaglavlje X-Vault-Namespace)."
+
+#: includes/providers/VaultProvider.php:78
+msgid "KV Engine Version"
+msgstr "Verzija KV pogona"
+
+#: includes/providers/VaultProvider.php:80
+msgid "The version of the KV secrets engine the mount uses."
+msgstr "Verzija KV pogona tajni koju koristi tačka montiranja."
+
+#: includes/providers/VaultProvider.php:81
+msgid "KV Version 2"
+msgstr "KV verzija 2"
+
+#: includes/providers/VaultProvider.php:81
+msgid "KV Version 1"
+msgstr "KV verzija 1"
+
+#: includes/providers/VaultProvider.php:85
+msgid "KV Mount Path"
+msgstr "KV putanja montiranja"
+
+#: includes/providers/VaultProvider.php:87
+msgid "The mount path of the KV secrets engine, for example 'secret'."
+msgstr "Putanja montiranja KV pogona tajni, na primjer 'secret'."
+
+#: includes/providers/VaultProvider.php:94
+msgid "How this plugin authenticates to Vault."
+msgstr "Način na koji se ovaj dodatak autentificira prema Vault serveru."
+
+#: includes/providers/VaultProvider.php:95
+#: includes/providers/VaultProvider.php:99
+msgid "Token"
+msgstr "Token"
+
+#: includes/providers/VaultProvider.php:95
+msgid "AppRole"
+msgstr "AppRole"
+
+#: includes/providers/VaultProvider.php:101
+msgid "The Vault token used for Token authentication. Stored encrypted."
+msgstr "Vault token koji se koristi za autentifikaciju tokenom. Čuva se šifrirano."
+
+#: includes/providers/VaultProvider.php:106
+msgid "AppRole Role ID"
+msgstr "AppRole Role ID"
+
+#: includes/providers/VaultProvider.php:108
+msgid "The AppRole RoleID used for AppRole authentication."
+msgstr "AppRole RoleID koji se koristi za AppRole autentifikaciju."
+
+#: includes/providers/VaultProvider.php:112
+msgid "AppRole Secret ID"
+msgstr "AppRole Secret ID"
+
+#: includes/providers/VaultProvider.php:114
+msgid "The AppRole SecretID used for AppRole authentication. Stored encrypted."
+msgstr "AppRole SecretID koji se koristi za AppRole autentifikaciju. Čuva se šifrirano."
+
+#: includes/providers/VaultProvider.php:121
+msgid "Verify the Vault server TLS certificate. Disable only for testing."
+msgstr "Provjeri TLS certifikat Vault servera. Onemogućite samo za testiranje."
+
+#: includes/providers/VaultProvider.php:127
+msgid "An optional path on the Cacti server to a PEM CA bundle used to verify Vault."
+msgstr "Opcionalna putanja na Cacti serveru do PEM CA paketa koji se koristi za provjeru Vaulta."
+
+#: includes/providers/VaultProvider.php:133
+msgid "The network timeout for Vault requests."
+msgstr "Mrežno vremensko ograničenje za Vault zahtjeve."
+
+#: includes/providers/VaultProvider.php:144
+#, php-format
+msgid "The %s address is required."
+msgstr "Adresa za %s je obavezna."
+
+#: includes/providers/VaultProvider.php:166
+#, php-format
+msgid "Successfully authenticated to %s."
+msgstr "Uspješna autentifikacija prema %s."
+
+#: includes/providers/VaultProvider.php:169
+#, php-format
+msgid "%s returned HTTP %d during token verification."
+msgstr "%s je vratio HTTP %d tokom provjere tokena."
+
+#: includes/providers/VaultProvider.php:176
+#, php-format
+msgid "The %s secret path is required."
+msgstr "Putanja tajne za %s je obavezna."
+
+#: includes/providers/VaultProvider.php:209
+#, php-format
+msgid "The %s secret path '%s' was not found."
+msgstr "Putanja tajne za %s '%s' nije pronađena."
+
+#: includes/providers/VaultProvider.php:213
+#, php-format
+msgid "%s returned HTTP %d reading the secret."
+msgstr "%s je vratio HTTP %d prilikom čitanja tajne."
+
+#: includes/providers/VaultProvider.php:219
+#, php-format
+msgid "%s returned an unexpected response reading the secret."
+msgstr "%s je vratio neočekivan odgovor prilikom čitanja tajne."
+
+#: includes/providers/VaultProvider.php:228
+#, php-format
+msgid "%s returned an unexpected secret payload."
+msgstr "%s je vratio neočekivan sadržaj tajne."
+
+#: includes/providers/VaultProvider.php:239
+#, php-format
+msgid "The %s secret holds multiple fields; append '#key' to the reference to select one."
+msgstr "Tajna za %s sadrži više polja; dodajte '#key' na referencu da odaberete jedno."
+
+#: includes/providers/VaultProvider.php:262
+msgid "AppRole authentication requires both a RoleID and a SecretID."
+msgstr "AppRole autentifikacija zahtijeva i RoleID i SecretID."
+
+#: includes/providers/VaultProvider.php:280
+#, php-format
+msgid "%s AppRole login failed with HTTP %d."
+msgstr "%s AppRole prijava nije uspjela uz HTTP %d."
+
+#: includes/providers/VaultProvider.php:286
+#, php-format
+msgid "%s AppRole login returned no client token."
+msgstr "%s AppRole prijava nije vratila klijentski token."
+
+#: includes/providers/VaultProvider.php:295
+#, php-format
+msgid "The %s token is required for Token authentication."
+msgstr "Token za %s je obavezan za autentifikaciju tokenom."
+
+#: setup.php:270
+msgid "Configuration"
+msgstr "Konfiguracija"
+
+#: setup.php:294 setup.php:322
+msgid "(Edit)"
+msgstr "(Uredi)"
+
+#: setup.php:301 setup.php:329
+msgid "Actions"
+msgstr "Radnje"
+
+#: setup.php:308 setup.php:336
+msgid "(Save)"
+msgstr "(Sačuvaj)"

@@ -1,0 +1,1542 @@
+# Chinese (Simplified Han script) translations for Cacti package.
+# Copyright (C) 2004-2026 The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti 1.0\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-10-16 19:37+0000\n"
+"PO-Revision-Date: 2026-11-28 02:15+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Chinese (Simplified Han script) <https://translate.cacti.net/projects/cacti/core/zh_Hans/>\n"
+"Language: zh-CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: credential_providers.php:37 credentials.php:37
+msgid "Delete"
+msgstr "删除"
+
+#: credential_providers.php:38 credentials.php:38
+msgid "Enable"
+msgstr "启用"
+
+#: credential_providers.php:39 credentials.php:39
+msgid "Disable"
+msgstr "禁用"
+
+#: credential_providers.php:107
+msgid "The selected provider type is not valid."
+msgstr "所选的提供程序类型无效。"
+
+#: credential_providers.php:116
+msgid "A provider name is required."
+msgstr "必须填写提供程序名称。"
+
+#: credential_providers.php:150 credentials.php:181
+msgid "Cannot store a secret: the Cacti core secret encryption functions are unavailable on this installation."
+msgstr "无法存储机密：当前安装环境中不可用 Cacti 核心机密加密功能。"
+
+#: credential_providers.php:166 credential_providers.php:191
+#: credentials.php:228 credentials.php:254
+#, php-format
+msgid "'%s' is required."
+msgstr "必须填写“%s”。"
+
+#: credential_providers.php:175 credentials.php:237
+msgid "Could not encrypt the secret. Verify the Cacti encryption key configuration and try again."
+msgstr "无法加密机密。请检查 Cacti 加密密钥配置后重试。"
+
+#: credential_providers.php:204
+msgid "The provider could not be saved because one of its fields contains invalid characters. Please re-enter the affected values and try again."
+msgstr "由于提供程序的某个字段包含无效字符，无法保存该提供程序。请重新输入受影响的值后重试。"
+
+#: credential_providers.php:221
+msgid "Secret provider saved."
+msgstr "机密提供程序已保存。"
+
+#: credential_providers.php:224
+msgid "Failed to save the secret provider."
+msgstr "保存机密提供程序失败。"
+
+#: credential_providers.php:270
+#, php-format
+msgid "A provider still used by %d credential(s) was not deleted."
+msgstr "仍有 %d 个凭据正在使用该提供程序，因此未将其删除。"
+
+#: credential_providers.php:323
+msgid "Delete the following secret provider(s)?"
+msgstr "确定要删除以下机密提供程序吗？"
+
+#: credential_providers.php:325
+msgid "Enable the following secret provider(s)?"
+msgstr "确定要启用以下机密提供程序吗？"
+
+#: credential_providers.php:327
+msgid "Disable the following secret provider(s)?"
+msgstr "确定要禁用以下机密提供程序吗？"
+
+#: credential_providers.php:337 credential_providers.php:755
+#: credentials.php:428 credentials.php:882
+msgid "Cancel"
+msgstr "取消"
+
+#: credential_providers.php:337 credential_providers.php:754
+#: credentials.php:428 credentials.php:881
+msgid "Continue"
+msgstr "继续"
+
+#: credential_providers.php:366
+msgid "Invalid request method."
+msgstr "无效的请求方法。"
+
+#: credential_providers.php:376
+msgid "Save the provider before testing it."
+msgstr "请在测试前先保存提供程序。"
+
+#: credential_providers.php:491 credential_providers.php:530 setup.php:256
+#: setup.php:274 setup.php:315
+msgid "Secret Providers"
+msgstr "机密提供程序"
+
+#: credential_providers.php:499 credentials.php:575
+msgid "Search"
+msgstr "搜索"
+
+#: credential_providers.php:503
+msgid "Providers"
+msgstr "提供程序"
+
+#: credential_providers.php:506 credentials.php:593
+msgid "All"
+msgstr "所有"
+
+#: credential_providers.php:517 credentials.php:604
+msgid "Go"
+msgstr "Go"
+
+#: credential_providers.php:518 credentials.php:605
+msgid "Clear"
+msgstr "清除"
+
+#: credential_providers.php:539 credential_providers.php:625
+#: credentials.php:626 credentials.php:750
+msgid "Name"
+msgstr "名称"
+
+#: credential_providers.php:540 credentials.php:579 credentials.php:627
+msgid "Type"
+msgstr "Type"
+
+#: credential_providers.php:541 credential_providers.php:633
+#: credentials.php:629 credentials.php:758
+msgid "Description"
+msgstr "描述"
+
+#: credential_providers.php:542 credential_providers.php:648
+#: credentials.php:631 credentials.php:780
+msgid "Enabled"
+msgstr "已启用"
+
+#: credential_providers.php:543 credentials.php:632
+msgid "Last Updated"
+msgstr "最后更新"
+
+#: credential_providers.php:557 credentials.php:649
+msgid "Yes"
+msgstr "是"
+
+#: credential_providers.php:557 credentials.php:649
+msgid "No"
+msgstr "否"
+
+#: credential_providers.php:564
+msgid "No Secret Providers Found"
+msgstr "未找到机密提供程序"
+
+#: credential_providers.php:620
+#, php-format
+msgid "Secret Provider [edit: %s]"
+msgstr "机密提供程序 [编辑: %s]"
+
+#: credential_providers.php:620
+msgid "Secret Provider [new]"
+msgstr "机密提供程序 [新建]"
+
+#: credential_providers.php:626
+msgid "A unique, meaningful name for this provider instance."
+msgstr "此提供程序实例的唯一且有意义的名称。"
+
+#: credential_providers.php:634
+msgid "An optional description of this provider instance."
+msgstr "此提供程序实例的可选描述。"
+
+#: credential_providers.php:641
+msgid "Provider Type"
+msgstr "提供程序类型"
+
+#: credential_providers.php:642
+msgid "The external secret store this provider connects to. Changing the type on an existing provider discards the previously stored type-specific configuration when you save."
+msgstr "此提供程序连接的外部机密存储。更改现有提供程序的类型将在保存时丢弃先前存储的类型专用配置。"
+
+#: credential_providers.php:649
+msgid "Whether this provider is available to resolve credential secrets."
+msgstr "此提供程序是否可用于解析凭据机密。"
+
+#: credential_providers.php:697 credentials.php:833
+msgid "A value is currently stored (encrypted)."
+msgstr "当前已存储值（已加密）。"
+
+#: credential_providers.php:697 credentials.php:833
+msgid "Leave this blank to keep it, or enter a new value to replace it."
+msgstr "留空以保留原值，或输入新值进行替换。"
+
+#: credential_providers.php:699 credentials.php:835
+msgid "No value stored yet."
+msgstr "尚未存储值。"
+
+#: credential_providers.php:740
+msgid "Test Connection"
+msgstr "测试连接"
+
+#: credential_providers.php:752
+msgid "Change Provider Type?"
+msgstr "更改提供程序类型？"
+
+#: credential_providers.php:753
+msgid "Changing the Provider Type will discard the configuration stored for the current type when you save this provider. Do you want to continue?"
+msgstr "更改提供程序类型后，在保存此提供程序时将丢弃当前类型已存储的配置。是否继续？"
+
+#: credential_providers.php:756
+msgid "Testing..."
+msgstr "正在测试..."
+
+#: credential_providers.php:757
+msgid "The test request failed."
+msgstr "测试请求失败。"
+
+#: credentials.php:102
+msgid "The selected credential type is not valid."
+msgstr "所选的凭据类型无效。"
+
+#: credentials.php:111
+msgid "A credential name is required."
+msgstr "必须填写凭据名称。"
+
+#: credentials.php:125
+msgid "The selected secret provider does not exist."
+msgstr "所选的机密提供程序不存在。"
+
+#: credentials.php:132
+msgid "The selected secret provider is disabled."
+msgstr "所选的机密提供程序已禁用。"
+
+#: credentials.php:199
+#, php-format
+msgid "A reference for '%s' is required."
+msgstr "必须填写“%s”的引用。"
+
+#: credentials.php:215
+#, php-format
+msgid "The value and its confirmation for '%s' do not match."
+msgstr "“%s”的值与其确认值不匹配。"
+
+#: credentials.php:279
+msgid "The credential could not be saved because one of its fields contains invalid characters. Please re-enter the affected values and try again."
+msgstr "由于凭据的某个字段包含无效字符，无法保存该凭据。请重新输入受影响的值后重试。"
+
+#: credentials.php:312
+msgid "The selected secret provider is no longer available. Please choose another provider."
+msgstr "所选的机密提供程序不再可用。请选择其他提供程序。"
+
+#: credentials.php:326
+msgid "Credential saved."
+msgstr "凭据已保存。"
+
+#: credentials.php:329
+msgid "Failed to save the credential."
+msgstr "保存凭据失败。"
+
+#: credentials.php:414
+msgid "Delete the following credential(s)?"
+msgstr "确定要删除以下凭据吗？"
+
+#: credentials.php:416
+msgid "Enable the following credential(s)?"
+msgstr "确定要启用以下凭据吗？"
+
+#: credentials.php:418
+msgid "Disable the following credential(s)?"
+msgstr "确定要禁用以下凭据吗？"
+
+#: credentials.php:567 credentials.php:590 credentials.php:617 setup.php:255
+#: setup.php:273 setup.php:287
+msgid "Credentials"
+msgstr "凭据"
+
+#: credentials.php:582
+msgid "Any"
+msgstr "任何"
+
+#: credentials.php:628 credentials.php:773
+msgid "Secret Provider"
+msgstr "机密提供程序"
+
+#: credentials.php:630
+msgid "Owner"
+msgstr "所有者"
+
+#: credentials.php:640
+msgid "Local Database"
+msgstr "本地数据库"
+
+#: credentials.php:648
+msgid "N/A"
+msgstr "不可用"
+
+#: credentials.php:656
+msgid "No Credentials Found"
+msgstr "未找到凭据"
+
+#: credentials.php:745
+#, php-format
+msgid "Credential [edit: %s]"
+msgstr "凭据 [编辑: %s]"
+
+#: credentials.php:745
+msgid "Credential [new]"
+msgstr "凭据 [新建]"
+
+#: credentials.php:751
+msgid "A unique, meaningful name for this credential."
+msgstr "此凭据的唯一且有意义的名称。"
+
+#: credentials.php:759
+msgid "An optional description of where this credential is used."
+msgstr "关于此凭据使用位置的可选描述。"
+
+#: credentials.php:766
+msgid "Credential Type"
+msgstr "凭据类型"
+
+#: credentials.php:767
+msgid "The type of credential. Changing the type on an existing credential discards the previously stored type-specific values when you save."
+msgstr "凭据的类型。更改现有凭据的类型将在保存时丢弃先前存储的类型专用值。"
+
+#: credentials.php:774
+msgid "Where the secret values for this credential live. Choose the local encrypted database, or an external secret store. When an external provider is selected, each secret field holds a reference the provider resolves at poll time instead of the secret itself."
+msgstr "此凭据的机密值存储位置。可选择本地加密数据库或外部机密存储。选择外部提供程序时，每个机密字段保存的是提供程序在轮询时解析的引用，而非机密本身。"
+
+#: credentials.php:781
+msgid "Whether this credential is available for use."
+msgstr "此凭据是否可供使用。"
+
+#: credentials.php:822
+msgid "(reference)"
+msgstr "(引用)"
+
+#: credentials.php:879
+msgid "Change Credential Type?"
+msgstr "更改凭据类型？"
+
+#: credentials.php:880
+msgid "Changing the Credential Type will discard the values stored for the current type when you save this credential. Do you want to continue?"
+msgstr "更改凭据类型后，在保存此凭据时将丢弃当前类型已存储的值。是否继续？"
+
+#: includes/arrays.php:53
+msgid "SNMP v1/v2c Community"
+msgstr "SNMP v1/v2c 团体名"
+
+#: includes/arrays.php:55 includes/arrays.php:86
+msgid "SNMP"
+msgstr "SNMP"
+
+#: includes/arrays.php:58
+msgid "SNMP Version"
+msgstr "SNMP 版本"
+
+#: includes/arrays.php:60
+msgid "The community-based SNMP protocol version this credential is used with."
+msgstr "此凭据所用的基于团体名的 SNMP 协议版本。"
+
+#: includes/arrays.php:61
+msgid "Version 1"
+msgstr "版本 1"
+
+#: includes/arrays.php:61
+msgid "Version 2"
+msgstr "版本 2"
+
+#: includes/arrays.php:66
+msgid "Read Community"
+msgstr "只读团体名"
+
+#: includes/arrays.php:68
+msgid "The SNMP read community string. Treated as a secret and stored encrypted."
+msgstr "SNMP 只读团体字符串。作为机密处理并以加密方式存储。"
+
+#: includes/arrays.php:74
+msgid "Write Community"
+msgstr "写团体名"
+
+#: includes/arrays.php:76
+msgid "The optional SNMP write community string. Stored encrypted."
+msgstr "可选的 SNMP 写团体字符串。以加密方式存储。"
+
+#: includes/arrays.php:84
+msgid "SNMP v3 (USM)"
+msgstr "SNMP v3 (USM)"
+
+#: includes/arrays.php:89
+msgid "Security Name"
+msgstr "安全名称"
+
+#: includes/arrays.php:91
+msgid "The SNMP v3 USM security (user) name."
+msgstr "SNMP v3 USM 安全（用户）名称。"
+
+#: includes/arrays.php:96
+msgid "Authentication Protocol"
+msgstr "认证协议"
+
+#: includes/arrays.php:98
+msgid "The USM authentication protocol. Choose [None] for noAuthNoPriv."
+msgstr "USM 认证协议。选择 [None] 表示 noAuthNoPriv。"
+
+#: includes/arrays.php:100 includes/arrays.php:122
+msgid "None"
+msgstr "无"
+
+#: includes/arrays.php:111
+msgid "Authentication Passphrase"
+msgstr "认证密码短语"
+
+#: includes/arrays.php:113
+msgid "The USM authentication passphrase. Stored encrypted."
+msgstr "USM 认证密码短语。以加密方式存储。"
+
+#: includes/arrays.php:118
+msgid "Privacy Protocol"
+msgstr "加密协议"
+
+#: includes/arrays.php:120
+msgid "The USM privacy (encryption) protocol. Choose [None] for authNoPriv."
+msgstr "USM 加密协议。选择 [None] 表示 authNoPriv。"
+
+#: includes/arrays.php:131
+msgid "Privacy Passphrase"
+msgstr "加密密码短语"
+
+#: includes/arrays.php:133
+msgid "The USM privacy passphrase. Stored encrypted."
+msgstr "USM 加密密码短语。以加密方式存储。"
+
+#: includes/arrays.php:138
+msgid "Context Name"
+msgstr "上下文名称"
+
+#: includes/arrays.php:140
+msgid "The optional SNMP v3 context name."
+msgstr "可选的 SNMP v3 上下文名称。"
+
+#: includes/arrays.php:145
+msgid "Engine ID"
+msgstr "引擎 ID"
+
+#: includes/arrays.php:147
+msgid "The optional SNMP v3 context engine id."
+msgstr "可选的 SNMP v3 上下文引擎 ID。"
+
+#: includes/arrays.php:154
+msgid "Username / Password"
+msgstr "用户名 / 密码"
+
+#: includes/arrays.php:156
+msgid "Generic"
+msgstr "通用"
+
+#: includes/arrays.php:159 includes/arrays.php:181 includes/arrays.php:289
+#: includes/arrays.php:347 includes/arrays.php:378 includes/arrays.php:400
+#: includes/arrays.php:450 includes/arrays.php:486
+msgid "Username"
+msgstr "用户名"
+
+#: includes/arrays.php:161
+msgid "A reusable username for HTTP Basic, Telnet, web UI logins or script inputs."
+msgstr "可用于 HTTP Basic、Telnet、Web 界面登录或脚本输入的可复用用户名。"
+
+#: includes/arrays.php:166 includes/arrays.php:191 includes/arrays.php:195
+#: includes/arrays.php:354 includes/arrays.php:385 includes/arrays.php:407
+#: includes/arrays.php:457 includes/arrays.php:493
+msgid "Password"
+msgstr "密码"
+
+#: includes/arrays.php:168
+msgid "The password paired with the username. Stored encrypted."
+msgstr "与用户名配对的密码。以加密方式存储。"
+
+#: includes/arrays.php:176
+msgid "SSH"
+msgstr "SSH"
+
+#: includes/arrays.php:178
+msgid "CLI"
+msgstr "CLI"
+
+#: includes/arrays.php:183
+msgid "The SSH login username."
+msgstr "SSH 登录用户名。"
+
+#: includes/arrays.php:188 includes/providers/AzureKeyVaultProvider.php:67
+#: includes/providers/VaultProvider.php:92
+msgid "Authentication Method"
+msgstr "认证方法"
+
+#: includes/arrays.php:190
+msgid "Authenticate with a password or a private key."
+msgstr "使用密码或私钥进行认证。"
+
+#: includes/arrays.php:191 includes/arrays.php:203
+msgid "Private Key"
+msgstr "私钥"
+
+#: includes/arrays.php:197
+msgid "The SSH password (when using password authentication). Stored encrypted."
+msgstr "SSH 密码（使用密码认证时）。以加密方式存储。"
+
+#: includes/arrays.php:205
+msgid "The PEM private key (when using key authentication). Stored encrypted."
+msgstr "PEM 格式的私钥（使用密钥认证时）。以加密方式存储。"
+
+#: includes/arrays.php:211 includes/arrays.php:522
+msgid "Key Passphrase"
+msgstr "密钥密码短语"
+
+#: includes/arrays.php:213 includes/arrays.php:524
+msgid "The optional passphrase protecting the private key. Stored encrypted."
+msgstr "用于保护私钥的可选密码短语。以加密方式存储。"
+
+#: includes/arrays.php:219 includes/arrays.php:443
+msgid "Port"
+msgstr "端口"
+
+#: includes/arrays.php:221
+msgid "The TCP port for the SSH service."
+msgstr "SSH 服务的 TCP 端口。"
+
+#: includes/arrays.php:231
+msgid "Bearer / API Token"
+msgstr "Bearer / API 令牌"
+
+#: includes/arrays.php:233 includes/arrays.php:256 includes/arrays.php:286
+#: includes/arrays.php:308 includes/arrays.php:344
+msgid "API"
+msgstr "API"
+
+#: includes/arrays.php:236
+msgid "Bearer Token"
+msgstr "Bearer 令牌"
+
+#: includes/arrays.php:238
+msgid "The opaque bearer token sent as an Authorization header. Stored encrypted."
+msgstr "作为 Authorization 请求头发送的不透明 Bearer 令牌。以加密方式存储。"
+
+#: includes/arrays.php:244
+msgid "Header Name"
+msgstr "请求头名称"
+
+#: includes/arrays.php:246
+msgid "The HTTP header the token is sent in."
+msgstr "用于发送令牌的 HTTP 请求头。"
+
+#: includes/arrays.php:254 includes/arrays.php:259
+#: includes/providers/ConjurProvider.php:74
+msgid "API Key"
+msgstr "API 密钥"
+
+#: includes/arrays.php:261
+msgid "The API key value. Stored encrypted."
+msgstr "API 密钥值。以加密方式存储。"
+
+#: includes/arrays.php:267
+msgid "Placement"
+msgstr "位置"
+
+#: includes/arrays.php:269
+msgid "Whether the key is sent as an HTTP header or a query parameter."
+msgstr "密钥是作为 HTTP 请求头还是查询参数发送。"
+
+#: includes/arrays.php:270
+msgid "Header"
+msgstr "头部"
+
+#: includes/arrays.php:270
+msgid "Query Parameter"
+msgstr "查询参数"
+
+#: includes/arrays.php:274
+msgid "Parameter Name"
+msgstr "参数名称"
+
+#: includes/arrays.php:276
+msgid "The header or query parameter name carrying the key (e.g. X-API-Key)."
+msgstr "携带密钥的请求头或查询参数名称（例如 X-API-Key）。"
+
+#: includes/arrays.php:284
+msgid "GitHub Personal Access Token"
+msgstr "GitHub 个人访问令牌"
+
+#: includes/arrays.php:291
+msgid "The optional GitHub username associated with the token."
+msgstr "与该令牌关联的可选 GitHub 用户名。"
+
+#: includes/arrays.php:296
+msgid "Personal Access Token"
+msgstr "个人访问令牌"
+
+#: includes/arrays.php:298
+msgid "The GitHub personal access token. Stored encrypted."
+msgstr "GitHub 个人访问令牌。以加密方式存储。"
+
+#: includes/arrays.php:306
+msgid "OAuth 2.0 Client Credentials"
+msgstr "OAuth 2.0 客户端凭据"
+
+#: includes/arrays.php:311
+msgid "Client ID"
+msgstr "客户端 ID"
+
+#: includes/arrays.php:313
+msgid "The OAuth 2.0 client identifier."
+msgstr "OAuth 2.0 客户端标识符。"
+
+#: includes/arrays.php:318 includes/providers/AzureKeyVaultProvider.php:89
+msgid "Client Secret"
+msgstr "客户端密钥"
+
+#: includes/arrays.php:320
+msgid "The OAuth 2.0 client secret. Stored encrypted."
+msgstr "OAuth 2.0 客户端密钥。以加密方式存储。"
+
+#: includes/arrays.php:326
+msgid "Token URL"
+msgstr "令牌 URL"
+
+#: includes/arrays.php:328
+msgid "The token endpoint used for the client_credentials grant."
+msgstr "用于 client_credentials 授权的令牌端点。"
+
+#: includes/arrays.php:333
+msgid "Scopes"
+msgstr "作用域"
+
+#: includes/arrays.php:335
+msgid "An optional space delimited list of scopes to request."
+msgstr "要请求的可选作用域列表，以空格分隔。"
+
+#: includes/arrays.php:342
+msgid "HTTP Basic Auth"
+msgstr "HTTP Basic 认证"
+
+#: includes/arrays.php:349
+msgid "The HTTP Basic auth username."
+msgstr "HTTP Basic 认证用户名。"
+
+#: includes/arrays.php:356
+msgid "The HTTP Basic auth password. Stored encrypted."
+msgstr "HTTP Basic 认证密码。以加密方式存储。"
+
+#: includes/arrays.php:366
+msgid "WMI (Windows)"
+msgstr "WMI (Windows)"
+
+#: includes/arrays.php:368 includes/arrays.php:397 includes/arrays.php:426
+#: includes/arrays.php:476 includes/arrays.php:505
+msgid "Device"
+msgstr "设备"
+
+#: includes/arrays.php:371
+msgid "Domain"
+msgstr "域"
+
+#: includes/arrays.php:373
+msgid "The optional Windows domain."
+msgstr "可选的 Windows 域。"
+
+#: includes/arrays.php:380
+msgid "The Windows account username."
+msgstr "Windows 账号用户名。"
+
+#: includes/arrays.php:387
+msgid "The Windows account password. Stored encrypted."
+msgstr "Windows 账号密码。以加密方式存储。"
+
+#: includes/arrays.php:395
+msgid "IPMI / Redfish (BMC)"
+msgstr "IPMI / Redfish (BMC)"
+
+#: includes/arrays.php:402
+msgid "The out-of-band controller username."
+msgstr "带外控制器用户名。"
+
+#: includes/arrays.php:409
+msgid "The out-of-band controller password. Stored encrypted."
+msgstr "带外控制器密码。以加密方式存储。"
+
+#: includes/arrays.php:415
+msgid "Protocol"
+msgstr "协议"
+
+#: includes/arrays.php:417
+msgid "The management protocol exposed by the controller."
+msgstr "控制器公开的管理协议。"
+
+#: includes/arrays.php:424
+msgid "Database"
+msgstr "数据库"
+
+#: includes/arrays.php:429
+msgid "Driver"
+msgstr "驱动程序"
+
+#: includes/arrays.php:431
+msgid "The database engine this credential connects to."
+msgstr "此凭据连接的数据库引擎。"
+
+#: includes/arrays.php:436
+msgid "Host"
+msgstr "主机"
+
+#: includes/arrays.php:438
+msgid "The database server hostname or IP address."
+msgstr "数据库服务器主机名或 IP 地址。"
+
+#: includes/arrays.php:445
+msgid "The database server TCP port."
+msgstr "数据库服务器 TCP 端口。"
+
+#: includes/arrays.php:452
+msgid "The database account username."
+msgstr "数据库账号用户名。"
+
+#: includes/arrays.php:459
+msgid "The database account password. Stored encrypted."
+msgstr "数据库账号密码。以加密方式存储。"
+
+#: includes/arrays.php:465
+msgid "Database Name"
+msgstr "数据库名称"
+
+#: includes/arrays.php:467
+msgid "The optional default database/schema name."
+msgstr "可选的默认数据库/模式名称。"
+
+#: includes/arrays.php:474
+msgid "VMware / vCenter"
+msgstr "VMware / vCenter"
+
+#: includes/arrays.php:479
+msgid "Server"
+msgstr "服务器"
+
+#: includes/arrays.php:481
+msgid "The vCenter or ESXi API endpoint."
+msgstr "vCenter 或 ESXi API 端点。"
+
+#: includes/arrays.php:488
+msgid "The hypervisor API username."
+msgstr "虚拟化管理程序 API 用户名。"
+
+#: includes/arrays.php:495
+msgid "The hypervisor API password. Stored encrypted."
+msgstr "虚拟化管理程序 API 密码。以加密方式存储。"
+
+#: includes/arrays.php:503
+msgid "TLS Client Certificate"
+msgstr "TLS 客户端证书"
+
+#: includes/arrays.php:508
+msgid "Certificate (PEM)"
+msgstr "证书 (PEM)"
+
+#: includes/arrays.php:510
+msgid "The PEM client certificate. Public material, stored as entered."
+msgstr "PEM 格式的客户端证书。属于公开信息，按原样存储。"
+
+#: includes/arrays.php:514
+msgid "Private Key (PEM)"
+msgstr "私钥 (PEM)"
+
+#: includes/arrays.php:516
+msgid "The PEM private key for the client certificate. Stored encrypted."
+msgstr "客户端证书对应的 PEM 私钥。以加密方式存储。"
+
+#: includes/arrays.php:530
+msgid "CA Bundle (PEM)"
+msgstr "CA 证书包 (PEM)"
+
+#: includes/arrays.php:532
+msgid "An optional PEM CA bundle used to verify the peer."
+msgstr "用于验证对端的可选 PEM 格式 CA 证书包。"
+
+#: includes/functions.php:199
+msgid "A password is required for SSH password authentication."
+msgstr "SSH 密码认证需要提供密码。"
+
+#: includes/functions.php:203
+msgid "A private key is required for SSH key authentication."
+msgstr "SSH 密钥认证需要提供私钥。"
+
+#: includes/functions.php:210
+msgid "SNMP v3 privacy requires an authentication protocol; noAuthPriv is not a valid security level."
+msgstr "SNMP v3 加密需要指定认证协议；noAuthPriv 不是有效的安全级别。"
+
+#: includes/functions.php:214
+msgid "An authentication passphrase is required when an SNMP v3 authentication protocol is selected."
+msgstr "选择 SNMP v3 认证协议时必须提供认证密码短语。"
+
+#: includes/functions.php:218
+msgid "A privacy passphrase is required when an SNMP v3 privacy protocol is selected."
+msgstr "选择 SNMP v3 加密协议时必须提供加密密码短语。"
+
+#: includes/providers.php:192
+msgid "Local Database (encrypted)"
+msgstr "本地数据库（已加密）"
+
+#: includes/providers.php:203
+msgid "(disabled)"
+msgstr "(已禁用)"
+
+#: includes/providers.php:290
+msgid "The provider could not be found or its type is unknown."
+msgstr "找不到该提供程序或其类型未知。"
+
+#: includes/providers/AbstractProvider.php:38
+msgid "Secret Reference"
+msgstr "机密引用"
+
+#: includes/providers/AbstractProvider.php:124
+#, php-format
+msgid "The stored secret is not a JSON object, so the '%s' key cannot be selected."
+msgstr "存储的机密不是 JSON 对象，因此无法选择“%s”键。"
+
+#: includes/providers/AbstractProvider.php:132
+#, php-format
+msgid "The stored secret does not contain the '%s' key."
+msgstr "存储的机密不包含“%s”键。"
+
+#: includes/providers/AbstractProvider.php:162
+msgid "The PHP cURL extension is required to reach external secret providers."
+msgstr "访问外部机密提供程序需要 PHP cURL 扩展。"
+
+#: includes/providers/AbstractProvider.php:208
+msgid "The request to the secret provider failed."
+msgstr "向机密提供程序发出的请求失败。"
+
+#: includes/providers/AwsSecretsManagerProvider.php:39
+msgid "AWS Secrets Manager"
+msgstr "AWS Secrets Manager"
+
+#: includes/providers/AwsSecretsManagerProvider.php:43
+msgid "Resolve secrets from AWS Secrets Manager using IAM access keys or an EC2/ECS instance role."
+msgstr "使用 IAM 访问密钥或 EC2/ECS 实例角色从 AWS Secrets Manager 解析机密。"
+
+#: includes/providers/AwsSecretsManagerProvider.php:47
+msgid "Secret Id or Name"
+msgstr "机密 ID 或名称"
+
+#: includes/providers/AwsSecretsManagerProvider.php:51
+msgid "An AWS Secrets Manager secret id or name, optionally with '#key' to select a field from a JSON secret, for example 'prod/snmp#community'."
+msgstr "AWS Secrets Manager 机密 ID 或名称，可附加可选的 '#key' 以从 JSON 机密中选择字段，例如 'prod/snmp#community'。"
+
+#: includes/providers/AwsSecretsManagerProvider.php:57
+msgid "Region"
+msgstr "区域"
+
+#: includes/providers/AwsSecretsManagerProvider.php:59
+msgid "The AWS region hosting the secrets, for example us-east-1."
+msgstr "托管机密的 AWS 区域，例如 us-east-1。"
+
+#: includes/providers/AwsSecretsManagerProvider.php:64
+msgid "Use Instance Role"
+msgstr "使用实例角色"
+
+#: includes/providers/AwsSecretsManagerProvider.php:66
+msgid "Obtain temporary credentials from the EC2/ECS instance metadata service instead of static keys."
+msgstr "从 EC2/ECS 实例元数据服务获取临时凭据，而不使用静态密钥。"
+
+#: includes/providers/AwsSecretsManagerProvider.php:70
+msgid "Access Key Id"
+msgstr "访问密钥 ID"
+
+#: includes/providers/AwsSecretsManagerProvider.php:72
+msgid "The IAM access key id used when not using an instance role."
+msgstr "不使用实例角色时所用的 IAM 访问密钥 ID。"
+
+#: includes/providers/AwsSecretsManagerProvider.php:76
+msgid "Secret Access Key"
+msgstr "秘密访问密钥"
+
+#: includes/providers/AwsSecretsManagerProvider.php:78
+msgid "The IAM secret access key. Stored encrypted."
+msgstr "IAM 秘密访问密钥。以加密方式存储。"
+
+#: includes/providers/AwsSecretsManagerProvider.php:83
+msgid "Session Token"
+msgstr "会话令牌"
+
+#: includes/providers/AwsSecretsManagerProvider.php:85
+msgid "An optional STS session token for temporary static credentials. Stored encrypted."
+msgstr "用于临时静态凭据的可选 STS 会话令牌。以加密方式存储。"
+
+#: includes/providers/AwsSecretsManagerProvider.php:90
+msgid "Endpoint Override"
+msgstr "端点覆盖"
+
+#: includes/providers/AwsSecretsManagerProvider.php:92
+msgid "An optional endpoint override (for VPC endpoints or testing). Defaults to the public AWS endpoint for the region."
+msgstr "可选的端点覆盖地址（用于 VPC 端点或测试）。默认使用该区域的 AWS 公共端点。"
+
+#: includes/providers/AwsSecretsManagerProvider.php:96
+#: includes/providers/AzureKeyVaultProvider.php:103
+#: includes/providers/ConjurProvider.php:93
+#: includes/providers/GcpSecretManagerProvider.php:77
+#: includes/providers/VaultProvider.php:131
+msgid "Timeout (seconds)"
+msgstr "超时（秒）"
+
+#: includes/providers/AwsSecretsManagerProvider.php:98
+msgid "The network timeout for AWS requests."
+msgstr "AWS 请求的网络超时时间。"
+
+#: includes/providers/AwsSecretsManagerProvider.php:107
+msgid "An AWS region is required."
+msgstr "必须填写 AWS 区域。"
+
+#: includes/providers/AwsSecretsManagerProvider.php:125
+msgid "Successfully authenticated to AWS Secrets Manager."
+msgstr "已成功向 AWS Secrets Manager 完成认证。"
+
+#: includes/providers/AwsSecretsManagerProvider.php:135
+msgid "An AWS secret id is required."
+msgstr "必须填写 AWS 机密 ID。"
+
+#: includes/providers/AwsSecretsManagerProvider.php:157
+msgid "AWS returned an unexpected response reading the secret."
+msgstr "读取机密时 AWS 返回了意外响应。"
+
+#: includes/providers/AwsSecretsManagerProvider.php:165
+msgid "The AWS secret has no retrievable value."
+msgstr "该 AWS 机密没有可检索的值。"
+
+#: includes/providers/AwsSecretsManagerProvider.php:189
+msgid "An access key id and secret access key are required unless an instance role is used."
+msgstr "除非使用实例角色，否则必须提供访问密钥 ID 和秘密访问密钥。"
+
+#: includes/providers/AwsSecretsManagerProvider.php:220
+msgid "The ECS relative credentials URI is not valid."
+msgstr "ECS 相对凭据 URI 无效。"
+
+#: includes/providers/AwsSecretsManagerProvider.php:230
+msgid "The configured ECS credentials endpoint is not an allowed address."
+msgstr "配置的 ECS 凭据端点不是允许的地址。"
+
+#: includes/providers/AwsSecretsManagerProvider.php:259
+msgid "Unable to read ECS task role credentials."
+msgstr "无法读取 ECS 任务角色凭据。"
+
+#: includes/providers/AwsSecretsManagerProvider.php:265
+msgid "The ECS credentials endpoint returned no usable credentials."
+msgstr "ECS 凭据端点未返回可用凭据。"
+
+#: includes/providers/AwsSecretsManagerProvider.php:352
+msgid "Unable to obtain an instance metadata token; is Cacti running on an AWS instance with a role?"
+msgstr "无法获取实例元数据令牌；Cacti 是否运行在已附加角色的 AWS 实例上？"
+
+#: includes/providers/AwsSecretsManagerProvider.php:360
+msgid "No IAM role is attached to this instance."
+msgstr "此实例未附加 IAM 角色。"
+
+#: includes/providers/AwsSecretsManagerProvider.php:368
+msgid "Unable to read instance role credentials."
+msgstr "无法读取实例角色凭据。"
+
+#: includes/providers/AwsSecretsManagerProvider.php:374
+msgid "The instance metadata service returned no usable credentials."
+msgstr "实例元数据服务未返回可用凭据。"
+
+#: includes/providers/AwsSecretsManagerProvider.php:403
+msgid "Unable to encode the AWS request."
+msgstr "无法对 AWS 请求进行编码。"
+
+#: includes/providers/AwsSecretsManagerProvider.php:498
+#, php-format
+msgid "AWS Secrets Manager error: %s (HTTP %d)."
+msgstr "AWS Secrets Manager 错误：%s (HTTP %d)。"
+
+#: includes/providers/AwsSecretsManagerProvider.php:501
+#, php-format
+msgid "AWS Secrets Manager returned HTTP %d."
+msgstr "AWS Secrets Manager 返回 HTTP %d。"
+
+#: includes/providers/AzureKeyVaultProvider.php:42
+msgid "Azure Key Vault"
+msgstr "Azure Key Vault"
+
+#: includes/providers/AzureKeyVaultProvider.php:46
+msgid "Resolve secrets from Azure Key Vault using an Entra ID service principal or a Managed Identity."
+msgstr "使用 Entra ID 服务主体或托管标识从 Azure Key Vault 解析机密。"
+
+#: includes/providers/AzureKeyVaultProvider.php:50
+#: includes/providers/GcpSecretManagerProvider.php:47
+msgid "Secret Name"
+msgstr "机密名称"
+
+#: includes/providers/AzureKeyVaultProvider.php:54
+msgid "A Key Vault secret name, optionally a specific version as 'name/version', with an optional '#key' to select a field from a JSON secret, for example 'snmp-community'."
+msgstr "Key Vault 机密名称，可选择以 'name/version' 形式指定版本，也可附加可选的 '#key' 以从 JSON 机密中选择字段，例如 'snmp-community'。"
+
+#: includes/providers/AzureKeyVaultProvider.php:60
+msgid "Vault URL"
+msgstr "Vault URL"
+
+#: includes/providers/AzureKeyVaultProvider.php:62
+msgid "The Key Vault base URL, for example https://my-vault.vault.azure.net."
+msgstr "Key Vault 基础 URL，例如 https://my-vault.vault.azure.net。"
+
+#: includes/providers/AzureKeyVaultProvider.php:69
+msgid "How this plugin obtains an access token."
+msgstr "此插件获取访问令牌的方式。"
+
+#: includes/providers/AzureKeyVaultProvider.php:71
+msgid "Service Principal (client secret)"
+msgstr "服务主体（客户端密钥）"
+
+#: includes/providers/AzureKeyVaultProvider.php:72
+msgid "Managed Identity"
+msgstr "托管标识"
+
+#: includes/providers/AzureKeyVaultProvider.php:77
+msgid "Tenant Id"
+msgstr "租户 ID"
+
+#: includes/providers/AzureKeyVaultProvider.php:79
+msgid "The Entra ID tenant (directory) id, used for service principal authentication."
+msgstr "用于服务主体认证的 Entra ID 租户（目录）ID。"
+
+#: includes/providers/AzureKeyVaultProvider.php:83
+msgid "Client Id"
+msgstr "客户端 ID"
+
+#: includes/providers/AzureKeyVaultProvider.php:85
+msgid "The application (client) id. For a user-assigned Managed Identity, the identity client id."
+msgstr "应用程序（客户端）ID。对于用户分配的托管标识，为该标识的客户端 ID。"
+
+#: includes/providers/AzureKeyVaultProvider.php:91
+msgid "The service principal client secret. Stored encrypted."
+msgstr "服务主体客户端密钥。以加密方式存储。"
+
+#: includes/providers/AzureKeyVaultProvider.php:96
+msgid "API Version"
+msgstr "API 版本"
+
+#: includes/providers/AzureKeyVaultProvider.php:98
+msgid "The Key Vault data-plane API version."
+msgstr "Key Vault 数据平面 API 版本。"
+
+#: includes/providers/AzureKeyVaultProvider.php:105
+msgid "The network timeout for Azure requests."
+msgstr "Azure 请求的网络超时时间。"
+
+#: includes/providers/AzureKeyVaultProvider.php:114
+msgid "A Key Vault URL is required."
+msgstr "必须填写 Key Vault URL。"
+
+#: includes/providers/AzureKeyVaultProvider.php:133
+msgid "Successfully authenticated to Azure Key Vault."
+msgstr "已成功向 Azure Key Vault 完成认证。"
+
+#: includes/providers/AzureKeyVaultProvider.php:143
+msgid "A Key Vault secret name is required."
+msgstr "必须填写 Key Vault 机密名称。"
+
+#: includes/providers/AzureKeyVaultProvider.php:167
+#, php-format
+msgid "The Key Vault secret '%s' was not found."
+msgstr "未找到 Key Vault 机密“%s”。"
+
+#: includes/providers/AzureKeyVaultProvider.php:177
+msgid "Azure returned an unexpected response reading the secret."
+msgstr "读取机密时 Azure 返回了意外响应。"
+
+#: includes/providers/AzureKeyVaultProvider.php:200
+msgid "Service principal authentication requires a tenant id, client id and client secret."
+msgstr "服务主体认证需要租户 ID、客户端 ID 和客户端密钥。"
+
+#: includes/providers/AzureKeyVaultProvider.php:218
+#, php-format
+msgid "Azure token request failed with HTTP %d."
+msgstr "Azure 令牌请求失败，返回 HTTP %d。"
+
+#: includes/providers/AzureKeyVaultProvider.php:224
+msgid "Azure token request returned no access token."
+msgstr "Azure 令牌请求未返回访问令牌。"
+
+#: includes/providers/AzureKeyVaultProvider.php:249
+msgid "Unable to obtain a Managed Identity token; is Cacti running on an Azure resource with an identity assigned?"
+msgstr "无法获取托管标识令牌；Cacti 是否运行在已分配标识的 Azure 资源上？"
+
+#: includes/providers/AzureKeyVaultProvider.php:255
+msgid "The Managed Identity endpoint returned no access token."
+msgstr "托管标识端点未返回访问令牌。"
+
+#: includes/providers/AzureKeyVaultProvider.php:273
+#, php-format
+msgid "Azure Key Vault error: %s (HTTP %d)."
+msgstr "Azure Key Vault 错误：%s (HTTP %d)。"
+
+#: includes/providers/AzureKeyVaultProvider.php:276
+#, php-format
+msgid "Azure Key Vault returned HTTP %d."
+msgstr "Azure Key Vault 返回 HTTP %d。"
+
+#: includes/providers/ConjurProvider.php:35
+msgid "CyberArk Conjur"
+msgstr "CyberArk Conjur"
+
+#: includes/providers/ConjurProvider.php:39
+msgid "Resolve secrets from CyberArk Conjur using a host or user identity and its API key."
+msgstr "使用主机或用户身份及其 API 密钥从 CyberArk Conjur 解析机密。"
+
+#: includes/providers/ConjurProvider.php:43
+msgid "Variable Id"
+msgstr "变量 ID"
+
+#: includes/providers/ConjurProvider.php:47
+msgid "A Conjur variable id, with an optional '#key' to select a field from a JSON secret, for example 'prod/network/snmp'."
+msgstr "Conjur 变量 ID，可附加可选的 '#key' 以从 JSON 机密中选择字段，例如 'prod/network/snmp'。"
+
+#: includes/providers/ConjurProvider.php:53
+msgid "Appliance URL"
+msgstr "设备 URL"
+
+#: includes/providers/ConjurProvider.php:55
+msgid "The base URL of the Conjur appliance, for example https://conjur.example.com."
+msgstr "Conjur 设备的基础 URL，例如 https://conjur.example.com。"
+
+#: includes/providers/ConjurProvider.php:60
+msgid "Account"
+msgstr "帐户"
+
+#: includes/providers/ConjurProvider.php:62
+msgid "The Conjur account (organization) name."
+msgstr "Conjur 账号（组织）名称。"
+
+#: includes/providers/ConjurProvider.php:67
+msgid "Login (Host or User)"
+msgstr "登录名（主机或用户）"
+
+#: includes/providers/ConjurProvider.php:69
+msgid "The identity used to authenticate, for example host/cacti-poller or a username."
+msgstr "用于认证的身份，例如 host/cacti-poller 或用户名。"
+
+#: includes/providers/ConjurProvider.php:76
+msgid "The API key for the identity. Stored encrypted."
+msgstr "该身份对应的 API 密钥。以加密方式存储。"
+
+#: includes/providers/ConjurProvider.php:81
+#: includes/providers/VaultProvider.php:119
+msgid "Verify TLS Certificate"
+msgstr "验证 TLS 证书"
+
+#: includes/providers/ConjurProvider.php:83
+msgid "Verify the Conjur appliance TLS certificate. Disable only for testing."
+msgstr "验证 Conjur 设备的 TLS 证书。仅在测试时禁用。"
+
+#: includes/providers/ConjurProvider.php:87
+#: includes/providers/VaultProvider.php:125
+msgid "CA Bundle Path"
+msgstr "CA 证书包路径"
+
+#: includes/providers/ConjurProvider.php:89
+msgid "An optional path on the Cacti server to a PEM CA bundle used to verify Conjur."
+msgstr "Cacti 服务器上用于验证 Conjur 的可选 PEM 格式 CA 证书包路径。"
+
+#: includes/providers/ConjurProvider.php:95
+msgid "The network timeout for Conjur requests."
+msgstr "Conjur 请求的网络超时时间。"
+
+#: includes/providers/ConjurProvider.php:105
+msgid "The Conjur appliance URL, account, login and API key are all required."
+msgstr "Conjur 设备 URL、账号、登录名和 API 密钥均为必填项。"
+
+#: includes/providers/ConjurProvider.php:115
+msgid "Successfully authenticated to CyberArk Conjur."
+msgstr "已成功向 CyberArk Conjur 完成认证。"
+
+#: includes/providers/ConjurProvider.php:122
+msgid "A Conjur variable id is required."
+msgstr "必须填写 Conjur 变量 ID。"
+
+#: includes/providers/ConjurProvider.php:142
+#, php-format
+msgid "The Conjur variable '%s' was not found or has no value."
+msgstr "未找到 Conjur 变量“%s”或其没有值。"
+
+#: includes/providers/ConjurProvider.php:146
+#, php-format
+msgid "Conjur returned HTTP %d reading the variable."
+msgstr "读取变量时 Conjur 返回 HTTP %d。"
+
+#: includes/providers/ConjurProvider.php:166
+msgid "Conjur authentication requires an account, login and API key."
+msgstr "Conjur 认证需要账号、登录名和 API 密钥。"
+
+#: includes/providers/ConjurProvider.php:178
+#, php-format
+msgid "Conjur authentication failed with HTTP %d."
+msgstr "Conjur 认证失败，返回 HTTP %d。"
+
+#: includes/providers/ConjurProvider.php:184
+msgid "Conjur authentication returned an empty token."
+msgstr "Conjur 认证返回了空令牌。"
+
+#: includes/providers/GcpSecretManagerProvider.php:39
+msgid "Google Cloud Secret Manager"
+msgstr "Google Cloud Secret Manager"
+
+#: includes/providers/GcpSecretManagerProvider.php:43
+msgid "Resolve secrets from Google Cloud Secret Manager using a service account key or the instance service account."
+msgstr "使用服务账号密钥或实例服务账号从 Google Cloud Secret Manager 解析机密。"
+
+#: includes/providers/GcpSecretManagerProvider.php:51
+msgid "A Secret Manager secret id, optionally a version as 'name/version' (default 'latest'), with an optional '#key' to select a field from a JSON secret, for example 'snmp-community'."
+msgstr "Secret Manager 机密 ID，可选择以 'name/version' 形式指定版本（默认为 'latest'），也可附加可选的 '#key' 以从 JSON 机密中选择字段，例如 'snmp-community'。"
+
+#: includes/providers/GcpSecretManagerProvider.php:57
+msgid "Project Id"
+msgstr "项目 ID"
+
+#: includes/providers/GcpSecretManagerProvider.php:59
+msgid "The Google Cloud project id that owns the secrets."
+msgstr "拥有这些机密的 Google Cloud 项目 ID。"
+
+#: includes/providers/GcpSecretManagerProvider.php:64
+msgid "Use Instance Service Account"
+msgstr "使用实例服务账号"
+
+#: includes/providers/GcpSecretManagerProvider.php:66
+msgid "Obtain an access token from the GCE metadata server instead of a service account key."
+msgstr "从 GCE 元数据服务器获取访问令牌，而不使用服务账号密钥。"
+
+#: includes/providers/GcpSecretManagerProvider.php:70
+msgid "Service Account Key (JSON)"
+msgstr "服务账号密钥 (JSON)"
+
+#: includes/providers/GcpSecretManagerProvider.php:72
+msgid "The full service account key JSON. Stored encrypted. Not required when using the instance service account."
+msgstr "完整的服务账号密钥 JSON。以加密方式存储。使用实例服务账号时无需填写。"
+
+#: includes/providers/GcpSecretManagerProvider.php:79
+msgid "The network timeout for Google Cloud requests."
+msgstr "Google Cloud 请求的网络超时时间。"
+
+#: includes/providers/GcpSecretManagerProvider.php:88
+msgid "A Google Cloud project id is required."
+msgstr "必须填写 Google Cloud 项目 ID。"
+
+#: includes/providers/GcpSecretManagerProvider.php:107
+msgid "Successfully authenticated to Google Cloud Secret Manager."
+msgstr "已成功向 Google Cloud Secret Manager 完成认证。"
+
+#: includes/providers/GcpSecretManagerProvider.php:117
+msgid "A Secret Manager secret name is required."
+msgstr "必须填写 Secret Manager 机密名称。"
+
+#: includes/providers/GcpSecretManagerProvider.php:140
+#, php-format
+msgid "The Secret Manager secret '%s' was not found."
+msgstr "未找到 Secret Manager 机密“%s”。"
+
+#: includes/providers/GcpSecretManagerProvider.php:150
+msgid "Google Cloud returned an unexpected response reading the secret."
+msgstr "读取机密时 Google Cloud 返回了意外响应。"
+
+#: includes/providers/GcpSecretManagerProvider.php:156
+msgid "The Secret Manager payload could not be decoded."
+msgstr "无法解码 Secret Manager 负载。"
+
+#: includes/providers/GcpSecretManagerProvider.php:178
+msgid "A service account key JSON is required unless the instance service account is used."
+msgstr "除非使用实例服务账号，否则必须提供服务账号密钥 JSON。"
+
+#: includes/providers/GcpSecretManagerProvider.php:184
+msgid "The service account key JSON is invalid or incomplete."
+msgstr "服务账号密钥 JSON 无效或不完整。"
+
+#: includes/providers/GcpSecretManagerProvider.php:190
+msgid "The service account token URI must be a supported Google OAuth endpoint."
+msgstr "服务账号令牌 URI 必须是受支持的 Google OAuth 端点。"
+
+#: includes/providers/GcpSecretManagerProvider.php:221
+#, php-format
+msgid "Google Cloud token request failed with HTTP %d."
+msgstr "Google Cloud 令牌请求失败，返回 HTTP %d。"
+
+#: includes/providers/GcpSecretManagerProvider.php:227
+msgid "Google Cloud token request returned no access token."
+msgstr "Google Cloud 令牌请求未返回访问令牌。"
+
+#: includes/providers/GcpSecretManagerProvider.php:271
+msgid "Unable to obtain a token from the GCE metadata server; is Cacti running on a Google Cloud instance?"
+msgstr "无法从 GCE 元数据服务器获取令牌；Cacti 是否运行在 Google Cloud 实例上？"
+
+#: includes/providers/GcpSecretManagerProvider.php:277
+msgid "The GCE metadata server returned no access token."
+msgstr "GCE 元数据服务器未返回访问令牌。"
+
+#: includes/providers/GcpSecretManagerProvider.php:300
+msgid "The service account private key could not be read."
+msgstr "无法读取服务账号私钥。"
+
+#: includes/providers/GcpSecretManagerProvider.php:307
+msgid "The service account JWT could not be signed."
+msgstr "无法对服务账号 JWT 进行签名。"
+
+#: includes/providers/GcpSecretManagerProvider.php:336
+#, php-format
+msgid "Google Cloud Secret Manager error: %s (HTTP %d)."
+msgstr "Google Cloud Secret Manager 错误：%s (HTTP %d)。"
+
+#: includes/providers/GcpSecretManagerProvider.php:339
+#, php-format
+msgid "Google Cloud Secret Manager returned HTTP %d."
+msgstr "Google Cloud Secret Manager 返回 HTTP %d。"
+
+#: includes/providers/OpenBaoProvider.php:36
+msgid "OpenBao"
+msgstr "OpenBao"
+
+#: includes/providers/OpenBaoProvider.php:44
+msgid "Resolve secrets from an OpenBao KV v1 or v2 secrets engine using a token or AppRole."
+msgstr "使用令牌或 AppRole 从 OpenBao KV v1 或 v2 机密引擎解析机密。"
+
+#: includes/providers/OpenBaoProvider.php:48
+msgid "An OpenBao secret path and the key within it, separated by '#', for example 'network/snmp#community'. The path is relative to the configured KV mount; append '#key' to select a field from the secret."
+msgstr "OpenBao 机密路径及其中的键名，以 '#' 分隔，例如 'network/snmp#community'。该路径相对于已配置的 KV 挂载点；附加 '#key' 可从机密中选择特定字段。"
+
+#: includes/providers/OpenBaoProvider.php:55
+msgid "OpenBao Address"
+msgstr "OpenBao 地址"
+
+#: includes/providers/OpenBaoProvider.php:55
+msgid "The base URL of the OpenBao server, for example https://openbao.example.com:8200."
+msgstr "OpenBao 服务器的基础 URL，例如 https://openbao.example.com:8200。"
+
+#: includes/providers/OpenBaoProvider.php:56
+msgid "The optional OpenBao namespace (sent as the X-Vault-Namespace header)."
+msgstr "可选的 OpenBao 命名空间（作为 X-Vault-Namespace 请求头发送）。"
+
+#: includes/providers/OpenBaoProvider.php:57
+msgid "How this plugin authenticates to OpenBao."
+msgstr "此插件向 OpenBao 进行认证的方式。"
+
+#: includes/providers/OpenBaoProvider.php:58
+msgid "The OpenBao token used for Token authentication. Stored encrypted."
+msgstr "用于令牌认证的 OpenBao 令牌。以加密方式存储。"
+
+#: includes/providers/OpenBaoProvider.php:59
+msgid "Verify the OpenBao server TLS certificate. Disable only for testing."
+msgstr "验证 OpenBao 服务器的 TLS 证书。仅在测试时禁用。"
+
+#: includes/providers/OpenBaoProvider.php:60
+msgid "An optional path on the Cacti server to a PEM CA bundle used to verify OpenBao."
+msgstr "Cacti 服务器上用于验证 OpenBao 的可选 PEM 格式 CA 证书包路径。"
+
+#: includes/providers/OpenBaoProvider.php:61
+msgid "The network timeout for OpenBao requests."
+msgstr "OpenBao 请求的网络超时时间。"
+
+#: includes/providers/VaultProvider.php:35
+msgid "HashiCorp Vault"
+msgstr "HashiCorp Vault"
+
+#: includes/providers/VaultProvider.php:51
+msgid "Resolve secrets from a HashiCorp Vault KV v1 or v2 secrets engine using a token or AppRole."
+msgstr "使用令牌或 AppRole 从 HashiCorp Vault KV v1 或 v2 机密引擎解析机密。"
+
+#: includes/providers/VaultProvider.php:55
+msgid "Secret Path and Key"
+msgstr "机密路径与键名"
+
+#: includes/providers/VaultProvider.php:59
+msgid "A Vault secret path and the key within it, separated by '#', for example 'network/snmp#community'. The path is relative to the configured KV mount; append '#key' to select a field from the secret."
+msgstr "Vault 机密路径及其中的键名，以 '#' 分隔，例如 'network/snmp#community'。该路径相对于已配置的 KV 挂载点；附加 '#key' 可从机密中选择特定字段。"
+
+#: includes/providers/VaultProvider.php:65
+msgid "Vault Address"
+msgstr "Vault 地址"
+
+#: includes/providers/VaultProvider.php:67
+msgid "The base URL of the Vault server, for example https://vault.example.com:8200."
+msgstr "Vault 服务器的基础 URL，例如 https://vault.example.com:8200。"
+
+#: includes/providers/VaultProvider.php:72
+msgid "Namespace"
+msgstr "命名空间"
+
+#: includes/providers/VaultProvider.php:74
+msgid "The optional Vault Enterprise namespace (sent as the X-Vault-Namespace header)."
+msgstr "可选的 Vault Enterprise 命名空间（作为 X-Vault-Namespace 请求头发送）。"
+
+#: includes/providers/VaultProvider.php:78
+msgid "KV Engine Version"
+msgstr "KV 引擎版本"
+
+#: includes/providers/VaultProvider.php:80
+msgid "The version of the KV secrets engine the mount uses."
+msgstr "挂载点所使用的 KV 机密引擎版本。"
+
+#: includes/providers/VaultProvider.php:81
+msgid "KV Version 2"
+msgstr "KV 版本 2"
+
+#: includes/providers/VaultProvider.php:81
+msgid "KV Version 1"
+msgstr "KV 版本 1"
+
+#: includes/providers/VaultProvider.php:85
+msgid "KV Mount Path"
+msgstr "KV 挂载路径"
+
+#: includes/providers/VaultProvider.php:87
+msgid "The mount path of the KV secrets engine, for example 'secret'."
+msgstr "KV 机密引擎的挂载路径，例如 'secret'。"
+
+#: includes/providers/VaultProvider.php:94
+msgid "How this plugin authenticates to Vault."
+msgstr "此插件向 Vault 进行认证的方式。"
+
+#: includes/providers/VaultProvider.php:95
+#: includes/providers/VaultProvider.php:99
+msgid "Token"
+msgstr "令牌"
+
+#: includes/providers/VaultProvider.php:95
+msgid "AppRole"
+msgstr "AppRole"
+
+#: includes/providers/VaultProvider.php:101
+msgid "The Vault token used for Token authentication. Stored encrypted."
+msgstr "用于令牌认证的 Vault 令牌。以加密方式存储。"
+
+#: includes/providers/VaultProvider.php:106
+msgid "AppRole Role ID"
+msgstr "AppRole 角色 ID"
+
+#: includes/providers/VaultProvider.php:108
+msgid "The AppRole RoleID used for AppRole authentication."
+msgstr "用于 AppRole 认证的 AppRole RoleID。"
+
+#: includes/providers/VaultProvider.php:112
+msgid "AppRole Secret ID"
+msgstr "AppRole 机密 ID"
+
+#: includes/providers/VaultProvider.php:114
+msgid "The AppRole SecretID used for AppRole authentication. Stored encrypted."
+msgstr "用于 AppRole 认证的 AppRole SecretID。以加密方式存储。"
+
+#: includes/providers/VaultProvider.php:121
+msgid "Verify the Vault server TLS certificate. Disable only for testing."
+msgstr "验证 Vault 服务器的 TLS 证书。仅在测试时禁用。"
+
+#: includes/providers/VaultProvider.php:127
+msgid "An optional path on the Cacti server to a PEM CA bundle used to verify Vault."
+msgstr "Cacti 服务器上用于验证 Vault 的可选 PEM 格式 CA 证书包路径。"
+
+#: includes/providers/VaultProvider.php:133
+msgid "The network timeout for Vault requests."
+msgstr "Vault 请求的网络超时时间。"
+
+#: includes/providers/VaultProvider.php:144
+#, php-format
+msgid "The %s address is required."
+msgstr "必须填写 %s 地址。"
+
+#: includes/providers/VaultProvider.php:166
+#, php-format
+msgid "Successfully authenticated to %s."
+msgstr "已成功向 %s 完成认证。"
+
+#: includes/providers/VaultProvider.php:169
+#, php-format
+msgid "%s returned HTTP %d during token verification."
+msgstr "令牌验证期间 %s 返回 HTTP %d。"
+
+#: includes/providers/VaultProvider.php:176
+#, php-format
+msgid "The %s secret path is required."
+msgstr "必须填写 %s 机密路径。"
+
+#: includes/providers/VaultProvider.php:209
+#, php-format
+msgid "The %s secret path '%s' was not found."
+msgstr "未找到 %s 机密路径“%s”。"
+
+#: includes/providers/VaultProvider.php:213
+#, php-format
+msgid "%s returned HTTP %d reading the secret."
+msgstr "读取机密时 %s 返回 HTTP %d。"
+
+#: includes/providers/VaultProvider.php:219
+#, php-format
+msgid "%s returned an unexpected response reading the secret."
+msgstr "读取机密时 %s 返回了意外响应。"
+
+#: includes/providers/VaultProvider.php:228
+#, php-format
+msgid "%s returned an unexpected secret payload."
+msgstr "%s 返回了意外的机密负载。"
+
+#: includes/providers/VaultProvider.php:239
+#, php-format
+msgid "The %s secret holds multiple fields; append '#key' to the reference to select one."
+msgstr "%s 机密包含多个字段；请在引用后附加 '#key' 以选择其中一个字段。"
+
+#: includes/providers/VaultProvider.php:262
+msgid "AppRole authentication requires both a RoleID and a SecretID."
+msgstr "AppRole 认证需要同时提供 RoleID 和 SecretID。"
+
+#: includes/providers/VaultProvider.php:280
+#, php-format
+msgid "%s AppRole login failed with HTTP %d."
+msgstr "%s AppRole 登录失败，返回 HTTP %d。"
+
+#: includes/providers/VaultProvider.php:286
+#, php-format
+msgid "%s AppRole login returned no client token."
+msgstr "%s AppRole 登录未返回客户端令牌。"
+
+#: includes/providers/VaultProvider.php:295
+#, php-format
+msgid "The %s token is required for Token authentication."
+msgstr "令牌认证需要提供 %s 令牌。"
+
+#: setup.php:270
+msgid "Configuration"
+msgstr "系统配置"
+
+#: setup.php:294 setup.php:322
+msgid "(Edit)"
+msgstr "(编辑)"
+
+#: setup.php:301 setup.php:329
+msgid "Actions"
+msgstr "操作"
+
+#: setup.php:308 setup.php:336
+msgid "(Save)"
+msgstr "(保存)"

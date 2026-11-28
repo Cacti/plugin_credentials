@@ -1,0 +1,1542 @@
+# Hindi translations for Cacti package.
+# Copyright (C) 2004-2026 The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti 1.0\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-10-16 19:37+0000\n"
+"PO-Revision-Date: 2026-11-28 02:15+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Hindi <https://translate.cacti.net/projects/cacti/core/hi/>\n"
+"Language: hi-IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+
+#: credential_providers.php:37 credentials.php:37
+msgid "Delete"
+msgstr "हटाएं"
+
+#: credential_providers.php:38 credentials.php:38
+msgid "Enable"
+msgstr "सक्षम करें"
+
+#: credential_providers.php:39 credentials.php:39
+msgid "Disable"
+msgstr "अक्षम करें"
+
+#: credential_providers.php:107
+msgid "The selected provider type is not valid."
+msgstr "चयनित प्रदाता प्रकार मान्य नहीं है।"
+
+#: credential_providers.php:116
+msgid "A provider name is required."
+msgstr "प्रदाता नाम आवश्यक है।"
+
+#: credential_providers.php:150 credentials.php:181
+msgid "Cannot store a secret: the Cacti core secret encryption functions are unavailable on this installation."
+msgstr "सीक्रेट संग्रहीत नहीं किया जा सकता: इस इंस्टॉलेशन पर Cacti कोर सीक्रेट एन्क्रिप्शन फ़ंक्शन अनुपलब्ध हैं।"
+
+#: credential_providers.php:166 credential_providers.php:191
+#: credentials.php:228 credentials.php:254
+#, php-format
+msgid "'%s' is required."
+msgstr "'%s' आवश्यक है।"
+
+#: credential_providers.php:175 credentials.php:237
+msgid "Could not encrypt the secret. Verify the Cacti encryption key configuration and try again."
+msgstr "सीक्रेट एन्क्रिप्ट नहीं किया जा सका। Cacti एन्क्रिप्शन कुंजी कॉन्फ़िगरेशन सत्यापित करें और पुनः प्रयास करें।"
+
+#: credential_providers.php:204
+msgid "The provider could not be saved because one of its fields contains invalid characters. Please re-enter the affected values and try again."
+msgstr "प्रदाता सहेजा नहीं जा सका क्योंकि इसके एक फ़ील्ड में अमान्य वर्ण हैं। कृपया प्रभावित मान फिर से दर्ज करें और पुनः प्रयास करें।"
+
+#: credential_providers.php:221
+msgid "Secret provider saved."
+msgstr "सीक्रेट प्रदाता सहेजा गया।"
+
+#: credential_providers.php:224
+msgid "Failed to save the secret provider."
+msgstr "सीक्रेट प्रदाता सहेजने में विफल।"
+
+#: credential_providers.php:270
+#, php-format
+msgid "A provider still used by %d credential(s) was not deleted."
+msgstr "एक प्रदाता जो अभी भी %d क्रेडेंशियल द्वारा उपयोग किया जा रहा है, उसे हटाया नहीं गया।"
+
+#: credential_providers.php:323
+msgid "Delete the following secret provider(s)?"
+msgstr "क्या निम्नलिखित सीक्रेट प्रदाता हटाएं?"
+
+#: credential_providers.php:325
+msgid "Enable the following secret provider(s)?"
+msgstr "क्या निम्नलिखित सीक्रेट प्रदाता सक्षम करें?"
+
+#: credential_providers.php:327
+msgid "Disable the following secret provider(s)?"
+msgstr "क्या निम्नलिखित सीक्रेट प्रदाता अक्षम करें?"
+
+#: credential_providers.php:337 credential_providers.php:755
+#: credentials.php:428 credentials.php:882
+msgid "Cancel"
+msgstr "कैंसिल करें"
+
+#: credential_providers.php:337 credential_providers.php:754
+#: credentials.php:428 credentials.php:881
+msgid "Continue"
+msgstr "जारी रखें"
+
+#: credential_providers.php:366
+msgid "Invalid request method."
+msgstr "अमान्य अनुरोध विधि।"
+
+#: credential_providers.php:376
+msgid "Save the provider before testing it."
+msgstr "परीक्षण से पहले प्रदाता को सहेजें।"
+
+#: credential_providers.php:491 credential_providers.php:530 setup.php:256
+#: setup.php:274 setup.php:315
+msgid "Secret Providers"
+msgstr "सीक्रेट प्रदाता"
+
+#: credential_providers.php:499 credentials.php:575
+msgid "Search"
+msgstr "खोजें"
+
+#: credential_providers.php:503
+msgid "Providers"
+msgstr "प्रदाता"
+
+#: credential_providers.php:506 credentials.php:593
+msgid "All"
+msgstr "सभी"
+
+#: credential_providers.php:517 credentials.php:604
+msgid "Go"
+msgstr "जाएं"
+
+#: credential_providers.php:518 credentials.php:605
+msgid "Clear"
+msgstr "साफ़ करें"
+
+#: credential_providers.php:539 credential_providers.php:625
+#: credentials.php:626 credentials.php:750
+msgid "Name"
+msgstr "नाम"
+
+#: credential_providers.php:540 credentials.php:579 credentials.php:627
+msgid "Type"
+msgstr "प्रकार"
+
+#: credential_providers.php:541 credential_providers.php:633
+#: credentials.php:629 credentials.php:758
+msgid "Description"
+msgstr "विवरण"
+
+#: credential_providers.php:542 credential_providers.php:648
+#: credentials.php:631 credentials.php:780
+msgid "Enabled"
+msgstr "सक्षम"
+
+#: credential_providers.php:543 credentials.php:632
+msgid "Last Updated"
+msgstr "अंतिम अपडेट"
+
+#: credential_providers.php:557 credentials.php:649
+msgid "Yes"
+msgstr "हाँ"
+
+#: credential_providers.php:557 credentials.php:649
+msgid "No"
+msgstr "नहीं"
+
+#: credential_providers.php:564
+msgid "No Secret Providers Found"
+msgstr "कोई सीक्रेट प्रदाता नहीं मिला"
+
+#: credential_providers.php:620
+#, php-format
+msgid "Secret Provider [edit: %s]"
+msgstr "सीक्रेट प्रदाता [संपादन: %s]"
+
+#: credential_providers.php:620
+msgid "Secret Provider [new]"
+msgstr "सीक्रेट प्रदाता [नया]"
+
+#: credential_providers.php:626
+msgid "A unique, meaningful name for this provider instance."
+msgstr "इस प्रदाता इंस्टेंस के लिए एक अद्वितीय, सार्थक नाम।"
+
+#: credential_providers.php:634
+msgid "An optional description of this provider instance."
+msgstr "इस प्रदाता इंस्टेंस का वैकल्पिक विवरण।"
+
+#: credential_providers.php:641
+msgid "Provider Type"
+msgstr "प्रदाता प्रकार"
+
+#: credential_providers.php:642
+msgid "The external secret store this provider connects to. Changing the type on an existing provider discards the previously stored type-specific configuration when you save."
+msgstr "वह बाहरी सीक्रेट स्टोर जिससे यह प्रदाता जुड़ता है। मौजूदा प्रदाता पर प्रकार बदलने से सहेजते समय पहले से संग्रहीत प्रकार-विशिष्ट कॉन्फ़िगरेशन हट जाता है।"
+
+#: credential_providers.php:649
+msgid "Whether this provider is available to resolve credential secrets."
+msgstr "क्या यह प्रदाता क्रेडेंशियल सीक्रेट हल करने के लिए उपलब्ध है।"
+
+#: credential_providers.php:697 credentials.php:833
+msgid "A value is currently stored (encrypted)."
+msgstr "एक मान वर्तमान में संग्रहीत है (एन्क्रिप्टेड)।"
+
+#: credential_providers.php:697 credentials.php:833
+msgid "Leave this blank to keep it, or enter a new value to replace it."
+msgstr "इसे बनाए रखने के लिए रिक्त छोड़ें, या इसे बदलने के लिए नया मान दर्ज करें।"
+
+#: credential_providers.php:699 credentials.php:835
+msgid "No value stored yet."
+msgstr "अभी तक कोई मान संग्रहीत नहीं है।"
+
+#: credential_providers.php:740
+msgid "Test Connection"
+msgstr "कनेक्शन जांचें"
+
+#: credential_providers.php:752
+msgid "Change Provider Type?"
+msgstr "प्रदाता प्रकार बदलें?"
+
+#: credential_providers.php:753
+msgid "Changing the Provider Type will discard the configuration stored for the current type when you save this provider. Do you want to continue?"
+msgstr "प्रदाता प्रकार बदलने से इस प्रदाता को सहेजने पर वर्तमान प्रकार के लिए संग्रहीत कॉन्फ़िगरेशन हट जाएगा। क्या आप जारी रखना चाहते हैं?"
+
+#: credential_providers.php:756
+msgid "Testing..."
+msgstr "परीक्षण हो रहा है..."
+
+#: credential_providers.php:757
+msgid "The test request failed."
+msgstr "परीक्षण अनुरोध विफल रहा।"
+
+#: credentials.php:102
+msgid "The selected credential type is not valid."
+msgstr "चयनित क्रेडेंशियल प्रकार मान्य नहीं है।"
+
+#: credentials.php:111
+msgid "A credential name is required."
+msgstr "क्रेडेंशियल नाम आवश्यक है।"
+
+#: credentials.php:125
+msgid "The selected secret provider does not exist."
+msgstr "चयनित सीक्रेट प्रदाता मौजूद नहीं है।"
+
+#: credentials.php:132
+msgid "The selected secret provider is disabled."
+msgstr "चयनित सीक्रेट प्रदाता अक्षम है।"
+
+#: credentials.php:199
+#, php-format
+msgid "A reference for '%s' is required."
+msgstr "'%s' के लिए संदर्भ आवश्यक है।"
+
+#: credentials.php:215
+#, php-format
+msgid "The value and its confirmation for '%s' do not match."
+msgstr "'%s' के लिए मान और उसकी पुष्टि मेल नहीं खाती।"
+
+#: credentials.php:279
+msgid "The credential could not be saved because one of its fields contains invalid characters. Please re-enter the affected values and try again."
+msgstr "क्रेडेंशियल सहेजा नहीं जा सका क्योंकि इसके एक फ़ील्ड में अमान्य वर्ण हैं। कृपया प्रभावित मान फिर से दर्ज करें और पुनः प्रयास करें।"
+
+#: credentials.php:312
+msgid "The selected secret provider is no longer available. Please choose another provider."
+msgstr "चयनित सीक्रेट प्रदाता अब उपलब्ध नहीं है। कृपया कोई अन्य प्रदाता चुनें।"
+
+#: credentials.php:326
+msgid "Credential saved."
+msgstr "क्रेडेंशियल सहेजा गया।"
+
+#: credentials.php:329
+msgid "Failed to save the credential."
+msgstr "क्रेडेंशियल सहेजने में विफल।"
+
+#: credentials.php:414
+msgid "Delete the following credential(s)?"
+msgstr "क्या निम्नलिखित क्रेडेंशियल हटाएं?"
+
+#: credentials.php:416
+msgid "Enable the following credential(s)?"
+msgstr "क्या निम्नलिखित क्रेडेंशियल सक्षम करें?"
+
+#: credentials.php:418
+msgid "Disable the following credential(s)?"
+msgstr "क्या निम्नलिखित क्रेडेंशियल अक्षम करें?"
+
+#: credentials.php:567 credentials.php:590 credentials.php:617 setup.php:255
+#: setup.php:273 setup.php:287
+msgid "Credentials"
+msgstr "क्रेडेंशियल्स"
+
+#: credentials.php:582
+msgid "Any"
+msgstr "कोई भी"
+
+#: credentials.php:628 credentials.php:773
+msgid "Secret Provider"
+msgstr "सीक्रेट प्रदाता"
+
+#: credentials.php:630
+msgid "Owner"
+msgstr "स्वामी"
+
+#: credentials.php:640
+msgid "Local Database"
+msgstr "स्थानीय डेटाबेस"
+
+#: credentials.php:648
+msgid "N/A"
+msgstr "लागू नहीं"
+
+#: credentials.php:656
+msgid "No Credentials Found"
+msgstr "कोई क्रेडेंशियल नहीं मिला"
+
+#: credentials.php:745
+#, php-format
+msgid "Credential [edit: %s]"
+msgstr "क्रेडेंशियल [संपादन: %s]"
+
+#: credentials.php:745
+msgid "Credential [new]"
+msgstr "क्रेडेंशियल [नया]"
+
+#: credentials.php:751
+msgid "A unique, meaningful name for this credential."
+msgstr "इस क्रेडेंशियल के लिए एक अद्वितीय, सार्थक नाम।"
+
+#: credentials.php:759
+msgid "An optional description of where this credential is used."
+msgstr "इस क्रेडेंशियल का उपयोग कहां किया जाता है, इसका वैकल्पिक विवरण।"
+
+#: credentials.php:766
+msgid "Credential Type"
+msgstr "क्रेडेंशियल प्रकार"
+
+#: credentials.php:767
+msgid "The type of credential. Changing the type on an existing credential discards the previously stored type-specific values when you save."
+msgstr "क्रेडेंशियल का प्रकार। मौजूदा क्रेडेंशियल पर प्रकार बदलने से सहेजते समय पहले से संग्रहीत प्रकार-विशिष्ट मान हट जाते हैं।"
+
+#: credentials.php:774
+msgid "Where the secret values for this credential live. Choose the local encrypted database, or an external secret store. When an external provider is selected, each secret field holds a reference the provider resolves at poll time instead of the secret itself."
+msgstr "इस क्रेडेंशियल के सीक्रेट मान कहां संग्रहीत हैं। स्थानीय एन्क्रिप्टेड डेटाबेस या बाहरी सीक्रेट स्टोर चुनें। जब कोई बाहरी प्रदाता चुना जाता है, तो प्रत्येक सीक्रेट फ़ील्ड में सीक्रेट के बजाय एक संदर्भ होता है जिसे प्रदाता पोल समय पर हल करता है।"
+
+#: credentials.php:781
+msgid "Whether this credential is available for use."
+msgstr "क्या यह क्रेडेंशियल उपयोग के लिए उपलब्ध है।"
+
+#: credentials.php:822
+msgid "(reference)"
+msgstr "(संदर्भ)"
+
+#: credentials.php:879
+msgid "Change Credential Type?"
+msgstr "क्रेडेंशियल प्रकार बदलें?"
+
+#: credentials.php:880
+msgid "Changing the Credential Type will discard the values stored for the current type when you save this credential. Do you want to continue?"
+msgstr "क्रेडेंशियल प्रकार बदलने से इस क्रेडेंशियल को सहेजने पर वर्तमान प्रकार के लिए संग्रहीत मान हट जाएंगे। क्या आप जारी रखना चाहते हैं?"
+
+#: includes/arrays.php:53
+msgid "SNMP v1/v2c Community"
+msgstr "SNMP v1/v2c कम्युनिटी"
+
+#: includes/arrays.php:55 includes/arrays.php:86
+msgid "SNMP"
+msgstr "SNMP"
+
+#: includes/arrays.php:58
+msgid "SNMP Version"
+msgstr "SNMP संस्करण"
+
+#: includes/arrays.php:60
+msgid "The community-based SNMP protocol version this credential is used with."
+msgstr "इस क्रेडेंशियल के साथ उपयोग किया जाने वाला कम्युनिटी-आधारित SNMP प्रोटोकॉल संस्करण।"
+
+#: includes/arrays.php:61
+msgid "Version 1"
+msgstr "संस्करण 1"
+
+#: includes/arrays.php:61
+msgid "Version 2"
+msgstr "संस्करण 2"
+
+#: includes/arrays.php:66
+msgid "Read Community"
+msgstr "रीड कम्युनिटी (Read Community)"
+
+#: includes/arrays.php:68
+msgid "The SNMP read community string. Treated as a secret and stored encrypted."
+msgstr "SNMP रीड कम्युनिटी स्ट्रिंग। सीक्रेट के रूप में मानी जाती है और एन्क्रिप्टेड रूप में संग्रहीत होती है।"
+
+#: includes/arrays.php:74
+msgid "Write Community"
+msgstr "राइट कम्युनिटी (Write Community)"
+
+#: includes/arrays.php:76
+msgid "The optional SNMP write community string. Stored encrypted."
+msgstr "वैकल्पिक SNMP राइट कम्युनिटी स्ट्रिंग। एन्क्रिप्टेड रूप में संग्रहीत।"
+
+#: includes/arrays.php:84
+msgid "SNMP v3 (USM)"
+msgstr "SNMP v3 (USM)"
+
+#: includes/arrays.php:89
+msgid "Security Name"
+msgstr "सुरक्षा नाम"
+
+#: includes/arrays.php:91
+msgid "The SNMP v3 USM security (user) name."
+msgstr "SNMP v3 USM सुरक्षा (उपयोगकर्ता) नाम।"
+
+#: includes/arrays.php:96
+msgid "Authentication Protocol"
+msgstr "प्रमाणीकरण प्रोटोकॉल"
+
+#: includes/arrays.php:98
+msgid "The USM authentication protocol. Choose [None] for noAuthNoPriv."
+msgstr "USM प्रमाणीकरण प्रोटोकॉल। noAuthNoPriv के लिए [कोई नहीं] चुनें।"
+
+#: includes/arrays.php:100 includes/arrays.php:122
+msgid "None"
+msgstr "कोई नहीं"
+
+#: includes/arrays.php:111
+msgid "Authentication Passphrase"
+msgstr "प्रमाणीकरण पासफ़्रेज़"
+
+#: includes/arrays.php:113
+msgid "The USM authentication passphrase. Stored encrypted."
+msgstr "USM प्रमाणीकरण पासफ़्रेज़। एन्क्रिप्टेड रूप में संग्रहीत।"
+
+#: includes/arrays.php:118
+msgid "Privacy Protocol"
+msgstr "गोपनीयता प्रोटोकॉल"
+
+#: includes/arrays.php:120
+msgid "The USM privacy (encryption) protocol. Choose [None] for authNoPriv."
+msgstr "USM गोपनीयता (एन्क्रिप्शन) प्रोटोकॉल। authNoPriv के लिए [कोई नहीं] चुनें।"
+
+#: includes/arrays.php:131
+msgid "Privacy Passphrase"
+msgstr "गोपनीयता पासफ़्रेज़"
+
+#: includes/arrays.php:133
+msgid "The USM privacy passphrase. Stored encrypted."
+msgstr "USM गोपनीयता पासफ़्रेज़। एन्क्रिप्टेड रूप में संग्रहीत।"
+
+#: includes/arrays.php:138
+msgid "Context Name"
+msgstr "संदर्भ नाम"
+
+#: includes/arrays.php:140
+msgid "The optional SNMP v3 context name."
+msgstr "वैकल्पिक SNMP v3 संदर्भ नाम।"
+
+#: includes/arrays.php:145
+msgid "Engine ID"
+msgstr "इंजन आईडी"
+
+#: includes/arrays.php:147
+msgid "The optional SNMP v3 context engine id."
+msgstr "वैकल्पिक SNMP v3 संदर्भ इंजन आईडी।"
+
+#: includes/arrays.php:154
+msgid "Username / Password"
+msgstr "उपयोगकर्ता नाम / पासवर्ड"
+
+#: includes/arrays.php:156
+msgid "Generic"
+msgstr "सामान्य"
+
+#: includes/arrays.php:159 includes/arrays.php:181 includes/arrays.php:289
+#: includes/arrays.php:347 includes/arrays.php:378 includes/arrays.php:400
+#: includes/arrays.php:450 includes/arrays.php:486
+msgid "Username"
+msgstr "उपयोगकर्ता नाम"
+
+#: includes/arrays.php:161
+msgid "A reusable username for HTTP Basic, Telnet, web UI logins or script inputs."
+msgstr "HTTP Basic, Telnet, वेब UI लॉगिन या स्क्रिप्ट इनपुट के लिए पुन: उपयोग योग्य उपयोगकर्ता नाम।"
+
+#: includes/arrays.php:166 includes/arrays.php:191 includes/arrays.php:195
+#: includes/arrays.php:354 includes/arrays.php:385 includes/arrays.php:407
+#: includes/arrays.php:457 includes/arrays.php:493
+msgid "Password"
+msgstr "पासवर्ड"
+
+#: includes/arrays.php:168
+msgid "The password paired with the username. Stored encrypted."
+msgstr "उपयोगकर्ता नाम के साथ युग्मित पासवर्ड। एन्क्रिप्टेड रूप में संग्रहीत।"
+
+#: includes/arrays.php:176
+msgid "SSH"
+msgstr "SSH"
+
+#: includes/arrays.php:178
+msgid "CLI"
+msgstr "CLI"
+
+#: includes/arrays.php:183
+msgid "The SSH login username."
+msgstr "SSH लॉगिन उपयोगकर्ता नाम।"
+
+#: includes/arrays.php:188 includes/providers/AzureKeyVaultProvider.php:67
+#: includes/providers/VaultProvider.php:92
+msgid "Authentication Method"
+msgstr "प्रमाणीकरण विधि"
+
+#: includes/arrays.php:190
+msgid "Authenticate with a password or a private key."
+msgstr "पासवर्ड या निजी कुंजी से प्रमाणित करें।"
+
+#: includes/arrays.php:191 includes/arrays.php:203
+msgid "Private Key"
+msgstr "निजी कुंजी"
+
+#: includes/arrays.php:197
+msgid "The SSH password (when using password authentication). Stored encrypted."
+msgstr "SSH पासवर्ड (पासवर्ड प्रमाणीकरण का उपयोग करते समय)। एन्क्रिप्टेड रूप में संग्रहीत।"
+
+#: includes/arrays.php:205
+msgid "The PEM private key (when using key authentication). Stored encrypted."
+msgstr "PEM निजी कुंजी (कुंजी प्रमाणीकरण का उपयोग करते समय)। एन्क्रिप्टेड रूप में संग्रहीत।"
+
+#: includes/arrays.php:211 includes/arrays.php:522
+msgid "Key Passphrase"
+msgstr "कुंजी पासफ़्रेज़"
+
+#: includes/arrays.php:213 includes/arrays.php:524
+msgid "The optional passphrase protecting the private key. Stored encrypted."
+msgstr "निजी कुंजी की सुरक्षा करने वाला वैकल्पिक पासफ़्रेज़। एन्क्रिप्टेड रूप में संग्रहीत।"
+
+#: includes/arrays.php:219 includes/arrays.php:443
+msgid "Port"
+msgstr "पोर्ट"
+
+#: includes/arrays.php:221
+msgid "The TCP port for the SSH service."
+msgstr "SSH सेवा के लिए TCP पोर्ट।"
+
+#: includes/arrays.php:231
+msgid "Bearer / API Token"
+msgstr "Bearer / API टोकन"
+
+#: includes/arrays.php:233 includes/arrays.php:256 includes/arrays.php:286
+#: includes/arrays.php:308 includes/arrays.php:344
+msgid "API"
+msgstr "API"
+
+#: includes/arrays.php:236
+msgid "Bearer Token"
+msgstr "Bearer टोकन"
+
+#: includes/arrays.php:238
+msgid "The opaque bearer token sent as an Authorization header. Stored encrypted."
+msgstr "Authorization हेडर के रूप में भेजा जाने वाला अपारदर्शी Bearer टोकन। एन्क्रिप्टेड रूप में संग्रहीत।"
+
+#: includes/arrays.php:244
+msgid "Header Name"
+msgstr "हेडर नाम"
+
+#: includes/arrays.php:246
+msgid "The HTTP header the token is sent in."
+msgstr "वह HTTP हेडर जिसमें टोकन भेजा जाता है।"
+
+#: includes/arrays.php:254 includes/arrays.php:259
+#: includes/providers/ConjurProvider.php:74
+msgid "API Key"
+msgstr "API कुंजी"
+
+#: includes/arrays.php:261
+msgid "The API key value. Stored encrypted."
+msgstr "API कुंजी मान। एन्क्रिप्टेड रूप में संग्रहीत।"
+
+#: includes/arrays.php:267
+msgid "Placement"
+msgstr "स्थान निर्धारण"
+
+#: includes/arrays.php:269
+msgid "Whether the key is sent as an HTTP header or a query parameter."
+msgstr "क्या कुंजी को HTTP हेडर या क्वेरी पैरामीटर के रूप में भेजा जाता है।"
+
+#: includes/arrays.php:270
+msgid "Header"
+msgstr "हेडर"
+
+#: includes/arrays.php:270
+msgid "Query Parameter"
+msgstr "क्वेरी पैरामीटर"
+
+#: includes/arrays.php:274
+msgid "Parameter Name"
+msgstr "पैरामीटर नाम"
+
+#: includes/arrays.php:276
+msgid "The header or query parameter name carrying the key (e.g. X-API-Key)."
+msgstr "कुंजी ले जाने वाले हेडर या क्वेरी पैरामीटर का नाम (जैसे X-API-Key)।"
+
+#: includes/arrays.php:284
+msgid "GitHub Personal Access Token"
+msgstr "GitHub व्यक्तिगत एक्सेस टोकन"
+
+#: includes/arrays.php:291
+msgid "The optional GitHub username associated with the token."
+msgstr "टोकन से संबद्ध वैकल्पिक GitHub उपयोगकर्ता नाम।"
+
+#: includes/arrays.php:296
+msgid "Personal Access Token"
+msgstr "सफलता - टोकन"
+
+#: includes/arrays.php:298
+msgid "The GitHub personal access token. Stored encrypted."
+msgstr "GitHub व्यक्तिगत एक्सेस टोकन। एन्क्रिप्टेड रूप में संग्रहीत।"
+
+#: includes/arrays.php:306
+msgid "OAuth 2.0 Client Credentials"
+msgstr "OAuth 2.0 क्लाइंट क्रेडेंशियल्स"
+
+#: includes/arrays.php:311
+msgid "Client ID"
+msgstr "Client ID"
+
+#: includes/arrays.php:313
+msgid "The OAuth 2.0 client identifier."
+msgstr "OAuth 2.0 क्लाइंट पहचानकर्ता।"
+
+#: includes/arrays.php:318 includes/providers/AzureKeyVaultProvider.php:89
+msgid "Client Secret"
+msgstr "क्लाइंट सीक्रेट"
+
+#: includes/arrays.php:320
+msgid "The OAuth 2.0 client secret. Stored encrypted."
+msgstr "OAuth 2.0 क्लाइंट सीक्रेट। एन्क्रिप्टेड रूप में संग्रहीत।"
+
+#: includes/arrays.php:326
+msgid "Token URL"
+msgstr "टोकन URL"
+
+#: includes/arrays.php:328
+msgid "The token endpoint used for the client_credentials grant."
+msgstr "client_credentials ग्रांट के लिए उपयोग किया जाने वाला टोकन एंडपॉइंट।"
+
+#: includes/arrays.php:333
+msgid "Scopes"
+msgstr "स्कोप (Scopes)"
+
+#: includes/arrays.php:335
+msgid "An optional space delimited list of scopes to request."
+msgstr "अनुरोध किए जाने वाले स्कोप की वैकल्पिक स्थान-सीमांकित सूची।"
+
+#: includes/arrays.php:342
+msgid "HTTP Basic Auth"
+msgstr "HTTP Basic प्रमाणीकरण"
+
+#: includes/arrays.php:349
+msgid "The HTTP Basic auth username."
+msgstr "HTTP Basic प्रमाणीकरण उपयोगकर्ता नाम।"
+
+#: includes/arrays.php:356
+msgid "The HTTP Basic auth password. Stored encrypted."
+msgstr "HTTP Basic प्रमाणीकरण पासवर्ड। एन्क्रिप्टेड रूप में संग्रहीत।"
+
+#: includes/arrays.php:366
+msgid "WMI (Windows)"
+msgstr "WMI (Windows)"
+
+#: includes/arrays.php:368 includes/arrays.php:397 includes/arrays.php:426
+#: includes/arrays.php:476 includes/arrays.php:505
+msgid "Device"
+msgstr "डिवाइस"
+
+#: includes/arrays.php:371
+msgid "Domain"
+msgstr "डोमेन"
+
+#: includes/arrays.php:373
+msgid "The optional Windows domain."
+msgstr "वैकल्पिक Windows डोमेन।"
+
+#: includes/arrays.php:380
+msgid "The Windows account username."
+msgstr "Windows खाता उपयोगकर्ता नाम।"
+
+#: includes/arrays.php:387
+msgid "The Windows account password. Stored encrypted."
+msgstr "Windows खाता पासवर्ड। एन्क्रिप्टेड रूप में संग्रहीत।"
+
+#: includes/arrays.php:395
+msgid "IPMI / Redfish (BMC)"
+msgstr "IPMI / Redfish (BMC)"
+
+#: includes/arrays.php:402
+msgid "The out-of-band controller username."
+msgstr "आउट-ऑफ़-बैंड नियंत्रक उपयोगकर्ता नाम।"
+
+#: includes/arrays.php:409
+msgid "The out-of-band controller password. Stored encrypted."
+msgstr "आउट-ऑफ़-बैंड नियंत्रक पासवर्ड। एन्क्रिप्टेड रूप में संग्रहीत।"
+
+#: includes/arrays.php:415
+msgid "Protocol"
+msgstr "प्रोटोकॉल"
+
+#: includes/arrays.php:417
+msgid "The management protocol exposed by the controller."
+msgstr "नियंत्रक द्वारा उपलब्ध कराया गया प्रबंधन प्रोटोकॉल।"
+
+#: includes/arrays.php:424
+msgid "Database"
+msgstr "डाटाबेस"
+
+#: includes/arrays.php:429
+msgid "Driver"
+msgstr "ड्राइवर"
+
+#: includes/arrays.php:431
+msgid "The database engine this credential connects to."
+msgstr "वह डेटाबेस इंजन जिससे यह क्रेडेंशियल जुड़ता है।"
+
+#: includes/arrays.php:436
+msgid "Host"
+msgstr "होस्ट"
+
+#: includes/arrays.php:438
+msgid "The database server hostname or IP address."
+msgstr "डेटाबेस सर्वर होस्टनाम या IP पता।"
+
+#: includes/arrays.php:445
+msgid "The database server TCP port."
+msgstr "डेटाबेस सर्वर TCP पोर्ट।"
+
+#: includes/arrays.php:452
+msgid "The database account username."
+msgstr "डेटाबेस खाता उपयोगकर्ता नाम।"
+
+#: includes/arrays.php:459
+msgid "The database account password. Stored encrypted."
+msgstr "डेटाबेस खाता पासवर्ड। एन्क्रिप्टेड रूप में संग्रहीत।"
+
+#: includes/arrays.php:465
+msgid "Database Name"
+msgstr "डेटाबेस नाम"
+
+#: includes/arrays.php:467
+msgid "The optional default database/schema name."
+msgstr "वैकल्पिक डिफ़ॉल्ट डेटाबेस/स्कीमा नाम।"
+
+#: includes/arrays.php:474
+msgid "VMware / vCenter"
+msgstr "VMware / vCenter"
+
+#: includes/arrays.php:479
+msgid "Server"
+msgstr "सर्वर"
+
+#: includes/arrays.php:481
+msgid "The vCenter or ESXi API endpoint."
+msgstr "vCenter या ESXi API एंडपॉइंट।"
+
+#: includes/arrays.php:488
+msgid "The hypervisor API username."
+msgstr "हाइपरवाइज़र API उपयोगकर्ता नाम।"
+
+#: includes/arrays.php:495
+msgid "The hypervisor API password. Stored encrypted."
+msgstr "हाइपरवाइज़र API पासवर्ड। एन्क्रिप्टेड रूप में संग्रहीत।"
+
+#: includes/arrays.php:503
+msgid "TLS Client Certificate"
+msgstr "TLS क्लाइंट प्रमाणपत्र"
+
+#: includes/arrays.php:508
+msgid "Certificate (PEM)"
+msgstr "प्रमाणपत्र (PEM)"
+
+#: includes/arrays.php:510
+msgid "The PEM client certificate. Public material, stored as entered."
+msgstr "PEM क्लाइंट प्रमाणपत्र। सार्वजनिक सामग्री, दर्ज किए अनुसार संग्रहीत।"
+
+#: includes/arrays.php:514
+msgid "Private Key (PEM)"
+msgstr "निजी कुंजी (PEM)"
+
+#: includes/arrays.php:516
+msgid "The PEM private key for the client certificate. Stored encrypted."
+msgstr "क्लाइंट प्रमाणपत्र के लिए PEM निजी कुंजी। एन्क्रिप्टेड रूप में संग्रहीत।"
+
+#: includes/arrays.php:530
+msgid "CA Bundle (PEM)"
+msgstr "CA बंडल (PEM)"
+
+#: includes/arrays.php:532
+msgid "An optional PEM CA bundle used to verify the peer."
+msgstr "पीयर को सत्यापित करने के लिए उपयोग किया जाने वाला वैकल्पिक PEM CA बंडल।"
+
+#: includes/functions.php:199
+msgid "A password is required for SSH password authentication."
+msgstr "SSH पासवर्ड प्रमाणीकरण के लिए पासवर्ड आवश्यक है।"
+
+#: includes/functions.php:203
+msgid "A private key is required for SSH key authentication."
+msgstr "SSH कुंजी प्रमाणीकरण के लिए निजी कुंजी आवश्यक है।"
+
+#: includes/functions.php:210
+msgid "SNMP v3 privacy requires an authentication protocol; noAuthPriv is not a valid security level."
+msgstr "SNMP v3 गोपनीयता के लिए प्रमाणीकरण प्रोटोकॉल आवश्यक है; noAuthPriv एक वैध सुरक्षा स्तर नहीं है।"
+
+#: includes/functions.php:214
+msgid "An authentication passphrase is required when an SNMP v3 authentication protocol is selected."
+msgstr "SNMP v3 प्रमाणीकरण प्रोटोकॉल चुने जाने पर प्रमाणीकरण पासफ़्रेज़ आवश्यक है।"
+
+#: includes/functions.php:218
+msgid "A privacy passphrase is required when an SNMP v3 privacy protocol is selected."
+msgstr "SNMP v3 गोपनीयता प्रोटोकॉल चुने जाने पर गोपनीयता पासफ़्रेज़ आवश्यक है।"
+
+#: includes/providers.php:192
+msgid "Local Database (encrypted)"
+msgstr "स्थानीय डेटाबेस (एन्क्रिप्टेड)"
+
+#: includes/providers.php:203
+msgid "(disabled)"
+msgstr "(अक्षम)"
+
+#: includes/providers.php:290
+msgid "The provider could not be found or its type is unknown."
+msgstr "प्रदाता नहीं मिला या इसका प्रकार अज्ञात है।"
+
+#: includes/providers/AbstractProvider.php:38
+msgid "Secret Reference"
+msgstr "सीक्रेट संदर्भ"
+
+#: includes/providers/AbstractProvider.php:124
+#, php-format
+msgid "The stored secret is not a JSON object, so the '%s' key cannot be selected."
+msgstr "संग्रहीत सीक्रेट एक JSON ऑब्जेक्ट नहीं है, इसलिए '%s' कुंजी नहीं चुनी जा सकती।"
+
+#: includes/providers/AbstractProvider.php:132
+#, php-format
+msgid "The stored secret does not contain the '%s' key."
+msgstr "संग्रहीत सीक्रेट में '%s' कुंजी नहीं है।"
+
+#: includes/providers/AbstractProvider.php:162
+msgid "The PHP cURL extension is required to reach external secret providers."
+msgstr "बाहरी सीक्रेट प्रदाताओं तक पहुंचने के लिए PHP cURL एक्सटेंशन आवश्यक है।"
+
+#: includes/providers/AbstractProvider.php:208
+msgid "The request to the secret provider failed."
+msgstr "सीक्रेट प्रदाता को भेजा गया अनुरोध विफल रहा।"
+
+#: includes/providers/AwsSecretsManagerProvider.php:39
+msgid "AWS Secrets Manager"
+msgstr "AWS Secrets Manager"
+
+#: includes/providers/AwsSecretsManagerProvider.php:43
+msgid "Resolve secrets from AWS Secrets Manager using IAM access keys or an EC2/ECS instance role."
+msgstr "IAM एक्सेस कुंजियों या EC2/ECS इंस्टेंस भूमिका का उपयोग करके AWS Secrets Manager से सीक्रेट प्राप्त करें।"
+
+#: includes/providers/AwsSecretsManagerProvider.php:47
+msgid "Secret Id or Name"
+msgstr "सीक्रेट आईडी या नाम"
+
+#: includes/providers/AwsSecretsManagerProvider.php:51
+msgid "An AWS Secrets Manager secret id or name, optionally with '#key' to select a field from a JSON secret, for example 'prod/snmp#community'."
+msgstr "AWS Secrets Manager सीक्रेट आईडी या नाम, JSON सीक्रेट से फ़ील्ड चुनने के लिए वैकल्पिक '#key' के साथ, उदाहरण के लिए 'prod/snmp#community'।"
+
+#: includes/providers/AwsSecretsManagerProvider.php:57
+msgid "Region"
+msgstr "क्षेत्र"
+
+#: includes/providers/AwsSecretsManagerProvider.php:59
+msgid "The AWS region hosting the secrets, for example us-east-1."
+msgstr "सीक्रेट्स को होस्ट करने वाला AWS क्षेत्र, उदाहरण के लिए us-east-1।"
+
+#: includes/providers/AwsSecretsManagerProvider.php:64
+msgid "Use Instance Role"
+msgstr "इंस्टेंस भूमिका का उपयोग करें"
+
+#: includes/providers/AwsSecretsManagerProvider.php:66
+msgid "Obtain temporary credentials from the EC2/ECS instance metadata service instead of static keys."
+msgstr "स्टैटिक कुंजियों के बजाय EC2/ECS इंस्टेंस मेटाडेटा सेवा से अस्थायी क्रेडेंशियल प्राप्त करें।"
+
+#: includes/providers/AwsSecretsManagerProvider.php:70
+msgid "Access Key Id"
+msgstr "एक्सेस कुंजी आईडी"
+
+#: includes/providers/AwsSecretsManagerProvider.php:72
+msgid "The IAM access key id used when not using an instance role."
+msgstr "इंस्टेंस भूमिका का उपयोग न करने पर उपयोग की जाने वाली IAM एक्सेस कुंजी आईडी।"
+
+#: includes/providers/AwsSecretsManagerProvider.php:76
+msgid "Secret Access Key"
+msgstr "सीक्रेट एक्सेस कुंजी"
+
+#: includes/providers/AwsSecretsManagerProvider.php:78
+msgid "The IAM secret access key. Stored encrypted."
+msgstr "IAM सीक्रेट एक्सेस कुंजी। एन्क्रिप्टेड रूप में संग्रहीत।"
+
+#: includes/providers/AwsSecretsManagerProvider.php:83
+msgid "Session Token"
+msgstr "सत्र टोकन"
+
+#: includes/providers/AwsSecretsManagerProvider.php:85
+msgid "An optional STS session token for temporary static credentials. Stored encrypted."
+msgstr "अस्थायी स्टैटिक क्रेडेंशियल्स के लिए वैकल्पिक STS सत्र टोकन। एन्क्रिप्टेड रूप में संग्रहीत।"
+
+#: includes/providers/AwsSecretsManagerProvider.php:90
+msgid "Endpoint Override"
+msgstr "एंडपॉइंट ओवरराइड"
+
+#: includes/providers/AwsSecretsManagerProvider.php:92
+msgid "An optional endpoint override (for VPC endpoints or testing). Defaults to the public AWS endpoint for the region."
+msgstr "वैकल्पिक एंडपॉइंट ओवरराइड (VPC एंडपॉइंट या परीक्षण के लिए)। डिफ़ॉल्ट रूप से क्षेत्र के सार्वजनिक AWS एंडपॉइंट का उपयोग करता है।"
+
+#: includes/providers/AwsSecretsManagerProvider.php:96
+#: includes/providers/AzureKeyVaultProvider.php:103
+#: includes/providers/ConjurProvider.php:93
+#: includes/providers/GcpSecretManagerProvider.php:77
+#: includes/providers/VaultProvider.php:131
+msgid "Timeout (seconds)"
+msgstr "समय-सीमा (सेकंड)"
+
+#: includes/providers/AwsSecretsManagerProvider.php:98
+msgid "The network timeout for AWS requests."
+msgstr "AWS अनुरोधों के लिए नेटवर्क समय-सीमा।"
+
+#: includes/providers/AwsSecretsManagerProvider.php:107
+msgid "An AWS region is required."
+msgstr "AWS क्षेत्र आवश्यक है।"
+
+#: includes/providers/AwsSecretsManagerProvider.php:125
+msgid "Successfully authenticated to AWS Secrets Manager."
+msgstr "AWS Secrets Manager के लिए सफलतापूर्वक प्रमाणित किया गया।"
+
+#: includes/providers/AwsSecretsManagerProvider.php:135
+msgid "An AWS secret id is required."
+msgstr "AWS सीक्रेट आईडी आवश्यक है।"
+
+#: includes/providers/AwsSecretsManagerProvider.php:157
+msgid "AWS returned an unexpected response reading the secret."
+msgstr "AWS ने सीक्रेट पढ़ते समय अप्रत्याशित प्रतिक्रिया लौटाई।"
+
+#: includes/providers/AwsSecretsManagerProvider.php:165
+msgid "The AWS secret has no retrievable value."
+msgstr "AWS सीक्रेट में कोई पुनर्प्राप्त करने योग्य मान नहीं है।"
+
+#: includes/providers/AwsSecretsManagerProvider.php:189
+msgid "An access key id and secret access key are required unless an instance role is used."
+msgstr "जब तक इंस्टेंस भूमिका का उपयोग न किया जाए, एक्सेस कुंजी आईडी और सीक्रेट एक्सेस कुंजी आवश्यक हैं।"
+
+#: includes/providers/AwsSecretsManagerProvider.php:220
+msgid "The ECS relative credentials URI is not valid."
+msgstr "ECS सापेक्ष क्रेडेंशियल URI मान्य नहीं है।"
+
+#: includes/providers/AwsSecretsManagerProvider.php:230
+msgid "The configured ECS credentials endpoint is not an allowed address."
+msgstr "कॉन्फ़िगर किया गया ECS क्रेडेंशियल एंडपॉइंट एक अनुमत पता नहीं है।"
+
+#: includes/providers/AwsSecretsManagerProvider.php:259
+msgid "Unable to read ECS task role credentials."
+msgstr "ECS टास्क भूमिका क्रेडेंशियल पढ़ने में असमर्थ।"
+
+#: includes/providers/AwsSecretsManagerProvider.php:265
+msgid "The ECS credentials endpoint returned no usable credentials."
+msgstr "ECS क्रेडेंशियल एंडपॉइंट ने कोई उपयोगी क्रेडेंशियल नहीं लौटाया।"
+
+#: includes/providers/AwsSecretsManagerProvider.php:352
+msgid "Unable to obtain an instance metadata token; is Cacti running on an AWS instance with a role?"
+msgstr "इंस्टेंस मेटाडेटा टोकन प्राप्त करने में असमर्थ; क्या Cacti किसी भूमिका वाले AWS इंस्टेंस पर चल रहा है?"
+
+#: includes/providers/AwsSecretsManagerProvider.php:360
+msgid "No IAM role is attached to this instance."
+msgstr "इस इंस्टेंस से कोई IAM भूमिका संबद्ध नहीं है।"
+
+#: includes/providers/AwsSecretsManagerProvider.php:368
+msgid "Unable to read instance role credentials."
+msgstr "इंस्टेंस भूमिका क्रेडेंशियल पढ़ने में असमर्थ।"
+
+#: includes/providers/AwsSecretsManagerProvider.php:374
+msgid "The instance metadata service returned no usable credentials."
+msgstr "इंस्टेंस मेटाडेटा सेवा ने कोई उपयोगी क्रेडेंशियल नहीं लौटाया।"
+
+#: includes/providers/AwsSecretsManagerProvider.php:403
+msgid "Unable to encode the AWS request."
+msgstr "AWS अनुरोध को एन्कोड करने में असमर्थ।"
+
+#: includes/providers/AwsSecretsManagerProvider.php:498
+#, php-format
+msgid "AWS Secrets Manager error: %s (HTTP %d)."
+msgstr "AWS Secrets Manager त्रुटि: %s (HTTP %d)।"
+
+#: includes/providers/AwsSecretsManagerProvider.php:501
+#, php-format
+msgid "AWS Secrets Manager returned HTTP %d."
+msgstr "AWS Secrets Manager ने HTTP %d लौटाया।"
+
+#: includes/providers/AzureKeyVaultProvider.php:42
+msgid "Azure Key Vault"
+msgstr "Azure Key Vault"
+
+#: includes/providers/AzureKeyVaultProvider.php:46
+msgid "Resolve secrets from Azure Key Vault using an Entra ID service principal or a Managed Identity."
+msgstr "Entra ID सेवा प्रिंसिपल या प्रबंधित पहचान का उपयोग करके Azure Key Vault से सीक्रेट प्राप्त करें।"
+
+#: includes/providers/AzureKeyVaultProvider.php:50
+#: includes/providers/GcpSecretManagerProvider.php:47
+msgid "Secret Name"
+msgstr "सीक्रेट नाम"
+
+#: includes/providers/AzureKeyVaultProvider.php:54
+msgid "A Key Vault secret name, optionally a specific version as 'name/version', with an optional '#key' to select a field from a JSON secret, for example 'snmp-community'."
+msgstr "एक Key Vault सीक्रेट नाम, वैकल्पिक रूप से 'name/version' के रूप में एक विशिष्ट संस्करण और JSON सीक्रेट से फ़ील्ड चुनने के लिए वैकल्पिक '#key' के साथ, उदाहरण के लिए 'snmp-community'।"
+
+#: includes/providers/AzureKeyVaultProvider.php:60
+msgid "Vault URL"
+msgstr "Vault URL"
+
+#: includes/providers/AzureKeyVaultProvider.php:62
+msgid "The Key Vault base URL, for example https://my-vault.vault.azure.net."
+msgstr "Key Vault का आधार URL, उदाहरण के लिए https://my-vault.vault.azure.net।"
+
+#: includes/providers/AzureKeyVaultProvider.php:69
+msgid "How this plugin obtains an access token."
+msgstr "यह प्लगइन एक्सेस टोकन कैसे प्राप्त करता है।"
+
+#: includes/providers/AzureKeyVaultProvider.php:71
+msgid "Service Principal (client secret)"
+msgstr "सेवा प्रिंसिपल (क्लाइंट सीक्रेट)"
+
+#: includes/providers/AzureKeyVaultProvider.php:72
+msgid "Managed Identity"
+msgstr "प्रबंधित पहचान (Managed Identity)"
+
+#: includes/providers/AzureKeyVaultProvider.php:77
+msgid "Tenant Id"
+msgstr "टेनेंट आईडी"
+
+#: includes/providers/AzureKeyVaultProvider.php:79
+msgid "The Entra ID tenant (directory) id, used for service principal authentication."
+msgstr "Entra ID टेनेंट (निर्देशिका) आईडी, जिसका उपयोग सेवा प्रिंसिपल प्रमाणीकरण के लिए किया जाता है।"
+
+#: includes/providers/AzureKeyVaultProvider.php:83
+msgid "Client Id"
+msgstr "क्लाइंट आईडी"
+
+#: includes/providers/AzureKeyVaultProvider.php:85
+msgid "The application (client) id. For a user-assigned Managed Identity, the identity client id."
+msgstr "एप्लिकेशन (क्लाइंट) आईडी। उपयोगकर्ता द्वारा निर्दिष्ट प्रबंधित पहचान के लिए, पहचान क्लाइंट आईडी।"
+
+#: includes/providers/AzureKeyVaultProvider.php:91
+msgid "The service principal client secret. Stored encrypted."
+msgstr "सेवा प्रिंसिपल क्लाइंट सीक्रेट। एन्क्रिप्टेड रूप में संग्रहीत।"
+
+#: includes/providers/AzureKeyVaultProvider.php:96
+msgid "API Version"
+msgstr "API संस्करण"
+
+#: includes/providers/AzureKeyVaultProvider.php:98
+msgid "The Key Vault data-plane API version."
+msgstr "Key Vault डेटा-प्लेन API संस्करण।"
+
+#: includes/providers/AzureKeyVaultProvider.php:105
+msgid "The network timeout for Azure requests."
+msgstr "Azure अनुरोधों के लिए नेटवर्क समय-सीमा।"
+
+#: includes/providers/AzureKeyVaultProvider.php:114
+msgid "A Key Vault URL is required."
+msgstr "Key Vault URL आवश्यक है।"
+
+#: includes/providers/AzureKeyVaultProvider.php:133
+msgid "Successfully authenticated to Azure Key Vault."
+msgstr "Azure Key Vault के लिए सफलतापूर्वक प्रमाणित किया गया।"
+
+#: includes/providers/AzureKeyVaultProvider.php:143
+msgid "A Key Vault secret name is required."
+msgstr "Key Vault सीक्रेट नाम आवश्यक है।"
+
+#: includes/providers/AzureKeyVaultProvider.php:167
+#, php-format
+msgid "The Key Vault secret '%s' was not found."
+msgstr "Key Vault सीक्रेट '%s' नहीं मिला।"
+
+#: includes/providers/AzureKeyVaultProvider.php:177
+msgid "Azure returned an unexpected response reading the secret."
+msgstr "Azure ने सीक्रेट पढ़ते समय अप्रत्याशित प्रतिक्रिया लौटाई।"
+
+#: includes/providers/AzureKeyVaultProvider.php:200
+msgid "Service principal authentication requires a tenant id, client id and client secret."
+msgstr "सेवा प्रिंसिपल प्रमाणीकरण के लिए टेनेंट आईडी, क्लाइंट आईडी और क्लाइंट सीक्रेट आवश्यक हैं।"
+
+#: includes/providers/AzureKeyVaultProvider.php:218
+#, php-format
+msgid "Azure token request failed with HTTP %d."
+msgstr "Azure टोकन अनुरोध HTTP %d के साथ विफल रहा।"
+
+#: includes/providers/AzureKeyVaultProvider.php:224
+msgid "Azure token request returned no access token."
+msgstr "Azure टोकन अनुरोध ने कोई एक्सेस टोकन नहीं लौटाया।"
+
+#: includes/providers/AzureKeyVaultProvider.php:249
+msgid "Unable to obtain a Managed Identity token; is Cacti running on an Azure resource with an identity assigned?"
+msgstr "प्रबंधित पहचान टोकन प्राप्त करने में असमर्थ; क्या Cacti किसी ऐसे Azure संसाधन पर चल रहा है जिसे पहचान सौंपी गई है?"
+
+#: includes/providers/AzureKeyVaultProvider.php:255
+msgid "The Managed Identity endpoint returned no access token."
+msgstr "प्रबंधित पहचान एंडपॉइंट ने कोई एक्सेस टोकन नहीं लौटाया।"
+
+#: includes/providers/AzureKeyVaultProvider.php:273
+#, php-format
+msgid "Azure Key Vault error: %s (HTTP %d)."
+msgstr "Azure Key Vault त्रुटि: %s (HTTP %d)।"
+
+#: includes/providers/AzureKeyVaultProvider.php:276
+#, php-format
+msgid "Azure Key Vault returned HTTP %d."
+msgstr "Azure Key Vault ने HTTP %d लौटाया।"
+
+#: includes/providers/ConjurProvider.php:35
+msgid "CyberArk Conjur"
+msgstr "CyberArk Conjur"
+
+#: includes/providers/ConjurProvider.php:39
+msgid "Resolve secrets from CyberArk Conjur using a host or user identity and its API key."
+msgstr "होस्ट या उपयोगकर्ता पहचान और उसकी API कुंजी का उपयोग करके CyberArk Conjur से सीक्रेट प्राप्त करें।"
+
+#: includes/providers/ConjurProvider.php:43
+msgid "Variable Id"
+msgstr "वेरिएबल आईडी"
+
+#: includes/providers/ConjurProvider.php:47
+msgid "A Conjur variable id, with an optional '#key' to select a field from a JSON secret, for example 'prod/network/snmp'."
+msgstr "एक Conjur वेरिएबल आईडी, JSON सीक्रेट से फ़ील्ड चुनने के लिए वैकल्पिक '#key' के साथ, उदाहरण के लिए 'prod/network/snmp'।"
+
+#: includes/providers/ConjurProvider.php:53
+msgid "Appliance URL"
+msgstr "उपकरण URL"
+
+#: includes/providers/ConjurProvider.php:55
+msgid "The base URL of the Conjur appliance, for example https://conjur.example.com."
+msgstr "Conjur उपकरण का आधार URL, उदाहरण के लिए https://conjur.example.com।"
+
+#: includes/providers/ConjurProvider.php:60
+msgid "Account"
+msgstr "खाता"
+
+#: includes/providers/ConjurProvider.php:62
+msgid "The Conjur account (organization) name."
+msgstr "Conjur खाता (संगठन) नाम।"
+
+#: includes/providers/ConjurProvider.php:67
+msgid "Login (Host or User)"
+msgstr "लॉगिन (होस्ट या उपयोगकर्ता)"
+
+#: includes/providers/ConjurProvider.php:69
+msgid "The identity used to authenticate, for example host/cacti-poller or a username."
+msgstr "प्रमाणीकरण के लिए उपयोग की जाने वाली पहचान, उदाहरण के लिए host/cacti-poller या कोई उपयोगकर्ता नाम।"
+
+#: includes/providers/ConjurProvider.php:76
+msgid "The API key for the identity. Stored encrypted."
+msgstr "पहचान के लिए API कुंजी। एन्क्रिप्टेड रूप में संग्रहीत।"
+
+#: includes/providers/ConjurProvider.php:81
+#: includes/providers/VaultProvider.php:119
+msgid "Verify TLS Certificate"
+msgstr "TLS प्रमाणपत्र सत्यापित करें"
+
+#: includes/providers/ConjurProvider.php:83
+msgid "Verify the Conjur appliance TLS certificate. Disable only for testing."
+msgstr "Conjur उपकरण TLS प्रमाणपत्र सत्यापित करें। केवल परीक्षण के लिए अक्षम करें।"
+
+#: includes/providers/ConjurProvider.php:87
+#: includes/providers/VaultProvider.php:125
+msgid "CA Bundle Path"
+msgstr "CA बंडल पथ"
+
+#: includes/providers/ConjurProvider.php:89
+msgid "An optional path on the Cacti server to a PEM CA bundle used to verify Conjur."
+msgstr "Conjur को सत्यापित करने के लिए उपयोग किए जाने वाले PEM CA बंडल का Cacti सर्वर पर वैकल्पिक पथ।"
+
+#: includes/providers/ConjurProvider.php:95
+msgid "The network timeout for Conjur requests."
+msgstr "Conjur अनुरोधों के लिए नेटवर्क समय-सीमा।"
+
+#: includes/providers/ConjurProvider.php:105
+msgid "The Conjur appliance URL, account, login and API key are all required."
+msgstr "Conjur उपकरण URL, खाता, लॉगिन और API कुंजी सभी आवश्यक हैं।"
+
+#: includes/providers/ConjurProvider.php:115
+msgid "Successfully authenticated to CyberArk Conjur."
+msgstr "CyberArk Conjur के लिए सफलतापूर्वक प्रमाणित किया गया।"
+
+#: includes/providers/ConjurProvider.php:122
+msgid "A Conjur variable id is required."
+msgstr "Conjur वेरिएबल आईडी आवश्यक है।"
+
+#: includes/providers/ConjurProvider.php:142
+#, php-format
+msgid "The Conjur variable '%s' was not found or has no value."
+msgstr "Conjur वेरिएबल '%s' नहीं मिला या उसका कोई मान नहीं है।"
+
+#: includes/providers/ConjurProvider.php:146
+#, php-format
+msgid "Conjur returned HTTP %d reading the variable."
+msgstr "Conjur ने वेरिएबल पढ़ते समय HTTP %d लौटाया।"
+
+#: includes/providers/ConjurProvider.php:166
+msgid "Conjur authentication requires an account, login and API key."
+msgstr "Conjur प्रमाणीकरण के लिए खाता, लॉगिन और API कुंजी आवश्यक हैं।"
+
+#: includes/providers/ConjurProvider.php:178
+#, php-format
+msgid "Conjur authentication failed with HTTP %d."
+msgstr "Conjur प्रमाणीकरण HTTP %d के साथ विफल रहा।"
+
+#: includes/providers/ConjurProvider.php:184
+msgid "Conjur authentication returned an empty token."
+msgstr "Conjur प्रमाणीकरण ने रिक्त टोकन लौटाया।"
+
+#: includes/providers/GcpSecretManagerProvider.php:39
+msgid "Google Cloud Secret Manager"
+msgstr "Google Cloud Secret Manager"
+
+#: includes/providers/GcpSecretManagerProvider.php:43
+msgid "Resolve secrets from Google Cloud Secret Manager using a service account key or the instance service account."
+msgstr "सेवा खाता कुंजी या इंस्टेंस सेवा खाते का उपयोग करके Google Cloud Secret Manager से सीक्रेट प्राप्त करें।"
+
+#: includes/providers/GcpSecretManagerProvider.php:51
+msgid "A Secret Manager secret id, optionally a version as 'name/version' (default 'latest'), with an optional '#key' to select a field from a JSON secret, for example 'snmp-community'."
+msgstr "एक Secret Manager सीक्रेट आईडी, वैकल्पिक रूप से 'name/version' के रूप में संस्करण (डिफ़ॉल्ट 'latest') और JSON सीक्रेट से फ़ील्ड चुनने के लिए वैकल्पिक '#key' के साथ, उदाहरण के लिए 'snmp-community'।"
+
+#: includes/providers/GcpSecretManagerProvider.php:57
+msgid "Project Id"
+msgstr "प्रोजेक्ट आईडी"
+
+#: includes/providers/GcpSecretManagerProvider.php:59
+msgid "The Google Cloud project id that owns the secrets."
+msgstr "वह Google Cloud प्रोजेक्ट आईडी जिसके पास सीक्रेट्स का स्वामित्व है।"
+
+#: includes/providers/GcpSecretManagerProvider.php:64
+msgid "Use Instance Service Account"
+msgstr "इंस्टेंस सेवा खाते का उपयोग करें"
+
+#: includes/providers/GcpSecretManagerProvider.php:66
+msgid "Obtain an access token from the GCE metadata server instead of a service account key."
+msgstr "सेवा खाता कुंजी के बजाय GCE मेटाडेटा सर्वर से एक्सेस टोकन प्राप्त करें।"
+
+#: includes/providers/GcpSecretManagerProvider.php:70
+msgid "Service Account Key (JSON)"
+msgstr "सेवा खाता कुंजी (JSON)"
+
+#: includes/providers/GcpSecretManagerProvider.php:72
+msgid "The full service account key JSON. Stored encrypted. Not required when using the instance service account."
+msgstr "पूर्ण सेवा खाता कुंजी JSON। एन्क्रिप्टेड रूप में संग्रहीत। इंस्टेंस सेवा खाते का उपयोग करते समय आवश्यक नहीं है।"
+
+#: includes/providers/GcpSecretManagerProvider.php:79
+msgid "The network timeout for Google Cloud requests."
+msgstr "Google Cloud अनुरोधों के लिए नेटवर्क समय-सीमा।"
+
+#: includes/providers/GcpSecretManagerProvider.php:88
+msgid "A Google Cloud project id is required."
+msgstr "Google Cloud प्रोजेक्ट आईडी आवश्यक है।"
+
+#: includes/providers/GcpSecretManagerProvider.php:107
+msgid "Successfully authenticated to Google Cloud Secret Manager."
+msgstr "Google Cloud Secret Manager के लिए सफलतापूर्वक प्रमाणित किया गया।"
+
+#: includes/providers/GcpSecretManagerProvider.php:117
+msgid "A Secret Manager secret name is required."
+msgstr "Secret Manager सीक्रेट नाम आवश्यक है।"
+
+#: includes/providers/GcpSecretManagerProvider.php:140
+#, php-format
+msgid "The Secret Manager secret '%s' was not found."
+msgstr "Secret Manager सीक्रेट '%s' नहीं मिला।"
+
+#: includes/providers/GcpSecretManagerProvider.php:150
+msgid "Google Cloud returned an unexpected response reading the secret."
+msgstr "Google Cloud ने सीक्रेट पढ़ते समय अप्रत्याशित प्रतिक्रिया लौटाई।"
+
+#: includes/providers/GcpSecretManagerProvider.php:156
+msgid "The Secret Manager payload could not be decoded."
+msgstr "Secret Manager पेलोड को डिकोड नहीं किया जा सका।"
+
+#: includes/providers/GcpSecretManagerProvider.php:178
+msgid "A service account key JSON is required unless the instance service account is used."
+msgstr "जब तक इंस्टेंस सेवा खाते का उपयोग न किया जाए, सेवा खाता कुंजी JSON आवश्यक है।"
+
+#: includes/providers/GcpSecretManagerProvider.php:184
+msgid "The service account key JSON is invalid or incomplete."
+msgstr "सेवा खाता कुंजी JSON अमान्य या अपूर्ण है।"
+
+#: includes/providers/GcpSecretManagerProvider.php:190
+msgid "The service account token URI must be a supported Google OAuth endpoint."
+msgstr "सेवा खाता टोकन URI एक समर्थित Google OAuth एंडपॉइंट होना चाहिए।"
+
+#: includes/providers/GcpSecretManagerProvider.php:221
+#, php-format
+msgid "Google Cloud token request failed with HTTP %d."
+msgstr "Google Cloud टोकन अनुरोध HTTP %d के साथ विफल रहा।"
+
+#: includes/providers/GcpSecretManagerProvider.php:227
+msgid "Google Cloud token request returned no access token."
+msgstr "Google Cloud टोकन अनुरोध ने कोई एक्सेस टोकन नहीं लौटाया।"
+
+#: includes/providers/GcpSecretManagerProvider.php:271
+msgid "Unable to obtain a token from the GCE metadata server; is Cacti running on a Google Cloud instance?"
+msgstr "GCE मेटाडेटा सर्वर से टोकन प्राप्त करने में असमर्थ; क्या Cacti किसी Google Cloud इंस्टेंस पर चल रहा है?"
+
+#: includes/providers/GcpSecretManagerProvider.php:277
+msgid "The GCE metadata server returned no access token."
+msgstr "GCE मेटाडेटा सर्वर ने कोई एक्सेस टोकन नहीं लौटाया।"
+
+#: includes/providers/GcpSecretManagerProvider.php:300
+msgid "The service account private key could not be read."
+msgstr "सेवा खाता निजी कुंजी पढ़ी नहीं जा सकी।"
+
+#: includes/providers/GcpSecretManagerProvider.php:307
+msgid "The service account JWT could not be signed."
+msgstr "सेवा खाता JWT पर हस्ताक्षर नहीं किए जा सके।"
+
+#: includes/providers/GcpSecretManagerProvider.php:336
+#, php-format
+msgid "Google Cloud Secret Manager error: %s (HTTP %d)."
+msgstr "Google Cloud Secret Manager त्रुटि: %s (HTTP %d)।"
+
+#: includes/providers/GcpSecretManagerProvider.php:339
+#, php-format
+msgid "Google Cloud Secret Manager returned HTTP %d."
+msgstr "Google Cloud Secret Manager ने HTTP %d लौटाया।"
+
+#: includes/providers/OpenBaoProvider.php:36
+msgid "OpenBao"
+msgstr "OpenBao"
+
+#: includes/providers/OpenBaoProvider.php:44
+msgid "Resolve secrets from an OpenBao KV v1 or v2 secrets engine using a token or AppRole."
+msgstr "टोकन या AppRole का उपयोग करके OpenBao KV v1 या v2 सीक्रेट इंजन से सीक्रेट प्राप्त करें।"
+
+#: includes/providers/OpenBaoProvider.php:48
+msgid "An OpenBao secret path and the key within it, separated by '#', for example 'network/snmp#community'. The path is relative to the configured KV mount; append '#key' to select a field from the secret."
+msgstr "OpenBao सीक्रेट पथ और उसके भीतर की कुंजी, '#' से अलग की गई, उदाहरण के लिए 'network/snmp#community'। पथ कॉन्फ़िगर किए गए KV माउंट के सापेक्ष है; सीक्रेट से फ़ील्ड चुनने के लिए '#key' जोड़ें।"
+
+#: includes/providers/OpenBaoProvider.php:55
+msgid "OpenBao Address"
+msgstr "OpenBao पता"
+
+#: includes/providers/OpenBaoProvider.php:55
+msgid "The base URL of the OpenBao server, for example https://openbao.example.com:8200."
+msgstr "OpenBao सर्वर का आधार URL, उदाहरण के लिए https://openbao.example.com:8200।"
+
+#: includes/providers/OpenBaoProvider.php:56
+msgid "The optional OpenBao namespace (sent as the X-Vault-Namespace header)."
+msgstr "वैकल्पिक OpenBao नेमस्पेस (X-Vault-Namespace हेडर के रूप में भेजा गया)।"
+
+#: includes/providers/OpenBaoProvider.php:57
+msgid "How this plugin authenticates to OpenBao."
+msgstr "यह प्लगइन OpenBao के लिए कैसे प्रमाणित होता है।"
+
+#: includes/providers/OpenBaoProvider.php:58
+msgid "The OpenBao token used for Token authentication. Stored encrypted."
+msgstr "टोकन प्रमाणीकरण के लिए उपयोग किया जाने वाला OpenBao टोकन। एन्क्रिप्टेड रूप में संग्रहीत।"
+
+#: includes/providers/OpenBaoProvider.php:59
+msgid "Verify the OpenBao server TLS certificate. Disable only for testing."
+msgstr "OpenBao सर्वर TLS प्रमाणपत्र सत्यापित करें। केवल परीक्षण के लिए अक्षम करें।"
+
+#: includes/providers/OpenBaoProvider.php:60
+msgid "An optional path on the Cacti server to a PEM CA bundle used to verify OpenBao."
+msgstr "OpenBao को सत्यापित करने के लिए उपयोग किए जाने वाले PEM CA बंडल का Cacti सर्वर पर वैकल्पिक पथ।"
+
+#: includes/providers/OpenBaoProvider.php:61
+msgid "The network timeout for OpenBao requests."
+msgstr "OpenBao अनुरोधों के लिए नेटवर्क समय-सीमा।"
+
+#: includes/providers/VaultProvider.php:35
+msgid "HashiCorp Vault"
+msgstr "HashiCorp Vault"
+
+#: includes/providers/VaultProvider.php:51
+msgid "Resolve secrets from a HashiCorp Vault KV v1 or v2 secrets engine using a token or AppRole."
+msgstr "टोकन या AppRole का उपयोग करके HashiCorp Vault KV v1 या v2 सीक्रेट इंजन से सीक्रेट प्राप्त करें।"
+
+#: includes/providers/VaultProvider.php:55
+msgid "Secret Path and Key"
+msgstr "सीक्रेट पथ और कुंजी"
+
+#: includes/providers/VaultProvider.php:59
+msgid "A Vault secret path and the key within it, separated by '#', for example 'network/snmp#community'. The path is relative to the configured KV mount; append '#key' to select a field from the secret."
+msgstr "Vault सीक्रेट पथ और उसके भीतर की कुंजी, '#' से अलग की गई, उदाहरण के लिए 'network/snmp#community'। पथ कॉन्फ़िगर किए गए KV माउंट के सापेक्ष है; सीक्रेट से फ़ील्ड चुनने के लिए '#key' जोड़ें।"
+
+#: includes/providers/VaultProvider.php:65
+msgid "Vault Address"
+msgstr "Vault पता"
+
+#: includes/providers/VaultProvider.php:67
+msgid "The base URL of the Vault server, for example https://vault.example.com:8200."
+msgstr "Vault सर्वर का आधार URL, उदाहरण के लिए https://vault.example.com:8200।"
+
+#: includes/providers/VaultProvider.php:72
+msgid "Namespace"
+msgstr "नेमस्पेस"
+
+#: includes/providers/VaultProvider.php:74
+msgid "The optional Vault Enterprise namespace (sent as the X-Vault-Namespace header)."
+msgstr "वैकल्पिक Vault Enterprise नेमस्पेस (X-Vault-Namespace हेडर के रूप में भेजा गया)।"
+
+#: includes/providers/VaultProvider.php:78
+msgid "KV Engine Version"
+msgstr "KV इंजन संस्करण"
+
+#: includes/providers/VaultProvider.php:80
+msgid "The version of the KV secrets engine the mount uses."
+msgstr "माउंट द्वारा उपयोग किए जाने वाले KV सीक्रेट इंजन का संस्करण।"
+
+#: includes/providers/VaultProvider.php:81
+msgid "KV Version 2"
+msgstr "KV संस्करण 2"
+
+#: includes/providers/VaultProvider.php:81
+msgid "KV Version 1"
+msgstr "KV संस्करण 1"
+
+#: includes/providers/VaultProvider.php:85
+msgid "KV Mount Path"
+msgstr "KV माउंट पथ"
+
+#: includes/providers/VaultProvider.php:87
+msgid "The mount path of the KV secrets engine, for example 'secret'."
+msgstr "KV सीक्रेट इंजन का माउंट पथ, उदाहरण के लिए 'secret'।"
+
+#: includes/providers/VaultProvider.php:94
+msgid "How this plugin authenticates to Vault."
+msgstr "यह प्लगइन Vault के लिए कैसे प्रमाणित होता है।"
+
+#: includes/providers/VaultProvider.php:95
+#: includes/providers/VaultProvider.php:99
+msgid "Token"
+msgstr "टोकन"
+
+#: includes/providers/VaultProvider.php:95
+msgid "AppRole"
+msgstr "AppRole"
+
+#: includes/providers/VaultProvider.php:101
+msgid "The Vault token used for Token authentication. Stored encrypted."
+msgstr "टोकन प्रमाणीकरण के लिए उपयोग किया जाने वाला Vault टोकन। एन्क्रिप्टेड रूप में संग्रहीत।"
+
+#: includes/providers/VaultProvider.php:106
+msgid "AppRole Role ID"
+msgstr "AppRole Role ID"
+
+#: includes/providers/VaultProvider.php:108
+msgid "The AppRole RoleID used for AppRole authentication."
+msgstr "AppRole प्रमाणीकरण के लिए उपयोग की जाने वाली AppRole RoleID।"
+
+#: includes/providers/VaultProvider.php:112
+msgid "AppRole Secret ID"
+msgstr "AppRole Secret ID"
+
+#: includes/providers/VaultProvider.php:114
+msgid "The AppRole SecretID used for AppRole authentication. Stored encrypted."
+msgstr "AppRole प्रमाणीकरण के लिए उपयोग की जाने वाली AppRole SecretID। एन्क्रिप्टेड रूप में संग्रहीत।"
+
+#: includes/providers/VaultProvider.php:121
+msgid "Verify the Vault server TLS certificate. Disable only for testing."
+msgstr "Vault सर्वर TLS प्रमाणपत्र सत्यापित करें। केवल परीक्षण के लिए अक्षम करें।"
+
+#: includes/providers/VaultProvider.php:127
+msgid "An optional path on the Cacti server to a PEM CA bundle used to verify Vault."
+msgstr "Vault को सत्यापित करने के लिए उपयोग किए जाने वाले PEM CA बंडल का Cacti सर्वर पर वैकल्पिक पथ।"
+
+#: includes/providers/VaultProvider.php:133
+msgid "The network timeout for Vault requests."
+msgstr "Vault अनुरोधों के लिए नेटवर्क समय-सीमा।"
+
+#: includes/providers/VaultProvider.php:144
+#, php-format
+msgid "The %s address is required."
+msgstr "%s पता आवश्यक है।"
+
+#: includes/providers/VaultProvider.php:166
+#, php-format
+msgid "Successfully authenticated to %s."
+msgstr "%s के लिए सफलतापूर्वक प्रमाणित किया गया।"
+
+#: includes/providers/VaultProvider.php:169
+#, php-format
+msgid "%s returned HTTP %d during token verification."
+msgstr "%s ने टोकन सत्यापन के दौरान HTTP %d लौटाया।"
+
+#: includes/providers/VaultProvider.php:176
+#, php-format
+msgid "The %s secret path is required."
+msgstr "%s सीक्रेट पथ आवश्यक है।"
+
+#: includes/providers/VaultProvider.php:209
+#, php-format
+msgid "The %s secret path '%s' was not found."
+msgstr "%s सीक्रेट पथ '%s' नहीं मिला।"
+
+#: includes/providers/VaultProvider.php:213
+#, php-format
+msgid "%s returned HTTP %d reading the secret."
+msgstr "%s ने सीक्रेट पढ़ते समय HTTP %d लौटाया।"
+
+#: includes/providers/VaultProvider.php:219
+#, php-format
+msgid "%s returned an unexpected response reading the secret."
+msgstr "%s ने सीक्रेट पढ़ते समय अप्रत्याशित प्रतिक्रिया लौटाई।"
+
+#: includes/providers/VaultProvider.php:228
+#, php-format
+msgid "%s returned an unexpected secret payload."
+msgstr "%s ने अप्रत्याशित सीक्रेट पेलोड लौटाया।"
+
+#: includes/providers/VaultProvider.php:239
+#, php-format
+msgid "The %s secret holds multiple fields; append '#key' to the reference to select one."
+msgstr "%s सीक्रेट में कई फ़ील्ड हैं; किसी एक को चुनने के लिए संदर्भ में '#key' जोड़ें।"
+
+#: includes/providers/VaultProvider.php:262
+msgid "AppRole authentication requires both a RoleID and a SecretID."
+msgstr "AppRole प्रमाणीकरण के लिए RoleID और SecretID दोनों आवश्यक हैं।"
+
+#: includes/providers/VaultProvider.php:280
+#, php-format
+msgid "%s AppRole login failed with HTTP %d."
+msgstr "%s AppRole लॉगिन HTTP %d के साथ विफल रहा।"
+
+#: includes/providers/VaultProvider.php:286
+#, php-format
+msgid "%s AppRole login returned no client token."
+msgstr "%s AppRole लॉगिन ने कोई क्लाइंट टोकन नहीं लौटाया।"
+
+#: includes/providers/VaultProvider.php:295
+#, php-format
+msgid "The %s token is required for Token authentication."
+msgstr "टोकन प्रमाणीकरण के लिए %s टोकन आवश्यक है।"
+
+#: setup.php:270
+msgid "Configuration"
+msgstr "कॉन्फ़िगरेशन"
+
+#: setup.php:294 setup.php:322
+msgid "(Edit)"
+msgstr "संपादित करें"
+
+#: setup.php:301 setup.php:329
+msgid "Actions"
+msgstr "कार्रवाइयाँ"
+
+#: setup.php:308 setup.php:336
+msgid "(Save)"
+msgstr "(सहेजें)"
