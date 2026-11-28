@@ -1,0 +1,1542 @@
+# Zulu translations for Cacti package.
+# Copyright (C) 2004-2026 The Cacti Group
+# This file is distributed under the same license as the Cacti package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cacti 1.0\n"
+"Report-Msgid-Bugs-To: developers@cacti.net\n"
+"POT-Creation-Date: 2026-10-16 19:37+0000\n"
+"PO-Revision-Date: 2026-11-28 02:15+0000\n"
+"Last-Translator: Thomas Vincent <thomasvincent@gmail.com>\n"
+"Language-Team: Zulu <developers@cacti.net>\n"
+"Language: zu_ZA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: credential_providers.php:37 credentials.php:37
+msgid "Delete"
+msgstr "Susa"
+
+#: credential_providers.php:38 credentials.php:38
+msgid "Enable"
+msgstr "Nika amandla"
+
+#: credential_providers.php:39 credentials.php:39
+msgid "Disable"
+msgstr "Khubaza"
+
+#: credential_providers.php:107
+msgid "The selected provider type is not valid."
+msgstr "Uhlobo lomhlinzeki olukhethiwe aluvumelekile."
+
+#: credential_providers.php:116
+msgid "A provider name is required."
+msgstr "Igama lomhlinzeki liyadingeka."
+
+#: credential_providers.php:150 credentials.php:181
+msgid "Cannot store a secret: the Cacti core secret encryption functions are unavailable on this installation."
+msgstr "Ayikwazi ukulondoloza imfihlo: imisebenzi eyinhloko yokubethela imfihlo ye-Cacti ayitholakali kulokhu kufakwa."
+
+#: credential_providers.php:166 credential_providers.php:191
+#: credentials.php:228 credentials.php:254
+#, php-format
+msgid "'%s' is required."
+msgstr "'%s' iyadingeka."
+
+#: credential_providers.php:175 credentials.php:237
+msgid "Could not encrypt the secret. Verify the Cacti encryption key configuration and try again."
+msgstr "Ayikwazanga ukubethela imfihlo. Qinisekisa ukumiswa kokhiye wokubethela we-Cacti bese uzama futhi."
+
+#: credential_providers.php:204
+msgid "The provider could not be saved because one of its fields contains invalid characters. Please re-enter the affected values and try again."
+msgstr "Umhlinzeki akakwazanga ukulondolozwa ngoba enye yezinkambu zakhe iqukethe izinhlamvu ezingavumelekile. Sicela ufake kabusha amanani athintekile bese uzama futhi."
+
+#: credential_providers.php:221
+msgid "Secret provider saved."
+msgstr "Umhlinzeki wezimfihlo ulondoloziwe."
+
+#: credential_providers.php:224
+msgid "Failed to save the secret provider."
+msgstr "Yehlulekile ukulondoloza umhlinzeki wezimfihlo."
+
+#: credential_providers.php:270
+#, php-format
+msgid "A provider still used by %d credential(s) was not deleted."
+msgstr "Umhlinzeki osasetshenziswa iziqinisekiso zokungena ezingu-%d akasusiwe."
+
+#: credential_providers.php:323
+msgid "Delete the following secret provider(s)?"
+msgstr "Susa laba bahlinzeki bezimfihlo abalandelayo?"
+
+#: credential_providers.php:325
+msgid "Enable the following secret provider(s)?"
+msgstr "Nika amandla laba bahlinzeki bezimfihlo abalandelayo?"
+
+#: credential_providers.php:327
+msgid "Disable the following secret provider(s)?"
+msgstr "Khubaza laba bahlinzeki bezimfihlo abalandelayo?"
+
+#: credential_providers.php:337 credential_providers.php:755
+#: credentials.php:428 credentials.php:882
+msgid "Cancel"
+msgstr "Khansela"
+
+#: credential_providers.php:337 credential_providers.php:754
+#: credentials.php:428 credentials.php:881
+msgid "Continue"
+msgstr "Qhubeka"
+
+#: credential_providers.php:366
+msgid "Invalid request method."
+msgstr "Indlela yesicelo ayivumelekile."
+
+#: credential_providers.php:376
+msgid "Save the provider before testing it."
+msgstr "Londoloza umhlinzeki ngaphambi kokumhlola."
+
+#: credential_providers.php:491 credential_providers.php:530 setup.php:256
+#: setup.php:274 setup.php:315
+msgid "Secret Providers"
+msgstr "Abahlinzeki Bezimfihlo"
+
+#: credential_providers.php:499 credentials.php:575
+msgid "Search"
+msgstr "Sesha"
+
+#: credential_providers.php:503
+msgid "Providers"
+msgstr "Abahlinzeki"
+
+#: credential_providers.php:506 credentials.php:593
+msgid "All"
+msgstr "Konke"
+
+#: credential_providers.php:517 credentials.php:604
+msgid "Go"
+msgstr "Hamba"
+
+#: credential_providers.php:518 credentials.php:605
+msgid "Clear"
+msgstr "Sula"
+
+#: credential_providers.php:539 credential_providers.php:625
+#: credentials.php:626 credentials.php:750
+msgid "Name"
+msgstr "Igama"
+
+#: credential_providers.php:540 credentials.php:579 credentials.php:627
+msgid "Type"
+msgstr "Uhlobo"
+
+#: credential_providers.php:541 credential_providers.php:633
+#: credentials.php:629 credentials.php:758
+msgid "Description"
+msgstr "Incazelo"
+
+#: credential_providers.php:542 credential_providers.php:648
+#: credentials.php:631 credentials.php:780
+msgid "Enabled"
+msgstr "Kunikwe amandla"
+
+#: credential_providers.php:543 credentials.php:632
+msgid "Last Updated"
+msgstr "Kugcine Ukubuyekezwa"
+
+#: credential_providers.php:557 credentials.php:649
+msgid "Yes"
+msgstr "Yebo"
+
+#: credential_providers.php:557 credentials.php:649
+msgid "No"
+msgstr "Cha"
+
+#: credential_providers.php:564
+msgid "No Secret Providers Found"
+msgstr "Abekho Abahlinzeki Bezimfihlo Abatholiwe"
+
+#: credential_providers.php:620
+#, php-format
+msgid "Secret Provider [edit: %s]"
+msgstr "Umhlinzeki Wezimfihlo [hlela: %s]"
+
+#: credential_providers.php:620
+msgid "Secret Provider [new]"
+msgstr "Umhlinzeki Wezimfihlo [okusha]"
+
+#: credential_providers.php:626
+msgid "A unique, meaningful name for this provider instance."
+msgstr "Igama eliyingqayizivele nelinengqondo lalesi sibonelo somhlinzeki."
+
+#: credential_providers.php:634
+msgid "An optional description of this provider instance."
+msgstr "Incazelo yokuzithandela yalesi sibonelo somhlinzeki."
+
+#: credential_providers.php:641
+msgid "Provider Type"
+msgstr "Uhlobo Lomhlinzeki"
+
+#: credential_providers.php:642
+msgid "The external secret store this provider connects to. Changing the type on an existing provider discards the previously stored type-specific configuration when you save."
+msgstr "Isitolo sezimfihlo sangaphandle lo mhlinzeki axhuma kuso. Ukushintsha uhlobo kumhlinzeki okhona kulahla ukumiswa okukhethekile kohlobo okulondolozwe ngaphambilini uma ulondoloza."
+
+#: credential_providers.php:649
+msgid "Whether this provider is available to resolve credential secrets."
+msgstr "Ukuthi lo mhlinzeki uyatholakala yini ukuxazulula izimfihlo zeziqinisekiso zokungena."
+
+#: credential_providers.php:697 credentials.php:833
+msgid "A value is currently stored (encrypted)."
+msgstr "Inani ligciniwe njengamanje (libetheliwe)."
+
+#: credential_providers.php:697 credentials.php:833
+msgid "Leave this blank to keep it, or enter a new value to replace it."
+msgstr "Shiya lokhu kungenalutho ukuze ukugcine, noma faka inani elisha ukuze ulishintshe."
+
+#: credential_providers.php:699 credentials.php:835
+msgid "No value stored yet."
+msgstr "Alikho inani elilondoloziwe okwamanje."
+
+#: credential_providers.php:740
+msgid "Test Connection"
+msgstr "Hlola Ukuxhumana"
+
+#: credential_providers.php:752
+msgid "Change Provider Type?"
+msgstr "Shintsha Uhlobo Lomhlinzeki?"
+
+#: credential_providers.php:753
+msgid "Changing the Provider Type will discard the configuration stored for the current type when you save this provider. Do you want to continue?"
+msgstr "Ukushintsha Uhlobo Lomhlinzeki kuzolahla ukumiswa okulondolozelwe uhlobo lwamanje uma ulondoloza lo mhlinzeki. Ufuna ukuqhubeka?"
+
+#: credential_providers.php:756
+msgid "Testing..."
+msgstr "Iyahlola..."
+
+#: credential_providers.php:757
+msgid "The test request failed."
+msgstr "Isicelo sokuhlola sehlulekile."
+
+#: credentials.php:102
+msgid "The selected credential type is not valid."
+msgstr "Uhlobo lwesiqinisekiso sokungena olukhethiwe aluvumelekile."
+
+#: credentials.php:111
+msgid "A credential name is required."
+msgstr "Igama lesiqinisekiso sokungena liyadingeka."
+
+#: credentials.php:125
+msgid "The selected secret provider does not exist."
+msgstr "Umhlinzeki wezimfihlo okhethiwe akekho."
+
+#: credentials.php:132
+msgid "The selected secret provider is disabled."
+msgstr "Umhlinzeki wezimfihlo okhethiwe ukhutshaziwe."
+
+#: credentials.php:199
+#, php-format
+msgid "A reference for '%s' is required."
+msgstr "Ireferensi ye-'%s' iyadingeka."
+
+#: credentials.php:215
+#, php-format
+msgid "The value and its confirmation for '%s' do not match."
+msgstr "Inani nokuqinisekiswa kwalo kwe-'%s' akufani."
+
+#: credentials.php:279
+msgid "The credential could not be saved because one of its fields contains invalid characters. Please re-enter the affected values and try again."
+msgstr "Isiqinisekiso sokungena asikwazanga ukulondolozwa ngoba enye yezinkambu zaso iqukethe izinhlamvu ezingavumelekile. Sicela ufake kabusha amanani athintekile bese uzama futhi."
+
+#: credentials.php:312
+msgid "The selected secret provider is no longer available. Please choose another provider."
+msgstr "Umhlinzeki wezimfihlo okhethiwe akasatholakali. Sicela ukhethe omunye umhlinzeki."
+
+#: credentials.php:326
+msgid "Credential saved."
+msgstr "Isiqinisekiso sokungena silondoloziwe."
+
+#: credentials.php:329
+msgid "Failed to save the credential."
+msgstr "Yehlulekile ukulondoloza isiqinisekiso sokungena."
+
+#: credentials.php:414
+msgid "Delete the following credential(s)?"
+msgstr "Susa lezi ziqinisekiso zokungena ezilandelayo?"
+
+#: credentials.php:416
+msgid "Enable the following credential(s)?"
+msgstr "Nika amandla lezi ziqinisekiso zokungena ezilandelayo?"
+
+#: credentials.php:418
+msgid "Disable the following credential(s)?"
+msgstr "Khubaza lezi ziqinisekiso zokungena ezilandelayo?"
+
+#: credentials.php:567 credentials.php:590 credentials.php:617 setup.php:255
+#: setup.php:273 setup.php:287
+msgid "Credentials"
+msgstr "Iziqinisekiso zokungena"
+
+#: credentials.php:582
+msgid "Any"
+msgstr "Noma yikuphi"
+
+#: credentials.php:628 credentials.php:773
+msgid "Secret Provider"
+msgstr "Umhlinzeki Wezimfihlo"
+
+#: credentials.php:630
+msgid "Owner"
+msgstr "Umnikazi"
+
+#: credentials.php:640
+msgid "Local Database"
+msgstr "Idathabheyisi Yasendaweni"
+
+#: credentials.php:648
+msgid "N/A"
+msgstr "Akutholakali"
+
+#: credentials.php:656
+msgid "No Credentials Found"
+msgstr "Azikho Iziqinisekiso Zokungena Ezitholiwe"
+
+#: credentials.php:745
+#, php-format
+msgid "Credential [edit: %s]"
+msgstr "Isiqinisekiso sokungena [hlela: %s]"
+
+#: credentials.php:745
+msgid "Credential [new]"
+msgstr "Isiqinisekiso sokungena [okusha]"
+
+#: credentials.php:751
+msgid "A unique, meaningful name for this credential."
+msgstr "Igama eliyingqayizivele nelinengqondo lalesi siqinisekiso sokungena."
+
+#: credentials.php:759
+msgid "An optional description of where this credential is used."
+msgstr "Incazelo yokuzithandela yokuthi lesi siqinisekiso sokungena sisetshenziswa kuphi."
+
+#: credentials.php:766
+msgid "Credential Type"
+msgstr "Uhlobo Lwesiqinisekiso sokungena"
+
+#: credentials.php:767
+msgid "The type of credential. Changing the type on an existing credential discards the previously stored type-specific values when you save."
+msgstr "Uhlobo lwesiqinisekiso sokungena. Ukushintsha uhlobo kwisiqinisekiso esikhona kulahla amanani akhethekile ohlobo alondolozwe ngaphambilini uma ulondoloza."
+
+#: credentials.php:774
+msgid "Where the secret values for this credential live. Choose the local encrypted database, or an external secret store. When an external provider is selected, each secret field holds a reference the provider resolves at poll time instead of the secret itself."
+msgstr "Lapho kuhlala khona amanani emfihlo alesi siqinisekiso sokungena. Khetha idathabheyisi yasendaweni ebetheliwe, noma isitolo sezimfihlo sangaphandle. Uma kukhethwe umhlinzeki wangaphandle, inkambu ngayinye yemfihlo igcina ireferensi exazululwa ngumhlinzeki ngesikhathi sokuhlola esikhundleni semfihlo ngokwayo."
+
+#: credentials.php:781
+msgid "Whether this credential is available for use."
+msgstr "Ukuthi lesi siqinisekiso sokungena siyatholakala yini ukuze sisetshenziswe."
+
+#: credentials.php:822
+msgid "(reference)"
+msgstr "(ireferensi)"
+
+#: credentials.php:879
+msgid "Change Credential Type?"
+msgstr "Shintsha Uhlobo Lwesiqinisekiso sokungena?"
+
+#: credentials.php:880
+msgid "Changing the Credential Type will discard the values stored for the current type when you save this credential. Do you want to continue?"
+msgstr "Ukushintsha Uhlobo Lwesiqinisekiso sokungena kuzolahla amanani alondolozelwe uhlobo lwamanje uma ulondoloza lesi siqinisekiso. Ufuna ukuqhubeka?"
+
+#: includes/arrays.php:53
+msgid "SNMP v1/v2c Community"
+msgstr "Umphakathi we-SNMP v1/v2c"
+
+#: includes/arrays.php:55 includes/arrays.php:86
+msgid "SNMP"
+msgstr "SNMP"
+
+#: includes/arrays.php:58
+msgid "SNMP Version"
+msgstr "Inguqulo ye-SNMP"
+
+#: includes/arrays.php:60
+msgid "The community-based SNMP protocol version this credential is used with."
+msgstr "Inguqulo yephrothokholi ye-SNMP esekelwe emphakathini esetshenziswa nalesi siqinisekiso sokungena."
+
+#: includes/arrays.php:61
+msgid "Version 1"
+msgstr "Inguqulo 1"
+
+#: includes/arrays.php:61
+msgid "Version 2"
+msgstr "Inguqulo 2"
+
+#: includes/arrays.php:66
+msgid "Read Community"
+msgstr "Umphakathi Wokufunda"
+
+#: includes/arrays.php:68
+msgid "The SNMP read community string. Treated as a secret and stored encrypted."
+msgstr "Intambo yomphakathi wokufunda we-SNMP. Iphathwa njengemfihlo futhi ilondolozwa ibetheliwe."
+
+#: includes/arrays.php:74
+msgid "Write Community"
+msgstr "Umphakathi Wokubhala"
+
+#: includes/arrays.php:76
+msgid "The optional SNMP write community string. Stored encrypted."
+msgstr "Intambo yomphakathi wokubhala we-SNMP yokuzithandela. Igcinwa ibetheliwe."
+
+#: includes/arrays.php:84
+msgid "SNMP v3 (USM)"
+msgstr "SNMP v3 (USM)"
+
+#: includes/arrays.php:89
+msgid "Security Name"
+msgstr "Igama Lokuvikeleka"
+
+#: includes/arrays.php:91
+msgid "The SNMP v3 USM security (user) name."
+msgstr "Igama lokuvikeleka (lomsebenzisi) le-SNMP v3 USM."
+
+#: includes/arrays.php:96
+msgid "Authentication Protocol"
+msgstr "Iphrothokholi Yokuqinisekisa"
+
+#: includes/arrays.php:98
+msgid "The USM authentication protocol. Choose [None] for noAuthNoPriv."
+msgstr "Iphrothokholi yokuqinisekisa ye-USM. Khetha u-[Akukho] ku-noAuthNoPriv."
+
+#: includes/arrays.php:100 includes/arrays.php:122
+msgid "None"
+msgstr "Akukho"
+
+#: includes/arrays.php:111
+msgid "Authentication Passphrase"
+msgstr "Umusho Wokungena Wokuqinisekisa"
+
+#: includes/arrays.php:113
+msgid "The USM authentication passphrase. Stored encrypted."
+msgstr "Umusho wokungena wokuqinisekisa we-USM. Ugcinwa ubetheliwe."
+
+#: includes/arrays.php:118
+msgid "Privacy Protocol"
+msgstr "Iphrothokholi Yobumfihlo"
+
+#: includes/arrays.php:120
+msgid "The USM privacy (encryption) protocol. Choose [None] for authNoPriv."
+msgstr "Iphrothokholi yobumfihlo (yokubethela) ye-USM. Khetha u-[Akukho] ku-authNoPriv."
+
+#: includes/arrays.php:131
+msgid "Privacy Passphrase"
+msgstr "Umusho Wokungena Wobumfihlo"
+
+#: includes/arrays.php:133
+msgid "The USM privacy passphrase. Stored encrypted."
+msgstr "Umusho wokungena wobumfihlo we-USM. Ugcinwa ubetheliwe."
+
+#: includes/arrays.php:138
+msgid "Context Name"
+msgstr "Igama Lomongo"
+
+#: includes/arrays.php:140
+msgid "The optional SNMP v3 context name."
+msgstr "Igama lomongo le-SNMP v3 lokuzithandela."
+
+#: includes/arrays.php:145
+msgid "Engine ID"
+msgstr "I-ID Yenjini"
+
+#: includes/arrays.php:147
+msgid "The optional SNMP v3 context engine id."
+msgstr "I-ID yenjini yomongo ye-SNMP v3 yokuzithandela."
+
+#: includes/arrays.php:154
+msgid "Username / Password"
+msgstr "Igama lomsebenzisi / Iphasiwedi"
+
+#: includes/arrays.php:156
+msgid "Generic"
+msgstr "Okujwayelekile"
+
+#: includes/arrays.php:159 includes/arrays.php:181 includes/arrays.php:289
+#: includes/arrays.php:347 includes/arrays.php:378 includes/arrays.php:400
+#: includes/arrays.php:450 includes/arrays.php:486
+msgid "Username"
+msgstr "Igama lomsebenzisi"
+
+#: includes/arrays.php:161
+msgid "A reusable username for HTTP Basic, Telnet, web UI logins or script inputs."
+msgstr "Igama lomsebenzisi elingaphinde lisetshenziswe le-HTTP Basic, Telnet, ukungena kwe-UI yewebhu noma okufakwa kweskripthi."
+
+#: includes/arrays.php:166 includes/arrays.php:191 includes/arrays.php:195
+#: includes/arrays.php:354 includes/arrays.php:385 includes/arrays.php:407
+#: includes/arrays.php:457 includes/arrays.php:493
+msgid "Password"
+msgstr "Iphasiwedi"
+
+#: includes/arrays.php:168
+msgid "The password paired with the username. Stored encrypted."
+msgstr "Iphasiwedi ebhangqwe negama lomsebenzisi. Igcinwa ibetheliwe."
+
+#: includes/arrays.php:176
+msgid "SSH"
+msgstr "SSH"
+
+#: includes/arrays.php:178
+msgid "CLI"
+msgstr "CLI"
+
+#: includes/arrays.php:183
+msgid "The SSH login username."
+msgstr "Igama lomsebenzisi lokungena le-SSH."
+
+#: includes/arrays.php:188 includes/providers/AzureKeyVaultProvider.php:67
+#: includes/providers/VaultProvider.php:92
+msgid "Authentication Method"
+msgstr "Indlela Yokuqinisekisa"
+
+#: includes/arrays.php:190
+msgid "Authenticate with a password or a private key."
+msgstr "Qinisekisa ngephasiwedi noma ngokhiye oyimfihlo."
+
+#: includes/arrays.php:191 includes/arrays.php:203
+msgid "Private Key"
+msgstr "Ukhiye Oyimfihlo"
+
+#: includes/arrays.php:197
+msgid "The SSH password (when using password authentication). Stored encrypted."
+msgstr "Iphasiwedi ye-SSH (uma usebenzisa ukuqinisekiswa ngephasiwedi). Igcinwa ibetheliwe."
+
+#: includes/arrays.php:205
+msgid "The PEM private key (when using key authentication). Stored encrypted."
+msgstr "Ukhiye oyimfihlo we-PEM (uma usebenzisa ukuqinisekiswa ngokhiye). Ugcinwa ubetheliwe."
+
+#: includes/arrays.php:211 includes/arrays.php:522
+msgid "Key Passphrase"
+msgstr "Umusho Wokungena Wokhiye"
+
+#: includes/arrays.php:213 includes/arrays.php:524
+msgid "The optional passphrase protecting the private key. Stored encrypted."
+msgstr "Umusho wokungena wokuzithandela ovikela ukhiye oyimfihlo. Ugcinwa ubetheliwe."
+
+#: includes/arrays.php:219 includes/arrays.php:443
+msgid "Port"
+msgstr "Imbobo"
+
+#: includes/arrays.php:221
+msgid "The TCP port for the SSH service."
+msgstr "Imbobo ye-TCP yesevisi ye-SSH."
+
+#: includes/arrays.php:231
+msgid "Bearer / API Token"
+msgstr "I-Bearer / Ithokheni ye-API"
+
+#: includes/arrays.php:233 includes/arrays.php:256 includes/arrays.php:286
+#: includes/arrays.php:308 includes/arrays.php:344
+msgid "API"
+msgstr "API"
+
+#: includes/arrays.php:236
+msgid "Bearer Token"
+msgstr "I-Bearer Token"
+
+#: includes/arrays.php:238
+msgid "The opaque bearer token sent as an Authorization header. Stored encrypted."
+msgstr "Ithokheni ye-bearer engacaci ethunyelwa njengesihloko se-Authorization. Igcinwa ibetheliwe."
+
+#: includes/arrays.php:244
+msgid "Header Name"
+msgstr "Igama Lesihloko"
+
+#: includes/arrays.php:246
+msgid "The HTTP header the token is sent in."
+msgstr "Isihloko se-HTTP okuthunyelwa kuso ithokheni."
+
+#: includes/arrays.php:254 includes/arrays.php:259
+#: includes/providers/ConjurProvider.php:74
+msgid "API Key"
+msgstr "Ukhiye we-API"
+
+#: includes/arrays.php:261
+msgid "The API key value. Stored encrypted."
+msgstr "Inani lokhiye we-API. Ligcinwa libetheliwe."
+
+#: includes/arrays.php:267
+msgid "Placement"
+msgstr "Ukubekwa"
+
+#: includes/arrays.php:269
+msgid "Whether the key is sent as an HTTP header or a query parameter."
+msgstr "Ukuthi ukhiye uthunyelwa njengesihloko se-HTTP noma ipharamitha yombuzo."
+
+#: includes/arrays.php:270
+msgid "Header"
+msgstr "Isihloko"
+
+#: includes/arrays.php:270
+msgid "Query Parameter"
+msgstr "Ipharamitha Yombuzo"
+
+#: includes/arrays.php:274
+msgid "Parameter Name"
+msgstr "Igama Lepharamitha"
+
+#: includes/arrays.php:276
+msgid "The header or query parameter name carrying the key (e.g. X-API-Key)."
+msgstr "Igama lesihloko noma ipharamitha yombuzo ephethe ukhiye (isib. X-API-Key)."
+
+#: includes/arrays.php:284
+msgid "GitHub Personal Access Token"
+msgstr "Ithokheni Yokufinyelela Yomuntu Siqu ye-GitHub"
+
+#: includes/arrays.php:291
+msgid "The optional GitHub username associated with the token."
+msgstr "Igama lomsebenzisi le-GitHub lokuzithandela elihlobene nethokheni."
+
+#: includes/arrays.php:296
+msgid "Personal Access Token"
+msgstr "Ithokheni Yokufinyelela Yomuntu Siqu"
+
+#: includes/arrays.php:298
+msgid "The GitHub personal access token. Stored encrypted."
+msgstr "Ithokheni yokufinyelela yomuntu siqu ye-GitHub. Igcinwa ibetheliwe."
+
+#: includes/arrays.php:306
+msgid "OAuth 2.0 Client Credentials"
+msgstr "OAuth 2.0 Client Credentials"
+
+#: includes/arrays.php:311
+msgid "Client ID"
+msgstr "I-ID Yeklayenti"
+
+#: includes/arrays.php:313
+msgid "The OAuth 2.0 client identifier."
+msgstr "Isihlonzi seklayenti se-OAuth 2.0."
+
+#: includes/arrays.php:318 includes/providers/AzureKeyVaultProvider.php:89
+msgid "Client Secret"
+msgstr "Imfihlo Yeklayenti"
+
+#: includes/arrays.php:320
+msgid "The OAuth 2.0 client secret. Stored encrypted."
+msgstr "Imfihlo yeklayenti ye-OAuth 2.0. Igcinwa ibetheliwe."
+
+#: includes/arrays.php:326
+msgid "Token URL"
+msgstr "I-URL Yethokheni"
+
+#: includes/arrays.php:328
+msgid "The token endpoint used for the client_credentials grant."
+msgstr "Indawo yokuxhumana yethokheni esetshenziselwa ugunyazo lwe-client_credentials."
+
+#: includes/arrays.php:333
+msgid "Scopes"
+msgstr "Izikophu"
+
+#: includes/arrays.php:335
+msgid "An optional space delimited list of scopes to request."
+msgstr "Uhlu lokuzithandela lwezindawo ezingacelwa ezihlukaniswe izikhala."
+
+#: includes/arrays.php:342
+msgid "HTTP Basic Auth"
+msgstr "Ukuqinisekiswa kwe-HTTP Basic"
+
+#: includes/arrays.php:349
+msgid "The HTTP Basic auth username."
+msgstr "Igama lomsebenzisi lokuqinisekiswa kwe-HTTP Basic."
+
+#: includes/arrays.php:356
+msgid "The HTTP Basic auth password. Stored encrypted."
+msgstr "Iphasiwedi yokuqinisekiswa kwe-HTTP Basic. Igcinwa ibetheliwe."
+
+#: includes/arrays.php:366
+msgid "WMI (Windows)"
+msgstr "WMI (Windows)"
+
+#: includes/arrays.php:368 includes/arrays.php:397 includes/arrays.php:426
+#: includes/arrays.php:476 includes/arrays.php:505
+msgid "Device"
+msgstr "Idivayisi"
+
+#: includes/arrays.php:371
+msgid "Domain"
+msgstr "Isizinda"
+
+#: includes/arrays.php:373
+msgid "The optional Windows domain."
+msgstr "Isizinda se-Windows sokuzithandela."
+
+#: includes/arrays.php:380
+msgid "The Windows account username."
+msgstr "Igama lomsebenzisi le-akhawunti ye-Windows."
+
+#: includes/arrays.php:387
+msgid "The Windows account password. Stored encrypted."
+msgstr "Iphasiwedi ye-akhawunti ye-Windows. Igcinwa ibetheliwe."
+
+#: includes/arrays.php:395
+msgid "IPMI / Redfish (BMC)"
+msgstr "IPMI / Redfish (BMC)"
+
+#: includes/arrays.php:402
+msgid "The out-of-band controller username."
+msgstr "Igama lomsebenzisi lomlawuli wangaphandle kwebhendi."
+
+#: includes/arrays.php:409
+msgid "The out-of-band controller password. Stored encrypted."
+msgstr "Iphasiwedi yomlawuli wangaphandle kwebhendi. Igcinwa ibetheliwe."
+
+#: includes/arrays.php:415
+msgid "Protocol"
+msgstr "Iphrothokholi"
+
+#: includes/arrays.php:417
+msgid "The management protocol exposed by the controller."
+msgstr "Iphrothokholi yokuphatha evezwa ngumlawuli."
+
+#: includes/arrays.php:424
+msgid "Database"
+msgstr "Isizindalwazi"
+
+#: includes/arrays.php:429
+msgid "Driver"
+msgstr "I-Driver"
+
+#: includes/arrays.php:431
+msgid "The database engine this credential connects to."
+msgstr "Injini yedathabheyisi lesi siqinisekiso sokungena esixhuma kuyo."
+
+#: includes/arrays.php:436
+msgid "Host"
+msgstr "Umsingathi"
+
+#: includes/arrays.php:438
+msgid "The database server hostname or IP address."
+msgstr "Igama lomsingathi noma ikheli le-IP leseva yedathabheyisi."
+
+#: includes/arrays.php:445
+msgid "The database server TCP port."
+msgstr "Imbobo ye-TCP yeseva yedathabheyisi."
+
+#: includes/arrays.php:452
+msgid "The database account username."
+msgstr "Igama lomsebenzisi le-akhawunti yedathabheyisi."
+
+#: includes/arrays.php:459
+msgid "The database account password. Stored encrypted."
+msgstr "Iphasiwedi ye-akhawunti yedathabheyisi. Igcinwa ibetheliwe."
+
+#: includes/arrays.php:465
+msgid "Database Name"
+msgstr "Igama Ledathabheyisi"
+
+#: includes/arrays.php:467
+msgid "The optional default database/schema name."
+msgstr "Igama ledathabheyisi/iskima elizenzakalelayo lokuzithandela."
+
+#: includes/arrays.php:474
+msgid "VMware / vCenter"
+msgstr "VMware / vCenter"
+
+#: includes/arrays.php:479
+msgid "Server"
+msgstr "Iseva"
+
+#: includes/arrays.php:481
+msgid "The vCenter or ESXi API endpoint."
+msgstr "Indawo yokuxhumana ye-API ye-vCenter noma ye-ESXi."
+
+#: includes/arrays.php:488
+msgid "The hypervisor API username."
+msgstr "Igama lomsebenzisi le-API ye-hypervisor."
+
+#: includes/arrays.php:495
+msgid "The hypervisor API password. Stored encrypted."
+msgstr "Iphasiwedi ye-API ye-hypervisor. Igcinwa ibetheliwe."
+
+#: includes/arrays.php:503
+msgid "TLS Client Certificate"
+msgstr "Isitifiketi Seklayenti se-TLS"
+
+#: includes/arrays.php:508
+msgid "Certificate (PEM)"
+msgstr "Isitifiketi (PEM)"
+
+#: includes/arrays.php:510
+msgid "The PEM client certificate. Public material, stored as entered."
+msgstr "Isitifiketi seklayenti se-PEM. Okokusebenza komphakathi, kulondolozwa njengoba kufakiwe."
+
+#: includes/arrays.php:514
+msgid "Private Key (PEM)"
+msgstr "Ukhiye Oyimfihlo (PEM)"
+
+#: includes/arrays.php:516
+msgid "The PEM private key for the client certificate. Stored encrypted."
+msgstr "Ukhiye oyimfihlo we-PEM wesitifiketi seklayenti. Ugcinwa ubetheliwe."
+
+#: includes/arrays.php:530
+msgid "CA Bundle (PEM)"
+msgstr "Inqwaba ye-CA (PEM)"
+
+#: includes/arrays.php:532
+msgid "An optional PEM CA bundle used to verify the peer."
+msgstr "Inqwaba ye-CA ye-PEM yokuzithandela esetshenziselwa ukuqinisekisa uzakwethu."
+
+#: includes/functions.php:199
+msgid "A password is required for SSH password authentication."
+msgstr "Iphasiwedi iyadingeka ukuqinisekiswa ngephasiwedi ye-SSH."
+
+#: includes/functions.php:203
+msgid "A private key is required for SSH key authentication."
+msgstr "Ukhiye oyimfihlo uyadingeka ukuqinisekiswa ngokhiye we-SSH."
+
+#: includes/functions.php:210
+msgid "SNMP v3 privacy requires an authentication protocol; noAuthPriv is not a valid security level."
+msgstr "Ubumfihlo be-SNMP v3 budinga iphrothokholi yokuqinisekisa; i-noAuthPriv akulona izinga lokuvikeleka elivumelekile."
+
+#: includes/functions.php:214
+msgid "An authentication passphrase is required when an SNMP v3 authentication protocol is selected."
+msgstr "Umusho wokungena wokuqinisekisa uyadingeka uma kukhethwe iphrothokholi yokuqinisekisa ye-SNMP v3."
+
+#: includes/functions.php:218
+msgid "A privacy passphrase is required when an SNMP v3 privacy protocol is selected."
+msgstr "Umusho wokungena wobumfihlo uyadingeka uma kukhethwe iphrothokholi yobumfihlo ye-SNMP v3."
+
+#: includes/providers.php:192
+msgid "Local Database (encrypted)"
+msgstr "Idathabheyisi Yasendaweni (ibetheliwe)"
+
+#: includes/providers.php:203
+msgid "(disabled)"
+msgstr "(kukhutshaziwe)"
+
+#: includes/providers.php:290
+msgid "The provider could not be found or its type is unknown."
+msgstr "Umhlinzeki akatholakalanga noma uhlobo lwakhe alwaziwa."
+
+#: includes/providers/AbstractProvider.php:38
+msgid "Secret Reference"
+msgstr "Ireferensi Yemfihlo"
+
+#: includes/providers/AbstractProvider.php:124
+#, php-format
+msgid "The stored secret is not a JSON object, so the '%s' key cannot be selected."
+msgstr "Imfihlo elondoloziwe akuyona into ye-JSON, ngakho ukhiye we-'%s' awukwazi ukukhethwa."
+
+#: includes/providers/AbstractProvider.php:132
+#, php-format
+msgid "The stored secret does not contain the '%s' key."
+msgstr "Imfihlo elondoloziwe ayinakho ukhiye we-'%s'."
+
+#: includes/providers/AbstractProvider.php:162
+msgid "The PHP cURL extension is required to reach external secret providers."
+msgstr "Isandiso se-PHP cURL siyadingeka ukuze kufinyelelwe kubahlinzeki bezimfihlo bangaphandle."
+
+#: includes/providers/AbstractProvider.php:208
+msgid "The request to the secret provider failed."
+msgstr "Isicelo kumhlinzeki wezimfihlo sehlulekile."
+
+#: includes/providers/AwsSecretsManagerProvider.php:39
+msgid "AWS Secrets Manager"
+msgstr "AWS Secrets Manager"
+
+#: includes/providers/AwsSecretsManagerProvider.php:43
+msgid "Resolve secrets from AWS Secrets Manager using IAM access keys or an EC2/ECS instance role."
+msgstr "Xazulula izimfihlo ezivela ku-AWS Secrets Manager usebenzisa okhiye bokufinyelela be-IAM noma indima yesibonelo se-EC2/ECS."
+
+#: includes/providers/AwsSecretsManagerProvider.php:47
+msgid "Secret Id or Name"
+msgstr "I-ID noma Igama Lemfihlo"
+
+#: includes/providers/AwsSecretsManagerProvider.php:51
+msgid "An AWS Secrets Manager secret id or name, optionally with '#key' to select a field from a JSON secret, for example 'prod/snmp#community'."
+msgstr "I-ID noma igama lemfihlo ye-AWS Secrets Manager, ngokuzithandela ngo-'#key' ukukhetha inkambu emfihlweni ye-JSON, isibonelo 'prod/snmp#community'."
+
+#: includes/providers/AwsSecretsManagerProvider.php:57
+msgid "Region"
+msgstr "Isifunda"
+
+#: includes/providers/AwsSecretsManagerProvider.php:59
+msgid "The AWS region hosting the secrets, for example us-east-1."
+msgstr "Isifunda se-AWS esisingatha izimfihlo, isibonelo us-east-1."
+
+#: includes/providers/AwsSecretsManagerProvider.php:64
+msgid "Use Instance Role"
+msgstr "Sebenzisa Indima Yesibonelo"
+
+#: includes/providers/AwsSecretsManagerProvider.php:66
+msgid "Obtain temporary credentials from the EC2/ECS instance metadata service instead of static keys."
+msgstr "Thola iziqinisekiso zesikhashana kusevisi ye-metadata yesibonelo se-EC2/ECS esikhundleni sokhiye abangashintshi."
+
+#: includes/providers/AwsSecretsManagerProvider.php:70
+msgid "Access Key Id"
+msgstr "I-ID Yokhiye Wokufinyelela"
+
+#: includes/providers/AwsSecretsManagerProvider.php:72
+msgid "The IAM access key id used when not using an instance role."
+msgstr "I-ID yokhiye wokufinyelela ye-IAM esetshenziswayo uma kungasetshenziswa indima yesibonelo."
+
+#: includes/providers/AwsSecretsManagerProvider.php:76
+msgid "Secret Access Key"
+msgstr "Ukhiye Wokufinyelela Oyimfihlo"
+
+#: includes/providers/AwsSecretsManagerProvider.php:78
+msgid "The IAM secret access key. Stored encrypted."
+msgstr "Ukhiye wokufinyelela oyimfihlo we-IAM. Ugcinwa ubetheliwe."
+
+#: includes/providers/AwsSecretsManagerProvider.php:83
+msgid "Session Token"
+msgstr "Ithokheni Yeseshini"
+
+#: includes/providers/AwsSecretsManagerProvider.php:85
+msgid "An optional STS session token for temporary static credentials. Stored encrypted."
+msgstr "Ithokheni yeseshini ye-STS yokuzithandela yeziqinisekiso ezingashintshi zesikhashana. Igcinwa ibetheliwe."
+
+#: includes/providers/AwsSecretsManagerProvider.php:90
+msgid "Endpoint Override"
+msgstr "Ukushintshwa Kwendawo Yokuxhumana"
+
+#: includes/providers/AwsSecretsManagerProvider.php:92
+msgid "An optional endpoint override (for VPC endpoints or testing). Defaults to the public AWS endpoint for the region."
+msgstr "Ukushintshwa kwendawo yokuxhumana ngokuzithandela (kwezindawo zokuxhumana ze-VPC noma ukuhlola). Kuzenzakalela endaweni yokuxhumana yomphakathi ye-AWS yesifunda."
+
+#: includes/providers/AwsSecretsManagerProvider.php:96
+#: includes/providers/AzureKeyVaultProvider.php:103
+#: includes/providers/ConjurProvider.php:93
+#: includes/providers/GcpSecretManagerProvider.php:77
+#: includes/providers/VaultProvider.php:131
+msgid "Timeout (seconds)"
+msgstr "Isikhathi sokuphelelwa (amasekhondi)"
+
+#: includes/providers/AwsSecretsManagerProvider.php:98
+msgid "The network timeout for AWS requests."
+msgstr "Isikhathi sokuphelelwa inethiwekhi sezicelo ze-AWS."
+
+#: includes/providers/AwsSecretsManagerProvider.php:107
+msgid "An AWS region is required."
+msgstr "Isifunda se-AWS siyadingeka."
+
+#: includes/providers/AwsSecretsManagerProvider.php:125
+msgid "Successfully authenticated to AWS Secrets Manager."
+msgstr "Ukuqinisekiswa kuphumelele ku-AWS Secrets Manager."
+
+#: includes/providers/AwsSecretsManagerProvider.php:135
+msgid "An AWS secret id is required."
+msgstr "I-ID yemfihlo ye-AWS iyadingeka."
+
+#: includes/providers/AwsSecretsManagerProvider.php:157
+msgid "AWS returned an unexpected response reading the secret."
+msgstr "I-AWS ibuyise impendulo engalindelekile ngesikhathi kufundwa imfihlo."
+
+#: includes/providers/AwsSecretsManagerProvider.php:165
+msgid "The AWS secret has no retrievable value."
+msgstr "Imfihlo ye-AWS ayinalo inani elingatholakala."
+
+#: includes/providers/AwsSecretsManagerProvider.php:189
+msgid "An access key id and secret access key are required unless an instance role is used."
+msgstr "I-ID yokhiye wokufinyelela kanye nokhiye wokufinyelela oyimfihlo kuyadingeka ngaphandle uma kusetshenziswa indima yesibonelo."
+
+#: includes/providers/AwsSecretsManagerProvider.php:220
+msgid "The ECS relative credentials URI is not valid."
+msgstr "I-URI yeziqinisekiso ezihlobene ze-ECS ayivumelekile."
+
+#: includes/providers/AwsSecretsManagerProvider.php:230
+msgid "The configured ECS credentials endpoint is not an allowed address."
+msgstr "Indawo yokuxhumana yeziqinisekiso ze-ECS elungisiwe akulona ikheli elivumelekile."
+
+#: includes/providers/AwsSecretsManagerProvider.php:259
+msgid "Unable to read ECS task role credentials."
+msgstr "Ayikwazanga ukufunda iziqinisekiso zendima yomsebenzi we-ECS."
+
+#: includes/providers/AwsSecretsManagerProvider.php:265
+msgid "The ECS credentials endpoint returned no usable credentials."
+msgstr "Indawo yokuxhumana yeziqinisekiso ze-ECS ayibuyisanga iziqinisekiso ezingasebenziseka."
+
+#: includes/providers/AwsSecretsManagerProvider.php:352
+msgid "Unable to obtain an instance metadata token; is Cacti running on an AWS instance with a role?"
+msgstr "Ayikwazanga ukuthola ithokheni ye-metadata yesibonelo; ingabe i-Cacti isebenza kusibonelo se-AWS esinendima?"
+
+#: includes/providers/AwsSecretsManagerProvider.php:360
+msgid "No IAM role is attached to this instance."
+msgstr "Ayikho indima ye-IAM enamathiselwe kulesi sibonelo."
+
+#: includes/providers/AwsSecretsManagerProvider.php:368
+msgid "Unable to read instance role credentials."
+msgstr "Ayikwazanga ukufunda iziqinisekiso zendima yesibonelo."
+
+#: includes/providers/AwsSecretsManagerProvider.php:374
+msgid "The instance metadata service returned no usable credentials."
+msgstr "Isevisi ye-metadata yesibonelo ayibuyisanga iziqinisekiso ezingasebenziseka."
+
+#: includes/providers/AwsSecretsManagerProvider.php:403
+msgid "Unable to encode the AWS request."
+msgstr "Ayikwazanga ukubhala ikhodi yesicelo se-AWS."
+
+#: includes/providers/AwsSecretsManagerProvider.php:498
+#, php-format
+msgid "AWS Secrets Manager error: %s (HTTP %d)."
+msgstr "Iphutha le-AWS Secrets Manager: %s (HTTP %d)."
+
+#: includes/providers/AwsSecretsManagerProvider.php:501
+#, php-format
+msgid "AWS Secrets Manager returned HTTP %d."
+msgstr "I-AWS Secrets Manager ibuyise i-HTTP %d."
+
+#: includes/providers/AzureKeyVaultProvider.php:42
+msgid "Azure Key Vault"
+msgstr "Azure Key Vault"
+
+#: includes/providers/AzureKeyVaultProvider.php:46
+msgid "Resolve secrets from Azure Key Vault using an Entra ID service principal or a Managed Identity."
+msgstr "Xazulula izimfihlo ezivela ku-Azure Key Vault usebenzisa i-service principal ye-Entra ID noma i-Managed Identity."
+
+#: includes/providers/AzureKeyVaultProvider.php:50
+#: includes/providers/GcpSecretManagerProvider.php:47
+msgid "Secret Name"
+msgstr "Igama Lemfihlo"
+
+#: includes/providers/AzureKeyVaultProvider.php:54
+msgid "A Key Vault secret name, optionally a specific version as 'name/version', with an optional '#key' to select a field from a JSON secret, for example 'snmp-community'."
+msgstr "Igama lemfihlo ye-Key Vault, ngokuzithandela inguqulo ethile njenge-'name/version', kanye nokukhetha u-'#key' ukukhetha inkambu emfihlweni ye-JSON, isibonelo 'snmp-community'."
+
+#: includes/providers/AzureKeyVaultProvider.php:60
+msgid "Vault URL"
+msgstr "I-URL ye-Vault"
+
+#: includes/providers/AzureKeyVaultProvider.php:62
+msgid "The Key Vault base URL, for example https://my-vault.vault.azure.net."
+msgstr "I-URL eyisisekelo ye-Key Vault, isibonelo https://my-vault.vault.azure.net."
+
+#: includes/providers/AzureKeyVaultProvider.php:69
+msgid "How this plugin obtains an access token."
+msgstr "Indlela le plugin ethola ngayo ithokheni yokufinyelela."
+
+#: includes/providers/AzureKeyVaultProvider.php:71
+msgid "Service Principal (client secret)"
+msgstr "I-Service Principal (imfihlo yeklayenti)"
+
+#: includes/providers/AzureKeyVaultProvider.php:72
+msgid "Managed Identity"
+msgstr "Ubunikazi Obuphethwe"
+
+#: includes/providers/AzureKeyVaultProvider.php:77
+msgid "Tenant Id"
+msgstr "I-ID Yomqashi"
+
+#: includes/providers/AzureKeyVaultProvider.php:79
+msgid "The Entra ID tenant (directory) id, used for service principal authentication."
+msgstr "I-ID yomqashi (inkombandlela) ye-Entra ID, esetshenziselwa ukuqinisekiswa kwe-service principal."
+
+#: includes/providers/AzureKeyVaultProvider.php:83
+msgid "Client Id"
+msgstr "I-ID Yeklayenti"
+
+#: includes/providers/AzureKeyVaultProvider.php:85
+msgid "The application (client) id. For a user-assigned Managed Identity, the identity client id."
+msgstr "I-ID yohlelo lokusebenza (yeklayenti). Ku-Managed Identity eyabelwe umsebenzisi, i-ID yeklayenti yobunikazi."
+
+#: includes/providers/AzureKeyVaultProvider.php:91
+msgid "The service principal client secret. Stored encrypted."
+msgstr "Imfihlo yeklayenti ye-service principal. Igcinwa ibetheliwe."
+
+#: includes/providers/AzureKeyVaultProvider.php:96
+msgid "API Version"
+msgstr "Inguqulo ye-API"
+
+#: includes/providers/AzureKeyVaultProvider.php:98
+msgid "The Key Vault data-plane API version."
+msgstr "Inguqulo ye-API ye-data-plane ye-Key Vault."
+
+#: includes/providers/AzureKeyVaultProvider.php:105
+msgid "The network timeout for Azure requests."
+msgstr "Isikhathi sokuphelelwa inethiwekhi sezicelo ze-Azure."
+
+#: includes/providers/AzureKeyVaultProvider.php:114
+msgid "A Key Vault URL is required."
+msgstr "I-URL ye-Key Vault iyadingeka."
+
+#: includes/providers/AzureKeyVaultProvider.php:133
+msgid "Successfully authenticated to Azure Key Vault."
+msgstr "Ukuqinisekiswa kuphumelele ku-Azure Key Vault."
+
+#: includes/providers/AzureKeyVaultProvider.php:143
+msgid "A Key Vault secret name is required."
+msgstr "Igama lemfihlo ye-Key Vault liyadingeka."
+
+#: includes/providers/AzureKeyVaultProvider.php:167
+#, php-format
+msgid "The Key Vault secret '%s' was not found."
+msgstr "Imfihlo ye-Key Vault '%s' ayitholakalanga."
+
+#: includes/providers/AzureKeyVaultProvider.php:177
+msgid "Azure returned an unexpected response reading the secret."
+msgstr "I-Azure ibuyise impendulo engalindelekile ngesikhathi kufundwa imfihlo."
+
+#: includes/providers/AzureKeyVaultProvider.php:200
+msgid "Service principal authentication requires a tenant id, client id and client secret."
+msgstr "Ukuqinisekiswa kwe-service principal kudinga i-ID yomqashi, i-ID yeklayenti kanye nemfihlo yeklayenti."
+
+#: includes/providers/AzureKeyVaultProvider.php:218
+#, php-format
+msgid "Azure token request failed with HTTP %d."
+msgstr "Isicelo sethokheni ye-Azure sehlulekile nge-HTTP %d."
+
+#: includes/providers/AzureKeyVaultProvider.php:224
+msgid "Azure token request returned no access token."
+msgstr "Isicelo sethokheni ye-Azure asibuyisanga ithokheni yokufinyelela."
+
+#: includes/providers/AzureKeyVaultProvider.php:249
+msgid "Unable to obtain a Managed Identity token; is Cacti running on an Azure resource with an identity assigned?"
+msgstr "Ayikwazanga ukuthola ithokheni ye-Managed Identity; ingabe i-Cacti isebenza kusisetshenziswa se-Azure esinobunikazi obabelwe?"
+
+#: includes/providers/AzureKeyVaultProvider.php:255
+msgid "The Managed Identity endpoint returned no access token."
+msgstr "Indawo yokuxhumana ye-Managed Identity ayibuyisanga ithokheni yokufinyelela."
+
+#: includes/providers/AzureKeyVaultProvider.php:273
+#, php-format
+msgid "Azure Key Vault error: %s (HTTP %d)."
+msgstr "Iphutha le-Azure Key Vault: %s (HTTP %d)."
+
+#: includes/providers/AzureKeyVaultProvider.php:276
+#, php-format
+msgid "Azure Key Vault returned HTTP %d."
+msgstr "I-Azure Key Vault ibuyise i-HTTP %d."
+
+#: includes/providers/ConjurProvider.php:35
+msgid "CyberArk Conjur"
+msgstr "CyberArk Conjur"
+
+#: includes/providers/ConjurProvider.php:39
+msgid "Resolve secrets from CyberArk Conjur using a host or user identity and its API key."
+msgstr "Xazulula izimfihlo ezivela ku-CyberArk Conjur usebenzisa ubunikazi bomsingathi noma bomsebenzisi kanye nokhiye wabo we-API."
+
+#: includes/providers/ConjurProvider.php:43
+msgid "Variable Id"
+msgstr "I-ID Yokuguquguquka"
+
+#: includes/providers/ConjurProvider.php:47
+msgid "A Conjur variable id, with an optional '#key' to select a field from a JSON secret, for example 'prod/network/snmp'."
+msgstr "I-ID yokuguquguquka ye-Conjur, enokukhetha u-'#key' ukukhetha inkambu emfihlweni ye-JSON, isibonelo 'prod/network/snmp'."
+
+#: includes/providers/ConjurProvider.php:53
+msgid "Appliance URL"
+msgstr "I-URL Yedivayisi"
+
+#: includes/providers/ConjurProvider.php:55
+msgid "The base URL of the Conjur appliance, for example https://conjur.example.com."
+msgstr "I-URL eyisisekelo yedivayisi ye-Conjur, isibonelo https://conjur.example.com."
+
+#: includes/providers/ConjurProvider.php:60
+msgid "Account"
+msgstr "I-akhawunti"
+
+#: includes/providers/ConjurProvider.php:62
+msgid "The Conjur account (organization) name."
+msgstr "Igama le-akhawunti (inhlangano) ye-Conjur."
+
+#: includes/providers/ConjurProvider.php:67
+msgid "Login (Host or User)"
+msgstr "Ukungena (Umsingathi noma Umsebenzisi)"
+
+#: includes/providers/ConjurProvider.php:69
+msgid "The identity used to authenticate, for example host/cacti-poller or a username."
+msgstr "Ubunikazi obusetshenziselwa ukuqinisekisa, isibonelo host/cacti-poller noma igama lomsebenzisi."
+
+#: includes/providers/ConjurProvider.php:76
+msgid "The API key for the identity. Stored encrypted."
+msgstr "Ukhiye we-API wobunikazi. Ugcinwa ubetheliwe."
+
+#: includes/providers/ConjurProvider.php:81
+#: includes/providers/VaultProvider.php:119
+msgid "Verify TLS Certificate"
+msgstr "Qinisekisa Isitifiketi se-TLS"
+
+#: includes/providers/ConjurProvider.php:83
+msgid "Verify the Conjur appliance TLS certificate. Disable only for testing."
+msgstr "Qinisekisa isitifiketi se-TLS sedivayisi ye-Conjur. Khubaza kuphela ekuhloleni."
+
+#: includes/providers/ConjurProvider.php:87
+#: includes/providers/VaultProvider.php:125
+msgid "CA Bundle Path"
+msgstr "Indlela Yenqwaba ye-CA"
+
+#: includes/providers/ConjurProvider.php:89
+msgid "An optional path on the Cacti server to a PEM CA bundle used to verify Conjur."
+msgstr "Indlela yokuzithandela kuseva ye-Cacti eya kunqwaba ye-CA ye-PEM esetshenziselwa ukuqinisekisa i-Conjur."
+
+#: includes/providers/ConjurProvider.php:95
+msgid "The network timeout for Conjur requests."
+msgstr "Isikhathi sokuphelelwa inethiwekhi sezicelo ze-Conjur."
+
+#: includes/providers/ConjurProvider.php:105
+msgid "The Conjur appliance URL, account, login and API key are all required."
+msgstr "I-URL yedivayisi ye-Conjur, i-akhawunti, igama lokungena kanye nokhiye we-API konke kuyadingeka."
+
+#: includes/providers/ConjurProvider.php:115
+msgid "Successfully authenticated to CyberArk Conjur."
+msgstr "Ukuqinisekiswa kuphumelele ku-CyberArk Conjur."
+
+#: includes/providers/ConjurProvider.php:122
+msgid "A Conjur variable id is required."
+msgstr "I-ID yokuguquguquka ye-Conjur iyadingeka."
+
+#: includes/providers/ConjurProvider.php:142
+#, php-format
+msgid "The Conjur variable '%s' was not found or has no value."
+msgstr "Ukuguquguquka kwe-Conjur '%s' akutholakalanga noma akunalo inani."
+
+#: includes/providers/ConjurProvider.php:146
+#, php-format
+msgid "Conjur returned HTTP %d reading the variable."
+msgstr "I-Conjur ibuyise i-HTTP %d ngesikhathi kufundwa ukuguquguquka."
+
+#: includes/providers/ConjurProvider.php:166
+msgid "Conjur authentication requires an account, login and API key."
+msgstr "Ukuqinisekiswa kwe-Conjur kudinga i-akhawunti, igama lokungena kanye nokhiye we-API."
+
+#: includes/providers/ConjurProvider.php:178
+#, php-format
+msgid "Conjur authentication failed with HTTP %d."
+msgstr "Ukuqinisekiswa kwe-Conjur kwehlulekile nge-HTTP %d."
+
+#: includes/providers/ConjurProvider.php:184
+msgid "Conjur authentication returned an empty token."
+msgstr "Ukuqinisekiswa kwe-Conjur kubuyise ithokheni engenalutho."
+
+#: includes/providers/GcpSecretManagerProvider.php:39
+msgid "Google Cloud Secret Manager"
+msgstr "Google Cloud Secret Manager"
+
+#: includes/providers/GcpSecretManagerProvider.php:43
+msgid "Resolve secrets from Google Cloud Secret Manager using a service account key or the instance service account."
+msgstr "Xazulula izimfihlo ezivela ku-Google Cloud Secret Manager usebenzisa ukhiye we-akhawunti yesevisi noma i-akhawunti yesevisi yesibonelo."
+
+#: includes/providers/GcpSecretManagerProvider.php:51
+msgid "A Secret Manager secret id, optionally a version as 'name/version' (default 'latest'), with an optional '#key' to select a field from a JSON secret, for example 'snmp-community'."
+msgstr "I-ID yemfihlo ye-Secret Manager, ngokuzithandela inguqulo njenge-'name/version' (okuzenzakalelayo 'latest'), kanye nokukhetha u-'#key' ukukhetha inkambu emfihlweni ye-JSON, isibonelo 'snmp-community'."
+
+#: includes/providers/GcpSecretManagerProvider.php:57
+msgid "Project Id"
+msgstr "I-ID Yephrojekthi"
+
+#: includes/providers/GcpSecretManagerProvider.php:59
+msgid "The Google Cloud project id that owns the secrets."
+msgstr "I-ID yephrojekthi ye-Google Cloud engumnikazi wezimfihlo."
+
+#: includes/providers/GcpSecretManagerProvider.php:64
+msgid "Use Instance Service Account"
+msgstr "Sebenzisa I-Akhawunti Yesevisi Yesibonelo"
+
+#: includes/providers/GcpSecretManagerProvider.php:66
+msgid "Obtain an access token from the GCE metadata server instead of a service account key."
+msgstr "Thola ithokheni yokufinyelela kuseva ye-metadata ye-GCE esikhundleni sokhiye we-akhawunti yesevisi."
+
+#: includes/providers/GcpSecretManagerProvider.php:70
+msgid "Service Account Key (JSON)"
+msgstr "Ukhiye We-akhawunti Yesevisi (JSON)"
+
+#: includes/providers/GcpSecretManagerProvider.php:72
+msgid "The full service account key JSON. Stored encrypted. Not required when using the instance service account."
+msgstr "Ukhiye we-JSON ophelele we-akhawunti yesevisi. Ugcinwa ubetheliwe. Awudingeki uma usebenzisa i-akhawunti yesevisi yesibonelo."
+
+#: includes/providers/GcpSecretManagerProvider.php:79
+msgid "The network timeout for Google Cloud requests."
+msgstr "Isikhathi sokuphelelwa inethiwekhi sezicelo ze-Google Cloud."
+
+#: includes/providers/GcpSecretManagerProvider.php:88
+msgid "A Google Cloud project id is required."
+msgstr "I-ID yephrojekthi ye-Google Cloud iyadingeka."
+
+#: includes/providers/GcpSecretManagerProvider.php:107
+msgid "Successfully authenticated to Google Cloud Secret Manager."
+msgstr "Ukuqinisekiswa kuphumelele ku-Google Cloud Secret Manager."
+
+#: includes/providers/GcpSecretManagerProvider.php:117
+msgid "A Secret Manager secret name is required."
+msgstr "Igama lemfihlo ye-Secret Manager liyadingeka."
+
+#: includes/providers/GcpSecretManagerProvider.php:140
+#, php-format
+msgid "The Secret Manager secret '%s' was not found."
+msgstr "Imfihlo ye-Secret Manager '%s' ayitholakalanga."
+
+#: includes/providers/GcpSecretManagerProvider.php:150
+msgid "Google Cloud returned an unexpected response reading the secret."
+msgstr "I-Google Cloud ibuyise impendulo engalindelekile ngesikhathi kufundwa imfihlo."
+
+#: includes/providers/GcpSecretManagerProvider.php:156
+msgid "The Secret Manager payload could not be decoded."
+msgstr "Umthwalo we-Secret Manager awukwazanga ukuqondwa."
+
+#: includes/providers/GcpSecretManagerProvider.php:178
+msgid "A service account key JSON is required unless the instance service account is used."
+msgstr "Ukhiye we-JSON we-akhawunti yesevisi uyadingeka ngaphandle uma kusetshenziswa i-akhawunti yesevisi yesibonelo."
+
+#: includes/providers/GcpSecretManagerProvider.php:184
+msgid "The service account key JSON is invalid or incomplete."
+msgstr "Ukhiye we-JSON we-akhawunti yesevisi awuvumelekile noma awuphelele."
+
+#: includes/providers/GcpSecretManagerProvider.php:190
+msgid "The service account token URI must be a supported Google OAuth endpoint."
+msgstr "I-URI yethokheni ye-akhawunti yesevisi kufanele ibe yindawo yokuxhumana esekelwayo ye-Google OAuth."
+
+#: includes/providers/GcpSecretManagerProvider.php:221
+#, php-format
+msgid "Google Cloud token request failed with HTTP %d."
+msgstr "Isicelo sethokheni ye-Google Cloud sehlulekile nge-HTTP %d."
+
+#: includes/providers/GcpSecretManagerProvider.php:227
+msgid "Google Cloud token request returned no access token."
+msgstr "Isicelo sethokheni ye-Google Cloud asibuyisanga ithokheni yokufinyelela."
+
+#: includes/providers/GcpSecretManagerProvider.php:271
+msgid "Unable to obtain a token from the GCE metadata server; is Cacti running on a Google Cloud instance?"
+msgstr "Ayikwazanga ukuthola ithokheni kuseva ye-metadata ye-GCE; ingabe i-Cacti isebenza kusibonelo se-Google Cloud?"
+
+#: includes/providers/GcpSecretManagerProvider.php:277
+msgid "The GCE metadata server returned no access token."
+msgstr "Iseva ye-metadata ye-GCE ayibuyisanga ithokheni yokufinyelela."
+
+#: includes/providers/GcpSecretManagerProvider.php:300
+msgid "The service account private key could not be read."
+msgstr "Ukhiye oyimfihlo we-akhawunti yesevisi awukwazanga ukufundwa."
+
+#: includes/providers/GcpSecretManagerProvider.php:307
+msgid "The service account JWT could not be signed."
+msgstr "I-JWT ye-akhawunti yesevisi ayikwazanga ukusayinwa."
+
+#: includes/providers/GcpSecretManagerProvider.php:336
+#, php-format
+msgid "Google Cloud Secret Manager error: %s (HTTP %d)."
+msgstr "Iphutha le-Google Cloud Secret Manager: %s (HTTP %d)."
+
+#: includes/providers/GcpSecretManagerProvider.php:339
+#, php-format
+msgid "Google Cloud Secret Manager returned HTTP %d."
+msgstr "I-Google Cloud Secret Manager ibuyise i-HTTP %d."
+
+#: includes/providers/OpenBaoProvider.php:36
+msgid "OpenBao"
+msgstr "OpenBao"
+
+#: includes/providers/OpenBaoProvider.php:44
+msgid "Resolve secrets from an OpenBao KV v1 or v2 secrets engine using a token or AppRole."
+msgstr "Xazulula izimfihlo ezivela kunjini yezimfihlo ye-OpenBao KV v1 noma v2 usebenzisa ithokheni noma i-AppRole."
+
+#: includes/providers/OpenBaoProvider.php:48
+msgid "An OpenBao secret path and the key within it, separated by '#', for example 'network/snmp#community'. The path is relative to the configured KV mount; append '#key' to select a field from the secret."
+msgstr "Indlela yemfihlo ye-OpenBao kanye nokhiye ongaphakathi kuyo, okuhlukaniswe ngo-'#', isibonelo 'network/snmp#community'. Indlela ihlobene ne-KV mount elungisiwe; engeza u-'#key' ukuze ukhethe inkambu emfihlweni."
+
+#: includes/providers/OpenBaoProvider.php:55
+msgid "OpenBao Address"
+msgstr "Ikheli le-OpenBao"
+
+#: includes/providers/OpenBaoProvider.php:55
+msgid "The base URL of the OpenBao server, for example https://openbao.example.com:8200."
+msgstr "I-URL eyisisekelo yeseva ye-OpenBao, isibonelo https://openbao.example.com:8200."
+
+#: includes/providers/OpenBaoProvider.php:56
+msgid "The optional OpenBao namespace (sent as the X-Vault-Namespace header)."
+msgstr "Isikhala segama se-OpenBao sokuzithandela (sithunyelwa njengesihloko se-X-Vault-Namespace)."
+
+#: includes/providers/OpenBaoProvider.php:57
+msgid "How this plugin authenticates to OpenBao."
+msgstr "Indlela le plugin eqinisekisa ngayo ku-OpenBao."
+
+#: includes/providers/OpenBaoProvider.php:58
+msgid "The OpenBao token used for Token authentication. Stored encrypted."
+msgstr "Ithokheni ye-OpenBao esetshenziselwa ukuqinisekiswa kwe-Token. Igcinwa ibetheliwe."
+
+#: includes/providers/OpenBaoProvider.php:59
+msgid "Verify the OpenBao server TLS certificate. Disable only for testing."
+msgstr "Qinisekisa isitifiketi se-TLS seseva ye-OpenBao. Khubaza kuphela ekuhloleni."
+
+#: includes/providers/OpenBaoProvider.php:60
+msgid "An optional path on the Cacti server to a PEM CA bundle used to verify OpenBao."
+msgstr "Indlela yokuzithandela kuseva ye-Cacti eya kunqwaba ye-CA ye-PEM esetshenziselwa ukuqinisekisa i-OpenBao."
+
+#: includes/providers/OpenBaoProvider.php:61
+msgid "The network timeout for OpenBao requests."
+msgstr "Isikhathi sokuphelelwa inethiwekhi sezicelo ze-OpenBao."
+
+#: includes/providers/VaultProvider.php:35
+msgid "HashiCorp Vault"
+msgstr "HashiCorp Vault"
+
+#: includes/providers/VaultProvider.php:51
+msgid "Resolve secrets from a HashiCorp Vault KV v1 or v2 secrets engine using a token or AppRole."
+msgstr "Xazulula izimfihlo ezivela kunjini yezimfihlo ye-HashiCorp Vault KV v1 noma v2 usebenzisa ithokheni noma i-AppRole."
+
+#: includes/providers/VaultProvider.php:55
+msgid "Secret Path and Key"
+msgstr "Indlela Yemfihlo Nokhiye"
+
+#: includes/providers/VaultProvider.php:59
+msgid "A Vault secret path and the key within it, separated by '#', for example 'network/snmp#community'. The path is relative to the configured KV mount; append '#key' to select a field from the secret."
+msgstr "Indlela yemfihlo ye-Vault kanye nokhiye ongaphakathi kuyo, okuhlukaniswe ngo-'#', isibonelo 'network/snmp#community'. Indlela ihlobene ne-KV mount elungisiwe; engeza u-'#key' ukuze ukhethe inkambu emfihlweni."
+
+#: includes/providers/VaultProvider.php:65
+msgid "Vault Address"
+msgstr "Ikheli le-Vault"
+
+#: includes/providers/VaultProvider.php:67
+msgid "The base URL of the Vault server, for example https://vault.example.com:8200."
+msgstr "I-URL eyisisekelo yeseva ye-Vault, isibonelo https://vault.example.com:8200."
+
+#: includes/providers/VaultProvider.php:72
+msgid "Namespace"
+msgstr "Isikhala Segama"
+
+#: includes/providers/VaultProvider.php:74
+msgid "The optional Vault Enterprise namespace (sent as the X-Vault-Namespace header)."
+msgstr "Isikhala segama se-Vault Enterprise sokuzithandela (sithunyelwa njengesihloko se-X-Vault-Namespace)."
+
+#: includes/providers/VaultProvider.php:78
+msgid "KV Engine Version"
+msgstr "Inguqulo Yenjini ye-KV"
+
+#: includes/providers/VaultProvider.php:80
+msgid "The version of the KV secrets engine the mount uses."
+msgstr "Inguqulo yenjini yezimfihlo ye-KV esetshenziswa yi-mount."
+
+#: includes/providers/VaultProvider.php:81
+msgid "KV Version 2"
+msgstr "KV Inguqulo 2"
+
+#: includes/providers/VaultProvider.php:81
+msgid "KV Version 1"
+msgstr "KV Inguqulo 1"
+
+#: includes/providers/VaultProvider.php:85
+msgid "KV Mount Path"
+msgstr "Indlela ye-KV Mount"
+
+#: includes/providers/VaultProvider.php:87
+msgid "The mount path of the KV secrets engine, for example 'secret'."
+msgstr "Indlela ye-mount yenjini yezimfihlo ye-KV, isibonelo 'secret'."
+
+#: includes/providers/VaultProvider.php:94
+msgid "How this plugin authenticates to Vault."
+msgstr "Indlela le plugin eqinisekisa ngayo ku-Vault."
+
+#: includes/providers/VaultProvider.php:95
+#: includes/providers/VaultProvider.php:99
+msgid "Token"
+msgstr "Ithokheni"
+
+#: includes/providers/VaultProvider.php:95
+msgid "AppRole"
+msgstr "AppRole"
+
+#: includes/providers/VaultProvider.php:101
+msgid "The Vault token used for Token authentication. Stored encrypted."
+msgstr "Ithokheni ye-Vault esetshenziselwa ukuqinisekiswa kwe-Token. Igcinwa ibetheliwe."
+
+#: includes/providers/VaultProvider.php:106
+msgid "AppRole Role ID"
+msgstr "I-AppRole Role ID"
+
+#: includes/providers/VaultProvider.php:108
+msgid "The AppRole RoleID used for AppRole authentication."
+msgstr "I-AppRole RoleID esetshenziselwa ukuqinisekiswa kwe-AppRole."
+
+#: includes/providers/VaultProvider.php:112
+msgid "AppRole Secret ID"
+msgstr "I-AppRole Secret ID"
+
+#: includes/providers/VaultProvider.php:114
+msgid "The AppRole SecretID used for AppRole authentication. Stored encrypted."
+msgstr "I-AppRole SecretID esetshenziselwa ukuqinisekiswa kwe-AppRole. Igcinwa ibetheliwe."
+
+#: includes/providers/VaultProvider.php:121
+msgid "Verify the Vault server TLS certificate. Disable only for testing."
+msgstr "Qinisekisa isitifiketi se-TLS seseva ye-Vault. Khubaza kuphela ekuhloleni."
+
+#: includes/providers/VaultProvider.php:127
+msgid "An optional path on the Cacti server to a PEM CA bundle used to verify Vault."
+msgstr "Indlela yokuzithandela kuseva ye-Cacti eya kunqwaba ye-CA ye-PEM esetshenziselwa ukuqinisekisa i-Vault."
+
+#: includes/providers/VaultProvider.php:133
+msgid "The network timeout for Vault requests."
+msgstr "Isikhathi sokuphelelwa inethiwekhi sezicelo ze-Vault."
+
+#: includes/providers/VaultProvider.php:144
+#, php-format
+msgid "The %s address is required."
+msgstr "Ikheli le-%s liyadingeka."
+
+#: includes/providers/VaultProvider.php:166
+#, php-format
+msgid "Successfully authenticated to %s."
+msgstr "Ukuqinisekiswa kuphumelele ku-%s."
+
+#: includes/providers/VaultProvider.php:169
+#, php-format
+msgid "%s returned HTTP %d during token verification."
+msgstr "I-%s ibuyise i-HTTP %d ngesikhathi sokuqinisekiswa kwethokheni."
+
+#: includes/providers/VaultProvider.php:176
+#, php-format
+msgid "The %s secret path is required."
+msgstr "Indlela yemfihlo ye-%s iyadingeka."
+
+#: includes/providers/VaultProvider.php:209
+#, php-format
+msgid "The %s secret path '%s' was not found."
+msgstr "Indlela yemfihlo ye-%s '%s' ayitholakalanga."
+
+#: includes/providers/VaultProvider.php:213
+#, php-format
+msgid "%s returned HTTP %d reading the secret."
+msgstr "I-%s ibuyise i-HTTP %d ngesikhathi kufundwa imfihlo."
+
+#: includes/providers/VaultProvider.php:219
+#, php-format
+msgid "%s returned an unexpected response reading the secret."
+msgstr "I-%s ibuyise impendulo engalindelekile ngesikhathi kufundwa imfihlo."
+
+#: includes/providers/VaultProvider.php:228
+#, php-format
+msgid "%s returned an unexpected secret payload."
+msgstr "I-%s ibuyise umthwalo wemfihlo ongalindelekile."
+
+#: includes/providers/VaultProvider.php:239
+#, php-format
+msgid "The %s secret holds multiple fields; append '#key' to the reference to select one."
+msgstr "Imfihlo ye-%s inezinkambu eziningi; engeza u-'#key' kureferensi ukuze ukhethe eyodwa."
+
+#: includes/providers/VaultProvider.php:262
+msgid "AppRole authentication requires both a RoleID and a SecretID."
+msgstr "Ukuqinisekiswa kwe-AppRole kudinga kokubili i-RoleID ne-SecretID."
+
+#: includes/providers/VaultProvider.php:280
+#, php-format
+msgid "%s AppRole login failed with HTTP %d."
+msgstr "Ukungena kwe-AppRole ku-%s kwehlulekile nge-HTTP %d."
+
+#: includes/providers/VaultProvider.php:286
+#, php-format
+msgid "%s AppRole login returned no client token."
+msgstr "Ukungena kwe-AppRole ku-%s akubuyisanga ithokheni yeklayenti."
+
+#: includes/providers/VaultProvider.php:295
+#, php-format
+msgid "The %s token is required for Token authentication."
+msgstr "Ithokheni ye-%s iyadingeka ekuqinisekisweni kwe-Token."
+
+#: setup.php:270
+msgid "Configuration"
+msgstr "Ukucushwa"
+
+#: setup.php:294 setup.php:322
+msgid "(Edit)"
+msgstr "(Hlela)"
+
+#: setup.php:301 setup.php:329
+msgid "Actions"
+msgstr "Izenzo"
+
+#: setup.php:308 setup.php:336
+msgid "(Save)"
+msgstr "(Londoloza)"
